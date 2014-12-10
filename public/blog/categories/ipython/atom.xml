@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类: ipython | 小明明s à domicile]]></title>
+  <link href="http://www.dongwm.com/blog/categories/ipython/atom.xml" rel="self"/>
+  <link href="http://www.dongwm.com/"/>
+  <updated>2014-12-07T21:37:47+08:00</updated>
+  <id>http://www.dongwm.com/</id>
+  <author>
+    <name><![CDATA[Dongweiming]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ipython的一些高级用法(一)]]></title>
+    <link href="http://www.dongwm.com/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/"/>
+    <updated>2014-12-07T09:56:00+08:00</updated>
+    <id>http://www.dongwm.com/archives/ipythonde-[?]-xie-gao-ji-yong-fa</id>
+    <content type="html"><![CDATA[<h4 id="section">前言</h4>
+
+<p>以前在我的PPT<a href="http://dongweiming.github.io/Expert-Python/">python高级编程</a>也提到了一些关于ipython的用法. 今天继续由浅入深的看看ipython,
+本文作为读者的你已经知道ipython并且用了一段时间了.</p>
+
+<h5 id="run">%run</h5>
+
+<p>这是一个magic命令, 能把你的脚本里面的代码运行, 并且把对应的运行结果存入ipython的环境变量中:</p>
+
+<p>```
+$cat t.py
+# coding=utf-8
+l = range(5)</p>
+
+<p>$ipython
+In [1]: %run t.py # <code>%</code>可加可不加</p>
+
+<p>In [2]: l # 这个l本来是t.py里面的变量, 这里直接可以使用了
+Out[2]: [0, 1, 2, 3, 4]
+```</p>
+
+<h5 id="alias">alias</h5>
+
+<p><code>python
+In [3]: %alias largest ls -1sSh | grep %s
+In [4]: largest to
+total 42M
+ 20K tokenize.py
+ 16K tokenize.pyc
+8.0K story.html
+4.0K autopep8
+4.0K autopep8.bak
+4.0K story_layout.html
+</code></p>
+
+<p>PS 别名需要存储的, 否则重启ipython就不存在了:</p>
+
+<p><code>
+In [5]: %store largest
+Alias stored: largest (ls -1sSh | grep %s)
+</code></p>
+
+<p>下次进入的时候<code>%store -r</code></p>
+
+<h5 id="bookmark---">bookmark - 对目录做别名</h5>
+
+<p>```python
+In [2]: %pwd
+Out[2]: u’/home/vagrant’</p>
+
+<p>In [3]: %bookmark dongxi ~/shire/dongxi</p>
+
+<p>In [4]: %cd dongxi
+/home/vagrant/shire/dongxi_code</p>
+
+<p>In [5]: %pwd
+Out[5]: u’/home/vagrant/shire/dongxi_code’
+```</p>
+
+<h5 id="ipcluster---">ipcluster - 并行计算</h5>
+
+<p>其实ipython提供的方便的并行计算的功能. 先回答ipython做并行计算的特点:</p>
+
+<p>1.</p>
+
+<p><code>bash
+$wget http://www.gutenberg.org/files/27287/27287-0.txt
+</code></p>
+
+<p>第一个版本是直接的, 大家习惯的用法.</p>
+
+<p>```python
+In [1]: import re</p>
+
+<p>In [2]: import io</p>
+
+<p>In [3]: non_word = re.compile(r’[\W\d]+’, re.UNICODE)</p>
+
+<p>In [4]: common_words = {
+   …: ‘the’,’of’,’and’,’in’,’to’,’a’,’is’,’it’,’that’,’which’,’as’,’on’,’by’,
+   …: ‘be’,’this’,’with’,’are’,’from’,’will’,’at’,’you’,’not’,’for’,’no’,’have’,
+   …: ‘i’,’or’,’if’,’his’,’its’,’they’,’but’,’their’,’one’,’all’,’he’,’when’,
+   …: ‘than’,’so’,’these’,’them’,’may’,’see’,’other’,’was’,’has’,’an’,’there’,
+   …: ‘more’,’we’,’footnote’, ‘who’, ‘had’, ‘been’,  ‘she’, ‘do’, ‘what’,
+   …: ‘her’, ‘him’, ‘my’, ‘me’, ‘would’, ‘could’, ‘said’, ‘am’, ‘were’, ‘very’,
+   …: ‘your’, ‘did’, ‘not’,
+   …: }</p>
+
+<p>In [5]: def yield_words(filename):
+   …:     import io
+   …:     with io.open(filename, encoding=’latin-1’) as f:
+   …:         for line in f:
+   …:             for word in line.split():
+   …:                 word = non_word.sub(‘’, word.lower())
+   …:                 if word and word not in common_words:
+   …:                     yield word
+   …:</p>
+
+<p>In [6]: def word_count(filename):
+   …:     word_iterator = yield_words(filename)
+   …:     counts = {}
+   …:     counts = defaultdict(int)
+   …:     while True:
+   …:         try:
+   …:             word = next(word_iterator)
+   …:         except StopIteration:
+   …:             break
+   …:         else:
+   …:             counts[word] += 1
+   …:     return counts
+   …:</p>
+
+<p>In [6]: from collections import defaultdict # 脑残了 忘记放进去了..
+In [7]: %time counts = word_count(filename)
+CPU times: user 88.5 ms, sys: 2.48 ms, total: 91 ms
+Wall time: 89.3 ms
+```</p>
+
+<p>现在用ipython来跑一下:</p>
+
+<p><code>python
+ipcluster start -n 2 # 好吧, 我的Mac是双核的
+</code></p>
+
+<p>先讲下ipython 并行计算的用法:</p>
+
+<p>```python
+In [1]: from IPython.parallel import Client # import之后才能用%px*的magic</p>
+
+<p>In [2]: rc = Client()</p>
+
+<p>In [3]: rc.ids # 因为我启动了2个进程
+Out[3]: [0, 1]</p>
+
+<p>In [4]: %autopx # 如果不自动 每句都需要: <code>%px xxx</code>
+%autopx enabled</p>
+
+<p>In [5]: import os # 这里没autopx的话 需要: <code>%px import os</code></p>
+
+<p>In [6]: print os.getpid() # 2个进程的pid
+[stdout:0] 62638
+[stdout:1] 62636</p>
+
+<p>In [7]: %pxconfig –targets 1 # 在autopx下 这个magic不可用
+[stderr:0] ERROR: Line magic function <code>%pxconfig</code> not found.
+[stderr:1] ERROR: Line magic function <code>%pxconfig</code> not found.</p>
+
+<p>In [8]: %autopx # 再执行一次就会关闭autopx
+%autopx disabled</p>
+
+<p>In [10]: %pxconfig –targets 1 # 指定目标对象, 这样下面执行的代码就会只在第2个进程下运行</p>
+
+<p>In [11]: %%px –noblock # 其实就是执行一段非阻塞的代码
+   ….: import time
+   ….: time.sleep(1)
+   ….: os.getpid()
+   ….:
+Out[11]: <asyncresult: execute="" /></p>
+
+<p>In [12]: %pxresult # 看 只返回了第二个进程的pid
+Out[1:21]: 62636</p>
+
+<p>In [13]: v = rc[:] # 使用全部的进程, ipython可以细粒度的控制那个engine执行的内容</p>
+
+<p>In [14]: with v.sync_imports(): # 每个进程都导入time模块
+   ….:     import time
+   ….:
+importing time on engine(s)</p>
+
+<p>In [15]: def f(x):
+   ….:     time.sleep(1)
+   ….:     return x * x
+   ….:</p>
+
+<p>In [16]: v.map_sync(f, range(10)) # 同步的执行</p>
+
+<p>Out[16]: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</p>
+
+<p>In [17]: r = v.map(f, range(10)) # 异步的执行</p>
+
+<p>In [18]: r.ready(), r.elapsed # celery的用法
+Out[18]: (True, 5.87735)</p>
+
+<p>In [19]: r.get() # 获得执行的结果
+Out[19]: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```</p>
+
+<p>入正题:</p>
+
+<p>```python
+In [20]: def split_text(filename):
+….:    text = open(filename).read()
+….:    lines = text.splitlines()
+….:    nlines = len(lines)
+….:    n = 10
+….:    block = nlines//n
+….:    for i in range(n):
+….:        chunk = lines[i<em>block:(i+1)</em>(block)]
+….:        with open(‘count_file%i.txt’ % i, ‘w’) as f:
+….:            f.write(‘\n’.join(chunk))
+….:    cwd = os.path.abspath(os.getcwd())
+….:    fnames = [ os.path.join(cwd, ‘count_file%i.txt’ % i) for i in range(n)] # 不用glob是为了精准
+….:    return fnames</p>
+
+<p>In [21]: from IPython import parallel</p>
+
+<p>In [22]: rc = parallel.Client()</p>
+
+<p>In [23]: view = rc.load_balanced_view()</p>
+
+<p>In [24]: v = rc[:]</p>
+
+<p>In [25]: v.push(dict(
+   ….:     non_word=non_word,
+   ….:     yield_words=yield_words,
+   ….:     common_words=common_words
+   ….: ))
+Out[25]: <asyncresult: _push="" /></p>
+
+<p>In [26]: fnames = split_text(filename)</p>
+
+<p>In [27]: def count_parallel():
+   …..:     pcounts = view.map(word_count, fnames)
+   …..:     counts = defaultdict(int)
+   …..:     for pcount in pcounts.get():
+   …..:         for k, v in pcount.iteritems():
+   …..:             counts[k] += v
+   …..:     return counts, pcounts
+   …..:</p>
+
+<p>In [28]: %time counts, pcounts = count_parallel() # 这个时间包含了我再聚合的时间
+CPU times: user 47.6 ms, sys: 6.67 ms, total: 54.3 ms # 是不是比直接运行少了很多时间?
+Wall time: 106 ms # 这个时间是</p>
+
+<p>In [29]: pcounts.elapsed, pcounts.serial_time, pcounts.wall_time
+Out[29]: (0.104384, 0.13980499999999998, 0.104384)
+```</p>
+
+<p>更多地关于并行计算请看这里: <a href="http://nbviewer.ipython.org/url/www.astro.washington.edu/users/vanderplas/Astr599/notebooks/21_IPythonParallel.ipynb">Parallel Computing with IPython</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[怎样不退出交互模式自动reload模块]]></title>
+    <link href="http://www.dongwm.com/archives/how-to-not-exit-interactive-mode-autoreload/"/>
+    <updated>2013-05-24T11:54:00+08:00</updated>
+    <id>http://www.dongwm.com/archives/how-to-not-exit-interactive-mode-autoreload</id>
+    <content type="html"><![CDATA[<h4 id="section"><em>前言</em></h4>
+
+<p>我想做python开发的人尤其是django开发都会有一种经历:进入python交互模式(直接 执行python回车)或者进入django-shell调试某功能，然后修改源码，退出交互模式或者djangoshell，重新进入在吧那些模块一一import… 问题是什么呢？浪费时间，为啥不像web 框架那样修改源码自动reload？ </p>
+
+<p>本来我花了2个多礼拜一直在做这件事情，其实原理就是封装ipython到我的shell，然后在我的shell加这个autoreload功能，但是昨晚看ipython源码发现：ipython早已经实现了…</p>
+
+<p>我的系统的实现的源码文件是 /usr/lib64/python2.7/site-packages/IPython/Extensions/ipy_autoreload.py</p>
+
+<h4 id="ipython">在ipython交互模式实现</h4>
+
+<p>和ipython版本有关，大于0.11 这样加载</p>
+
+<p><code>
+%load_ext autoreload
+%autoreload 2
+</code>
+小于0.11的就要这样加载
+<code>
+import ipy_autoreload
+%autoreload 2
+</code></p>
+
+<h4 id="ipython-1">ipython交互模式自动加载</h4>
+
+<p>你总不像每次进入ipython都执行这么2句吧, 那么可以加到ipython的自定义配置里面.因操作系统和ipython版本不同，ipython的用户自定义目录有所不同，增加的配置也 有所不同</p>
+
+<p>首先创建ipython个人配置 </p>
+
+<p><code>
+ipython profile create
+</code></p>
+
+<p>gentoo ~/.ipython  ipython :0.10.2 </p>
+
+<p>配置文件是.ipython/ipy_user_conf.py 添加</p>
+
+<p>```
+import ipy_autoreload
+o.autoexec.append(‘%autoreload 2’)</p>
+
+<p>```</p>
+
+<p>opensuse ~/.config/ipython  :0.13</p>
+
+<p>配置文件是~/.config/ipython/profile_default/ipython_config.py</p>
+
+<p><code>
+c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
+c.InteractiveShellApp.exec_lines.append('%autoreload 2')
+</code></p>
+
+<h4 id="django-shell">Django shell的实现</h4>
+
+<p>遗憾的是改django源码中的core/management/commands/shell.py,没有提供自动reload,但是当你修改了ipython配置 他也是会起作用(这个操作系统有关，下面我会说不起作用的geek方法)</p>
+
+<p>PS： 你还可以使用<a href="https://github.com/dongweiming/django-extensions">django-extensions</a>中的shell_plus.py</p>
+
+<h4 id="ipythonbpythonpythondjango-shell">当你系统有ipython,bpython和默认的python，django shell选择的顺序</h4>
+
+<ul>
+  <li>
+    <p>当你系统没有ipython和bpython，那么就会选择默认的python</p>
+  </li>
+  <li>
+    <p>上面说的shell_plus的遍历列表顺序是bpython-&gt;ipython  </p>
+  </li>
+  <li>
+    <p>django自带的shell的遍历顺序是ipython-&gt;bpython</p>
+  </li>
+</ul>
+
+<p>上面说djangoshell不起作用怎么办？首先看了django/ipython源码(0.13.2)，其实djangoshell甚至django-extensions里面的shell_plus都没有问题，关键是ipython的问题</p>
+
+<p>我只说在用户配置里面的外部模块为啥没有正确执行</p>
+
+<p>ipython进入交互模式的流程</p>
+
+<ol>
+  <li>当调用ipython，都是通过IPython.frontend.terminal.ipapp的launch_new_instance函数开始</li>
+  <li>通过IPython.core.shellapp的InteractiveShellApp类里面的init_code方法去初始化启动后的加载</li>
+  <li>在init_code方法会执行self._run_exec_lines(),这个就是上面的模块导入执行</li>
+</ol>
+
+<p>djangoshell进入交互模式的流程</p>
+
+<ol>
+  <li>通过IPython.frontend.terminal.embed的TerminalInteractiveShell类开始</li>
+  <li>在TerminalInteractiveShell初始化中,没有执行上面的第三条</li>
+</ol>
+
+<p>解决办法就是暴力修改IPython/frontend/terminal/interactiveshell.py源码 给他加上模块初始化的操作</p>
+
+<p>在326行开始的地方，这样添加一段(包含存在的代码帮你你理解在什么位置添加代码,也就是下面的3-8行)</p>
+
+<p><code>
+self.init_usage(usage)                                                 
+self.init_banner(banner1, banner2, display_banner) 
+exex_lines = self.config['InteractiveShellApp']['exec_lines']          
+for line in exex_lines:                                                
+    try:                                                                        
+        self.run_cell(line, store_history=False)                       
+    except:                                                                     
+        pass
+#-------------------------------------------------------------------------          
+# Overrides of init stages                                                          
+#-------------------------------------------------------------------------
+</code></p>
+
+]]></content>
+  </entry>
+  
+</feed>
