@@ -1,0 +1,1377 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>小明明s à domicile</title>
+  <meta name="author" content="Dongweiming">
+
+  
+  <meta name="description" content="">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dongweiming.github.com/page/15">
+  <link href="/blog/favicon.png" rel="icon">
+  <link href="/blog/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      padding-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    .page-footer p {
+      text-align: center;
+    }
+  </style>
+  <script src="/blog/javascripts/libs/jquery.js"></script>
+  <script src="/blog/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/blog/javascripts/libs/bootstrap.js"></script>
+  <script src="/blog/javascripts/octopress.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/javascripts/api.js"></script>
+  <script type="text/javascript" src="/javascripts/wordcumulus.js"></script>
+  <script type="text/javascript" src="/javascripts/swfobject.js"></script>
+  <script type="text/javascript" src="/javascripts/tagcumulus.js"></script>
+  <link href="/atom.xml" rel="alternate" title="小明明s à domicile" type="application/atom+xml">
+  <script type="text/javascript" src="/javascripts/jimdoclockzip.js"></script>
+<script type="text/javascript" src="/javascripts/sh_python.min.js"></script>
+<script type="text/javascript" src="/javascripts/sh_bash.min.js"></script>
+<script type="text/javascript" src="/javascripts/sh_main.min.js"></script>
+<link href="/stylesheets/sh_ide-anjuta.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20495125-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>            
+
+<body    onload="sh_highlightDocument('', '.js');">
+<a href="http://github.com/dongweiming/">
+<img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Follower me on GitHub">
+</a>
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a class="brand" href="/blog/">小明明s à domicile</a>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+    <li><a href="/blog/">博客主页</a></li>
+    <li><a href="/blog/blog/archives">文章列表</a></li>
+    <li><a href="/blog/zongjie">12年总结</a></li>
+    <li><a href="/blog/aboutsite">关于本站</a></li>
+    <li><a href="/blog/projects">我的项目</a></li>
+    <li><a href="http://dongweiming.github.io/sed_and_awk">sed_and_awk</a></li>
+    <li><a href="http://dongweiming.github.io/Expert-Python">Expert-Python</a></li>
+    <li><a href="/blog/aboutme">关于我</a></li>
+</ul>
+
+
+        <ul class="nav pull-right" data-subscription="rss">
+          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+          
+        </ul>
+
+        
+          <form class="pull-right navbar-search" action="http://google.com/search" method="get">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:dongweiming.github.com" />
+              <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
+            </fieldset>
+          </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
+  <div class="container">
+      <div class="row-fluid">
+      <div class="span9">
+  
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyubisectyanjiu/">关于bisect研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T00:00:00+08:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：bisect模块会让列表保持排序顺序列出,可以在向一个数组插入数据的同时进行排序</p>
+
+<p>例子：</p>
+
+<p><pre class="sh_python">
+import bisect
+l = [ 20, 34, 35, 65, 78 ]
+print bisect.bisect(l, 25) #显示在什么位置插入25
+bisect.insort(l,25)  #插入数据
+print l  #新列表
+print bisect.bisect_left(l,35) #如果待查找元素在列表中存在，则返回左侧插入位置
+print bisect.bisect_right(l,35) #如果待查找元素在列表中存在，则返回右侧插入位置
+</pre></p>
+
+<p>结果：</p>
+
+<p>1
+[20, 25, 34, 35, 65, 78]
+3
+4</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyubase64yanjiu/">关于base64研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T00:00:00+08:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：这事一个很常用的模块，主要用来将二进制数据编码成ASCII字符。其实base64，base32和base16就是把8位字节值转化成可用的每字节6，5，4位的数据，容许非ascii字节编码为ascii字符，比如stmp协议数据</p>
+
+<p>一个简单的例子：</p>
+
+<p><pre class="sh_python">
+import base64
+original_string = 'This is the data, in the clear.'
+print 'Original:', original_string   #原文
+encoded_string = base64.b64encode(original_string)
+print 'Encoded :', encoded_string  #编码后的数据
+decoded_string = base64.b64decode(encoded_string)
+print 'Decoded :', decoded_string  #将编码后数据解码
+</pre></p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuatexityanjiu/">关于atexit研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T00:00:00+08:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：atexit是一个用于一个执行某程序后触发的，执行一个方法的模块，当正常执行后会调用这个回调函数。</p>
+
+<p>下面是一个例子，因为一场退出不触发这个方法：</p>
+
+<p><pre class="sh_python">
+import atexit
+import os</p>
+
+<p>def not_called():  #这个就是想触发的方法
+    print 'This should not be called'  </p>
+
+<p>print 'Registering'
+atexit.register(not_called)  #注册这个方法
+print 'Registered'</p>
+
+<p>print 'Exiting...'
+os._exit(0)
+</pre></p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python !$
+python test.py
+Registering
+Registered
+Exiting&#8230;
+而且atexit还支持装饰器用法:</p>
+
+<p><pre class="sh_python">
+import atexit
+import os
+print 'Registering'
+@atexit.register
+def not_called():
+    print 'This should be called'
+print 'Registered'
+</pre></p>
+
+<p>执行结果是：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+Registering
+Registered
+This should be called</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuargparseyanjiu/">关于argparse研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T00:00:00+08:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：argparse模块存在于python2.7和以上版本，它<span>用来解析命令行参数</span>，用来更换<a title="optparse: Command line option parser to replace :mod:`getopt`." href="http://www.doughellmann.com/PyMOTW/optparse/index.html#module-optparse"><tt>optparse</tt></a>模块。</p>
+
+<p>以下是一些例子：</p>
+
+<p><pre class="sh_python">
+import argparse
+parser = argparse.ArgumentParser(prog='PROG',   #设置一个分析器，prog默认是sys.argv[0],这里修改成PRDG 这四个字母表示
+                    description='Process some integers.',  #打印help时候 描述信息
+                    epilog="Just a text.",  #再执行完后的打印信息
+                    formatter_class=argparse.ArgumentDefaultsHelpFormatter,#修改默认格式，把每个默认值都打印出来，还可以用<tt>RawDescriptionHelpFormatter</tt>和<tt>RawTextHelpFormatter</tt>
+                    conflict_handler='resolve', #假如不设置这个，不能使用相同参数，比如一个叫'-foo',还有一个叫做'-foo'，那么这样可以都用：'-foo xx -foo newxx'
+                    usage='%(prog)s [options]', #默认是列出所有参数，每个参数用列表列出来，这里修改成 只列出来[options]
+                     ) 
+parser.add_argument('ng','--noarg', action="store_true", default=False,help='noarg')#help打印信息‘noarg’，action指定布尔值默认是false，可以用'-ng'和'--noatg'，
+parser.add_argument('--witharg', action="store", dest="witharg",nargs=2,required=True,metavar=('y','z'))  #action指定参数值可以存储成任何类型,narg表示参数是2个，并且这个是必须的参数
+                                                                                                 #打印信息时会提示这2个参数的一个参考值'y'和'z'
+parser.add_argument('--witharg2', action="store", dest="witharg2", type=int,choices=[1,2])  #action指定成int类型,可选值是1和2，在help时候会用{}打印出来
+parser.add_argument('-c', action='store_const', dest='constant_value', #假如指定'-c'，那么value＝value-to-store，并且设定一个自定义的属性名字constant_value
+                    const='value-to-store',
+                    help='Store a constant value')
+parser.add_argument('-a', action='append', dest='collection', #如果参数重复，参数值的列表叠加，比如'-a 1 -a 2'，那么值就是[1,2]
+                    default=[],
+                    help='Add repeated values to a list',
+                    )
+parser.add_argument('-A', action='append_const', dest='const_collection',  #包含这个'-A',那么值就是['value-1-to-append']
+                    const='value-1-to-append',
+                    default=[],
+                    help='Add different values to list')
+parser.add_argument('--version', action='version', version='%(prog)s 1.0') # 使用'--version' 那么输出：PROG 1.0
+results = parser.parse_args()
+</pre></p>
+
+<p>其他更多使用例子请参看：http://docs.python.org/library/argparse.html</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuanydbmyanjiu/">关于anydbm研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T00:00:00+08:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：DBM数据库和SQL不同，它只是简单的key－value关系</p>
+
+<p>anydbm表示一个通用的接入－DBM数据库的接口，包括<tt>dbhash</tt> (依赖<tt>bsddb</tt>), <tt>gdbm</tt>, or <tt>dbm</tt>，在python3中以及重命名为dbm模块</p>
+
+<p>以下是一个例子：</p>
+
+<p><pre class="sh_python">
+import anydbm
+import whichdb    #确定dbm数据库文件的类型</p>
+
+<p>db = anydbm.open('/tmp/example.db', 'n')   #不存在的话创建用'c'，一直创建用'n'
+db['key'] = 'value' 
+db['author'] = 'dongweiming'
+db.close()</p>
+
+<p>print whichdb.whichdb('/tmp/example.db')</p>
+
+<p>db = anydbm.open('/tmp/example.db', 'r')
+try:
+    print 'keys():', db.keys()
+    for k, v in db.iteritems():
+        print 'iterating:', k, v
+    print 'db["author"] =', db['author']
+finally:
+    db.close()</p>
+
+<p>db = anydbm.open('/tmp/example.db', 'w')
+try:
+    db['one'] = 1
+except TypeError, err:    #异常处理
+    print '%s: %s' % (err.__class__.__name__, err)
+finally:
+    db.close()
+</pre></p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyu/">关于BaseHTTPServer研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T00:00:00+08:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：BaseHTTPServer是一个实现web server的基类</p>
+
+<p>例子1 http get方法：</p>
+
+<p><pre class="sh_python">
+from BaseHTTPServer import BaseHTTPRequestHandler  #BaseHTTPRequestHandler类细分到处理每个协议的方法，这里是‘GET’方法的例子
+import urlparse</p>
+
+<p>class GetHandler(BaseHTTPRequestHandler):
+    def do_GET(self):   #重写这个方法
+        parsed_path = urlparse.urlparse(self.path)
+        message_parts = [  #建立一个想要返回的列表
+                'CLIENT VALUES:',    #客户端信息
+                'client_address=%s (%s)' % (self.client_address,
+                                            self.address_string()),  #返回客户端的地址和端口
+                'command=%s' % self.command,  #返回操作的命令，这里比然是'get'
+                'path=%s' % self.path,  #返回请求的路径
+                'real path=%s' % parsed_path.path, #返回通过urlparse格式化的路径
+                'query=%s' % parsed_path.query, #返回urlparse格式化的查询语句的键值
+                'request_version=%s' % self.request_version, #返回请求的http协议版本号
+                '',
+                'SERVER VALUES:', #服务器段信息
+                'server_version=%s' % self.server_version, #返回服务器端http的信息
+                'sys_version=%s' % self.sys_version, #返回服务器端使用的python版本
+                'protocol_version=%s' % self.protocol_version,  #返回服务器端使用的http协议版本
+                '',
+                'HEADERS RECEIVED:',
+                ]
+        for name, value in sorted(self.headers.items()):  #返回項添加头信息，包含用户的user-agent信息，主机信息等
+            message_parts.append('%s=%s' % (name, value.rstrip()))
+        message_parts.append('')
+        message = '\r\n'.join(message_parts)
+        self.send_response(200)  #返回给客户端结果，这里的响应码是200 OK，并包含一些其他信息
+        self.end_headers() #结束头信息
+        self.wfile.write(message) #返回数据
+        return
+if __name__ == '__main__':
+    from BaseHTTPServer import HTTPServer
+    server = HTTPServer(('localhost', 8080), GetHandler)  #在本地8080端口上启用httpserver，使用自定义的GetHandler处理
+    print 'Starting server, use &lt;Ctrl-C&gt; to stop'
+    server.serve_forever()  #保存程序一直运行
+</pre></p>
+
+<p>客户端测试（linux的curl即可）</p>
+
+<p>dongwm@linux-dongwm:~&gt; curl -i http://localhost:8080/?arg=value
+HTTP/1.0 200 OK
+Server: BaseHTTP/0.3 Python/2.7
+Date: Mon, 11 Jun 2012 06:59:20 GMT</p>
+
+<p>CLIENT VALUES:
+client_address=(&#8216;127.0.0.1&#8217;, 54016) (localhost)
+command=GET
+path=/?arg=value
+real path=/
+query=arg=value
+request_version=HTTP/1.1</p>
+
+<p>SERVER VALUES:
+server_version=BaseHTTP/0.3
+sys_version=Python/2.7
+protocol_version=HTTP/1.0</p>
+
+<p>HEADERS RECEIVED:
+accept=*/*
+host=localhost:8080
+user-agent=curl/7.21.2 (i686-pc-linux-gnu) libcurl/7.21.2 OpenSSL/1.0.0c zlib/1.2.5 libidn/1.15 libssh2/1.2.7</p>
+
+<p>例子2 http post方法：</p>
+
+<p><pre class="sh_python">
+from BaseHTTPServer import BaseHTTPRequestHandler
+import cgi   #cgi模块，让使用者通过Web服务器来执 行Web程序，并将所执行的结果通过Web服务器返回给浏览器，它产生HTML数据</p>
+
+<p>class PostHandler(BaseHTTPRequestHandler):
+    def do_POST(self): #还是重写这个方法
+        form = cgi.FieldStorage(  #cgi.FieldStorage实例效果类似一个字典，包含键－值和len等内置函数
+            fp=self.rfile,
+            headers=self.headers,
+            environ={'REQUEST_METHOD':'POST',
+                     'CONTENT_TYPE':self.headers['Content-Type'],
+                     })
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write('Client: %s\n' % str(self.client_address))
+        self.wfile.write('User-agent: %s\n' % str(self.headers['user-agent']))
+        self.wfile.write('Path: %s\n' % self.path)
+        self.wfile.write('Form data:\n')</p>
+
+<p>        for field in form.keys():
+            field_item = form[field]
+            self.wfile.write('\t%s=%s\n' % (field, form[field].value))
+        return</p>
+
+<p>if __name__ == '__main__':
+    from BaseHTTPServer import HTTPServer
+    server = HTTPServer(('localhost', 8080), PostHandler)
+    print 'Starting server, use &lt;Ctrl-C&gt; to stop'
+    server.serve_forever()
+</pre></p>
+
+<p>客户端测试（linux的curl）</p>
+
+<p>dongwm@linux-dongwm:~&gt; curl http://localhost:8080/ -F name=dongwm -F site=www.dongwm.com
+Client: (&#8216;127.0.0.1&#8217;, 44314)
+User-agent: curl/7.21.2 (i686-pc-linux-gnu) libcurl/7.21.2 OpenSSL/1.0.0c zlib/1.2.5 libidn/1.15 libssh2/1.2.7
+Path: /
+Form data:
+name=dongwm
+site=www.dongwm.com
+例子3 使用多线程</p>
+
+<p>注：<tt></tt><tt>HTTPServer</tt>是SocketServer.TCPServer的一个简单的子类，不能使用多个线程或进程来处理请求，可以这样使用</p>
+
+<p><pre class="sh_python">
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
+from SocketServer import ThreadingMixIn
+import threading</p>
+
+<p>class Handler(BaseHTTPRequestHandler):</p>
+
+<p>    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        message =  threading.currentThread().getName()  #换取当前线程的名字
+        self.wfile.write(message)  #返回这个名字
+        self.wfile.write('\n')
+        return</p>
+
+<p>class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
+    """Handle requests in a separate thread."""</p>
+
+<p>if __name__ == '__main__':
+    server = ThreadedHTTPServer(('localhost', 8080), Handler)
+    print 'Starting server, use &lt;Ctrl-C&gt; to stop'
+    server.serve_forever()
+</pre></p>
+
+<p>客户端测试：</p>
+
+<p>dongwm@linux-dongwm:~&gt; curl http://localhost:8080/
+Thread-1
+dongwm@linux-dongwm:~&gt; curl http://localhost:8080/
+Thread-2
+dongwm@linux-dongwm:~&gt; curl http://localhost:8080/
+Thread-3
+dongwm@linux-dongwm:~&gt; curl http://localhost:8080/
+Thread-4</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/zuijindelinuxheshellshiyongzongjie/">最近的linux和shell使用总结</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-05T00:00:00+08:00" pubdate data-updated="true">Jun 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：很久没有写关于linux和shell的东西了，但是最近研究一些东西，把还有印象的一起拿出来</p>
+
+<p><strong>1 定义函数解压缩不同文件</strong></p>
+
+<p>注：需求产生其实是因为工作中会下载解压缩各种文件，比如.tar.gz ,tar.bz2,.gz,.zip等等后缀，不如自定义一个命令解压：</p>
+
+<p>ec () {
+if [ -f $1 ] ; then
+case $1 in
+*.tar.bz2)   tar xjf $1        ;;
+*.tar.gz)    tar xzf $1     ;;
+*.bz2)       bunzip2 $1       ;;
+*.rar)       rar x $1     ;;
+*.gz)        gunzip $1     ;;
+*.tar)       tar xf $1        ;;
+*.tbz2)      tar xjf $1      ;;
+*.tgz)       tar xzf $1       ;;
+*.zip)       unzip $1     ;;
+*.Z)         uncompress $1  ;;
+*.7z)        7z x $1    ;;
+*)           echo &#8220;&#8217;$1&#8217; cannot be extracted via extract()&#8221; ;;
+esac
+else
+echo &#8220;&#8217;$1&#8217; is not a valid file&#8221;
+fi
+}
+export ec
+你可以将以上内容放在~/.bashrc 中，这样启动shell就可以使用这个ec命令</p>
+
+<p><strong>2 shell的图形程序</strong></p>
+
+<p>注：可能大家一说图形程序那么就是qt，gtk，wxpython这样的语言实现的，但是对于一般的系统管理员或者简单的工作，没有必要</p>
+
+<p>1 Zenity</p>
+
+<p>它依赖X Window环境 与 GNOME 相捆绑。如果使用kde，需要单独安装（gtk依赖是很折磨人的）</p>
+
+<p><pre class="sh_bash">
+#!/bin/bash
+(
+  echo "10" ;  sleep 1 #do something，我这里换成了sleep,以下同样，前面的10表示进度百分比，这个是自定义的数字而已，我根据大概时间占比设计的
+  echo "# Start thunderbird" ; sleep 1
+  echo "30" ; sleep 1
+  echo "# Receive mail" ; sleep 1
+  echo "75" ; sleep 1
+  echo "# handle mail" ; sleep 1
+  echo "100" ; sleep 1
+) |
+zenity --progress \
+  --title="Update System Logs" \
+  --text="Scanning mail ..." \  #这个文件显示就是上面的那个10%过程里
+  --percentage=0</p>
+
+<p>if [ "$?" = -1 ] ; then
+  zenity --error \
+    --text="Operate canceled."
+fi
+</pre></p>
+
+<p><pre class="sh_bash">
+ENTRY=`zenity --entry --text "Please enter your name" \
+   --entry-text "Your name" --title "Enter your name"`
+if [ $? == 0 ]; then
+  zenity --info --text "Hello $ENTRY\!"
+fi
+</pre></p>
+
+<p>2 dialog</p>
+
+<p>注：这个dialog在我以前的工作中还是比较经常使用的，一些脚本给用户一个选择的界面</p>
+
+<p><pre class="sh_bash">
+RESULT=`dialog --stdout  \
+   --checklist "Enable the account options you want:" 10 40 3 \   #这里是是一个可以多选的框
+  1 "Home directory" on \
+  2 "Signature file" off \
+  3 "Simple password" off`
+if [ $? == 0 ]; then
+  zenity --info --text "$RESULT\!"
+fi
+</pre></p>
+
+<p>例子很丰富，下载安装dialog的目录下有sample子文件夹，里面都是一些实现各种功能的shell脚本，大家可以去实践</p>
+
+<p><strong>3 抓取LINUX桌面的视频</strong></p>
+
+<p>注：以前很羡慕youtube的一些高清的关于linux桌面的视频，用录像工具发现很卡，后来发现了这个</p>
+
+<p>需要安装ffmpeg(opensuse11.4)</p>
+
+<p>sudo zypper addrepo -f http://ftp.gwdg.de/pub/linux/packman/suse/11.4/ packman</p>
+
+<p>sudo zypper addrepo -f http://opensuse-guide.org/repo/11.4/ dvd
+sudo zypper install ffmpeg
+ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg
+注：</p>
+
+<p>-f x11grab 指定输入类型。因为x11的缓冲区不是普通的视频文件可以侦测格式，必须指定后ffmpeg才知道如何获得输入。</p>
+
+<p>-s wxga 设置抓取区域的大小。wxga是1366*768的标准说法，也可以换成-s 800×600的写法。</p>
+
+<p>-r 25 设置帧率，即每秒抓取的画面数。</p>
+
+<p>-i :0.0 设置输入源，本地X默认在0.0</p>
+
+<p>-sameq 保持跟输入流一样的图像质量，以用来后期处理</p>
+
+<p><strong>4 最近的一个脚本，分析postfix的maillog的一些东西，其中使用了sqlite和redis的bash接口,并且格式化数据发送邮件</strong></p>
+
+<p>主要是：分析前一天的maillog，按小时，分析出那个小时里面给某邮件ISP发送的邮件的数量频率（单位封/min，第一封到最后一封，是按分钟，</p>
+
+<p>、不是按照每小时60min），计算全天给某邮件ISP的发送频率（同上，不是一天的24*60min）,计算每天给各邮件ISP发送总量，整天拒绝和弹回的邮件总量</p>
+
+<p><strong><pre class="sh_bash"></strong>
+#!/bin/bash</p>
+
+<p>START=`date +%s`
+function total(){
+for i in qq.comnum foxmail.comnum 163.comnum 126.comnum netease.comnum sina.comnum sina.com.cnnum sohu.comnum gmail.comnum yahoo.comnum yahoo.com.cnnum live.comnum hotmail.comnum mail.alipay.comnum other reject bounced
+do
+redis-bash-cli -h localhost set $i 0 2&gt;&amp;1 &gt;/dev/null
+done
+for i in qq.comint foxmail.comint 163.comint 126.comint netease.comint sina.comint sina.com.cnint sohu.comint gmail.comint yahoo.comint yahoo.com.cnint live.comint hotmail.comint mail.alipay.comint
+do
+redis-bash-cli -h localhost set $i 0 2&gt;&amp;1 &gt;/dev/null
+done
+}
+function initmail(){
+for i in qq.com foxmail.com 163.com 126.com netease.com sina.com sina.com.cn sohu.com gmail.com yahoo.com yahoo.com.cn live.com hotmail.com mail.alipay.com
+do
+redis-bash-cli -h localhost set $i 0 2&gt;&amp;1 &gt;/dev/null
+done
+}
+function init(){
+for i in 0{0..9} {10..24}; do sqlite3 test.db "CREATE TABLE IF NOT EXISTS t`date -d last-day +%m%d`$i(Name VARCHAR(40),Start INTEGER,End INTEGER,Num INTEGER)"; done
+sqlite3 test.db "CREATE TABLE IF NOT EXISTS t`date -d last-day +%m%d`(Name VARCHAR(40),DaySum VARCHAR(40),HourHigh VARCHAR(40),DayAv VARCHAR(40))";
+initmail
+}
+function status(){
+status=`echo $@|grep -Po "status=(\w+)"|cut -d '=' -f2`
+if [ "$status" = "sent" ];then
+parse $@
+elif [ "$status" = "bounced" ];then
+bou=`redis-bash-cli -h localhost get bounced`
+((bou++))
+redis-bash-cli -h localhost set bounced $bou 2&gt;&amp;1 &gt;/dev/null
+else
+if [ "`echo $@|grep reject`" != "" ];then
+rej=`redis-bash-cli -h localhost get reject`
+((rej++))
+redis-bash-cli -h localhost set reject $rej 2&gt;&amp;1 &gt;/dev/null
+fi
+fi
+}
+function add(){
+data=`redis-bash-cli -h localhost get $1 `
+mint=`redis-bash-cli -h localhost get $1int`
+mtotal=`redis-bash-cli -h localhost get $1num`
+if [ "$data" = 0 ];then
+m=`echo $@|awk '{print $4}'`
+mstart=`echo $m|cut -d ':' -f2`
+hour=`echo $m|cut -d ':' -f1`
+sqlite3 test.db "insert into t`date -d last-day +%m%d`$c (Name,Start) values ('$1','$mstart');"
+fi
+if [ "$mint" = 0 ];then
+cur=`echo "$hour * 60 + $mstart"|bc`
+redis-bash-cli -h localhost set $1int $cur 2&gt;&amp;1 &gt;/dev/null
+fi
+((data++))
+((mtotal++))
+redis-bash-cli -h localhost set $1 $data 2&gt;&amp;1 &gt;/dev/null
+redis-bash-cli -h localhost set $1num $mtotal 2&gt;&amp;1 &gt;/dev/null
+}
+function parse(){
+data=`echo $@|grep -Po 'to=&lt;(.*@.*?)&gt;'|cut -d',' -f 1|cut -d'@' -f2`
+len=`expr length $data`
+mail=${data:0:$len-1}
+if [ "$mail" = "foxmail.com" ];then
+add $mail $@
+elif [ "$mail" = "163.com" ];then
+add $mail $@
+elif [ "$mail" = "qq.com" ];then
+add $mail $@
+elif [ "$mail" = "mail.alipay.com" ];then
+add $mail $@
+elif [ "$mail" = "126.com" ];then
+add $mail $@
+elif [ "$mail" = "netease.com" ];then
+add $mail $@
+elif [ "$mail" = "sina.com" ];then
+add $mail $@
+elif [ "$mail" = "sina.com.cn" ];then
+add $mail $@
+elif [ "$mail" = "sohu.com" ];then
+add $mail $@
+elif [ "$mail" = "gmail.com" ];then
+add $mail $@
+elif [ "$mail" = "yahoo.com" ];then
+add $mail $@
+elif [ "$mail" = "yahoo.com.cn" ];then
+add $mail $@
+elif [ "$mail" = "live.com" ];then
+add $mail $@
+elif [ "$mail" = "hotmail.com" ];then
+add $mail $@
+else
+mother=`redis-bash-cli -h localhost get other`
+((mother++))
+redis-bash-cli -h localhost set other $mother 2&gt;&amp;1 &gt;/dev/null
+fi
+}
+function day(){
+day=`date -d last-day +%d`
+grep 'to=' /var/log/maillog|awk '$2=='"$day"' {print}'&gt;txt
+}
+function cal(){
+for c in 0{0..9} {10..24}
+do
+for i in qq.com foxmail.com 163.com 126.com netease.com sina.com sina.com.cn sohu.com gmail.com yahoo.com yahoo.com.cn live.com hotmail.com mail.alipay.com
+do
+tt=`redis-bash-cli -h localhost get $i`
+table=t`date -d last-day +%m%d`$c
+data=`sqlite3 test.db "select * from '"$table"' where Name='$i';"`
+if [ "$data" != "" ];then
+st=`echo $data|cut -d'|' -f2`
+ed=`echo $data|cut -d'|' -f3`
+nu=`echo $data|cut -d'|' -f4`
+cur=`expr $ed - $st`
+if [ "$cur" != 0 ];then
+d=`echo "scale=2;$nu/$cur"|bc`
+if [ `echo "$d &gt; $tt"|bc` -eq 1 ];then
+redis-bash-cli -h localhost set $i $d 2&gt;&amp;1 &gt;/dev/null
+fi
+fi
+fi
+done
+done
+}
+sqlop(){
+for i in qq.com foxmail.com 163.com 126.com netease.com sina.com sina.com.cn sohu.com gmail.com yahoo.com yahoo.com.cn live.com hotmail.com mail.alipay.com
+do
+num=`redis-bash-cli -h localhost get $i'num'`
+hi=`redis-bash-cli -h localhost get $i`
+di=`redis-bash-cli -h localhost get $i'int'`
+sqlite3 test.db "insert into t`date -d last-day +%m%d` (Name,DaySum,HourHigh,DayAv) values ('$i','$num','$hi','$di');"
+done
+}
+function caltotal(){
+for i in qq.com foxmail.com 163.com 126.com netease.com sina.com sina.com.cn sohu.com gmail.com yahoo.com yahoo.com.cn live.com hotmail.com mail.alipay.com
+do
+end=`grep 'to=&lt;.*@'"$i"'&gt;' txt|tail -n 1|awk '{print $3}'`
+mstart=`echo $end|cut -d ':' -f2`
+hour=`echo $end|cut -d ':' -f1`
+cur=`echo "$hour * 60 + $mstart"|bc`
+std=`redis-bash-cli -h localhost get $i'int'`
+sum=`redis-bash-cli -h localhost get $i'num'`
+if [ "$sum" != 0 ];then
+d=`expr $cur - $std`
+da=`echo "scale=2;$sum/$d"|bc`
+else
+da=0
+fi
+redis-bash-cli -h localhost set $i'int' $da  2&gt;&amp;1 &gt; /dev/null
+done
+}
+function sendmail()
+{
+END=`date +%s`
+otime=`date -d last-day +%d`
+s=`expr \( $END - $START \)`
+echo -n "&lt;strong&gt;您好：&lt;/br&gt;&lt;/strong&gt;" &gt; Mail
+echo -n "&lt;strong&gt;&lt;br&gt;$otime日邮件服务器数据统计&lt;/br&gt;&lt;/strong&gt;" &gt;&gt; Mail
+echo -n "&lt;table&gt;&lt;TR&gt;&lt;TD&gt;邮件ISP&lt;/TD&gt;&lt;TD&gt;本日发送总量(单位:封)&lt;/TD&gt;&lt;TD&gt;本日发送最高一小时频率（单位:封/min)&lt;/TD&gt;&lt;TD&gt;本日平均(单位:封/min)&lt;/TD&gt;&lt;/TR&gt;" &gt;&gt; Mail
+sqlite3 -html test.db  "select Name,DaySum,HourHigh,DayAv from t`date -d last-day +%m%d`;" &gt;&gt; Mail
+bou=`redis-bash-cli -h localhost get bounced`
+echo -n "&lt;TR&gt;&lt;TD&gt;被弹出邮件数量&lt;/TD&gt;&lt;TD&gt;$bou&lt;/TD&gt;&lt;/TR&gt;" &gt;&gt; Mail
+rej=`redis-bash-cli -h localhost get reject`
+echo -n "&lt;TR&gt;&lt;TD&gt;被拒绝邮件数量&lt;/TD&gt;&lt;TD&gt;$rej&lt;/TD&gt;&lt;/TR&gt;" &gt;&gt; Mail
+oth=`redis-bash-cli -h localhost get other`
+echo -n "&lt;TR&gt;&lt;TD&gt;其它类型邮件数量&lt;/TD&gt;&lt;TD&gt;$oth&lt;/TD&gt;&lt;/TR&gt;&lt;/table&gt;" &gt;&gt; Mail
+echo -n "&lt;font color="red"&gt;&lt;TR&gt;本次操作花费: $s秒&lt;/TR&gt;&lt;/font&gt;" &gt;&gt; Mail
+#cat Mail | /usr/bin/formail -I "From: dongwm@dongwm.com" -I "MIME-Version:1.0" -I "Content-type:text/html;charset=utf-8" -I "Subject:Postfix昨日邮件系统统计结果" -I "To: dongwm2@dongwm.com"|/usr/sbin/sendmail -oi dongwm2@dongwm.com
+}
+function tm(){
+for c in 0{0..9} {10..24}
+do
+awk '/'"$c"':[0-5][0-9]:[0-5][0-9]/ {print}' txt|while read line; do status $line; done
+for i in qq.com foxmail.com 163.com 126.com netease.com sina.com sina.com.cn sohu.com gmail.com yahoo.com yahoo.com.cn live.com hotmail.com mail.alipay.com
+do
+data=`redis-bash-cli -h localhost get $i`
+end=`awk '/'"$c"':[0-5][0-9]:[0-5][0-9]/ {print}' txt|grep 'to=&lt;.*@'"$i"'&gt;'|tail -n 1|awk '{print $3}'|cut -d ':' -f2`
+sqlite3 test.db "update t`date -d last-day +%m%d`$c set Num='$data',End='$end' where Name='$i';"
+done
+sleep 5
+initmail
+done
+}
+function end(){
+for i in 0{0..9} {10..24}; do sqlite3 test.db "drop table if exists t`date -d last-day +%m%d`$i"; done
+sqlite3 test.db "drop table if exists t`date -d last-day +%m%d`";
+}
+#主函数
+end
+total
+#day
+init
+tm
+cal
+caltotal
+sqlop
+sendmail
+<strong></pre>
+</strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/shiyongbeautifulsoupzhuaquyoudaocidianchaxunzidianjieguo/">使用BeautifulSoup抓取有道词典查询字典结果</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-01T00:00:00+08:00" pubdate data-updated="true">Jun 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：BeautifulSoup是python第三方类库，用于解析和修改html和xml文件。有时候不会一个英语单词想查询还要登录网站输入单词然后搜索，不如写个抓取程序玩玩</p>
+
+<p>首先将一下运行过程：</p>
+
+<p>1 登录网站http://dict.youdao.com 2 在 form区域输入要输入的英语词 3 点击‘搜索’ 4 页面返回结果 5解析html文件 6 找到相关翻译项 7 打印出来</p>
+
+<p>1  分析form（我只截取了一部分）：</p>
+
+<p><pre class="sh_html4strict">
+&lt;form method="<a>get</a>" action="<a href="view-source:http://dict.youdao.com/search">/search</a>" class="<a>c-fm-w</a>" id="<a>f</a>"&gt;    #使用‘get’方法，地址是http://dict.youdao.com/search（程序会用到）
+    &lt;!--Begin 搜索框 --&gt;
+    &lt;span class="<a>s-inpt-w</a>"&gt;
+        &lt;input type="<a>text</a>" class="<a>s-inpt</a>" autocomplete="<a>off</a>" name="<a>q</a>" id="<a>query</a>" onmouseover="<a>this.focus()</a>" onfocus="<a>this.select()</a>" maxlength="<a>256</a>"/&gt; #'name'是'q'，程序会用
+        &lt;span id="<a>hnwBtn</a>" class="<a>hand-write</a>"&gt;&lt;/span&gt;
+        &lt;!-- Begin 这两个SPAN 尽量写一行 --&gt;
+    &lt;/span&gt;&lt;span class="<a>s-btn-w</a>"&gt;
+        &lt;!-- #End 这两个SPAN 尽量写一行 --&gt;
+        &lt;input type="<a>submit</a>" class="<a>s-btn</a>" id="<a>qb</a>" value="<a>搜 索</a>"/&gt;
+        &lt;input type="<a>hidden</a>" name="<a>keyfrom</a>" value="<a>dict.index</a>"/&gt; &lt;/span&gt;
+&lt;/form &gt;
+</pre></p>
+
+<p>当提交后，看我的firebug的分析图：</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/archives/shiyongbeautifulsoupzhuaquyoudaocidianchaxunzidianjieguo/">继续阅读 &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/linuxjiqiao/">Linux技巧</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-10T00:00:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>1 cat ~/.ssh/id_rsa.pub | ssh －p port user@server &#8220;cat - &gt;&gt; ~/.ssh/authorized_keys&#8221;  #ssh-copy-id类似</strong></p>
+
+<p><strong>2 awk &#8216;BEGIN{srand()}{a[NR,rand()]=$0}END{y=0;for(i in a){print a[i];y++;if(y==num){exit;}}}&#8217;  file #从file中随机出num行显示出来</strong></p>
+
+<p><strong>3 sorted(dict.iteritems(), key=lambda d:d[1],reverse =True) #将字典dict以value按从大到小的顺序排序（python）</strong></p>
+
+<p><strong>4 history | awk &#8216;{a[$2]++}END{for(i in a){print a[i] &#8221; &#8221; i}}&#8217; | sort -rn | head #最常用的10条命令</strong></p>
+
+<p><strong>5 heapq.nlargest(10, d.iteritems(), operator.itemgetter(1)) #字典排序，返回根据value从大到小前十</strong></p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/pythonzhongduanxianshicaisezifu/">Python终端显示彩色字符</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-27T00:00:00+08:00" pubdate data-updated="true">Apr 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：作一个脚本或者程序在需要发音很多输出的时候，默认的白色会让人看的很困，但是有了彩色做个分割线或者让一些重要信息用彩色字体打印出来就好多了，以前一直在用模块实现，后来发现print借用ANSI控制码原来也可以：参见：http://www.oschina.net/code/snippet_87675_8599</p>
+
+<p>1分析这个程序</p>
+
+<p><pre class="sh_python">
+#!/usr/bin/env python
+#-*-coding:utf-8-*-
+#Filename:</p>
+
+<p>__author__ = "maqiang.jacky &lt;maqiang.jacky@snda.com&gt;"
+__version__ = 1.0
+__date__ = "12-2-9"</p>
+
+<p>"""
+0  All attributes off 默认值
+1  Bold (or Bright) 粗体 or 高亮
+4  Underline 下划线
+5  Blink 闪烁
+7  Invert 反显
+30 Black text
+31 Red text
+32 Green text
+33 Yellow text
+34 Blue text
+35 Purple text
+36 Cyan text
+37 White text
+40 Black background
+41 Red background
+42 Green background
+43 Yellow background
+44 Blue background
+45 Purple background
+46 Cyan background
+47 White background
+"""
+def main():
+    """ """
+for atrr in [0,1,4,5,7]:   0表示无属性，1表示高亮，4加下划线，5表示闪烁 ，7反显 ，8消隐 
+    print "attribute %d ------------------------------" % atrr
+    for fore in [30,31,32,33,34,35,36,37]:
+        for back in [40,41,42,43,44,45,46,47]:
+            color = "\x1B[%d;%d;%dm" % (atrr,fore,back)  #除了atrr，分别代表 字的颜色，底色
+            print "%s %d-%d-%d\x1B[0m" % (color,atrr,fore,back),
+        print ""
+if __name__ == "__main__":
+    """ """
+    main()
+</pre></p>
+
+<p>其中</p>
+
+<p>字背景颜色范围:40&#8212;-49
+40:黑
+41:深红
+42:绿
+43:黄色
+44:蓝色
+45:紫色
+46:深绿
+47:白色</p>
+
+<p>字颜色:30&#8212;&#8212;&#8212;&#8211;39
+30:黑
+31:红
+32:绿
+33:黄
+34:蓝色
+35:紫色
+36:深绿
+37:白色</p>
+
+<p>因为我不需要底色，自己写了一个方法：</p>
+
+<p><pre class="sh_python">
+def myprint(color,mes):
+    if color == 'r':
+        fore = 31
+    elif color == 'g':
+        fore = 32
+    elif color == 'b':
+        fore = 36
+    elif color == 'y':
+        fore = 33
+    else:
+        fore = 37
+    color = "\x1B[%d;%dm" % (1,fore)
+    print "%s %s\x1B[0m" % (color,mes)
+</pre></p>
+
+<p>假如想显示一段信息为红色：</p>
+
+<p>dongwm@linux-dongwm:~&gt; myprint(&#8216;r&#8217;,&#8217;some messages&#8217;)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <ul class="pager">
+    
+    <li class="previous"><a href="/blog/page/16/">&larr; Older</a></li>
+    
+    <li><a href="/blog/blog/archives">博客文章</a></li>
+    
+    <li class="next"><a href="/blog/page/14/">Newer &rarr;</a></li>
+    
+  </ul>
+</div>
+<aside class="sidebar-nav span3">
+  
+    <section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">最近发布</li>
+    
+      <li class="post">
+        <a href="/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/">ipython的一些高级用法(一)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa/">python几个特别的__开头的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/%5B%3F%5D-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d/">一个使用python的web程序员的emacs.d</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/pythonmo-fa-er/">python的魔法二:开发的&#8217;坑&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/pythonde-mo-fa/">python的魔法(一): 基本知识</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/xian-cheng-suo-de-%5B%3F%5D-ge-da-keng/">线程锁的一个大坑</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/speakerdeck/">speakerdeck</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/">分享一个准备给公司讲python高级编程的slide</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/">使用grafana和Diamond构建Graphite监控系统</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/sou-ji-xi-tong-xin-xi-de-dashboard/">搜集系统信息的dashboard</a>
+      </li>
+    
+  </ul>
+</section>
+<section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+  <li class="nav-header">个人网站</li>
+    <li class="post"><a href="http://salogs.com">带我入行的boss</a></li>
+    <li class="post"><a href="http://dongweiming.github.com/">小明明s Github Blog</a></li>
+    <li class="post"><a href="http://youhouer.appspot.com/">Love story(GAE)</a></li>
+    <li class="post"><a href="http://www.unixhot.com">unixhot运维社区</a></li>
+    <li class="post"><a href="http://www.vpsee.com">Vpsee</a></li>
+    <li class="post"><a href="http://rfyiamcool.blog.51cto.com">峰云就她了</a></li>
+    <li class="post"><a href="http://dongweiming.github.io/sed_and_awk/">sed_and_awk</a></li>
+    <li class="post"><a href="http://dongweiming.github.io/Expert-Python">Expert-Python</a></li>
+  </ul>
+</section>
+
+<section class="well">
+  <ul id="gh_repos" class="nav">
+    <li class="nav-header">GitHub帐号</li>
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/dongweiming">@dongweiming</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        github.showRepos({
+            user: 'dongweiming',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/blog/javascripts/asides/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+<section class="well">
+   <ul id="gh_repos" class="nav">
+    <li class="nav-header">标签Cloud</li>
+  </ul>
+  <div id="tag-cloud"></div>
+</section>
+
+<section class="well">
+  <ul id="gh_repos" class="nav">
+    <li class="nav-header">豆瓣阅读</li>
+  </ul>
+  <script type="text/javascript" src="http://www.douban.com/service/badge/62943420/?select=random&amp;n=10&amp;columns=2&amp;picsize=medium&amp;hidelogo=true&amp;hideself=true&amp;cat=book|music" ></script>
+  <a href="https://www.douban.com/people/62943420">@小明明</a> on Douban 
+</section>
+
+
+<section class='well'>
+<ul id='gh_repos' class='nav'>
+<li class='nav-header'>文章统计</li>
+<li>本站共有 271 篇文章</li>
+</ul>
+</section>
+
+
+  
+</aside>
+
+      </div>
+  </div>
+  <footer role="contentinfo" class="page-footer"><hr>
+<p>
+  Copyright &copy; 2014 - Dongweiming -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'dongwm';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

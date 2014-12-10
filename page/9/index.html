@@ -1,0 +1,2043 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>小明明s à domicile</title>
+  <meta name="author" content="Dongweiming">
+
+  
+  <meta name="description" content="">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dongweiming.github.com/page/9">
+  <link href="/blog/favicon.png" rel="icon">
+  <link href="/blog/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      padding-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    .page-footer p {
+      text-align: center;
+    }
+  </style>
+  <script src="/blog/javascripts/libs/jquery.js"></script>
+  <script src="/blog/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/blog/javascripts/libs/bootstrap.js"></script>
+  <script src="/blog/javascripts/octopress.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/javascripts/api.js"></script>
+  <script type="text/javascript" src="/javascripts/wordcumulus.js"></script>
+  <script type="text/javascript" src="/javascripts/swfobject.js"></script>
+  <script type="text/javascript" src="/javascripts/tagcumulus.js"></script>
+  <link href="/atom.xml" rel="alternate" title="小明明s à domicile" type="application/atom+xml">
+  <script type="text/javascript" src="/javascripts/jimdoclockzip.js"></script>
+<script type="text/javascript" src="/javascripts/sh_python.min.js"></script>
+<script type="text/javascript" src="/javascripts/sh_bash.min.js"></script>
+<script type="text/javascript" src="/javascripts/sh_main.min.js"></script>
+<link href="/stylesheets/sh_ide-anjuta.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20495125-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>            
+
+<body    onload="sh_highlightDocument('', '.js');">
+<a href="http://github.com/dongweiming/">
+<img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Follower me on GitHub">
+</a>
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a class="brand" href="/blog/">小明明s à domicile</a>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+    <li><a href="/blog/">博客主页</a></li>
+    <li><a href="/blog/blog/archives">文章列表</a></li>
+    <li><a href="/blog/zongjie">12年总结</a></li>
+    <li><a href="/blog/aboutsite">关于本站</a></li>
+    <li><a href="/blog/projects">我的项目</a></li>
+    <li><a href="http://dongweiming.github.io/sed_and_awk">sed_and_awk</a></li>
+    <li><a href="http://dongweiming.github.io/Expert-Python">Expert-Python</a></li>
+    <li><a href="/blog/aboutme">关于我</a></li>
+</ul>
+
+
+        <ul class="nav pull-right" data-subscription="rss">
+          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+          
+        </ul>
+
+        
+          <form class="pull-right navbar-search" action="http://google.com/search" method="get">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:dongweiming.github.com" />
+              <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
+            </fieldset>
+          </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
+  <div class="container">
+      <div class="row-fluid">
+      <div class="span9">
+  
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuzipimportyanjiu/">关于zipimport研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：zipimport模块实现如果sys.path中的任何项引用了 ZIP 格式的存档，则 Python 会把该存档视为目录。存档包含一个或多个模块的.py 源文件</p>
+
+<p><pre class="sh_python">
+import sys
+import zipfile
+import zipimport
+import os</p>
+
+<p>zf = zipfile.PyZipFile('zipimport_example.zip', mode='w')  #创建一个zip
+try:
+    zf.write('.')  #添加当前目录
+    zf.write('test1.py') #添加这个文件
+    zf.write('txt/README.txt')  #添加这个文件
+finally:
+    zf.close()
+for name in zf.namelist():
+    print name #打印zip档案文件
+importer = zipimport.zipimporter('zipimport_example.zip')  #导入这个zip分析</p>
+
+<p>for module_name in [ 'test1', 'not_there' ]:
+    print module_name, ':', importer.find_module(module_name) #当找到这个模块返回，没有返回none</p>
+
+<p>print importer.get_code('test1') #获取test1.py源码
+module = importer.load_module('test1')  #import导入test1.py  
+print 'Name   :', module.__name__ #模块的名字
+print 'Loader :', module.__loader__  #返回zipimporter对象
+print 'Code   :', module.datetime #返回模块的datetime方法(或者类)的引用
+source = importer.get_source('test1')  #获取test1.py源码
+print '=' * 80
+print module_name
+print '=' * 80
+print source
+print
+print importer.is_package('txt')  #我们把readme.txt 放入了txt  txt就类似于一个包
+import txt #导入txt这个包 
+data_filename = os.path.join(os.path.dirname(txt.__file__), 
+                             'README.txt')
+print data_filename, ':'
+print open(data_filename, 'rt').read()  #读取README.txt内容
+</pre></p>
+
+<p>执行：</p>
+
+<p>dongwm@linux-dongwm:~/test&gt; python test.py
+./
+test1.py
+txt/README.txt
+test1 : &lt;zipimporter object &#8220;zipimport_example.zip&#8221;&gt;
+not_there : None
+&lt;code object &lt;module&gt; at 0xb73800f8, file &#8220;zipimport_example.zip/test1.py&#8221;, line 1&gt;
+Name   : test1
+Loader : &lt;zipimporter object &#8220;zipimport_example.zip&#8221;&gt;
+Code   : &lt;module &#8216;datetime&#8217; from &#8216;/usr/lib/python2.7/lib-dynload/datetime.so&#8217;&gt;
+================================================================================
+not_there
+================================================================================
+from SimpleXMLRPCServer import SimpleXMLRPCServer
+from xmlrpclib import Binary
+import datetime</p>
+
+<p>server = SimpleXMLRPCServer((&#8216;localhost&#8217;, 9000), logRequests=True, allow_none=True)
+server.register_introspection_functions()
+server.register_multicall_functions()</p>
+
+<p>class ExampleService:</p>
+
+<p>def ping(self):
+&#8221;&#8221;&#8220;Simple function to respond when called to demonstrate connectivity.&#8221;&#8220;&#8221;
+return True</p>
+
+<p>def now(self):
+&#8221;&#8221;&#8220;Returns the server current date and time.&#8221;&#8220;&#8221;
+return datetime.datetime.now()</p>
+
+<p>def show_type(self, arg):
+&#8221;&#8221;&#8220;Illustrates how types are passed in and out of server methods.</p>
+
+<p>Accepts one argument of any type.
+Returns a tuple with string representation of the value,
+the name of the type, and the value itself.
+&#8221;&#8221;&#8221;
+return (str(arg), str(type(arg)), arg)</p>
+
+<p>def raises_exception(self, msg):
+&#8220;Always raises a RuntimeError with the message passed in&#8221;
+raise RuntimeError(msg)</p>
+
+<p>def send_back_binary(self, bin):
+&#8220;Accepts single Binary argument, unpacks and repacks it to return it&#8221;
+data = bin.data
+response = Binary(data)
+return response
+<pre class="sh_python">
+import sys
+sys.path.insert(0, 'zipimport_example.zip')
+print txt.__file__
+print txt.__loader__.get_data('txt/README.txt')  #导入模块使用get_data获取数据，而不能只是 open(os.path.join(os.path.dirname(txt.__file__), 'README.txt'), 'rt').read()
+</pre></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuzipfileyanjiu/">关于zipfile研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：zipfile是一个读写ZIP档案文件的模块</p>
+
+<p><pre class="sh_python">
+import zipfile
+import datetime</p>
+
+<p>for filename in [ 'README.txt', 'example.zip', 'bad_example.zip', 'notthere.zip' ]:
+    print '%20s %s' % (filename, zipfile.is_zipfile(filename))  #返回一个布尔值, 判断给定的文件是否是一个有效的ZIP文件.
+zf = zipfile.ZipFile('example.zip', 'r')  
+print zf.namelist() #读取现有存档中所有文件的名字  返回一个列表
+def print_info(archive_name):
+    zf = zipfile.ZipFile(archive_name)
+    for info in zf.infolist(): #访问存档内容的所有元数据
+        print info.filename
+        print '\tComment:\t', info.comment  #注释信息
+        print '\tModified:\t', datetime.datetime(*info.date_time) #修改时间
+        print '\tSystem:\t\t', info.create_system, '(0 = Windows, 3 = Unix)' #系统  3便是linux
+        print '\tZIP version:\t', info.create_version
+        print '\tCompressed:\t', info.compress_size, 'bytes' #压缩后的大小
+        print '\tUncompressed:\t', info.file_size, 'bytes' #压缩前大小
+        print
+print_info('example.zip')
+zf = zipfile.ZipFile('example.zip') 
+for filename in [ 'README.txt', 'notthere.txt' ]:
+    try:
+        info = zf.getinfo(filename) #通过文件名获取ZipInfo对象
+    except KeyError:
+        print 'ERROR: Did not find %s in zip file' % filename
+    else:
+        print '%s is %d bytes' % (info.filename, info.file_size)</p>
+
+<p>    try:
+        data = zf.read(filename) #读取访问存档文件的数据，必要时, 数据会自动解压缩.
+    except KeyError:
+        print 'ERROR: Did not find %s in zip file' % filename
+    else:
+        print filename, ':'
+        print repr(data)
+        print
+print 'creating archive'
+zf = zipfile.ZipFile('zipfile_write.zip', mode='w')  #创建zip存档文件，档案中任何现有文件会被清空, 开始新档案
+try:
+    print 'adding README.txt'
+    zf.write('README.txt')  #增加文件
+finally:
+    print 'closing'
+    zf.close()</p>
+
+<p>print
+</pre></p>
+
+<p>执行结果：
+dongwm@linux-dongwm:~&gt; python test.py
+README.txt False
+example.zip True
+bad_example.zip False
+notthere.zip False
+[&#8216;README.txt&#8217;]
+README.txt
+Comment:
+Modified:    2012-06-18 15:40:00
+System:        3 (0 = Windows, 3 = Unix)
+ZIP version:    20
+Compressed:    9 bytes
+Uncompressed:    9 bytes</p>
+
+<p>README.txt is 9 bytes
+README.txt :
+&#8216;test mes\n&#8217;</p>
+
+<p>ERROR: Did not find notthere.txt in zip file
+ERROR: Did not find notthere.txt in zip file
+creating archive
+adding README.txt
+closing
+<pre class="sh_python">
+import zipfile
+import sys 
+try:
+    import zlib
+    compression = zipfile.ZIP_DEFLATED #zlib模块提供压缩功能. 如果zlib是可用的, 你能使用zipfile.ZIP_DEFLATED对个人文件或者整个档案设置压缩模式.
+except:
+    compression = zipfile.ZIP_STORED #默认压缩模式为zipfile.ZIP_STORED.</p>
+
+<p>modes = { zipfile.ZIP_DEFLATED: 'deflated',
+    zipfile.ZIP_STORED: 'stored',
+}</p>
+
+<p>print 'creating archive'
+zf = zipfile.ZipFile('zipfile_write_compression.zip', mode='w')
+try:
+    print 'adding README.txt with compression mode', modes[compression]
+    zf.write('README.txt', compress_type=compression)
+finally:
+    print 'closing'
+    zf.close()</p>
+
+<p>print
+zf = zipfile.ZipFile('zipfile_write_arcname.zip', mode='w')
+try:
+    zf.write('README.txt', arcname='NOT_README.txt') #将一个文件添加到存档中, 但命名不能是原始文件名,而是重命名为'NOT_README.txt'
+finally:
+    zf.close()
+msg = 'This data did not exist in a file before being added to the ZIP file'
+zf = zipfile.ZipFile('zipfile_writestr.zip',
+ mode='w',
+ compression=zipfile.ZIP_DEFLATED,
+)
+try:
+    zf.writestr('from_string.txt', msg)  #将数据直接写到存档zip的这个文件里
+finally:
+    zf.close()
+msg = 'This data did not exist in a file before being added to the ZIP file'
+zf = zipfile.ZipFile('zipfile_writestr_zipinfo.zip', mode='w',)
+try:
+    info = zipfile.ZipInfo('from_string.txt', date_time=time.localtime(time.time()),) #创建一个ZipInfo实例，修改时间
+    info.compress_type=zipfile.ZIP_DEFLATED #修改压缩方式
+    info.comment='Remarks go here' #添加文件注释
+    info.create_system=0 #修改文件的系统信息 这里变成了windows系统
+    zf.writestr(info, msg) #将数据写道这个ZipInfo实例 也就是把from_string.txt的属性和内容都修改了
+finally:
+    zf.close()
+zf = zipfile.ZipFile('zipfile_append.zip', mode='a')  #模式'a'是追加模式，追加一个文件或在一个现有文件的末尾增加一个档案文件
+try:
+    zf.write('README.txt', arcname='README2.txt')
+finally:
+    zf.close()
+zf = zipfile.PyZipFile('zipfile_pyzipfile.zip', mode='w') #直接将当前目录压缩打包，还能编译py脚本
+    try:
+        zf.debug = 3
+        print 'Adding python files'
+        zf.writepy('.') #PyZipFile浏览目录寻找.py文件, 并且将关联文件 <tt>.pyo</tt> 或 <tt>.pyc</tt> 加入到档案中. 如果两者都不存在, 则生成一个.pyc文件, 并将其加入到档案中.
+    finally:
+        zf.close()
+        for name in zf.namelist():
+            print name</p>
+
+<p>    print
+    sys.path.insert(0, 'zipfile_pyzipfile.zip')
+    import zipfile_pyzipfile
+    print 'Imported from:', zipfile_pyzipfile.__file__
+</pre></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuxmlrpclibyanjiu/">关于xmlrpclib研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>&nbsp;</p>
+
+<p>前言：xmlrpclib是python中用于xmlrpc调用的模块</p>
+
+<p>以下例子的服务器端：</p>
+
+<p><pre class="sh_python">
+from SimpleXMLRPCServer import SimpleXMLRPCServer
+from xmlrpclib import Binary
+import cPickle as pickle
+import datetime</p>
+
+<p>server = SimpleXMLRPCServer(('localhost', 9000), logRequests=True, allow_none=True)
+server.register_introspection_functions()
+server.register_multicall_functions()</p>
+
+<p>class ExampleService:</p>
+
+<p>    def ping(self):
+        return True </p>
+
+<p>    def now(self):
+        return datetime.datetime.now()  #返回当前时间</p>
+
+<p>    def show_type(self, arg):
+        return (str(arg), str(type(arg)), arg)</p>
+
+<p>    def raises_exception(self, msg):
+        raise RuntimeError(msg)</p>
+
+<p>    def send_back_binary(self, bin):
+        data = bin.data
+        response = Binary(data)
+        return response</p>
+
+<p>server.register_instance(ExampleService())</p>
+
+<p>try:
+    print 'Use Control-C to exit'
+    server.serve_forever()
+except KeyboardInterrupt:
+    print 'Exiting'
+</pre></p>
+
+<p><pre class="sh_python">
+import xmlrpclib
+import datetime</p>
+
+<p>server = xmlrpclib.ServerProxy('http://localhost:9000', verbose=True) #返回一个连接服务器的实例,verbose=True显示调试信息，否则直接输出结果
+                                                #encoding='gbk':默认的编码是utf－8，这里可以修改成'gbk'。
+print 'Ping:', server.ping()   #上面定义 返回True  这里就会显示：True
+server = xmlrpclib.ServerProxy('http://localhost:9000', allow_none=True) #allow_none=True便表示容许把none自动转化成'nil'
+print 'Allowed:', server.show_type(None)</p>
+
+<p>server = xmlrpclib.ServerProxy('http://localhost:9000', allow_none=False) 
+print 'Not allowed:', server.show_type(None) #触发TypeError
+for t, v in [ ('boolean', True),   #XML-RPC协议识别有限的常见的数据类型
+              ('integer', 1),
+              ('floating-point number', 2.5),
+              ('string', 'some text'), 
+              ('datetime', datetime.datetime.now()),
+              ('array', ['a', 'list']),
+              ('array', ('a', 'tuple')),
+              ('structure', {'a':'dictionary'}),
+            ]:
+    print '%-22s:' % t, server.show_type(v)
+class MyObj:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def __repr__(self):
+        return 'MyObj(%s, %s)' % (repr(self.a), repr(self.b))
+o = MyObj(1, 'b goes here')
+print 'o=', o
+print server.show_type(o)
+o2 = MyObj(2, o)  #传递对象给o2 ，把{'a': 1, 'b': 'b goes here'} 传递给key：b的值
+print 'o2=', o2
+print server.show_type(o2)
+o = MyObj(1, 'b goes here')
+print 'Local:', o, id(o) 
+print 'As object:', server.show_type(o) 
+p = pickle.dumps(o) #数据持久化
+b = xmlrpclib.Binary(p)  #二进制模式传送
+r = server.send_back_binary(b) #返回数据
+o2 = pickle.loads(r.data)  #还原持久化
+print 'From pickle:', o2, id(o2)  #数据相同，但是id不同 因为是不一样的对象
+try:
+    server.raises_exception('A message')
+except Exception, err:
+    print 'Fault code:', err.faultCode  #触发异常的code
+    print 'Message   :', err.faultString #触发异常相应的内容
+s = 'This is a string with control characters' + '\0' #包含无效的XML字符
+print 'Local string:', s</p>
+
+<p>data = xmlrpclib.Binary(s) #需要传递二进制数据，最好是使用<tt>二进制</tt>类编码
+print 'As binary:', server.send_back_binary(data)  #正常打印</p>
+
+<p>print 'As string:', server.show_type(s) #但是xml不识别  触发异常
+multicall = xmlrpclib.MultiCall(server)  #同时查询某一个连接对象的返回
+multicall.ping()  #返回：  0：True   前面的数值自增长
+multicall.show_type(1)
+multicall.raises_exception('Next to last call stops execution') #这里一个触发，multicall就不再继续了
+multicall.show_type('string')</p>
+
+<p>for i, r in enumerate(multicall()):
+    print i, r
+</pre></p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuxml-etree-elementtreeyanjiujiexipian/">关于xml.etree.ElementTree研究(解析篇)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>&nbsp;</p>
+
+<p>前言：xml.etree.ElementTree是xml模块中的一部分，从python2.5开始添加，是一个处理xml的接口模块</p>
+
+<p>这里有一个需要解析的opml文件（<a href="http://www.opml.org/">OPML</a>(Outline Processor Markup Language)是建立在XML基础上的“大纲处理标记语言”，</p>
+
+<p>主要用于描述一份资料的结构。它的优势是订阅集中及分享）：</p>
+
+<p><pre class="sh_xml">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;  #这个例子是podcasts.opml
+&lt;opml version="1.0"&gt;
+&lt;head&gt;
+	&lt;title&gt;My Podcasts&lt;/title&gt;
+	&lt;dateCreated&gt;Sun, 07 Mar 2010 15:53:26 GMT&lt;/dateCreated&gt;
+	&lt;dateModified&gt;Sun, 07 Mar 2010 15:53:26 GMT&lt;/dateModified&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;outline text="Science and Tech"&gt;
+    &lt;outline text="APM: Future Tense" type="rss" 
+             xmlUrl="http://www.publicradio.org/columns/futuretense/podcast.xml" 
+             htmlUrl="http://www.publicradio.org/columns/futuretense/" /&gt;
+	&lt;outline text="Engines Of Our Ingenuity Podcast" type="rss" 
+             xmlUrl="http://www.npr.org/rss/podcast.php?id=510030" 
+             htmlUrl="http://www.uh.edu/engines/engines.htm" /&gt;
+	&lt;outline text="Science &amp;#38; the City" type="rss" 
+             xmlUrl="http://www.nyas.org/Podcasts/Atom.axd" 
+             htmlUrl="http://www.nyas.org/WhatWeDo/SciencetheCity.aspx" /&gt;
+  &lt;/outline&gt;
+  &lt;outline text="Books and Fiction"&gt;
+	&lt;outline text="Podiobooker" type="rss" 
+             xmlUrl="http://feeds.feedburner.com/podiobooks" 
+             htmlUrl="http://www.podiobooks.com/blog" /&gt;
+	&lt;outline text="The Drabblecast" type="rss" 
+             xmlUrl="http://web.me.com/normsherman/Site/Podcast/rss.xml" 
+             htmlUrl="http://web.me.com/normsherman/Site/Podcast/Podcast.html" /&gt;
+	&lt;outline text="tor.com / category / tordotstories" type="rss" 
+             xmlUrl="http://www.tor.com/rss/category/TorDotStories" 
+             htmlUrl="http://www.tor.com/" /&gt;
+  &lt;/outline&gt;
+  &lt;outline text="Computers and Programming"&gt;
+	&lt;outline text="MacBreak Weekly" type="rss" 
+             xmlUrl="http://leo.am/podcasts/mbw" 
+             htmlUrl="http://twit.tv/mbw" /&gt;
+	&lt;outline text="FLOSS Weekly" type="rss" 
+             xmlUrl="http://leo.am/podcasts/floss" 
+             htmlUrl="http://twit.tv" /&gt;
+	&lt;outline text="Core Intuition" type="rss" 
+             xmlUrl="http://www.coreint.org/podcast.xml" 
+             htmlUrl="http://www.coreint.org/" /&gt;
+  &lt;/outline&gt;
+  &lt;outline text="Python"&gt;
+    &lt;outline text="PyCon Podcast" type="rss" 
+             xmlUrl="http://advocacy.python.org/podcasts/pycon.rss" 
+             htmlUrl="http://advocacy.python.org/podcasts/" /&gt;
+	&lt;outline text="A Little Bit of Python" type="rss" 
+             xmlUrl="http://advocacy.python.org/podcasts/littlebit.rss" 
+             htmlUrl="http://advocacy.python.org/podcasts/" /&gt;
+	&lt;outline text="Django Dose Everything Feed" type="rss" 
+             xmlUrl="http://djangodose.com/everything/feed/" /&gt;
+  &lt;/outline&gt;
+  &lt;outline text="Miscelaneous"&gt;
+	&lt;outline text="dhellmann's CastSampler Feed" type="rss" 
+             xmlUrl="http://www.castsampler.com/cast/feed/rss/dhellmann/" 
+             htmlUrl="http://www.castsampler.com/users/dhellmann/" /&gt;
+  &lt;/outline&gt;
+&lt;/body&gt;
+&lt;/opml&gt;
+</pre></p>
+
+<p>&nbsp;</p>
+
+<p><pre class="sh_xml">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;  #这个例子是data.xml
+&lt;top&gt;
+  &lt;child&gt;This child contains text.&lt;/child&gt;
+  &lt;child_with_tail&gt;This child has regular text.&lt;/child_with_tail&gt;And "tail" text.
+  &lt;with_attributes name="value" foo="bar" /&gt;
+  &lt;entity_expansion attribute="This &amp;#38; That"&gt;That &amp;#38; This&lt;/entity_expansion&gt;
+&lt;/top&gt;
+</pre></p>
+
+<p>&nbsp;</p>
+
+<p><pre class="sh_python">
+from xml.etree import ElementTree</p>
+
+<p>with open('podcasts.opml', 'rt') as f:
+    tree = ElementTree.parse(f)  #返回一个ElementTree的对象</p>
+
+<p>print tree</p>
+
+<p>for node in tree.iter():  #遍历解析树
+    print node.tag, node.attrib #标签和值 </p>
+
+<p>for node in tree.iter('outline'): #遍历outline部分
+    name = node.attrib.get('text') 
+    url = node.attrib.get('xmlUrl')
+    if name and url:
+        print '  %s :: %s' % (name, url)
+    else:
+        print name</p>
+
+<p>for node in tree.findall('.//outline'): #没有用getiterator()，而是findall出一个列表迭代 outline是node的名字
+    url = node.attrib.get('xmlUrl')
+    if url:
+        print url
+for node in tree.findall('.//outline/outline'): #寻找2级层次的node 就是node'outline'的子node是'outline'的过滤
+    url = node.attrib.get('xmlUrl')
+    print url
+</pre></p>
+
+<p>&nbsp;</p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+&lt;xml.etree.ElementTree.ElementTree object at 0xb748e58c&gt;
+opml {&#8216;version&#8217;: &#8216;1.0&#8217;}
+head {}
+title {}
+dateCreated {}
+dateModified {}
+body {}
+outline {&#8216;text&#8217;: &#8216;Science and Tech&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://www.publicradio.org/columns/futuretense/podcast.xml&#8217;, &#8216;text&#8217;: &#8216;APM: Future Tense&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://www.publicradio.org/columns/futuretense/&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://www.npr.org/rss/podcast.php?id=510030&#8217;, &#8216;text&#8217;: &#8216;Engines Of Our Ingenuity Podcast&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://www.uh.edu/engines/engines.htm&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://www.nyas.org/Podcasts/Atom.axd&#8217;, &#8216;text&#8217;: &#8216;Science &amp; the City&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://www.nyas.org/WhatWeDo/SciencetheCity.aspx&#8217;}
+outline {&#8216;text&#8217;: &#8216;Books and Fiction&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://feeds.feedburner.com/podiobooks&#8217;, &#8216;text&#8217;: &#8216;Podiobooker&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://www.podiobooks.com/blog&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://web.me.com/normsherman/Site/Podcast/rss.xml&#8217;, &#8216;text&#8217;: &#8216;The Drabblecast&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://web.me.com/normsherman/Site/Podcast/Podcast.html&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://www.tor.com/rss/category/TorDotStories&#8217;, &#8216;text&#8217;: &#8216;tor.com / category / tordotstories&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://www.tor.com/&#8217;}
+outline {&#8216;text&#8217;: &#8216;Computers and Programming&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://leo.am/podcasts/mbw&#8217;, &#8216;text&#8217;: &#8216;MacBreak Weekly&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://twit.tv/mbw&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://leo.am/podcasts/floss&#8217;, &#8216;text&#8217;: &#8216;FLOSS Weekly&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://twit.tv&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://www.coreint.org/podcast.xml&#8217;, &#8216;text&#8217;: &#8216;Core Intuition&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://www.coreint.org/&#8217;}
+outline {&#8216;text&#8217;: &#8216;Python&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://advocacy.python.org/podcasts/pycon.rss&#8217;, &#8216;text&#8217;: &#8216;PyCon Podcast&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://advocacy.python.org/podcasts/&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://advocacy.python.org/podcasts/littlebit.rss&#8217;, &#8216;text&#8217;: &#8216;A Little Bit of Python&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://advocacy.python.org/podcasts/&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://djangodose.com/everything/feed/&#8217;, &#8216;text&#8217;: &#8216;Django Dose Everything Feed&#8217;, &#8216;type&#8217;: &#8216;rss&#8217;}
+outline {&#8216;text&#8217;: &#8216;Miscelaneous&#8217;}
+outline {&#8216;xmlUrl&#8217;: &#8216;http://www.castsampler.com/cast/feed/rss/dhellmann/&#8217;, &#8216;text&#8217;: &#8220;dhellmann&#8217;s CastSampler Feed&#8221;, &#8216;type&#8217;: &#8216;rss&#8217;, &#8216;htmlUrl&#8217;: &#8216;http://www.castsampler.com/users/dhellmann/&#8217;}
+Science and Tech
+APM: Future Tense :: http://www.publicradio.org/columns/futuretense/podcast.xml
+Engines Of Our Ingenuity Podcast :: http://www.npr.org/rss/podcast.php?id=510030
+Science &amp; the City :: http://www.nyas.org/Podcasts/Atom.axd
+Books and Fiction
+Podiobooker :: http://feeds.feedburner.com/podiobooks
+The Drabblecast :: http://web.me.com/normsherman/Site/Podcast/rss.xml
+tor.com / category / tordotstories :: http://www.tor.com/rss/category/TorDotStories
+Computers and Programming
+MacBreak Weekly :: http://leo.am/podcasts/mbw
+FLOSS Weekly :: http://leo.am/podcasts/floss
+Core Intuition :: http://www.coreint.org/podcast.xml
+Python
+PyCon Podcast :: http://advocacy.python.org/podcasts/pycon.rss
+A Little Bit of Python :: http://advocacy.python.org/podcasts/littlebit.rss
+Django Dose Everything Feed :: http://djangodose.com/everything/feed/
+Miscelaneous
+dhellmann&#8217;s CastSampler Feed :: http://www.castsampler.com/cast/feed/rss/dhellmann/
+http://www.publicradio.org/columns/futuretense/podcast.xml
+http://www.npr.org/rss/podcast.php?id=510030
+http://www.nyas.org/Podcasts/Atom.axd
+http://feeds.feedburner.com/podiobooks
+http://web.me.com/normsherman/Site/Podcast/rss.xml
+http://www.tor.com/rss/category/TorDotStories
+http://leo.am/podcasts/mbw
+http://leo.am/podcasts/floss
+http://www.coreint.org/podcast.xml
+http://advocacy.python.org/podcasts/pycon.rss
+http://advocacy.python.org/podcasts/littlebit.rss
+http://djangodose.com/everything/feed/
+http://www.castsampler.com/cast/feed/rss/dhellmann/
+http://www.publicradio.org/columns/futuretense/podcast.xml
+http://www.npr.org/rss/podcast.php?id=510030
+http://www.nyas.org/Podcasts/Atom.axd
+http://feeds.feedburner.com/podiobooks
+http://web.me.com/normsherman/Site/Podcast/rss.xml
+http://www.tor.com/rss/category/TorDotStories
+http://leo.am/podcasts/mbw
+http://leo.am/podcasts/floss
+http://www.coreint.org/podcast.xml
+http://advocacy.python.org/podcasts/pycon.rss
+http://advocacy.python.org/podcasts/littlebit.rss
+http://djangodose.com/everything/feed/
+http://www.castsampler.com/cast/feed/rss/dhellmann/
+<pre class="sh_python">
+from xml.etree import ElementTree</p>
+
+<p>with open('data.xml', 'rt') as f:
+    tree = ElementTree.parse(f)</p>
+
+<p>node = tree.find('./with_attributes') #找到这个节点
+print node.tag #打印这个节点的值
+for name, value in sorted(node.attrib.items()): #
+    print '  %-4s = "%s"' % (name, value)</p>
+
+<p>for path in [ './child', './child_with_tail' ]:
+    node = tree.find(path)
+    print node.tag
+    print '  child node text:', node.text  #标签中间部分
+    print '  and tail text  :', node.tail  #标签结束后的那部分</p>
+
+<p>node = tree.find('entity_expansion')
+print node.tag
+print '  in attribute:', node.attrib['attribute']  #获取这个标签的属性
+print '  in text     :', node.text #获取这个标签的值
+</pre></p>
+
+<p>&nbsp;</p>
+
+<p>执行结果：</p>
+
+<p>with_attributes
+foo  = &#8220;bar&#8221;
+name = &#8220;value&#8221;
+child
+child node text: This child contains text.
+and tail text  :</p>
+
+<p>child_with_tail
+child node text: This child has regular text.
+and tail text  : And &#8220;tail&#8221; text.</p>
+
+<p>entity_expansion
+in attribute: This &amp; That  #转换为适当的字符值返回
+in text     : That &amp; This</p>
+
+<p><pre class="sh_python">
+from xml.etree.ElementTree import iterparse</p>
+
+<p>depth = 0
+prefix_width = 8
+prefix_dots = '.' * prefix_width
+line_template = '{prefix:&lt;0.{prefix_len}}{event:&lt;8}{suffix:&lt;{suffix_len}} {node.tag:&lt;12} {node_id}'  #模式匹配</p>
+
+<p>for (event, node) in iterparse('podcasts.opml', ['start', 'end', 'start-ns', 'end-ns']): #iterparse返回一个迭代产生的元组
+                                   #包含事件的名称和触发事件的节点，这些事件：包含在参数第二个参数的列表
+    if event == 'end':
+        depth -= 1  #当事件结束深度－1</p>
+
+<p>    prefix_len = depth * 2</p>
+
+<p>    print line_template.format(prefix=prefix_dots,  #解析格式化  前缀使用设定的一定位数的'.'
+                               prefix_len=prefix_len,
+                               suffix='',
+                               suffix_len=(prefix_width - prefix_len),
+                               node=node,
+                               node_id=id(node),
+                               event=event,
+                               )</p>
+
+<p>    if event == 'start':
+        depth += 1
+
+</pre></p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+start            opml         3074976588
+..start          head         3074976748
+&#8230;.start        title        3074976908
+&#8230;.end          title        3074976908
+&#8230;.start        dateCreated  3074977228
+&#8230;.end          dateCreated  3074977228
+&#8230;.start        dateModified 3074977292
+&#8230;.end          dateModified 3074977292
+..end            head         3074976748
+..start          body         3074977324
+&#8230;.start        outline      3074977420
+&#8230;&#8230;start      outline      3074977644
+&#8230;&#8230;end        outline      3074977644
+&#8230;&#8230;start      outline      3074977676
+&#8230;&#8230;end        outline      3074977676
+&#8230;&#8230;start      outline      3074990124
+&#8230;&#8230;end        outline      3074990124
+&#8230;.end          outline      3074977420
+&#8230;.start        outline      3074990188
+&#8230;&#8230;start      outline      3074990220
+&#8230;&#8230;end        outline      3074990220
+&#8230;&#8230;start      outline      3074990156
+&#8230;&#8230;end        outline      3074990156
+&#8230;&#8230;start      outline      3074990284
+&#8230;&#8230;end        outline      3074990284
+&#8230;.end          outline      3074990188
+&#8230;.start        outline      3074990348
+&#8230;&#8230;start      outline      3074990380
+&#8230;&#8230;end        outline      3074990380
+&#8230;&#8230;start      outline      3074990316
+&#8230;&#8230;end        outline      3074990316
+&#8230;&#8230;start      outline      3074990412
+&#8230;&#8230;end        outline      3074990412
+&#8230;.end          outline      3074990348
+&#8230;.start        outline      3074990508
+&#8230;&#8230;start      outline      3074990444
+&#8230;&#8230;end        outline      3074990444
+&#8230;&#8230;start      outline      3074990476
+&#8230;&#8230;end        outline      3074990476
+&#8230;&#8230;start      outline      3074990636
+&#8230;&#8230;end        outline      3074990636
+&#8230;.end          outline      3074990508
+&#8230;.start        outline      3074990700
+&#8230;&#8230;start      outline      3074990604
+&#8230;&#8230;end        outline      3074990604
+&#8230;.end          outline      3074990700
+..end            body         3074977324
+end              opml         3074976588</p>
+
+<p><pre class="sh_python">
+import csv
+from xml.etree.ElementTree import iterparse
+import sys</p>
+
+<p>writer = csv.writer(sys.stdout, quoting=csv.QUOTE_NONNUMERIC)  #将xml解析成csv文件格式</p>
+
+<p>group_name = ''</p>
+
+<p>for (event, node) in iterparse('podcasts.opml', events=['start']):  
+    if node.tag != 'outline':
+        continue
+    if not node.attrib.get('xmlUrl'):
+        group_name = node.attrib['text']
+    else:
+        # Output a podcast entry
+        writer.writerow( (group_name, node.attrib['text'],
+                          node.attrib['xmlUrl'],
+                          node.attrib.get('htmlUrl', ''),
+                          )
+                         )
+</pre></p>
+
+<p>&nbsp;</p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+&#8220;Science and Tech&#8221;,&#8221;APM: Future Tense&#8221;,&#8221;http://www.publicradio.org/columns/futuretense/podcast.xml&#8221;,&#8221;http://www.publicradio.org/columns/futuretense/&#8221;
+&#8220;Science and Tech&#8221;,&#8221;Engines Of Our Ingenuity Podcast&#8221;,&#8221;http://www.npr.org/rss/podcast.php?id=510030&#8221;,&#8221;http://www.uh.edu/engines/engines.htm&#8221;
+&#8220;Science and Tech&#8221;,&#8221;Science &amp; the City&#8221;,&#8221;http://www.nyas.org/Podcasts/Atom.axd&#8221;,&#8221;http://www.nyas.org/WhatWeDo/SciencetheCity.aspx&#8221;
+&#8220;Books and Fiction&#8221;,&#8221;Podiobooker&#8221;,&#8221;http://feeds.feedburner.com/podiobooks&#8221;,&#8221;http://www.podiobooks.com/blog&#8221;
+&#8220;Books and Fiction&#8221;,&#8221;The Drabblecast&#8221;,&#8221;http://web.me.com/normsherman/Site/Podcast/rss.xml&#8221;,&#8221;http://web.me.com/normsherman/Site/Podcast/Podcast.html&#8221;
+&#8220;Books and Fiction&#8221;,&#8221;tor.com / category / tordotstories&#8221;,&#8221;http://www.tor.com/rss/category/TorDotStories&#8221;,&#8221;http://www.tor.com/&#8221;
+&#8220;Computers and Programming&#8221;,&#8221;MacBreak Weekly&#8221;,&#8221;http://leo.am/podcasts/mbw&#8221;,&#8221;http://twit.tv/mbw&#8221;
+&#8220;Computers and Programming&#8221;,&#8221;FLOSS Weekly&#8221;,&#8221;http://leo.am/podcasts/floss&#8221;,&#8221;http://twit.tv&#8221;
+&#8220;Computers and Programming&#8221;,&#8221;Core Intuition&#8221;,&#8221;http://www.coreint.org/podcast.xml&#8221;,&#8221;http://www.coreint.org/&#8221;
+&#8220;Python&#8221;,&#8221;PyCon Podcast&#8221;,&#8221;http://advocacy.python.org/podcasts/pycon.rss&#8221;,&#8221;http://advocacy.python.org/podcasts/&#8221;
+&#8220;Python&#8221;,&#8221;A Little Bit of Python&#8221;,&#8221;http://advocacy.python.org/podcasts/littlebit.rss&#8221;,&#8221;http://advocacy.python.org/podcasts/&#8221;
+&#8220;Python&#8221;,&#8221;Django Dose Everything Feed&#8221;,&#8221;http://djangodose.com/everything/feed/&#8221;,&#8221;&#8221;
+&#8220;Miscelaneous&#8221;,&#8221;dhellmann&#8217;s CastSampler Feed&#8221;,&#8221;http://www.castsampler.com/cast/feed/rss/dhellmann/&#8221;,&#8221;http://www.castsampler.com/users/dhellmann/&#8221;
+<pre class="sh_python">
+import csv
+from xml.etree.ElementTree import XMLTreeBuilder  #创建一个自定义的xml数建构
+import sys</p>
+
+<p>class PodcastListToCSV(object):</p>
+
+<p>    def __init__(self, outputFile):
+        self.writer = csv.writer(outputFile, quoting=csv.QUOTE_NONNUMERIC)
+        self.group_name = ''
+        return</p>
+
+<p>    def start(self, tag, attrib):
+        if tag != 'outline':
+            return
+        if not attrib.get('xmlUrl'):
+            self.group_name = attrib['text']
+        else:
+            self.writer.writerow( (self.group_name, attrib['text'],
+                                   attrib['xmlUrl'],
+                                   attrib.get('htmlUrl', ''),
+                                   )
+                                  )</p>
+
+<p>    def end(self, tag):
+        pass  #放弃关闭标签
+    def data(self, data):
+        pass  #放弃node数据
+    def close(self):
+        return #什么都不做</p>
+
+<p>target = PodcastListToCSV(sys.stdout)
+parser = XMLTreeBuilder(target=target)
+with open('podcasts.opml', 'rt') as f:
+    for line in f:
+        parser.feed(line)
+parser.close()
+</pre>
+执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+&#8220;Science and Tech&#8221;,&#8221;APM: Future Tense&#8221;,&#8221;http://www.publicradio.org/columns/futuretense/podcast.xml&#8221;,&#8221;http://www.publicradio.org/columns/futuretense/&#8221;
+&#8220;Science and Tech&#8221;,&#8221;Engines Of Our Ingenuity Podcast&#8221;,&#8221;http://www.npr.org/rss/podcast.php?id=510030&#8221;,&#8221;http://www.uh.edu/engines/engines.htm&#8221;
+&#8220;Science and Tech&#8221;,&#8221;Science &amp; the City&#8221;,&#8221;http://www.nyas.org/Podcasts/Atom.axd&#8221;,&#8221;http://www.nyas.org/WhatWeDo/SciencetheCity.aspx&#8221;
+&#8220;Books and Fiction&#8221;,&#8221;Podiobooker&#8221;,&#8221;http://feeds.feedburner.com/podiobooks&#8221;,&#8221;http://www.podiobooks.com/blog&#8221;
+&#8220;Books and Fiction&#8221;,&#8221;The Drabblecast&#8221;,&#8221;http://web.me.com/normsherman/Site/Podcast/rss.xml&#8221;,&#8221;http://web.me.com/normsherman/Site/Podcast/Podcast.html&#8221;
+&#8220;Books and Fiction&#8221;,&#8221;tor.com / category / tordotstories&#8221;,&#8221;http://www.tor.com/rss/category/TorDotStories&#8221;,&#8221;http://www.tor.com/&#8221;
+&#8220;Computers and Programming&#8221;,&#8221;MacBreak Weekly&#8221;,&#8221;http://leo.am/podcasts/mbw&#8221;,&#8221;http://twit.tv/mbw&#8221;
+&#8220;Computers and Programming&#8221;,&#8221;FLOSS Weekly&#8221;,&#8221;http://leo.am/podcasts/floss&#8221;,&#8221;http://twit.tv&#8221;
+&#8220;Computers and Programming&#8221;,&#8221;Core Intuition&#8221;,&#8221;http://www.coreint.org/podcast.xml&#8221;,&#8221;http://www.coreint.org/&#8221;
+&#8220;Python&#8221;,&#8221;PyCon Podcast&#8221;,&#8221;http://advocacy.python.org/podcasts/pycon.rss&#8221;,&#8221;http://advocacy.python.org/podcasts/&#8221;
+&#8220;Python&#8221;,&#8221;A Little Bit of Python&#8221;,&#8221;http://advocacy.python.org/podcasts/littlebit.rss&#8221;,&#8221;http://advocacy.python.org/podcasts/&#8221;
+&#8220;Python&#8221;,&#8221;Django Dose Everything Feed&#8221;,&#8221;http://djangodose.com/everything/feed/&#8221;,&#8221;&#8221;
+&#8220;Miscelaneous&#8221;,&#8221;dhellmann&#8217;s CastSampler Feed&#8221;,&#8221;http://www.castsampler.com/cast/feed/rss/dhellmann/&#8221;,&#8221;http://www.castsampler.com/users/dhellmann/&#8221;
+<pre class="sh_python">
+from xml.etree.ElementTree import XML,XMLID</p>
+
+<p>parsed = XML('''  参数是一段xml文本
+&lt;root&gt;
+  &lt;group&gt;
+    &lt;child id="a"&gt;This is child "a".&lt;/child&gt;
+    &lt;child id="b"&gt;This is child "b".&lt;/child&gt;
+  &lt;/group&gt;
+  &lt;group&gt;
+    &lt;child id="c"&gt;This is child "c".&lt;/child&gt;
+  &lt;/group&gt;
+&lt;/root&gt;
+''')</p>
+
+<p>print 'parsed =', parsed</p>
+
+<p>for elem in parsed:
+    print elem.tag
+    if elem.text is not None and elem.text.strip():
+        print '  text: "%s"' % elem.text
+    if elem.tail is not None and elem.tail.strip():
+        print '  tail: "%s"' % elem.tail
+    for name, value in sorted(elem.attrib.items()):
+        print '  %-4s = "%s"' % (name, value)
+    print
+tree, id_map = XMLID('''  #使用<tt>id</tt>属性分析xml文本
+&lt;root&gt;
+  &lt;group&gt;
+    &lt;child id="a"&gt;This is child "a".&lt;/child&gt;
+    &lt;child id="b"&gt;This is child "b".&lt;/child&gt;
+  &lt;/group&gt;
+  &lt;group&gt;
+    &lt;child id="c"&gt;This is child "c".&lt;/child&gt;
+  &lt;/group&gt;
+&lt;/root&gt;
+''')</p>
+
+<p>for key, value in sorted(id_map.items()):
+    print '%s = %s' % (key, value)
+</pre></p>
+
+<p>执行：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+parsed = &lt;Element &#8216;root&#8217; at 0xb738fa2c&gt;
+group</p>
+
+<p>group</p>
+
+<p>a = &lt;Element &#8216;child&#8217; at 0xb738fdcc&gt;
+b = &lt;Element &#8216;child&#8217; at 0xb738fcec&gt;
+c = &lt;Element &#8216;child&#8217; at 0xb738fe2c&gt;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuxml-etree-elementtreeyanjiuchuangjianpian/">关于xml.etree.ElementTree研究(创建篇)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><pre class="sh_python">
+from xml.etree.ElementTree import Element, SubElement, Comment, tostring, ElementTree
+
+from xml.dom import minidom
+import sys
+import csv
+import datetime
+top = Element('top')  #创建一个root节点</p>
+
+<p>comment = Comment('Generated for dongwm')  #设置一个注释信息
+top.append(comment)  #添加到节点中</p>
+
+<p>child = SubElement(top, 'child')  #船舰一个子节点名字叫'child'  父节点是'top'
+child.text = 'This child contains text.'  #设置子节点的值</p>
+
+<p>child_with_tail = SubElement(top, 'child_with_tail')
+child_with_tail.text = 'This child has regular text.'  #设置借点标签间的值
+child_with_tail.tail = 'And "tail" text.' #设置节点标签结束后的值</p>
+
+<p>child_with_entity_ref = SubElement(top, 'child_with_entity_ref')
+child_with_entity_ref.text = 'This &amp; that'  #这个值会在显示的时候转化成合适的内容
+print tostring(top)
+ElementTree(top).write(sys.stdout)  #将xml数据导入流（这里是sys.stdout）
+def prettify(elem):
+    rough_string = tostring(elem, 'utf-8') #要转化的xml文件
+    reparsed = minidom.parseString(rough_string) 
+    return reparsed.toprettyxml(indent="  ") #美化显示xml
+print prettify(top)
+generated_on = str(datetime.datetime.now())
+root = Element('opml')  #设置root节点opml
+root.set('version', '1.0')  #设置xml的版本</p>
+
+<p>root.append(Comment('Generated by ElementTree_csv_to_xml.py for dongwm')) #增加注释</p>
+
+<p>head = SubElement(root, 'head') #根节点的head子节点
+title = SubElement(head, 'title')
+title.text = 'My Podcasts' #tittle子节点的值
+dc = SubElement(head, 'dateCreated')  #head的子节点
+dc.text = generated_on  #上面抓取的时间
+dm = SubElement(head, 'dateModified')
+dm.text = generated_on
+body = SubElement(root, 'body')
+with open('podcasts.csv', 'rt') as f:  #这是在解析篇生成的csv文件 
+    current_group = None
+    reader = csv.reader(f) #读取csv文件
+    for row in reader:
+        group_name, podcast_name, xml_url, html_url = row
+        if current_group is None or group_name != current_group.text:
+            current_group = SubElement(body, 'outline', {'text':group_name})
+        podcast = SubElement(current_group, 'outline',
+                             {'text':podcast_name,
+                              'xmlUrl':xml_url,
+                              'htmlUrl':html_url,
+                              })</p>
+
+<p>print prettify(root)
+print
+top = Element('top') #重新设置根节点
+children = [
+    Element('child', num=str(i))
+    for i in xrange(3)
+    ]
+top.extend(children)  #设置延长，加上上面的迭代列表的三个子节点
+top = Element('top')
+parent = SubElement(top, 'parent') #设置根节点的子节点
+children = XML('''&lt;root&gt;&lt;child num="0" /&gt;&lt;child num="1" /&gt;&lt;child num="2" /&gt;&lt;/root&gt; ''')  #直接使用xml内容添加
+parent.extend(children)
+print prettify(top)
+top = Element('top')
+parent_a = SubElement(top, 'parent', id='A') #设置id不同的2个子节点
+parent_b = SubElement(top, 'parent', id='B')
+children = XML('''&lt;root&gt;&lt;child num="0" /&gt;&lt;child num="1" /&gt;&lt;child num="2" /&gt;&lt;/root&gt; ''') 
+for c in children:
+    c.set('id', str(id(c)))  #准备要添加的子节点
+parent_a.extend(children)  #增加字节点
+print 'A:'
+print prettify(top)  #含有id为A的子节点
+print
+parent_b.extend(children)  #继续添加ID为B的字节点 但是A的字节点还在
+print 'B:'
+print prettify(top)
+print
+top = Element('top')
+child = SubElement(top, 'child')
+child.text = 'This child contains text.'
+empty_child = SubElement(top, 'empty_child')
+for method in [ 'xml', 'html', 'text' ]:
+    print method
+    ElementTree(top).write(sys.stdout, method=method) #xml是默认的method，只有<tt>&lt;empty_child /&gt;</tt>，text包含的text内容，html包含<tt>&lt;empty_child&gt;&lt;/empty_child&gt;</tt>
+    print '\n'
+</pre></p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuwebbrowseryanjiu/">关于webbrowser研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：利用webbrowser模块可以向用户显示web页面，在一个交互式的浏览程序中, webbrowser模块提供了一些用于打开URL链接的函数. 在系统中安装的浏览器, 通过模块的许多选项可以来获取利用他们. 也可通过环境变量BROWSER来控制.</p>
+
+<p><pre class="sh_python">
+import webbrowser</p>
+
+<p>webbrowser.open('http://www.dongwm.com') #浏览器中打开一个页面,如果当前已经有一个浏览器窗口, 那么会做为一个新标签打开.
+webbrowser.open_new('http://www.dongwm.com') #在新窗口中打开页面,
+webbrowser.open_new_tab('http://www.dongwm.com') #新的标签中打开页面</p>
+
+<p>b = webbrowser.get('lynx') #通过get(),使用特定的浏览器  也可以用BROWSER=lynx python test.py 的方式指定lynx
+b.open('http://www.dongwm.com') #也提供了open()、open_new()和open_new_tab()函数
+</pre></p>
+
+<p>注：可以直接命令行：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python -m webbrowser -n http://www.dongwm.com</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuweakrefyanjiu/">关于weakref研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：对一个对象的弱引用。相对于通常的引用来说，如果一个对象有一个常规的引用，它是不会被垃圾收集器销毁的，但是如果一个对象只剩下一个弱引用，那么它可能被垃圾收集器收回。weakref就是这样的垃圾收集对象的引用模块</p>
+
+<p><pre class="sh_python">
+import weakref</p>
+
+<p>class ExpensiveObject(object):
+    def __del__(self):
+        print '(Deleting %s)' % self</p>
+
+<p>obj = ExpensiveObject()
+r = weakref.ref(obj)</p>
+
+<p>print 'obj:', obj
+print 'ref:', r
+print 'r():', r()</p>
+
+<p>print 'deleting obj'
+del obj
+print 'r():', r()
+</pre></p>
+
+<p>执行：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+obj: &lt;__main__.ExpensiveObject object at 0xb73cfe2c&gt;
+ref: &lt;weakref at 0xb73d06e4; to &#8216;ExpensiveObject&#8217; at 0xb73cfe2c&gt;
+r(): &lt;__main__.ExpensiveObject object at 0xb73cfe2c&gt;  #一个弱引用
+deleting obj
+(Deleting &lt;__main__.ExpensiveObject object at 0xb73cfe2c&gt;)
+r(): None   #这个引用删除就没有了
+<pre class="sh_python">
+import weakref</p>
+
+<p>class ExpensiveObject(object):
+    def __del__(self):
+        print '(Deleting %s)' % self</p>
+
+<p>def callback(reference):  #回调函数
+    print 'callback(', reference, ')'</p>
+
+<p>obj = ExpensiveObject()
+r = weakref.ref(obj, callback) #当弱引用被删除会调用回调函数</p>
+
+<p>print 'obj:', obj
+print 'ref:', r
+print 'r():', r()</p>
+
+<p>print 'deleting obj'
+del obj
+print 'r():', r()
+</pre></p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+obj: &lt;__main__.ExpensiveObject object at 0xb74c2eec&gt;
+ref: &lt;weakref at 0xb74c370c; to &#8216;ExpensiveObject&#8217; at 0xb74c2eec&gt;
+r(): &lt;__main__.ExpensiveObject object at 0xb74c2eec&gt;
+deleting obj
+callback( &lt;weakref at 0xb74c370c; dead&gt; )
+(Deleting &lt;__main__.ExpensiveObject object at 0xb74c2eec&gt;)
+r(): None</p>
+
+<p><pre class="sh_python">
+import weakref</p>
+
+<p>class ExpensiveObject(object):
+    def __init__(self, name):
+        self.name = name
+    def __del__(self):
+        print '(Deleting %s)' % self</p>
+
+<p>obj = ExpensiveObject('My Object')
+r = weakref.ref(obj)
+p = weakref.proxy(obj) #弱引用代理</p>
+
+<p>print 'via obj:', obj.name
+print 'via ref:', r().name
+print 'via proxy:', p.name
+del obj
+print 'via proxy:', p.name
+</pre></p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+via obj: My Object
+via ref: My Object
+via proxy: My Object
+(Deleting &lt;__main__.ExpensiveObject object at 0xb72f9eec&gt;)
+via proxy:
+Traceback (most recent call last):  #<tt>因为引用不存在了，触发ReferenceError</tt>
+File &#8220;test.py&#8221;, line 17, in &lt;module&gt;
+print &#8216;via proxy:&#8217;, p.name
+ReferenceError: weakly-referenced object no longer exists</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuwarningsyanjiu/">关于warnings研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-20T00:00:00+08:00" pubdate data-updated="true">Jun 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：warnings是非致命级别警报的模块,当执行行程序时遇到问题时给用户非致命性的警示</p>
+
+<p><pre class="sh_python">
+print 'Before the warning'
+warnings.warn('This is a warning message')  #产生一个警告
+print 'After the warning'
+print
+warnings.simplefilter('error', UserWarning)#当出现报错 就停止继续</p>
+
+<p>print 'Before the warning'
+warnings.warn('This is a warning message')  
+print 'After the warning'
+</pre></p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+Before the warning
+test.py:5: UserWarning: This is a warning message
+warnings.warn(&#8216;This is a warning message&#8217;)
+After the warning</p>
+
+<p>Before the warning
+Traceback (most recent call last):
+File &#8220;test.py&#8221;, line 11, in &lt;module&gt;
+warnings.warn(&#8216;This is a warning message&#8217;)
+UserWarning: This is a warning message   #UserWarning  执行报错 停止</p>
+
+<p><pre class="sh_python">
+import warnings
+import logging
+warnings.filterwarnings('ignore', '.*do not.*',) #过滤报错信息，其中包含6种：error：变成一个异常警告，ignore:丢弃警告，
+#always:始终报警，default:它是从每个位置产生的第一次打印警告，module:它是从每个模块产生的第一次打印警告，once:它生成的第一次打印警告
+warnings.warn('Show this message')   #打印这个信息
+warnings.warn('Do not show this message')  #不打印这个信息，上面过滤了'.*do not.*'这样的模式匹配</p>
+
+<p>def function_with_warning():
+    warnings.warn('This is a warning!')</p>
+
+<p>function_with_warning() #虽然调用三次，只打印一次 不重复
+function_with_warning()
+function_with_warning()</p>
+
+<p>warnings.simplefilter('once', UserWarning)  #也可以这样调用，告诉值是第一次打印错误警告</p>
+
+<p>warnings.warn('This is a warning!')
+warnings.warn('This is a warning!')
+warnings.warn('This is a warning!')</p>
+
+<p>logging.basicConfig(level=logging.INFO)</p>
+
+<p>def send_warnings_to_log(message, category, filename, lineno, file=None):  #设定一个记录日志的方法
+    logging.warning(
+        '%s:%s: %s:%s' % 
+        (filename, lineno, category.__name__, message))
+    return</p>
+
+<p>old_showwarning = warnings.showwarning  #默认是终端显示错误信息，但是也可能改变方式  这里保存旧的方式
+warnings.showwarning = send_warnings_to_log  #将显示错误信息的方式改成用这个函数执行</p>
+
+<p>warnings.warn('This is a warning message')  #这里就会以logging的方式显示</p>
+
+<p>def warning_on_one_line(message, category, filename, lineno, file=None, line=None):
+    return ' %s:%s: %s:%s' % (filename, lineno, category.__name__, message)</p>
+
+<p>warnings.warn('This is a warning message, before')
+warnings.formatwarning = warning_on_one_line #修改显示错误信息的格式
+warnings.warn('This is a warning message, after')
+</pre></p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+test.py:5: UserWarning: Show this message
+warnings.warn(&#8216;Show this message&#8217;)
+test.py:9: UserWarning: This is a warning!
+warnings.warn(&#8216;This is a warning!&#8217;)
+test.py:17: UserWarning: This is a warning!
+warnings.warn(&#8216;This is a warning!&#8217;)
+WARNING:root:test.py:32: UserWarning:This is a warning message
+WARNING:root:test.py:37: UserWarning:This is a warning message, before
+WARNING:root:test.py:39: UserWarning:This is a warning message, after</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuuuidyanjiu/">关于uuid研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-19T00:00:00+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：uuid是使用python生成唯一ID的模块，uuid是一种唯一标识，在许多领域作为标识用途.主要方法从硬件地址和时间生成，md5，sha－1，随机四种方法</p>
+
+<p><pre class="sh_python">
+import uuid</p>
+
+<p>print hex(uuid.getnode())   #根据系统的mac地址打印  ,但是多个mac就有问题</p>
+
+<p>u = uuid.uuid1()  #uuid.uuid1()根据mac地址生成uuid  不带参数就是使用uuid.getnode() </p>
+
+<p>print u
+print type(u)
+print 'bytes   :', repr(u.bytes)
+print 'hex     :', u.hex
+print 'int     :', u.int
+print 'urn     :', u.urn
+print 'variant :', u.variant
+print 'version :', u.version
+print 'fields  :', u.fields
+print '\ttime_low            : ', u.time_low
+print '\ttime_mid            : ', u.time_mid
+print '\ttime_hi_version     : ', u.time_hi_version
+print '\tclock_seq_hi_variant: ', u.clock_seq_hi_variant
+print '\tclock_seq_low       : ', u.clock_seq_low
+print '\tnode                : ', u.node
+print '\ttime                : ', u.time
+print '\tclock_seq           : ', u.clock_seq</p>
+
+<p>for i in xrange(3):
+    print uuid.uuid1()  #uuid1()里面也包含了时间的影响  这样的迭代其中的一部分因为是时间不同而不同</p>
+
+<p>node1 = uuid.getnode()
+print hex(node1), uuid.uuid1(node1)  #本机mac地址生成</p>
+
+<p>node2 =  0x1e5274040e
+print hex(node2), uuid.uuid1(node2)  #根据这个特定mac生成</p>
+
+<p>hostnames = ['www.ailll.com', 'www.dongwm.com']</p>
+
+<p>for name in hostnames:
+    print name
+    print '\tMD5   :', uuid.uuid3(uuid.NAMESPACE_DNS, name)  #uuid3基于dns和加密算法md5
+    print '\tSHA-1 :', uuid.uuid5(uuid.NAMESPACE_DNS, name)  #uuid5是基于dns和加密算法sha-1 
+for i in xrange(3):
+    print uuid.uuid3(uuid.NAMESPACE_DNS, 'www.doughellmann.com')  #不基于时间 所以是迭代的是一样的
+for i in xrange(3):
+    print uuid.uuid4()  #uuid4是根据随机算法  每次差别很大
+def show(msg, l):
+    print msg
+    for v in l:
+        print '\t', v
+    print</p>
+
+<p>input_values = [ 
+    'urn:uuid:f2f84497-b3bf-493a-bba9-7c68e6def80b',
+    '{417a5ebb-01f7-4ed5-aeac-3d56cd5037b0}',
+    '2115773a-5bf1-11dd-ab48-001ec200d9e0',
+    ]  #用于分析各种格式的字符串创建的UUID对象</p>
+
+<p>show('input_values', input_values)</p>
+
+<p>uuids = [ uuid.UUID(s) for s in input_values ]
+show('converted to uuids', uuids)</p>
+
+<p>uuids.sort()
+show('sorted', uuids)
+</pre></p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+0xaeb8f70e0L
+f312fcaa-b9f1-11e1-bc26-000aeb8f70e0
+&lt;class &#8216;uuid.UUID&#8217;&gt;
+bytes   : &#8216;\xf3\x12\xfc\xaa\xb9\xf1\x11\xe1\xbc&amp;\x00\n\xeb\x8fp\xe0&#8217;
+hex     : f312fcaab9f111e1bc26000aeb8f70e0
+int     : 323100989012742094042604002680798933216
+urn     : urn:uuid:f312fcaa-b9f1-11e1-bc26-000aeb8f70e0
+variant : specified in RFC 4122
+version : 1
+fields  : (4078107818L, 47601L, 4577L, 188L, 38L, 46901719264L)
+time_low            :  4078107818
+time_mid            :  47601
+time_hi_version     :  4577
+clock_seq_hi_variant:  188
+clock_seq_low       :  38
+node                :  46901719264
+time                :  135593912614190250
+clock_seq           :  15398
+f31305ec-b9f1-11e1-bc26-000aeb8f70e0
+f31307f4-b9f1-11e1-bc26-000aeb8f70e0
+f3130952-b9f1-11e1-bc26-000aeb8f70e0
+0xaeb8f70e0L f3131b0c-b9f1-11e1-8092-000aeb8f70e0
+0x1e5274040eL f3131d17-b9f1-11e1-b53b-001e5274040e
+www.ailll.com
+MD5   : 3b7e4bb6-9606-34f9-ae27-98e0a83555ea
+SHA-1 : 2eae48e1-73e7-57c7-8b7c-3229c87fd79e
+www.dongwm.com
+MD5   : 2ddcfb77-c053-3e92-8a24-b57206b75157
+SHA-1 : 1ceafb54-c8ec-5090-b6ec-e71b3f0e15a9
+bcd02e22-68f0-3046-a512-327cca9def8f
+bcd02e22-68f0-3046-a512-327cca9def8f
+bcd02e22-68f0-3046-a512-327cca9def8f
+225d3fa0-d176-4eea-af0f-5a043711062d
+5039067a-e2a7-4a9b-8f3a-edd54d90a280
+40c69a3c-ebbc-4b67-b083-3223e32248ac
+input_values
+urn:uuid:f2f84497-b3bf-493a-bba9-7c68e6def80b
+{417a5ebb-01f7-4ed5-aeac-3d56cd5037b0}
+2115773a-5bf1-11dd-ab48-001ec200d9e0</p>
+
+<p>converted to uuids
+f2f84497-b3bf-493a-bba9-7c68e6def80b
+417a5ebb-01f7-4ed5-aeac-3d56cd5037b0
+2115773a-5bf1-11dd-ab48-001ec200d9e0</p>
+
+<p>sorted
+2115773a-5bf1-11dd-ab48-001ec200d9e0
+417a5ebb-01f7-4ed5-aeac-3d56cd5037b0
+f2f84497-b3bf-493a-bba9-7c68e6def80b</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/guanyuurllibyanjiu/">关于urllib研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-19T00:00:00+08:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言;urllib模块提供了一个访问网络资源的简单接口支持（ftp协议)，访问不需要认证的远程资源</p>
+
+<p>因为urllib模块是一个客户端模块，需要一个httpserver，借用以前的BaseHTTPServer的模块的程序：</p>
+
+<p><pre class="sh_python">
+from BaseHTTPServer import BaseHTTPRequestHandler
+import urlparse </p>
+
+<p>class GetHandler(BaseHTTPRequestHandler):</p>
+
+<p>    def do_GET(self):   #这个是get方法的处理
+        parsed_path = urlparse.urlparse(self.path)
+        message_parts = [
+                'CLIENT VALUES:',
+                'client_address=%s (%s)' % (self.client_address,
+                                            self.address_string()),
+                'command=%s' % self.command,
+                'path=%s' % self.path,
+                'real path=%s' % parsed_path.path,
+                'query=%s' % parsed_path.query,
+                'request_version=%s' % self.request_version,
+                '',
+                'SERVER VALUES:',
+                'server_version=%s' % self.server_version,
+                'sys_version=%s' % self.sys_version,
+                'protocol_version=%s' % self.protocol_version,
+                '',
+                'HEADERS RECEIVED:',
+                ]
+        for name, value in sorted(self.headers.items()):
+            message_parts.append('%s=%s' % (name, value.rstrip()))
+        message_parts.append('')
+        message = '\r\n'.join(message_parts)
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(message)
+        return</p>
+
+<p>if __name__ == '__main__':
+    from BaseHTTPServer import HTTPServer
+    server = HTTPServer(('localhost', 8080), GetHandler)
+    print 'Starting server, use &lt;Ctrl-C&gt; to stop'
+    server.serve_forever()
+</pre></p>
+
+<p><pre class="sh_python">
+from BaseHTTPServer import BaseHTTPRequestHandler
+import cgi</p>
+
+<p>class PostHandler(BaseHTTPRequestHandler):</p>
+
+<p>    def do_POST(self):  ##这个是post方法的处理
+        # Parse the form data posted
+        form = cgi.FieldStorage(
+            fp=self.rfile, 
+            headers=self.headers,
+            environ={'REQUEST_METHOD':'POST',
+                     'CONTENT_TYPE':self.headers['Content-Type'],
+                     })</p>
+
+<p>        # Begin the response
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write('Client: %s\n' % str(self.client_address))
+        self.wfile.write('User-agent: %s\n' % str(self.headers['user-agent']))
+        self.wfile.write('Path: %s\n' % self.path)
+        self.wfile.write('Form data:\n')</p>
+
+<p>        # Echo back information about what was posted in the form
+        for field in form.keys():
+            field_item = form[field]
+            if field_item.filename:
+                # The field contains an uploaded file
+                file_data = field_item.file.read()
+                file_len = len(file_data)
+                del file_data
+                self.wfile.write('\tUploaded %s as "%s" (%d bytes)\n' % \
+                        (field, field_item.filename, file_len))
+            else:
+                # Regular form value
+                self.wfile.write('\t%s=%s\n' % (field, form[field].value))
+        return</p>
+
+<p>if __name__ == '__main__':
+    from BaseHTTPServer import HTTPServer
+    server = HTTPServer(('localhost', 8080), PostHandler)
+    print 'Starting server, use &lt;Ctrl-C&gt; to stop'
+    server.serve_forever()
+</pre></p>
+
+<p><pre class="sh_python">
+import urllib</p>
+
+<p>response = urllib.urlopen('http://localhost:8080/')  #指定要打开的网页
+print 'RESPONSE:', response   #这个类文件对象也是可以迭代
+print 'URL :', response.geturl() #返回这个网页的url地址</p>
+
+<p>headers = response.info()
+print 'DATE :', headers['date']  #执行请求的时间
+print 'HEADERS :'
+print '---------'
+print headers  #返回server的信息和date信息</p>
+
+<p>data = response.read() #取到数据
+print 'LENGTH :', len(data) #数据长度
+print 'DATA :'
+print '---------'
+print data  #返回客户端，服务器端的一些信息，header信息
+</pre></p>
+
+<p>执行结果：</p>
+
+<p>dongwm@linux-dongwm:~&gt; python test.py
+RESPONSE: &lt;addinfourl at 3074658828L whose fp = &lt;socket._fileobject object at 0xb7418b2c&gt;&gt;
+URL : http://localhost:8080/
+DATE : Tue, 19 Jun 2012 07:55:13 GMT
+HEADERS :
+&#8212;&#8212;&#8212;
+Server: BaseHTTP/0.3 Python/2.7
+Date: Tue, 19 Jun 2012 07:55:13 GMT</p>
+
+<p>LENGTH : 304
+DATA :
+&#8212;&#8212;&#8212;
+CLIENT VALUES:
+client_address=(&#8216;127.0.0.1&#8217;, 57709) (localhost)
+command=GET
+path=/
+real path=/
+query=
+request_version=HTTP/1.0</p>
+
+<p>SERVER VALUES:
+server_version=BaseHTTP/0.3
+sys_version=Python/2.7
+protocol_version=HTTP/1.0</p>
+
+<p>HEADERS RECEIVED:
+host=localhost:8080
+user-agent=Python-urllib/1.17</p>
+
+<p><pre class="sh_python">
+import urllib
+query_args = { 'q':'query string', 'foo':'bar' }
+encoded_args = urllib.urlencode(query_args) #将dict或者包含两个元素的元组列表转换成url参数，如果参数doseq=True ，表示使用单独的变量来传递值序列时
+print 'Encoded:', encoded_args</p>
+
+<p>url = 'http://localhost:8080/?' + encoded_args
+print urllib.urlopen(url).read()  #返回打开的这个get页面的数据
+print 'quote() :', urllib.quote(url) #对字符串进行编码。参数safe指定了不需要编码的字符 同样的还原就是unquote
+print 'quote_plus():', urllib.quote_plus(url) #与urllib.quote类似，但这个方法用'+'来替换' '，而quote用'%20'来代替 同样的还原就是unquote_plus
+</pre></p>
+
+<p><pre class="sh_python">
+import urllib
+query_args = { 'q':'query string', 'foo':'bar' }
+encoded_args = urllib.urlencode(query_args)
+url = 'http://localhost:8080/'
+print urllib.urlopen(url, encoded_args).read()  #通过POST代替GET方式传递数据给远程服务器, 仅仅是把已编码的查询参数当作数据传递给urlopen().
+</pre></p>
+
+<p><pre class="sh_python">
+import urllib
+import os</p>
+
+<p>def reporthook(blocks_read, block_size, total_size):
+    if not blocks_read:
+        print 'Connection opened'
+        return
+    if total_size &lt; 0:
+        # Unknown size 未知大小
+        print 'Read %d blocks' % blocks_read
+    else:
+        amount_read = blocks_read * block_size
+        print 'Read %d blocks, or %d/%d' % (blocks_read, amount_read, total_size)
+        return</p>
+
+<p>try:
+    filename, msg = urllib.urlretrieve('http://www.dongwm.com/', reporthook=reporthook) # urlretrieve方法直接将远程数据下载到本地。
+                                                #参数filename指定了保存到本地的路径（如果未指定该参数，urllib会生成一个临时文件来保存数据） ,reporthook是一个回调函数
+                                                #当连接上服务器、以及相应的数据块传输完毕的时候会触发该回调。我们可以利用这个回调函 数来显示当前的下载进度
+    print
+    print 'File:', filename
+    print 'Headers:'
+    print msg
+    print 'File exists before cleanup:', os.path.exists(filename)
+finally:
+    urllib.urlcleanup()   #除这些临时的复本
+    print 'File still exists:', os.path.exists(filename)
+</pre></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <ul class="pager">
+    
+    <li class="previous"><a href="/blog/page/10/">&larr; Older</a></li>
+    
+    <li><a href="/blog/blog/archives">博客文章</a></li>
+    
+    <li class="next"><a href="/blog/page/8/">Newer &rarr;</a></li>
+    
+  </ul>
+</div>
+<aside class="sidebar-nav span3">
+  
+    <section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">最近发布</li>
+    
+      <li class="post">
+        <a href="/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/">ipython的一些高级用法(一)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa/">python几个特别的__开头的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/%5B%3F%5D-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d/">一个使用python的web程序员的emacs.d</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/pythonmo-fa-er/">python的魔法二:开发的&#8217;坑&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/pythonde-mo-fa/">python的魔法(一): 基本知识</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/xian-cheng-suo-de-%5B%3F%5D-ge-da-keng/">线程锁的一个大坑</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/speakerdeck/">speakerdeck</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/">分享一个准备给公司讲python高级编程的slide</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/">使用grafana和Diamond构建Graphite监控系统</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/sou-ji-xi-tong-xin-xi-de-dashboard/">搜集系统信息的dashboard</a>
+      </li>
+    
+  </ul>
+</section>
+<section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+  <li class="nav-header">个人网站</li>
+    <li class="post"><a href="http://salogs.com">带我入行的boss</a></li>
+    <li class="post"><a href="http://dongweiming.github.com/">小明明s Github Blog</a></li>
+    <li class="post"><a href="http://youhouer.appspot.com/">Love story(GAE)</a></li>
+    <li class="post"><a href="http://www.unixhot.com">unixhot运维社区</a></li>
+    <li class="post"><a href="http://www.vpsee.com">Vpsee</a></li>
+    <li class="post"><a href="http://rfyiamcool.blog.51cto.com">峰云就她了</a></li>
+    <li class="post"><a href="http://dongweiming.github.io/sed_and_awk/">sed_and_awk</a></li>
+    <li class="post"><a href="http://dongweiming.github.io/Expert-Python">Expert-Python</a></li>
+  </ul>
+</section>
+
+<section class="well">
+  <ul id="gh_repos" class="nav">
+    <li class="nav-header">GitHub帐号</li>
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/dongweiming">@dongweiming</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        github.showRepos({
+            user: 'dongweiming',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/blog/javascripts/asides/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+<section class="well">
+   <ul id="gh_repos" class="nav">
+    <li class="nav-header">标签Cloud</li>
+  </ul>
+  <div id="tag-cloud"></div>
+</section>
+
+<section class="well">
+  <ul id="gh_repos" class="nav">
+    <li class="nav-header">豆瓣阅读</li>
+  </ul>
+  <script type="text/javascript" src="http://www.douban.com/service/badge/62943420/?select=random&amp;n=10&amp;columns=2&amp;picsize=medium&amp;hidelogo=true&amp;hideself=true&amp;cat=book|music" ></script>
+  <a href="https://www.douban.com/people/62943420">@小明明</a> on Douban 
+</section>
+
+
+<section class='well'>
+<ul id='gh_repos' class='nav'>
+<li class='nav-header'>文章统计</li>
+<li>本站共有 271 篇文章</li>
+</ul>
+</section>
+
+
+  
+</aside>
+
+      </div>
+  </div>
+  <footer role="contentinfo" class="page-footer"><hr>
+<p>
+  Copyright &copy; 2014 - Dongweiming -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'dongwm';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1794 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>小明明s à domicile</title>
+  <meta name="author" content="Dongweiming">
+
+  
+  <meta name="description" content="">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dongweiming.github.com/page/3">
+  <link href="/blog/favicon.png" rel="icon">
+  <link href="/blog/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      padding-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    .page-footer p {
+      text-align: center;
+    }
+  </style>
+  <script src="/blog/javascripts/libs/jquery.js"></script>
+  <script src="/blog/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/blog/javascripts/libs/bootstrap.js"></script>
+  <script src="/blog/javascripts/octopress.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/javascripts/api.js"></script>
+  <script type="text/javascript" src="/javascripts/wordcumulus.js"></script>
+  <script type="text/javascript" src="/javascripts/swfobject.js"></script>
+  <script type="text/javascript" src="/javascripts/tagcumulus.js"></script>
+  <link href="/atom.xml" rel="alternate" title="小明明s à domicile" type="application/atom+xml">
+  <script type="text/javascript" src="/javascripts/jimdoclockzip.js"></script>
+<script type="text/javascript" src="/javascripts/sh_python.min.js"></script>
+<script type="text/javascript" src="/javascripts/sh_bash.min.js"></script>
+<script type="text/javascript" src="/javascripts/sh_main.min.js"></script>
+<link href="/stylesheets/sh_ide-anjuta.css" rel="stylesheet" type="text/css">
+
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20495125-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>            
+
+<body    onload="sh_highlightDocument('', '.js');">
+<a href="http://github.com/dongweiming/">
+<img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Follower me on GitHub">
+</a>
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a class="brand" href="/blog/">小明明s à domicile</a>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+    <li><a href="/blog/">博客主页</a></li>
+    <li><a href="/blog/blog/archives">文章列表</a></li>
+    <li><a href="/blog/zongjie">12年总结</a></li>
+    <li><a href="/blog/aboutsite">关于本站</a></li>
+    <li><a href="/blog/projects">我的项目</a></li>
+    <li><a href="http://dongweiming.github.io/sed_and_awk">sed_and_awk</a></li>
+    <li><a href="http://dongweiming.github.io/Expert-Python">Expert-Python</a></li>
+    <li><a href="/blog/aboutme">关于我</a></li>
+</ul>
+
+
+        <ul class="nav pull-right" data-subscription="rss">
+          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+          
+        </ul>
+
+        
+          <form class="pull-right navbar-search" action="http://google.com/search" method="get">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:dongweiming.github.com" />
+              <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
+            </fieldset>
+          </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
+  <div class="container">
+      <div class="row-fluid">
+      <div class="span9">
+  
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/shi-yong-celeryzhi-liao-jie-celery/">使用celery之了解celery</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-10T20:12:00+08:00" pubdate data-updated="true">Aug 10<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>我想很多做开发和运维的都会涉及一件事:crontab, 也就是在服务器上设定定时任务,按期执行一些任务.但是假如你有上千台的服务器，
+你有上千种任务,那么对于这个定时任务的管理恐怕是一件很头疼的事情.哪怕你只是几十个任务分配的不同的机器上怎么样合理的管理和实现以下功能呢:</p>
+
+<ol>
+  <li>查看定时任务的执行情况.比如执行是否成功，当前状态，执行花费的时间.</li>
+  <li>一个友好的界面或者命令行下实现添加,删除任务</li>
+  <li>怎么样简单实现不同的机器设定不同种任务,某些机器执行不同的队列</li>
+  <li>假如你需要生成一个任务怎么样不阻塞剩下来的过程(异步了呗)</li>
+  <li>怎么样并发的执行任务</li>
+</ol>
+
+<h4 id="section-1">几种选择</h4>
+
+<ol>
+  <li>有钱有人有时间自己实现一套,优点是完全符合公司业务的需要,有专门的团队维护和服务</li>
+  <li>使用<a href="http://gearman.org/">Gearman</a>,听说过没用过，因为是C/java/perl,对我们这种python开发者或者运维来说,假如没有这方面经验之后没有能力了解底层实现和二次开发的能力</li>
+  <li>使用<a href="http://python-rq.org/">rq</a>, rq是搞gitflow的那个作者写的，简介里面说的很清楚:Simple job queues for Python. 怕它不够复杂,但是假如业务没有那么复杂或者应用不是那么严格，完全可以尝试下</li>
+  <li>好吧我选择了<a href="https://github.com/celery/celery">celery</a>, 现在用了快半年，可能是历史遗留问题,版本较低.有很多坑.但是很不错</li>
+</ol>
+
+<h4 id="section-2">消息队列</h4>
+
+<p>RabbitMQ,ZeroMQ这样的消息队列总是出现在我们视线中, 其实意义是很简单: 消息就是一个要传送的数据,celery是一个分布式的任务队列.这个”任务”其实就是一种消息,
+任务被生成到队列中，被RabbitMQ等容器接收和存储，在适当的时候又被要执行的机器把这个消息取走.</p>
+
+<p>celery任务可以使用RabbitMQ/Redis/SQLAlchemy/Django的orm/Mongodb等等容器(这里叫做Broker).我使用的是RabbitMQ,因为作者在github主页的介绍里面很明确的写了这个</p>
+
+<p>所谓队列,你可以设想一个问题,我有一大推的东西要执行,但是我并不是需要每个服务器都执行这个任务,因为业务不同嘛. 所以就要做个队列, 比如任务A,B,C A可以在X,Y服务器执行,
+但是不需要或者不能在Z服务器上执行.那么在X,Y你启动worker(下面会说，其实就是消费者和生产者的消费者)加上这个队列,Z服务器就不需要指定这个队列,也就不会执行这个队列的任务</p>
+
+<h5 id="celerydjangocelerydjango-celery">celery的原理,我这里的角度是django+celery+django-celery</h5>
+
+<p>首先说一下流程:</p>
+
+<ol>
+  <li>使用django-celery或者直接操作数据库(settings.py里面指定)添加任务,设置的相关属性(包含定时任务的间隔)存入数据库.</li>
+  <li>celerybeat通过djcelery.schedulers.DatabaseScheduler获取django内你设置的任务周期性的检查(默认5s),发现需要执行某任务讲其丢入你设置的broker(我这里是rabbitmq),他会更具settings.py的设置放到对应的队列</li>
+  <li>在你启动了celery worker(以前是celeryd)的服务器上,根据worker也会定期(默认5s)去broker里面查找需要它执行的队列里面是否有任务</li>
+  <li>当发现队列有要执行的任务,worker将它取出来执行,执行完的结果通过celerycam(默认30s,所以这个进程也要启动)写入django设置的数据库,更新了这个任务的状态.比如花费的时间</li>
+</ol>
+
+<h4 id="supervisor">supervisor进程管理</h4>
+
+<p>不知道有没有人用过<a href="http://cr.yp.to/daemontools/supervise.html">supervise</a>，我以前经常在最初的项目开发中经常使用它监视我的程序,当程序死掉自动启动, <a href="https://github.com/Supervisor/supervisor">supervisor</a>确是一个
+进程管理的工具，我在这里使用它管理celery的程序和uwsgi</p>
+
+<p>粘贴下我的一个本地环境的配置,并直接进行一下说明:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="p">;</span><span class="err">程序名字</span>
+</span><span class="line"><span class="p">[</span><span class="n">program</span><span class="p">:</span><span class="n">celery</span><span class="o">-</span><span class="n">queue</span><span class="o">-</span><span class="n">fetch</span><span class="p">]</span>
+</span><span class="line"><span class="p">;</span><span class="err">程序要执行的命令</span><span class="p">,</span> <span class="o">-</span><span class="n">Q</span> <span class="err">指定了生成和接受任务的队列</span><span class="p">,</span><span class="err">多个用都好分开</span> <span class="o">-</span><span class="n">c</span><span class="err">为</span><span class="n">workr</span><span class="err">的数量</span><span class="p">,</span><span class="err">原意为并发数量</span>
+</span><span class="line"><span class="n">command</span><span class="o">=</span><span class="n">python</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">celery</span> <span class="n">worker</span> <span class="o">-</span><span class="n">E</span> <span class="o">--</span><span class="n">settings</span><span class="o">=</span><span class="n">settings_local</span> <span class="o">--</span><span class="n">loglevel</span><span class="o">=</span><span class="n">INFO</span> <span class="o">-</span><span class="n">Q</span> <span class="n">fetch_</span> <span class="o">-</span><span class="n">c</span> <span class="mi">30</span>
+</span><span class="line"><span class="p">;</span><span class="err">程序执行时候所在目录</span>
+</span><span class="line"><span class="n">directory</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span>
+</span><span class="line"><span class="p">;</span><span class="err">执行程序使用的用户</span>
+</span><span class="line"><span class="n">user</span><span class="o">=</span><span class="n">dongwm</span>
+</span><span class="line"><span class="p">;</span><span class="err">启动的程序的实例数</span><span class="p">,</span><span class="err">默认是</span><span class="mi">1</span>
+</span><span class="line"><span class="n">numprocs</span><span class="o">=</span><span class="mi">1</span>
+</span><span class="line"><span class="n">stdout_logfile</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">celerylog</span><span class="o">/</span><span class="n">celery</span><span class="o">.</span><span class="n">log</span>
+</span><span class="line"><span class="n">stderr_logfile</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">celerylog</span><span class="o">/</span><span class="n">celery</span><span class="o">.</span><span class="n">log</span>
+</span><span class="line"><span class="p">;</span><span class="err">在启动</span><span class="n">supervisor</span><span class="err">时候自动启动</span>
+</span><span class="line"><span class="n">autostart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="p">;</span><span class="err">当程序可能因为某些原因没有启动成功会自动重启</span>
+</span><span class="line"><span class="n">autorestart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="p">;</span><span class="err">启动的等待时候</span><span class="p">,</span><span class="err">我想是为了重启能杀掉原来进程预留的时间</span>
+</span><span class="line"><span class="n">startsecs</span><span class="o">=</span><span class="mi">10</span>
+</span><span class="line"><span class="p">;</span><span class="err">进程发送停止信号等待</span><span class="n">os</span><span class="err">返回</span><span class="n">SIGCHILD</span><span class="err">的时间</span>
+</span><span class="line"><span class="n">stopwaitsecs</span><span class="o">=</span><span class="mi">10</span>
+</span><span class="line"><span class="p">;</span><span class="err">低优先级的会首先启动最后关闭</span>
+</span><span class="line"><span class="n">priority</span><span class="o">=</span><span class="mi">998</span>
+</span><span class="line"><span class="p">;</span><span class="err">以下</span><span class="mi">2</span><span class="err">句是为了保证杀掉进程和其子进程而不会只杀死其控制的程序主进程而留下子进程变为孤立进程的问题</span>
+</span><span class="line"><span class="n">stopsignal</span><span class="o">=</span><span class="n">KILL</span>
+</span><span class="line"><span class="n">stopasgroup</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line">
+</span><span class="line"><span class="p">[</span><span class="n">program</span><span class="p">:</span><span class="n">celery</span><span class="o">-</span><span class="n">queue</span><span class="o">-</span><span class="n">feed</span><span class="p">]</span>
+</span><span class="line"><span class="n">command</span><span class="o">=</span><span class="n">python</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">celeryd</span> <span class="o">-</span><span class="n">E</span> <span class="o">--</span><span class="n">settings</span><span class="o">=</span><span class="n">settings_local</span> <span class="o">--</span><span class="n">loglevel</span><span class="o">=</span><span class="n">INFO</span> <span class="o">-</span><span class="n">Q</span> <span class="n">feed</span>
+</span><span class="line"><span class="n">directory</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span>
+</span><span class="line"><span class="n">user</span><span class="o">=</span><span class="n">dongwm</span>
+</span><span class="line"><span class="n">numprocs</span><span class="o">=</span><span class="mi">1</span>
+</span><span class="line"><span class="n">stdout_logfile</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">celerylog</span><span class="o">/</span><span class="n">celery</span><span class="o">.</span><span class="n">log</span>
+</span><span class="line"><span class="n">stderr_logfile</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">celerylog</span><span class="o">/</span><span class="n">celery</span><span class="o">.</span><span class="n">log</span>
+</span><span class="line"><span class="n">autostart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="n">autorestart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="n">startsecs</span><span class="o">=</span><span class="mi">10</span>
+</span><span class="line"><span class="n">stopwaitsecs</span><span class="o">=</span><span class="mi">10</span>
+</span><span class="line"><span class="n">priority</span><span class="o">=</span><span class="mi">998</span>
+</span><span class="line"><span class="n">stopsignal</span><span class="o">=</span><span class="n">KILL</span>
+</span><span class="line"><span class="n">stopasgroup</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line">
+</span><span class="line"><span class="p">[</span><span class="n">program</span><span class="p">:</span><span class="n">celerycam</span><span class="p">]</span>
+</span><span class="line"><span class="p">;</span><span class="err">任务快照的间隔时间为</span><span class="mi">10</span><span class="n">s</span>
+</span><span class="line"><span class="n">command</span><span class="o">=</span><span class="n">python</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">celerycam</span> <span class="o">-</span><span class="n">F</span> <span class="mi">10</span> <span class="o">--</span><span class="n">settings</span><span class="o">=</span><span class="n">settings_local</span>
+</span><span class="line"><span class="n">directory</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span>
+</span><span class="line"><span class="n">user</span><span class="o">=</span><span class="n">dongwm</span>
+</span><span class="line"><span class="n">numprocs</span><span class="o">=</span><span class="mi">1</span>
+</span><span class="line"><span class="n">stdout_logfile</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">celerylog</span><span class="o">/</span><span class="n">celerycam</span><span class="o">.</span><span class="n">log</span>
+</span><span class="line"><span class="n">stderr_logfile</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">celerylog</span><span class="o">/</span><span class="n">celerycam</span><span class="o">.</span><span class="n">log</span>
+</span><span class="line"><span class="n">autostart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="n">autorestart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="n">startsecs</span><span class="o">=</span><span class="mi">5</span>
+</span><span class="line"><span class="n">stopwaitsecs</span><span class="o">=</span><span class="mi">5</span>
+</span><span class="line"><span class="n">priority</span><span class="o">=</span><span class="mi">998</span>
+</span><span class="line"><span class="n">stopsignal</span><span class="o">=</span><span class="n">KILL</span>
+</span><span class="line"><span class="n">stopasgroup</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line">
+</span><span class="line"><span class="p">[</span><span class="n">program</span><span class="p">:</span><span class="n">celerybeat</span><span class="p">]</span>
+</span><span class="line"><span class="n">command</span><span class="o">=</span><span class="n">python</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">celerybeat</span> <span class="o">--</span><span class="n">settings</span><span class="o">=</span><span class="n">settings_real_old</span> <span class="o">--</span><span class="n">loglevel</span><span class="o">=</span><span class="n">DEBUG</span>
+</span><span class="line"><span class="n">directory</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span>
+</span><span class="line"><span class="n">user</span><span class="o">=</span><span class="n">dongwm</span>
+</span><span class="line"><span class="n">numprocs</span><span class="o">=</span><span class="mi">1</span>
+</span><span class="line"><span class="n">stdout_logfile</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">celerylog</span><span class="o">/</span><span class="n">celery_beat</span><span class="o">.</span><span class="n">log</span>
+</span><span class="line"><span class="n">stderr_logfile</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">celerylog</span><span class="o">/</span><span class="n">celery_beat</span><span class="o">.</span><span class="n">log</span>
+</span><span class="line"><span class="n">autostart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="n">autorestart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="n">startsecs</span><span class="o">=</span><span class="mi">10</span>
+</span><span class="line"><span class="n">priority</span><span class="o">=</span><span class="mi">999</span>
+</span><span class="line"><span class="n">stopsignal</span><span class="o">=</span><span class="n">KILL</span>
+</span><span class="line"><span class="n">stopasgroup</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line">
+</span><span class="line"><span class="p">;</span><span class="err">这是</span><span class="n">supervisor</span><span class="err">官方的一个监控进程状态异常退出的脚本</span><span class="p">,</span><span class="err">我对它进行了较大的修改</span><span class="p">,</span><span class="err">这样在程序奇怪退出的时候会给我发邮件</span>
+</span><span class="line"><span class="p">[</span><span class="n">eventlistener</span><span class="p">:</span><span class="n">crashmail</span><span class="p">]</span>
+</span><span class="line"><span class="n">command</span><span class="o">=</span><span class="n">python</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">superlance</span><span class="o">/</span><span class="n">superlance</span><span class="o">/</span><span class="n">crashmail</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">m</span> <span class="n">ciici123</span><span class="nd">@163.com</span>
+</span><span class="line"><span class="n">events</span><span class="o">=</span><span class="n">PROCESS_STATE_EXITED</span>
+</span><span class="line">
+</span><span class="line"><span class="p">[</span><span class="n">program</span><span class="p">:</span><span class="n">uwsgi</span><span class="p">]</span>
+</span><span class="line"><span class="n">user</span> <span class="o">=</span> <span class="n">dongwm</span>
+</span><span class="line"><span class="n">numprocs</span><span class="o">=</span><span class="mi">1</span>
+</span><span class="line"><span class="n">command</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">uwsgi</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">uwsgi</span><span class="o">-</span><span class="n">sandbox</span><span class="o">.</span><span class="n">sock</span> <span class="o">--</span><span class="n">processes</span> <span class="mi">4</span>  <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">threads</span> \
+</span><span class="line">     <span class="o">--</span><span class="n">pythonpath</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">uwsgi</span> <span class="o">--</span><span class="nb">buffer</span><span class="o">-</span><span class="n">size</span> <span class="mi">32768</span> <span class="o">--</span><span class="n">listen</span> <span class="mi">100</span> <span class="o">--</span><span class="n">daemonize</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">ulog</span><span class="o">/</span><span class="n">uwsgi_out</span><span class="o">.</span><span class="n">log</span>
+</span><span class="line"><span class="n">directory</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">dongwm</span><span class="o">/</span><span class="n">work</span>
+</span><span class="line"><span class="n">autostart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="n">autorestart</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="n">redirect_stderr</span><span class="o">=</span><span class="n">true</span>
+</span><span class="line"><span class="n">stopsignal</span><span class="o">=</span><span class="n">KILL</span>
+</span><span class="line"><span class="n">stopasgroup</span><span class="o">=</span><span class="n">true</span>
+</span></pre></figure></notextile></div>
+
+<h4 id="nginxuwsgi">nginx+uwsgi的实践</h4>
+
+<p>nginx进程数会直接影响性能, 如何使用到的模块不会出现阻塞式的调用，应该有多少cpu就配多少worker_processes,否则才需要配置更多的进程数.
+比如你的用户大量读取你的本地静态文件，并且服务器上面内存较少，硬盘的I/O调用可能会阻塞worker少量时间,那么就要多配</p>
+
+<p>为了更好利用多核的优势,我绑定了worker和对应的内核:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">worker_processes</span>     <span class="mi">4</span><span class="p">;</span>
+</span><span class="line"><span class="n">worker_cpu_affinity</span> <span class="mo">0001</span> <span class="mo">0010</span> <span class="mo">0100</span> <span class="mi">1000</span><span class="p">;</span>
+</span></pre></figure></notextile></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/ni-zhen-de-hui-pythonma/">你真的会python嘛?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-02T18:55:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>我这个博客一直都是一些技术分享,show code的地方，我从来没有写过个人生活或者情感杂谈,当然我也从来没有谈论过我对什么东西的喜恶. 
+很多人喜欢喷XX语言，喜欢谈论XX和YY的优缺,甚至凑了一本不知所云的书…好吧,我觉得没有使用一门语言超过10年，没有对一个技术研究个5,6年，
+不好意思说自己懂(天才除外).我也觉得我没有资格讨论什么，也许我有我的观点看法，但是我怀着怀疑的心态看自己，生怕自己理解错了.
+下文纯属个人吐槽,也许没有指定路怎么走，只是希望提个醒…</p>
+
+<p>使用python2年，可喜的是python被越来越多的人接受，甚至前端工程师…但是却有点烂大街的感觉:感觉出门不聊几句python都不好意思和人打招呼.但是你真的懂python嘛?</p>
+
+<h4 id="python">你会python真的不重要</h4>
+
+<p>python实在太好学习了,假如你会其它的语言，可能搞本书翻一翻，一周后就能写很高端的python程序，由于web框架的普及，你甚至可以让一个网站应用跑起来. 你会我也会，你有什么竞争力?</p>
+
+<h4 id="python-1">你知道python怎么用嘛?</h4>
+
+<ol>
+  <li>在什么时候需要使用OOP？</li>
+  <li>在什么时候使用类装饰器?</li>
+  <li>你用过元类嘛?</li>
+  <li>在什么时候用静态方法什么时候使用类方法?</li>
+  <li>你了解那些管理属性? <strong>call</strong> ,  <strong>init</strong> , __new__都是在什么时候被触发?__getattr__和__getattribute__应用有什么不同?</li>
+  <li>你知道标准库里面的多少个模块?你能在需要的时候知道这个功能其实标准库里面已经实现了?</li>
+  <li>什么时候用回调？</li>
+  <li>什么时候用signal？假如你会django你知道django的signal是什么?你了解orm嘛?</li>
+  <li>asyncore，contextlib， functools， collections， heapq，itertools， SocketServer， weakref，operator(知道3个就算)这些你会几个？</li>
+  <li>python的多态是什么?</li>
+  <li>在什么场景可以尝试python的设计模式中的XX(能想到2个场景就算)?</li>
+  <li>在什么时候可以使用Mixin？</li>
+  <li>在什么时候可以使用python的闭包？</li>
+  <li>你曾经用过yield嘛？生成器和迭代器的区别和应用场景是什么?</li>
+  <li>在什么可以使用python的函数式编程?</li>
+  <li>__future__模块里面都有什么定义的用法?</li>
+</ol>
+
+<p>提笔想了这上面16点我认为体现python的东西，假如你不能有效的回答上面1/4, 好吧不要和我说你原来是会python的，踏实下来..你的路还很长.假如你回答不超过一半,我提醒你-你只是刚入行而已(这是我的角度)</p>
+
+<h4 id="section-1">假如我是一个入职后的带新人的引导者</h4>
+
+<ol>
+  <li>学好git… 呵呵</li>
+  <li>假如新人还不熟悉python,python_koans是和不错的入门选择</li>
+  <li>首先就是严格的代码规范，加上团队的文化以及风格.</li>
+  <li>我会给一个任务，比如一周内写个多线程的socket命令行聊天程序,支持群组，加好友，群聊，发送文件等功能，看新人能力而定</li>
+  <li>而后把项目一部分略棘手的工作教给他，注意这里是生产环境，在他完成任务的过程中会熟悉我们的上线/code review/代码风格等东西</li>
+  <li>我希望整个团队一起贡献一个基础的公共库，包含一些常用的功能，然后新人首先学习这些东西，以后就不需要浪费时间造轮子，但是可以修改完善公共库，
+这个公共库可以在新服务器部署时候直接使用pypi或者ubuntuPPA安装进来</li>
+</ol>
+
+<h4 id="python-2">什么算是好的python代码?</h4>
+
+<p>假如你的代码没使用pep8检验过，你已经无敌了. 最差你也要使用<a href="https://github.com/hhatto/autopep8">autopep8</a>格式化差劲的代码吧?如果你想对自己的代码质量有要求，我强烈建议你了解什么是pythonic:</p>
+
+<ol>
+  <li>[doughellmann <python标准库>的作者 an-introduction-to-the-zen-of-python](http://www.slideshare.net/doughellmann/an-introduction-to-the-zen-of-python)</python标准库></li>
+  <li><a href="http://sssslide.com/www.slideshare.net/hychen/be-pythonic-14859746">be-pythonic</a></li>
+</ol>
+
+<h4 id="section-2">代码易懂但是堆和代码难懂但是精炼的取舍</h4>
+
+<p>我想很多对代码有追求的人都发现一件事情?看见项目中存在大量，没有被重用的函数，似曾相似的方法甚至方法的名字…
+我是极为见不得ugly或者华而不实的代码的人, 但是有个问题. 我封装的代码很不直观，难懂..原来的代码貌似极为好懂.每个人都有自己的理解吧.就象我的团队里面有人说django代码太难懂，因为它们有django项目组的文化…
+celery代码写的不好这样的安慰似的评论…但是我不这样认为,我还在读celery代码，我也承认里面是有作者风格的取名或者实现的方式，但是我学到了很多.</p>
+
+<p>通过看开源代码，比如django，requests，flask. 我会发现和总结很多别人的用法，思考别人为啥这样用.比如项目代码目录结构，解决一些问题使用的方式. 还有一些pep8中没有提到的规范. 比如一些代码实用的风格，举个例子：</p>
+
+<p>我们的代码引用其它模块是这样的:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="kn">from</span> <span class="nn">test</span> <span class="kn">import</span> <span class="n">long_long_long_test1</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">test</span> <span class="kn">import</span> <span class="n">long_long_long_test2</span>
+</span><span class="line"><span class="n">form</span> <span class="n">test</span> <span class="kn">import</span> <span class="nn">long_long_long_test3</span>
+</span></pre></figure></notextile></div>
+
+<p>省略20多行，很闹残吧? 有一种风格是</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="kn">from</span> <span class="nn">test</span> <span class="kn">import</span> <span class="n">long_long_long_test1</span><span class="p">,</span> \
+</span><span class="line">                 <span class="n">long_long_long_test2</span><span class="p">,</span> \
+</span><span class="line">                 <span class="n">long_long_long_test3</span>
+</span></pre></figure></notextile></div>
+
+<p>说一个技巧:当我不知道该用什么，去看很NB项目怎么用
+结果django和requests是这样的风格</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="kn">from</span> <span class="nn">test</span> <span class="kn">import</span> <span class="p">(</span><span class="n">long_long_long_test1</span><span class="p">,</span>
+</span><span class="line">                  <span class="n">long_long_long_test2</span><span class="p">,</span>
+</span><span class="line">                  <span class="n">long_long_long_test3</span><span class="p">)</span>
+</span></pre></figure></notextile></div>
+
+<p>怎么样进步?不是闭门造车..先去看看别人是怎么用的..</p>
+
+<p>比如我以前拼接一个文件路径都是这样:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="s">&#39;{0}/{1}&#39;</span><span class="o">.</span><span class="n">fotmat</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</span></pre></figure></notextile></div>
+
+<p>其实人家本来有:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</span></pre></figure></notextile></div>
+
+<p>很惭愧.然后花了半个小时，把以前我这样用的地方全改了</p>
+
+<p>这是我说的重要的一点: 知道了什么是对的 就要改….</p>
+
+<p>对于这个主题我的答案: 我喜欢难懂但是精炼的代码. 境界就是你看的懂就能写的出来.
+假如你连这点代码都看不懂.你看不了开源项目的做法.你会一直是个堆代码的码农..你会一直在堆着垃圾的代码.你会增加未来接手人的维护成本</p>
+
+<h4 id="python-3">怎么样提高python可读性和质量</h4>
+
+<p>以下是我的想法</p>
+
+<ol>
+  <li>首先给函数/类/方法取个好懂的名字(我这点很失败，英语太烂…是不是应该加一个学好英语)</li>
+  <li>当一个差不多的操作出现了三次，不要继续堆代码，要抽象出来</li>
+  <li>我倾向于写FIXME，TODO, 写文件/函数的用途的注释，在不是很好理解的代码上面注释作用，标明输入和输出都是什么(如果不是要修改维护你的代码，没人在乎你的算法多NB)</li>
+  <li>上面说的，请不要让别人需要仔细研究你的代码才明白是什么意思.. 我写代码很有压力，因为我不想接受我带嘛的人骂我.</li>
+  <li>不要炫技，请不要乱用函数式编程/闭包.我在乎的是性能和简单粗暴的实现功能</li>
+  <li>多用标准库的实现，如果不知道有这个功能实现前先google.</li>
+  <li>多读有名的项目，github上面有很多.思考别人为什么这样用</li>
+</ol>
+
+<p>….</p>
+
+<h4 id="section-3">我们是封装开源项目还是直接修改开源代码给自己用</h4>
+
+<p>其实我这样描述,比如有个项目因为历史原因是一个很早的版本.但是和其它新的版本组件有兼容问题以及我们业务的特殊需要.我看了源码发现需要改动几个地方.
+问题改动后就需要自己维护这个项目，对于新部署的环境甚至其它版本我还继续需要这个变动. 还有一种声音是”你不能修改XX源码”,你要在上面封装出一个新的东西，
+也就是不直接调用XX，而是在我的自己的项目对XX有了个封装YY，然后我们的调用YY.</p>
+
+<p>我觉得这个东西自己部署是一个可行的方案，首先这个修改不是一个patch，不是主流的修改.只能算是我们业务的二次开发而已，封装只是在掩耳盗铃.
+着让我想起一个问题:为什么中国鲜有好的开源项目:中国人不缺好的idea?是因为中国人觉得这件事情做不了，是因为它们觉得别人实现的就是很牛比的，
+自己改了就会有问题…其实这是自卑..首先是代码就会有bug，tornado/flask/requests不还是在开发和解决问题嘛？bug一直在只是你没有发现和注意.
+我觉得开源项目的代码看懂了，了解了就可以修改..没什么可担心的…我指的是角度.我觉得每个人学了一门语言看了某个项目的源码只要你有胆量，
+你有一个怀疑的善于发现和思考的心，那么你都能贡献你的代码，做你的二次开发.</p>
+
+<p>和本文相关: 如果你没有做过这件事，你怎么可以说你会python?</p>
+
+<h4 id="section-4">我的感想</h4>
+
+<p>我不赞同”做好工作就好了”的调调.对你个人来说你明年今天做的事情和现在是一样的，不同的是你老了一岁.
+如果是为什么完成工作而完成工作. 其实你这个代码就是线上运行的代码，并且是以后很长时间再用的版本，你随意的一些代码会在很久之后很难的变动.. 
+我也不同意一上来就把你的程序写的能承受千万级PV的架构.我认为对于现在项目状态，我要思考大约未来一年可能的发展，它如何简单的扩展就好了..</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/shi-yong-glancesjian-kong-ben-di-he-yuan-cheng-fu-wu-qi-de-xing-neng-zhuang-tai-%2Cyi-ji-wo-dui-ta-de-xiu-gai/">使用glances监控本地和远程服务器的性能状态，以及我对它的修改</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-01T11:43:00+08:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>首先开始感谢<a href="http://www.vpsee.com">Vpsee</a>的那篇<a href="http://www.vpsee.com/2013/07/a-new-system-monitoring-tool-glances-installation-and-usage/">安装和使用系统监控工具 Glances</a>，让我发现了<a href="https://github.com/nicolargo/glances">glances</a>这个新的系统监控工具.并且可以通过xml-rpc
+监控远程服务器的系统情况显示到本地.它其实类似于top,支持键盘按键.使用了psutil库获取了硬盘分区，负载，内存使用，交换分区使用，进程(支持根据cpu占用,内存占用，进程名和
+io使用的排序).并且在安装了lm-sensor后还可以监控服务器的温度.记录日志,高亮显示可配置的阀值的预警颜色.就像一个超级版的top,但是它的优点其实就是2个:</p>
+
+<ol>
+  <li>它是python的，你可以定制化</li>
+  <li>它可以使用rpc获取其他服务端的系统信息,top可不行额</li>
+</ol>
+
+<h4 id="section-1">我对它做了些贡献</h4>
+
+<ol>
+  <li>首先我给他添加了中文的国际化,但是因为显示英文比汉语占用得长度要小，我没有在太多的地方全部显示中文，而且我觉得作为运维本来就应该好好用英语…如果有必要我可以做一个glance-cn，完全汉化</li>
+  <li>我读了它的源码,发现它的代码已经超过4000行，但是好几个地方其实有很大的优化空间,比如它的glancesScreen类，有下面这样的代码:</li>
+</ol>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="k">def</span> <span class="nf">__getMemAlert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span><span class="line">    <span class="c"># If current &lt; CAREFUL of max then alert = OK                          </span>
+</span><span class="line">    <span class="c"># If current &gt; CAREFUL of max then alert = CAREFUL                     </span>
+</span><span class="line">    <span class="c"># If current &gt; WARNING of max then alert = WARNING                     </span>
+</span><span class="line">    <span class="c"># If current &gt; CRITICAL of max then alert = CRITICAL                   </span>
+</span><span class="line">    <span class="k">try</span><span class="p">:</span>
+</span><span class="line">        <span class="n">variable</span> <span class="o">=</span> <span class="p">(</span><span class="n">current</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="nb">max</span>
+</span><span class="line">    <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+</span><span class="line">        <span class="k">return</span> <span class="s">&#39;DEFAULT&#39;</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">if</span> <span class="n">variable</span> <span class="o">&gt;</span> <span class="n">limits</span><span class="o">.</span><span class="n">getMEMCritical</span><span class="p">():</span>
+</span><span class="line">        <span class="k">return</span> <span class="s">&#39;CRITICAL&#39;</span>
+</span><span class="line">    <span class="k">elif</span> <span class="n">variable</span> <span class="o">&gt;</span> <span class="n">limits</span><span class="o">.</span><span class="n">getMEMWarning</span><span class="p">():</span>
+</span><span class="line">        <span class="k">return</span> <span class="s">&#39;WARNING&#39;</span>
+</span><span class="line">    <span class="k">elif</span> <span class="n">variable</span> <span class="o">&gt;</span> <span class="n">limits</span><span class="o">.</span><span class="n">getMEMCareful</span><span class="p">():</span>
+</span><span class="line">        <span class="k">return</span> <span class="s">&#39;CAREFUL&#39;</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">return</span> <span class="s">&#39;OK&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">def</span> <span class="nf">__getMemColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span><span class="line">    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__colors_list</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__getMemAlert</span><span class="p">(</span><span class="n">current</span><span class="p">,</span> <span class="nb">max</span><span class="p">)]</span>
+</span><span class="line">
+</span><span class="line"><span class="k">def</span> <span class="nf">__getMemColor2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span><span class="line">    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__colors_list2</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__getMemAlert</span><span class="p">(</span><span class="n">current</span><span class="p">,</span> <span class="nb">max</span><span class="p">)]</span>
+</span><span class="line">
+</span><span class="line"><span class="k">def</span> <span class="nf">__getSwapAlert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span><span class="line">    <span class="c"># If current &lt; CAREFUL of max then alert = OK                          </span>
+</span><span class="line">    <span class="c"># If current &gt; CAREFUL of max then alert = CAREFUL                     </span>
+</span><span class="line">    <span class="c"># If current &gt; WARNING of max then alert = WARNING                     </span>
+</span><span class="line">    <span class="c"># If current &gt; CRITICAL of max then alert = CRITICAL                   </span>
+</span><span class="line">    <span class="k">try</span><span class="p">:</span>
+</span><span class="line">        <span class="n">variable</span> <span class="o">=</span> <span class="p">(</span><span class="n">current</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="nb">max</span>
+</span><span class="line">    <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+</span><span class="line">        <span class="k">return</span> <span class="s">&#39;DEFAULT&#39;</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">if</span> <span class="n">variable</span> <span class="o">&gt;</span> <span class="n">limits</span><span class="o">.</span><span class="n">getSWAPCritical</span><span class="p">():</span>
+</span><span class="line">        <span class="k">return</span> <span class="s">&#39;CRITICAL&#39;</span>
+</span><span class="line">    <span class="k">elif</span> <span class="n">variable</span> <span class="o">&gt;</span> <span class="n">limits</span><span class="o">.</span><span class="n">getSWAPWarning</span><span class="p">():</span>
+</span><span class="line">        <span class="k">return</span> <span class="s">&#39;WARNING&#39;</span>
+</span><span class="line">    <span class="k">elif</span> <span class="n">variable</span> <span class="o">&gt;</span> <span class="n">limits</span><span class="o">.</span><span class="n">getSWAPCareful</span><span class="p">():</span>
+</span><span class="line">        <span class="k">return</span> <span class="s">&#39;CAREFUL&#39;</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">return</span> <span class="s">&#39;OK&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">def</span> <span class="nf">__getSwapColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span><span class="line">    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__colors_list</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__getSwapAlert</span><span class="p">(</span><span class="n">current</span><span class="p">,</span> <span class="nb">max</span><span class="p">)]</span>
+</span><span class="line">
+</span><span class="line"><span class="k">def</span> <span class="nf">__getSwapColor2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+</span><span class="line">    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__colors_list2</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">__getSwapAlert</span><span class="p">(</span><span class="n">current</span><span class="p">,</span> <span class="nb">max</span><span class="p">)]</span>
+</span></pre></figure></notextile></div>
+
+<p>我来分析下,每种模块都有__getXXXAlert，__getXXXColor， __getxxxColor2，其中__getXXXColor， __getxxxColor2都会调用__getXXXAlert,他们的参数可能不同</p>
+
+<p>你看到了很多好相似的代码了嘛?其实待遇代码的可读性和可理解性已经代码的紧凑和不易懂一直就需要一个折中，我提了一个pull request，其实对这个类的属性做了下拦截</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="c"># 使用__getattr__是为了只获取类中没有定义的属性</span>
+</span><span class="line"><span class="k">def</span> <span class="nf">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span><span class="line">        <span class="n">base_type</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Mem&#39;</span><span class="p">,</span> <span class="s">&#39;Swap&#39;</span><span class="p">,</span> <span class="s">&#39;Fs&#39;</span><span class="p">,</span> <span class="s">&#39;HDDTemp&#39;</span><span class="p">,</span> <span class="s">&#39;Sensors&#39;</span><span class="p">]</span>
+</span><span class="line">        <span class="n">get_alert_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;_glancesScreen__get&#39;</span> <span class="o">+</span> <span class="n">m</span> <span class="o">+</span> <span class="s">&#39;Alert&#39;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">base_type</span><span class="p">]</span>
+</span><span class="line">        <span class="n">base_type</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s">&#39;Load&#39;</span><span class="p">,</span> <span class="s">&#39;Cpu&#39;</span><span class="p">])</span> <span class="c">#我没有也处理_getCpu/LoadAlert,因为他们的调用略有不同,保留了</span>
+</span><span class="line">        <span class="n">get_color_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;_glancesScreen__get&#39;</span> <span class="o">+</span> <span class="n">m</span> <span class="o">+</span> <span class="s">&#39;Color&#39;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">base_type</span><span class="p">]</span>
+</span><span class="line">        <span class="n">get_color_list2</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;_glancesScreen__get&#39;</span> <span class="o">+</span> <span class="n">m</span> <span class="o">+</span> <span class="s">&#39;Color2&#39;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">base_type</span><span class="p">]</span>
+</span><span class="line">
+</span><span class="line">        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">get_alert_list</span><span class="p">:</span>
+</span><span class="line">            <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getAlert</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">19</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</span><span class="line">        <span class="k">elif</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">get_color_list</span><span class="p">:</span>
+</span><span class="line">            <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getColor</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">19</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+</span><span class="line">        <span class="k">elif</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">get_color_list2</span><span class="p">:</span>
+</span><span class="line">            <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getColor2</span><span class="p">,</span> <span class="n">name</span><span class="p">[</span><span class="mi">19</span><span class="p">:</span><span class="o">-</span><span class="mi">6</span><span class="p">])</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">getColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span class="line">        <span class="sd">&quot;&quot;&quot;                                                                    </span>
+</span><span class="line"><span class="sd">        default: current=0, max=100, stat=&#39;&#39;, core=1                           </span>
+</span><span class="line"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span class="line">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__colors_list</span><span class="p">[</span><span class="nb">getattr</span><span class="p">(</span>
+</span><span class="line">            <span class="bp">self</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;_glancesScreen__get&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="s">&#39;Alert&#39;</span><span class="p">]))(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)]</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">getColor2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span class="line">        <span class="sd">&quot;&quot;&quot;                                                                    </span>
+</span><span class="line"><span class="sd">        default: current=0, max=100, stat=&#39;&#39;, core=1                           </span>
+</span><span class="line"><span class="sd">        &quot;&quot;&quot;</span>
+</span><span class="line">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__colors_list2</span><span class="p">[</span><span class="nb">getattr</span><span class="p">(</span>
+</span><span class="line">            <span class="bp">self</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;_glancesScreen__get&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="s">&#39;Alert&#39;</span><span class="p">]))(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)]</span>
+</span></pre></figure></notextile></div>
+
+<p>— update 2013-08-10 —– </p>
+
+<p>它已经接收了我的代码</p>
+
+<ol>
+  <li>我在服务器用pip，安装的是1.6.1，而本地是1.7.1a，但是有一个功能hddtemp支持实在1.6.1之后添加的,我用本地使用-c连接远程服务器,本
+地有-y选项，但是远程是没有的，按’h’就会报错,我修改了这个问题</li>
+</ol>
+
+<h4 id="section-2">如何使用国际化</h4>
+
+<ol>
+  <li>
+    <p>它自带了这个脚本i18n-gen.sh</p>
+  </li>
+  <li>
+    <p>我在我的gentoo和mac下都实验了,没有作用，难道是我理解有问题?</p>
+  </li>
+</ol>
+
+<p>首先我先把本地的locale换成中文:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">export</span> <span class="n">LANG</span><span class="o">=</span><span class="n">zh_CN</span><span class="o">.</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+</span></pre></figure></notextile></div>
+<p>后来我发现它使用国际化的原理是:</p>
+
+<ol>
+  <li>在安装的时候将.mo文件一起拷贝到glances的安装目录下得share/locale/XX/LC_MESSAGES下(XX代表你的生成的国际化名字)</li>
+  <li>它使用了这样的方法加载国际化</li>
+</ol>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">)</span>
+</span><span class="line"><span class="n">gettext</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">__appname__</span><span class="p">)</span>
+</span></pre></figure></notextile></div>
+
+<p>但是没有去作用，因为没有找到.mo文件</p>
+
+<p>我提了pull req, 这样修改(其实就是去目录下找到那个语言的.mo):</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">cur_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">__file__</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class="line"><span class="n">gettext</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">__appname__</span><span class="p">,</span> <span class="s">&#39;{0}/../share/locale&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cur_dir</span><span class="p">))</span>
+</span></pre></figure></notextile></div>
+
+<p>— update 2013-08-10 —–</p>
+
+<p>它没有采用我的方法而是比较复杂的实现了</p>
+
+<p>我在想，难道以前得几种语言是可以实现的?其实原来的方式在程序目录下是可以的，但是setup.py install后目录结构变化了</p>
+
+<h4 id="section-3">远程连接服务器</h4>
+
+<p>这是glances最大的一个特点，但是不能让谁都可以使用serverproxy链接查看你的状态吧?所以你需要指定-P选项，加一个随机密码(其实账号是glances，没有提供参数，在程序里面写死了)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/%5B%3F%5D-qi-xue-xi-common-lispba/">一起学习common Lisp吧</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-28T11:28:00+08:00" pubdate data-updated="true">Jul 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>我记得在什么地方说过一个程序员要学什么语言:汇编,C,lisp,还有一门脚本语言(python或者ruby).遗憾的是我只会一点python和一点点ruby. 
+最近关注到google出品了<a href="https://github.com/google/lisp-koans">lisp_koans</a>-一个给初学者学习commonlisp的好东西,也许你也没有听过ruby_koans
+和python_koans,假如你已经回了这2门语言可以忽略假如你想学习这2门语言,从koans入手是一个很好地途径.
+最近几天花了些时间完成了lisp_koans,把答案分享出来<a href="https://github.com/dongweiming/lisp-koans-answer">lisp-koans-answer</a></p>
+
+<p>我也给python_koans贡献了几行代码,在入职培训要求通过几种koans,xx_koans其实是一些测试用例,就像过关题目,他涉及这个语言的方方面面.只能你提供了正确的答案
+才能继续下一个题目</p>
+
+<h4 id="section-1">为啥分享答案</h4>
+
+<ol>
+  <li>
+    <p>做过python_koans的都记得，当某一题目你的答案不是期望的值的时候，这个测试没有通过，但是会提示你正确的结果,但是lisp_koans不会，你可以在不明所以的情况下需要研究很久</p>
+  </li>
+  <li>
+    <p>lisp_koans还很新(2013.05), 而且本来lisp语言就很小众. 不像ruby和python那样广泛.你不能从stackoverflow或者stackexchange找到答案</p>
+  </li>
+</ol>
+
+<h4 id="common-lisp">让我们一起学习common lisp吧</h4>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi/">使用http和websocket连接服务器</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-19T22:53:00+08:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>想想吧，通过网页ssh登录服务器是一件多么酷的事情?今天看了<a href="http://www.vpsee.com/2013/06/invoke-a-linux-shell-with-ssh-account-from-browser">使用浏览器访问 Linux 终端</a>,
+也就是这个<a href="https://github.com/dongweiming/wssh">wssh</a>,你也可以理解为websocket-ssh, 觉得有点意思就拿出来</p>
+
+<h4 id="section-1">原路</h4>
+
+<p>它是一个库，很简单，作者写了2个flask+gevent+websocket+paramiko的例子，其中网页版的使用了bootstrap.
+简单的理解就是不通过ssh连接服务器，而是通过网页或者一个client请求url+相应参数调用
+shell到服务器的方式，但是遗憾的是作者一年没有再维护，bootstrap的网页竟然没有指定ssh端口的选项，但是很多时候为了安全
+都会把ssh端口换成其它端口，这样就不能用了,好吧 我动手给它加了这个功能，也提了pull request.目前大家可以用我的这版:<a href="https://github.com/dongweiming/wssh">wssh</a></p>
+
+<h4 id="update"><strong>update</strong></h4>
+
+<p>wssh作者已经合并了我的修改</p>
+
+<h4 id="section-2">使用说明</h4>
+
+<p>当你使用</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">sudo python setup.py install</span></pre></figure></notextile></div>
+
+<p>安装后，就能直接使用wssh和wsshd,wsshd是一个flask作为httpserver和gevent作为wsgi的服务端，默认启动在你本机的5000端口.
+网页登录就能看见简单大气的选项页面，可以指定用户，服务器ip，端口，以及使用密钥或者密码登录.输入点击连接就会登录到那台服务器,数据通过websocket实时显示到页面上</p>
+
+<p>而wssh是一个命令行登录的带选项的命令，其实就是页面输入的参数通过命令行的方式输入然后直接登录服务器，比如我下面的用法:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">wssh dongwm@dongwm.com -p XXX -s 58404</span></pre></figure></notextile></div>
+
+<h4 id="section-3">我觉得有空可以基于这个做点好玩的东西</h4>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/gentooxia-de-lxche-docker/">Gentoo下的lxc和docker</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-13T20:03:00+08:00" pubdate data-updated="true">Jul 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>上次就说要写一篇gentoo下安装使用docker的文章，顺便也学习了下gentoo下的lxc，记录下来</p>
+
+<h4 id="section-1">升级你的内核</h4>
+
+<p>docker要求升级到3.8以上的内核,假如你的已经是3.8.XX,那么你就要重新编译内核,参看<a href="http://wiki.gentoo.org/wiki/LXC">Wiki</a>
+很多人比较怕编译内核，一看那个启动的简陋的页面就不知道该干什么了,出现问题不知道该去选择什么或者去掉什么选项.我来说一些小窍门,简单的说就是
+根据提示去内核界面按’/’搜索这个参数，根据提示的位置找到那个项</p>
+
+<p>问题1: 假如符合项很多怎么判断那个是真正要我选择的呢?</p>
+
+<p>回答: 首先是上下文的判断，一般的情况都是符合某写关键字的项都是某项和它的子项，当你去掉其父项，子项的选项也就消失了，还有个使用的经验的积累.
+比如下面的提示:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">*   CONFIG_NETFILTER_XT_MATCH_ADDRTYPE:  is not set when it should be.</span></pre></figure></notextile></div>
+
+<p>意思就是提示你”NETFILTER_XT_MATCH_ADDRTYPE”, 没有设置，然后你使用/输入”NETFILTER_XT_MATCH_ADDRTYPE”,回车，会显示类似下面的东西:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line"> Search Results ─────────────────────────────┐
+</span><span class="line">  │ Symbol: NETFILTER_XT_MATCH_ADDRTYPE [=n]                                │  
+</span><span class="line">  │ Type  : tristate                                                        │  
+</span><span class="line">  │ Prompt: "addrtype" address type match support                           │  
+</span><span class="line">  │   Defined at net/netfilter/Kconfig:798                                  │  
+</span><span class="line">  │   Depends on: NET [=y] &amp;&amp; INET [=y] &amp;&amp; NETFILTER [=y] &amp;&amp; NETFILTER_XTAB │  
+</span><span class="line">  │   Location:                                                             │  
+</span><span class="line">  │     -&gt; Networking support (NET [=y])                                    │  
+</span><span class="line">  │       -&gt; Networking options                                             │  
+</span><span class="line">  │         -&gt; Network packet filtering framework (Netfilter) (NETFILTER [= │  
+</span><span class="line">  │           -&gt; Core Netfilter Configuration                               │  
+</span><span class="line">  │ (1)         -&gt; Netfilter Xtables support (required for ip_tables) (NETF │ </span></pre></figure></notextile></div>
+
+<p>注意其中的’Prompt’,他是帮助你在实际找对应项判断主题的关键字,’Location’告诉你它的位置是
+‘Networking support’下的’Networking options’子项下的’Network packet filtering framework’…</p>
+
+<p>问题2： 为什么我选择了这个项依然还是没有显示成功，比如上面’NETFILTER_XT_MATCH_ADDRTYPE [=n]’ n就是no，y就是yes
+一个严重的问题就是某项其实会有很多依赖，只有这些依赖都是’y’的时候它才生效.比如lxc要求的’USER_NS’,
+默认内核中是没有显示出来的,原因是存在很多依赖和他冲突，必须去掉那些项他才会显示, 你打开它的搜索去看还有那个依赖还是’n’.
+这个过程可能好几次，直到最后，就显示了UIDGID_CONVERTED的bool值为n，这个时候你就要去看这个内核参数的依赖,打开/usr/src/linux/init/Kconfig,
+找到依赖挨个去掉，直到能显示</p>
+
+<h4 id="docker">安装docker</h4>
+
+<p><a href="https://github.com/tianon/gentoo-overlay">tianon</a>做好了一个docker的overlay源，而且docker的gentoo镜像也是他贡献的，感谢.
+把三方layman增加到你的gentoo系统在以前的<a href="http://www.dongwm.com/archives/wo-wei-hu-de-colout">我维护的colout</a>说过就不说了,假设这里你已经添加了tianon的源</p>
+
+<p>然后安装</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">sudo emerge app-emulation/lxc-docker</span></pre></figure></notextile></div>
+
+<p>这个依赖过程当然也会安装lxc</p>
+
+<p>因为docker依赖aufs,但是安装aufs的时候出现问题，我还记得一句:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">You need to apply a patch to your kernel to compile and run the aufs3 module</span></pre></figure></notextile></div>
+
+<p>然后就异常退出了,看了下源码也的确有这些patch,当我手动打了第一个patch,依然报错…只能一个个的补丁手动打进去？
+看它的ebuild,有这样一行:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">IUSE="debug doc fuse hfs inotify kernel-patch nfs pax_kernel ramfs"</span></pre></figure></notextile></div>
+
+<p>可是kernel-patch没有起作用,那么你在你的/etc/make.conf的USE里面添加’kernel-patch’就好了</p>
+
+<h4 id="docker0">增加docker0网卡</h4>
+<p>增加一个配置，这个配置也是创建容器可选的配置，都放在/etc/lxc目录下</p>
+
+<p>cat /etc/lxc/guest.conf</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">lxc.network.type = veth
+</span><span class="line">lxc.network.flags = up
+</span><span class="line">lxc.network.link = docker0</span></pre></figure></notextile></div>
+
+<h4 id="docker-1">启动docker</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">docker -d &amp;</span></pre></figure></notextile></div>
+<p>当提示类似:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">2013/07/13 13:36:46 Listening for HTTP on 127.0.0.1:4243 (tcp)</span></pre></figure></notextile></div>
+
+<p>表示搞定了</p>
+
+<p>但是我这里出现了一个报错</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">iptables v1.4.16.3: can't initialize iptables table `nat': Table does not exist (do you need to insmod?)</span></pre></figure></notextile></div>
+
+<p>iptables的版本够高，但是很明显还是内核模块的问题，查看下,果然如此</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">localhost ~ # zgrep NF_NAT /proc/config.gz
+</span><span class="line"># CONFIG_NF_NAT_IPV4 is not set
+</span><span class="line"># CONFIG_NF_NAT_IPV6 is not set</span></pre></figure></notextile></div>
+
+<p>还是需要设置在重新编译内核,重启生效</p>
+
+<h4 id="lxc">使用lxc</h4>
+
+<p>比如我想创建个debian的容器</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">emerge dev-util/debootstrap #不同的系统依赖不同的这个包，比如fedora/centos就是sys-apps/yum, arch就是sys-apps/pacman...
+</span><span class="line">lxc-create -t debian -n debian_test #也可以加-p 指定配置文件 ，配置类似上面的guest.conf，可以配置ip之类
+</span><span class="line"># 假如想要ubuntu
+</span><span class="line"># lxc-create -t ubuntu -n ubuntu_test
+</span></pre></figure></notextile></div>
+<p>这个时间会下载debian的基础镜像，包含一些基础的包</p>
+
+<p>你要设置root密码,比如我这个debian_test， 相关数据都在/etc/lxc/debian_test</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">cd /etc/lxc/debian_test
+</span><span class="line">chroot rootfs /bin/bash</span></pre></figure></notextile></div>
+
+<p>然后登录设置密码</p>
+
+<p>启动和关闭容器的命令是 </p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">lxc-start -n debian_test
+</span><span class="line">lxc-stop -n debian_test</span></pre></figure></notextile></div>
+
+<p>当然你也可以设置个开机启动</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">ln -s lxc /etc/init.d/lxc.debian_test
+</span><span class="line">/etc/init.d/lxc.debian_test stop
+</span><span class="line">/etc/init.d/lxc.debian_test start
+</span><span class="line">rc-update add lxc.debian_test default</span></pre></figure></notextile></div>
+
+<p>还可以使用终端连接</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">lxc-console -n debian_test</span></pre></figure></notextile></div>
+
+<h4 id="gentoo">创建gentoo容器</h4>
+
+<p>当我想创建gentoo的容器,可以借用<a href="https://github.com/globalcitizen/lxc-gentoo">lxc-gentoo</a>,它提供一个命令行的选择.简单粗暴，以下是一个例子
+创建一个ip为192.168.0.10，网关为192.168.0.1，容器叫做gentoo_test，主机名为test1的容器</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">sudo lxc-gentoo/lxc-gentoo create -i 192.168.0.10/26 -g 192.168.0.1 -n gentoo_test -u test1 </span></pre></figure></notextile></div>
+
+<p>默认会把容器安装在执行命令的当前目录,这样启动</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">sudo /usr/sbin/lxc-start -f test1.conf -n gentoo_test</span></pre></figure></notextile></div>
+
+<p>你也可以chroot进去， 为什么这样用？比如我经常用到的场景，我安装了gentoo/opensuse的双系统，可能我把其中一个系统玩坏(比如升级产生的问题，我安装或者卸载了某些东西等)
+，我就可以在没有u盘，livecd的前提下进入另外一个系统，chroot到这个系统去修复,而且不影响工作，因为我的很多目录之类都是软连接，修改一个地方切换另外的系统继续用</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">mount -t proc proc ./gentoo_test/proc
+</span><span class="line">mount -o bind /dev ./gentoo_test/dev
+</span><span class="line">chroot ./gentoo_test /bin/bash
+</span><span class="line">export PS1="(gentoo_test) $PS1"
+</span><span class="line"># 现在你就进来了,而不需要启动系统</span></pre></figure></notextile></div>
+
+<h4 id="archlinux">创建Archlinux容器</h4>
+
+<p>我没有用gentoo的lxc自带的/usr/share/lxc/templates/lxc-archlinux,因为它根本用不了,并且存在以下一些问题:</p>
+
+<ol>
+  <li>
+    <p>arch早已不用initscripts，改用systemd</p>
+  </li>
+  <li>
+    <p>安装基础系统不需要chroot到其系统,直接pacman指定系统根目录即可,并且它chroot进去指定根系统,那肯定永远也成功不了</p>
+  </li>
+  <li>
+    <p>在一个新的系统的pacman.conf没有指定XferCommand,那么也就不知道用什么下载了</p>
+  </li>
+</ol>
+
+<p>我新建个一个项目<a href="https://github.com/dongweiming/gentoo-lxc-templates">gentoo-lxc-templates</a>,目前包含了我修改的lxc-archlinux,我很少用arch,有问题欢迎pullme</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/osxxia-shi-yong-vagranthe-dockerguan-li-chuang-jian-xu-ni-huan-jing/">OSX下使用vagrant和docker管理创建虚拟环境</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-09T10:41:00+08:00" pubdate data-updated="true">Jul 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>乍一看题目出现了好多名词，根据我的理解一一说来</p>
+
+<p>虚拟化: 其实就是因为云计算的催生的技术，目的是让运行在上面的应用程序觉得自己独占所有的资源。说白了就是资源管理/隔离和namspace的隔离.</p>
+
+<p>Hypervisor: 这是虚拟化的一种,也就是操作系统上面在运行一个或者多个操作系统，这个底层的操作系统系统就是hypervisor.它来管理和分配那些创建的操作系统
+所需要的资源.这种虚拟化也可以分成2种:原生(直接将虚拟的操作系统运行在裸机上，比如kvm和xen,确定是需要特定的硬件支持)和宿生(软件层面的，比如我这里
+会用到的Virtualbox). 但是有个问题：运行了多个操作系统实例，开销很大，而且启动一个系统就要拿走一部分资源</p>
+
+<p>LXC(LinuX Containers):是一种操作系统层面的虚拟化技术.它只运行<strong>一个内核</strong>，一个虚拟的执行环境就是一个容器。可以为容器绑定特定的cpu和memory节点，
+分配特定比例的cpu时间、IO时间，限制可以使用的内存大小等.遗憾的是LXC只支持linux，不支持BSD，OSX，WINDOWS，所以我下面在我的Mac里面是通过
+Virtualbox生成容器的. 至于为什么选择LXC，我想除了开销小之外，就是方便快速的部署</p>
+
+<p><a href="http://www.docker.io">Docker</a>: 是一种增加了高级API的LinuX Container（LXC）技术，来至<a href="https://www.dotcloud.com">dotcloud</a>, 官网这样描述:提供了能够独立运行Unix进程的
+轻量级虚拟化解决方案。它提供了一种在安全、可重复的环境中自动部署软件的方式.在<a href="http://www.infoq.com/cn/news/2013/04/Docker">Infoq</a>你能找到主要特性，当然，3个月过去了，它肯定成长了很多</p>
+
+<p><a href="https://github.com/mitchellh/vagrant">Vagrant</a>: 是一个ruby语言的工具. 用于创建和部署虚拟化开发环境. 我们使用Vagrant在VirtualBox的虚拟机里安装docker</p>
+
+<h4 id="docker">什么系统来使用docker的一些想法</h4>
+
+<p>用OSX本来就有点…额，太绕. 其实docker已经被ubuntu官方支持，添加docker的PPA然后安装.</p>
+
+<p>还可以把安装流程封装成Dockfile，用git做版本控制</p>
+
+<h4 id="section-1">谁需要学习本文</h4>
+
+<p>我想运维同学会更需要一些.或者硬件资源缺乏的程序员们</p>
+
+<p>程序员倒是可以学习把开发的应用放在虚拟机里面做成模板，可以使用vagrant管理</p>
+
+<p>为什么这么说？要是为了不污染开发环境，我们python已经有个virtualenv+virtualenvwrapper.</p>
+
+<p>对我这种程序员来说，我不需要那么多虚拟机,其次是我还有物理机的测试环境，并且我们线上的操作系统相当一致. 这篇文章就是为了了解docker</p>
+
+<h4 id="vagrantvirtualbox">安装Vagrant和Virtualbox</h4>
+
+<p>vagrant就是基于<a href="https://www.virtualbox.org">Virtualbox</a>的，你可以使用gem安装</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">gem install vagrant</span></pre></figure></notextile></div>
+
+<p>我喜欢最新版，手动安装的</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">wget https://github.com/mitchellh/vagrant/archive/v1.2.2.tar.gz
+</span><span class="line">tar zxvf v1.2.2.tar.gz
+</span><span class="line">cd vagrant-1.2.2
+</span><span class="line">sudo gem install bundler
+</span><span class="line">bundle install
+</span><span class="line">rake install</span></pre></figure></notextile></div>
+
+<h4 id="githubdocker">从github克隆docker</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">git clone https://github.com/dotcloud/docker.git
+</span><span class="line">cd docker
+</span><span class="line">vagrant up</span></pre></figure></notextile></div>
+<p>‘vagrant up’其实就是调用了virtualbox的终端接口打开你的虚拟机，类似下面的命令， 而不是你在界面点击’开始’</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">/Applications/VirtualBox.app/Contents/MacOS/VBoxHeadless --comment docker_1373340358 --startvm 6e4ea638-77b2-400d-9fbe-3b4e8d4fba21 --vrde config</span></pre></figure></notextile></div>
+
+<p>这时候你在virtualbox的界面可以看见启动的虚拟机,名字就是上面的docker_1373340358</p>
+
+<p>在docker目录下已经有个一个Vagrantfile文件，你想想Makefile，意思很类似，其实为什么要这个docker源，
+很大原因就是要用这个文件，因为它已经配置好了默认你要是用的box文件,类似执行了下面的命令</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">vagrant init ubuntu http://files.vagrantup.com/http://files.vagrantup.com/precise64.box
+</span><span class="line">.... #一些配置
+</span><span class="line">vagrant up</span></pre></figure></notextile></div>
+
+<p>首先说这里可能会报错,类似这个网页粘贴的<a href="http://wklej.org/id/836076/txt">内容</a>， 内容有类似提示</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">INFO interface: error: There was an error executing the following command with
+</span><span class="line">VBoxManage:
+</span><span class="line">
+</span><span class="line">["import", "C:/Users/kwladyka/Desktop/My Dropbox/Vagrant/vagrant.d/boxes/base/bo
+</span><span class="line">x.ovf"]
+</span><span class="line">
+</span><span class="line">For more information on the failure, enable detailed logging with
+</span><span class="line">VAGRANT_LOG.</span></pre></figure></notextile></div>
+
+<p>解决办法是:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">cd /Users/dongwm/.vagrant.d/boxes/ubuntu/virtualbox/
+</span><span class="line">openssl sha1 *.vmdk *.ovf &gt; box.mf
+</span><span class="line">cd -</span></pre></figure></notextile></div>
+
+<p>但是官网说这样会自动帮我们增加docker的PPA，更新源再安装lxc-docker，可是没有出现，我后来都是自己去执行的,如下</p>
+
+<p>为什么用这个box？当然了其它系统都可以，你可以下载其它的虚拟机镜像，再安装其系统下的lxc-docker(我会准备一篇gentoo版本的文章)</p>
+
+<h4 id="section-2">登录虚拟机</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">vagrant ssh</span></pre></figure></notextile></div>
+
+<p>其实通过2222的端口转发登录了虚拟机的22端口，实际命令类似这样:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">ssh vagrant@127.0.0.1 -p 2222 -o LogLevel=FATAL -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o 
+</span><span class="line">IdentitiesOnly=yes -i /Users/dongwm/.vagrant.d/insecure_private_key</span></pre></figure></notextile></div>
+
+<h4 id="lxc-docker">我自己安装lxc-docker的方法</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">sudo apt-get install python-software-properties
+</span><span class="line">sudo add-apt-repository ppa:dotcloud/lxc-docker
+</span><span class="line">sudo apt-get update
+</span><span class="line">sudo apt-get install lxc-docker</span></pre></figure></notextile></div>
+
+<h4 id="sshd">生成容器(虚拟机)并且创建一个sshd进程，以便使用者链接这个虚拟机</h4>
+
+<p>官网说的下载dhrp/sshd这个容器，但是我费了半天劲下载后报神奇的404…后来我在换了另外一个,这个pull其实就是去下载一个已经
+被别人做好的实现某种功能的虚拟机，然后你使用这个实现基本功能的虚拟机，提交你的修改就变成你定制的版本了,当然你可以自己做一个容器</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">docker pull base  #pull基本的ubuntu镜像 
+</span><span class="line">docker run -i -t base /bin/bash #-i表示进入交互模式，-t为启动一个终端，其实就是根据base镜像进入一个容器
+</span><span class="line">root@4a61c288be0f:/# apt-get update &amp;&amp; apt-get install openssh-server #注意前面的PS，root权限，进入了这个容器，需要先安装sshd
+</span><span class="line">root@4a61c288be0f:/# mkdir /var/run/sshd #要不然启动不了sshd
+</span><span class="line">root@4a61c288be0f:/# /usr/sbin/sshd #启动sshd进程，不同的系统可能位置不同
+</span><span class="line">root@4a61c288be0f:/# passwd #设置root密码,以后要ssh登录滴
+</span><span class="line">root@4a61c288be0f:/# exit #退出容器 但是记住前面PS的一排随机号码 这里是4a61c288be0f
+</span><span class="line">docker ps -a |less #查看都有那些容器,也能看见上面的
+</span><span class="line">docker commit 4a61c288be0f dongweiming/sshd #这里的commit号码就是刚才记住的. 这样状态保存到dongwm/sshd,以后就不用下载openssh-server,设置root密码了</span></pre></figure></notextile></div>
+
+<p>想要简单的话直接这样嘛….</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">docker pull johnfuller/sshd
+</span><span class="line">docker run -i -t johnfuller/sshd /bin/bash
+</span><span class="line">root@2fd1aabac314:/# /usr/sbin/sshd
+</span><span class="line">root@2fd1aabac314:/# passwd
+</span><span class="line">root@2fd1aabac314:/# exit
+</span><span class="line">docker commit 2fd1aabac314 dongweiming/sshd</span></pre></figure></notextile></div>
+
+<p>这里有个STATUS列，退出码有0，1，2，127等,验证你的容器正常运行,后面还有PORTS列，要是sshd启动了就会显示的</p>
+
+<h4 id="sshd-1">启动容器,用我自己的sshd容器</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">rst=$(docker run -d dongwm/sshd -p 22 /usr/sbin/sshd -D) #执行这个会返回类似的字符数字串
+</span><span class="line">docker ps #你会发现它启动了
+</span><span class="line">port=$(docker port $rst 22) #这会显示在实际的虚拟机的这个容器专用的端口</span></pre></figure></notextile></div>
+
+<h4 id="ssh">ssh链接这个容器</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">ifconfig #找你本机的ip
+</span><span class="line">ssh root@192.168.33.10 -p $port #port 好像默认从49153开始 这样输入root密码就登录进去了</span></pre></figure></notextile></div>
+
+<p>OK了 就是这样，然后当然你可以为这个虚拟机和你本机(注意三个关键词:本机(我的Mac),虚拟机(vagrant创建的vbox),容器(在vbox中创建的虚拟机，虚拟机中的虚拟机))</p>
+
+<h4 id="pushdocker--">把你的源push到docker,需要你注册. 可以被别人用，当然了 目前来说没啥用</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">docker login
+</span><span class="line">docker push dongweiming/sshd  #要确保这个源没有被用,我这里是dongweiming和 dongweiming/sshd</span></pre></figure></notextile></div>
+
+<p>这样你以后想找个sshd的源,就可以这样</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">docker pull dongweiming/sshd</span></pre></figure></notextile></div>
+
+<p>但是这里面还是有很多其他的东西,往下看</p>
+
+<h4 id="section-3">端口转发</h4>
+
+<p>你想，你这是在虚拟机里面创建了一堆容器，他可以连接本机，甚至上网，但是你不能直连到它，那么这时候就需要神奇的端口转发,
+将你本机的端口的数据转发到这个vbox的端口，然后就可以看起来直连了,其实人家已经实现了</p>
+
+<p>回到最上面的Vagrantfile，就是docker的根目录下.最后面</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">if !FORWARD_DOCKER_PORTS.nil?                                                  
+</span><span class="line">    Vagrant::VERSION &lt; "1.1.0" and Vagrant::Config.run do |config|             
+</span><span class="line">        (49000..49900).each do |port|                                          
+</span><span class="line">            config.vm.forward_port port, port                                  
+</span><span class="line">        end                                                                    
+</span><span class="line">    end                                                                        
+</span><span class="line">                                                                               
+</span><span class="line">    Vagrant::VERSION &gt;= "1.1.0" and Vagrant.configure("2") do |config|         
+</span><span class="line">        (49000..49900).each do |port|                                          
+</span><span class="line">            config.vm.network :forwarded_port, :host =&gt; port, :guest =&gt; port   
+</span><span class="line">        end                                                                    
+</span><span class="line">    end          </span></pre></figure></notextile></div>
+
+<p>什么意思呢?其实你在本机的环境变量设置了FORWARD_DOCKER_PORTS，默认就会把49000..49900端口转发开启</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">export FORWARD_DOCKER_PORTS=True，然后再vagrant up</span></pre></figure></notextile></div>
+
+<h4 id="section-4">其他系统镜像</h4>
+
+<p>不知道你有没有注意,我们在OSX上面安装的虚拟机是ubuntu的，在里面使用docker管理的容器也是ubuntu的，假如想用其他的操作系统容器呢?</p>
+
+<p>比如找debian的,你可以使用</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">docker search debian</span></pre></figure></notextile></div>
+
+<p>或者在docker的索引网站搜索</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">https://index.docker.io</span></pre></figure></notextile></div>
+
+<p>我选择了 tianon/debian</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">docker pull tianon/debian</span></pre></figure></notextile></div>
+
+<p>比如还是刚才的ssh, -t 就不指base 而是tianon/debian</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">docker run -i -t tianon/debian  /bin/bash</span></pre></figure></notextile></div>
+
+<h4 id="dockerpythonwebflaskrevealhttpsgithubcomdongweimingflaskreveal">使用docker创建一个python的web环境，这里用我写的<a href="https://github.com/dongweiming/flask_reveal">flask_reveal</a></h4>
+
+<p>上面说的是一个容器,当你有了root权限想要安装什么都可以，对我来说还可以设置一个专为某应用设置的环境,根据官网的说明</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">docker pull dongweiming/sshd #一个构建python的web环境的镜像,根据上面的sshd我加的一些脚本在里面,然后下载了curl,python-pip等构建了一个环境
+</span><span class="line">URL=https://github.com/dongweiming/flask_reveal/archive/v1.0.tar.gz #这是我提供的release版本
+</span><span class="line">BUILD_JOB=$(docker run -d -t dongweiming/sshd:latest /usr/local/bin/buildapp $URL) #其实就是创建一个容器,下载这个tar.gz安装包
+</span><span class="line"># 解压，进入目录下 格局需要安装依赖pip install -r requirements.txt
+</span><span class="line">docker attach $BUILD_JOB #因为刚才的任务就是下载解压你可以这样去查看这个任务的执行过程
+</span><span class="line">BUILD_IMG=$(docker commit $BUILD_JOB reveal) #把刚才的下载提交后commit到新的镜像 取名reveal.这里请注意[commit](http://docs.docker.io/en/latest/commandline/command/commit)的用法,
+</span><span class="line"># 加'-run'可以运行你想的某种/些服务,设置内存，主机名，端口转发，dns，环境变量等
+</span><span class="line">WEB_WORKER=$(docker run -d -p 5000 $BUILD_IMG /usr/local/bin/runapp) #应用跑起来,这个runapp是我自己写的,启动mongodb, 根据我的reveal启动的流程
+</span><span class="line">docker logs $WEB_WORKER #可以查看manage.py已经启动了
+</span><span class="line">WEB_PORT=$(docker port $WEB_WORKER 5000) #使用虚拟机的一个端口映射到这个容器的5000端口
+</span><span class="line">http://127.0.0.1:$WEB_PORT #好吧 你可以通过本机访问了</span></pre></figure></notextile></div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/pythoncheng-xu-yuan-macchu-shi-hua-huan-jing/">python程序员Mac初始化环境</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-22T18:28:00+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>早就想总结一篇python程序员的Mac配置笔记，趁这次就写一下我初始化的一些实践</p>
+
+<h4 id="xcode-command-line-tools">安装Xcode, Command line tools</h4>
+
+<p>作为开发者，肯定需要gcc,clang这些环境，Xcode界面也能下载Command line tools，但是下载好几次都有签名错误的问题，直接去官网下载</p>
+
+<p>使用浏览器下载一段时间锁屏会停止下载，又不能续传。所以我还是习惯命令行下载.可以在这里找到https://github.com/orzrd/mytools/blob/master/adc_download.sh
+比如下载xcode:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">./adc_download.sh http://adcdownload.apple.com/Developer_Tools/xcode_4.6.3/xcode4630916281a.dmg</span></pre></figure></notextile></div>
+
+<h4 id="git">安装git</h4>
+
+<p>在这里 http://git-scm.com/download/mac，但是你需要注意<a href="http://support.apple.com/kb/ht1633?viewlocale=zh_CN">版本和你的os的版本的对应关系</a></p>
+
+<h4 id="brew-">安装brew-包管理工具</h4>
+
+<h5 id="brew">以后我通过brew安装的软件都放在这个目录</h5>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">sudo chown -R `whoami` /usr/local
+</span><span class="line">git init
+</span><span class="line">git remote add origin git://github.com/mxcl/homebrew.git
+</span><span class="line">git pull origin master</span></pre></figure></notextile></div>
+
+<h4 id="section-1">安装一些常用工具</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">brew install wget the_silver_searcher tree tmux htop mysql autojump mongodb zsh-completions
+</span><span class="line">sudo easy_install pip
+</span><span class="line">sudo pip install virtualenv
+</span><span class="line">sudo pip install virtualenvwrapper
+</span><span class="line"># 设置mysql和mongodb开机自启动
+</span><span class="line">ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents 
+</span><span class="line">iln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents</span></pre></figure></notextile></div>
+
+<h4 id="oh-my-zshdotfiles">安装配置oh-my-zsh和dotfiles</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">git clone https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
+</span><span class="line">chsh -s /bin/zsh
+</span><span class="line">git clone https://github.com/dongweiming/dotfiles.git ~/dotfiles
+</span><span class="line">cd dotfiles
+</span><span class="line">./install.sh vim</span></pre></figure></notextile></div>
+
+<h4 id="python">配置一个虚拟python环境</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">export WORKON_HOME=~/envs
+</span><span class="line">mkdir $WORKON_HOME -p
+</span><span class="line">source /usr/local/bin/virtualenvwrapper.sh
+</span><span class="line">mkvirtualenv --no-site-packages XXX # 这里新建了一个叫做XXX的环境,并且不会依赖site-package，需要你在环境中自定义下载
+</span><span class="line">pip install -r requirements.txt #根据文件安装依赖</span></pre></figure></notextile></div>
+
+<h5 id="zshrcdotfileshttpsgithubcomdongweimingdotfilesblobmasterzshrc">zshrc的配置可以看我的<a href="https://github.com/dongweiming/dotfiles/blob/master/_zshrc">dotfiles</a>，我粘贴出来</h5>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">export ANTIGEN_DEFAULT_REPO_URL=https://github.com/dongweiming/oh-my-zsh       
+</span><span class="line">source ~/dotfiles/antigen/antigen.zsh                                          
+</span><span class="line">                                                                               
+</span><span class="line">antigen use oh-my-zsh                                                          
+</span><span class="line">                                                                               
+</span><span class="line">if [ "${OSTYPE:0:6}"="darwin" ]; then                                          
+</span><span class="line">  antigen-bundle osx                                                           
+</span><span class="line">  antigen-bundle brew                                                          
+</span><span class="line">  export PATH=$(brew --prefix ruby)/bin:$PATH:/usr/local/sbin:~/bin
+</span><span class="line">else                                                                           
+</span><span class="line">  export PATH=$PATH:~/bin                                                      
+</span><span class="line">fi                                                                             
+</span><span class="line">antigen bundles &lt;&lt;EOB                                                          
+</span><span class="line">  git-extras                                                                   
+</span><span class="line">  pip                                                                          
+</span><span class="line">  python                                                                       
+</span><span class="line">  autojump
+</span><span class="line">  django                                                                       
+</span><span class="line">  ruby                                                                         
+</span><span class="line">  git-flow                                                                     
+</span><span class="line">  virtualenvwrapper                                                            
+</span><span class="line">  git                                                                          
+</span><span class="line">  github                                                                       
+</span><span class="line">  supervisor                                                                   
+</span><span class="line">  tmux                                                                         
+</span><span class="line">  vagrant                                                                      
+</span><span class="line">  history                                                                      
+</span><span class="line">  zsh-users/zsh-syntax-highlighting                                            
+</span><span class="line">  zsh-users/zaw                                                                
+</span><span class="line">  zsh-users/zsh-history-substring-search                                       
+</span><span class="line">  ~/.oh-my-zsh --no-local-clone                                                
+</span><span class="line">EOB                                                                            
+</span><span class="line">                                                                               
+</span><span class="line">antigen theme sheerun/oh-my-zsh-powerline-theme powerline                     
+</span><span class="line">                                                                               
+</span><span class="line">antigen apply                                                                  
+</span><span class="line">                                                                               
+</span><span class="line">autoload -U zmv                                                                
+</span><span class="line">export SSH_ASKPASS=""                                                          
+</span><span class="line">alias rake='noglob rake'                                                       
+</span><span class="line">export WORKON_HOME=~/envs                                                      
+</span><span class="line">source `which virtualenvwrapper.sh`                                            
+</span><span class="line">alias social='workon social;cd ~/social_master' 
+</span><span class="line">alias ls='ls -hF --color=auto'
+</span><span class="line">source ~/.oh-my-zsh/custom/powerline.zsh
+</span><span class="line">zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+</span><span class="line">
+</span><span class="line">for keycode in '[' 'O'; do
+</span><span class="line">  bindkey "^[${keycode}A" history-substring-search-up
+</span><span class="line">  bindkey "^[${keycode}B" history-substring-search-down
+</span><span class="line">done
+</span><span class="line">unset keycode
+</span><span class="line">
+</span><span class="line">
+</span><span class="line"># bind k and j for VI mode
+</span><span class="line">bindkey -M vicmd 'k' history-substring-search-up
+</span><span class="line">bindkey -M vicmd 'j' history-substring-search-down</span></pre></figure></notextile></div>
+
+<h4 id="coreutils">安装coreutils</h4>
+
+<h5 id="macfreebsdls-grepfreebsdrmrm--rf-xx--rm-xx--rf-s">Mac说白了就是freeBSD+一些插件的组合，所以常用工具例如ls 、grep也都是freeBSD版本,比如我使用rm删除文件,就必须rm -rf xx 而不能 rm xx -rf s实在脑残</h5>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">brew install coreutils</span></pre></figure></notextile></div>
+
+<p>添加PATH到.zshrc</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"                           
+</span><span class="line">MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"</span></pre></figure></notextile></div>
+
+<h4 id="ls">修改ls配色</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">git clone git@github.com:seebi/dircolors-solarized.git
+</span><span class="line"># dircolors就在上面的coreutils中
+</span><span class="line">echo 'eval `dircolors ~/lib/dircolors-solarized/dircolors.256dark`' &gt;&gt; ~/.zshrc</span></pre></figure></notextile></div>
+
+<h4 id="octopress---">安装octopress-为我的博客  仅供参考</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line"># 默认的ruby是1.8.7的，我想要2.0的
+</span><span class="line">brew install ruby
+</span><span class="line">gem install bundler
+</span><span class="line">bundle install
+</span><span class="line">bundle update rake #安装的版本和octoress要求的9.2.2要高，所以需要升级
+</span><span class="line">git clone https://github.com/imathis/octopress.git oc
+</span><span class="line">cd oc
+</span><span class="line"># 为啥会有下面的一堆cp?其实是为了升级我的octopress
+</span><span class="line">cp ../octopress/Rakefile .
+</span><span class="line">cp ../octopress/_config.yml .
+</span><span class="line">cp -rp ../octopress/source .
+</span><span class="line"># 以下是我自己写的几个脚本
+</span><span class="line">cp ../octopress/plugins/pygments_code.rb plugins
+</span><span class="line">cp ../octopress/plugins/shjs.rb plugins
+</span><span class="line">cp ../octopress/plugins/tag_cloud.rb plugins
+</span><span class="line">cp ../octopress/sass . -rp
+</span><span class="line"># 然后你就可以生成了
+</span><span class="line">rake generate</span></pre></figure></notextile></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/zi-da-jian-gitfu-wu-qi-shi-xian-ti-jiao-dai-ma-zi-dong-tui-dao-ce-shi-huan-jing/">自搭建git服务器实现提交代码自动推到测试环境</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-17T23:15:00+08:00" pubdate data-updated="true">Jun 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>假如公司有很多项目，很可能你要自建git服务器，然后有不同的分支管理各个项目。尤其是web开发，每次push不仅在测试环境需要pull代码，
+可能还有nginx，uwsgi，supervisor等都需要重启。那么有没有什么办法让你在push代码的时候触发这一系列的重新部署呢？</p>
+
+<h4 id="section-1">思路和例子</h4>
+
+<p>假设你的开发分支是feature_example_develop(你要是在master分支直接push也可以，呵呵)有A，B，C等等同事都会往这个分支提交东西
+测试环境的IP为192.168.22.34</p>
+
+<ol>
+  <li>在你的git版本库的hooks里面这些修改post-update(表示代码提交到版本库后触发)</li>
+</ol>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">#!/bin/sh
+</span><span class="line">#
+</span><span class="line"># An example hook script to prepare a packed repository for use over
+</span><span class="line"># dumb transports.
+</span><span class="line">#
+</span><span class="line"># To enable this hook, rename this file to "post-update".
+</span><span class="line">
+</span><span class="line"># 获取本次提交的分支名字
+</span><span class="line">branch=$(git rev-parse --symbolic --abbrev-ref $1)
+</span><span class="line">        
+</span><span class="line">case "$branch" in
+</span><span class="line">    feature_example_develop)
+</span><span class="line">        echo This is a develop push
+</span><span class="line">        # 远程执行测试环境下的sync_develop_code.sh脚本
+</span><span class="line">        ssh dongwm@192.168.22.34  -p 9922 "source sync_develop_code.sh"
+</span><span class="line">        ;;
+</span><span class="line">    master)
+</span><span class="line">        echo This is a master push
+</span><span class="line">        ;;
+</span><span class="line">    *)
+</span><span class="line">        echo This is only some push ops.
+</span><span class="line">        ;;
+</span><span class="line">esac
+</span><span class="line">
+</span><span class="line">exec git update-server-info</span></pre></figure></notextile></div>
+
+<ol>
+  <li>测试环境的更新环境脚本 sync_develop_code.sh</li>
+</ol>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">#! /bin/bash
+</span><span class="line"># 切换到git版本库目录下
+</span><span class="line">cd /home/dongwm/test_develop
+</span><span class="line"># '拉'下最新代码
+</span><span class="line">git pull origin feature_example_develop
+</span><span class="line"># 重启supervisor管理的进程
+</span><span class="line">sudo supervisorctl -c /home/dongwm/test_develop/server/supervisor_develop.conf restart all
+</span><span class="line"># 重启uwsgi
+</span><span class="line">sudo /etc/init.d/uwsgi restart</span></pre></figure></notextile></div>
+
+<h4 id="section-2">一个很重要的问题</h4>
+
+<p>post-update不会检查你的代码是不是有问题，当提交了错误的代码会造成测试环境问题
+解决办法：修改update钩子-在提交前对你设置的操作的执行的$?做判断-非0就会拒绝你的提交，在这个时候你可以做pylint/coverage/nosetests等，下次我再说我做的这个工作</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/archives/gei-chu-xue-pythonshe-ji-mo-shi-de-pythonista/">给初学python设计模式的pythonista</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-17T22:16:00+08:00" pubdate data-updated="true">Jun 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="section">前言</h4>
+
+<p>从2011年5月4日买了第一本《python学习手册》到现在，我学python已经2年多了，python也是我第一门除bash外的语言。
+学’设计模式’这么神秘的东西还是源于去年一次面试，在我说了我想做某个东西，然后有什么思路后，面试官很不屑的问我：你知道设计模式嘛？
+然后我就懵了-从来没听过。我特别赞赏提供良好扩展功能的项目，比如<a href="http://www.sublimetext.com/2">Sublime Text2</a>, 它提供第三方插件功能，你可以使用别人开发的插件，也可以自己写插件，让项目更好的维护和扩展而不需要动基础的代码。
+后来换工作一直在熟悉业务，学一些东西。但是我一直记得这个’设计模式’，上个月花了一些时间去了解，所以有了此文，假如你也想了解’设计模式’,也很怕它，你会python，希望本文带给你帮助</p>
+
+<p>我也写了一组python设计模式的文章: <a href="http://dongweiming.github.io/category/she-ji-mo-shi.html">小明明s Github - 设计模式</a></p>
+
+<h4 id="section-1">我的角度</h4>
+
+<p>GoF（“四人帮”，又称Gang of Four，即Erich Gamma, Richard Helm, Ralph Johnson &amp; John Vlissides四人）的《设计模式》这本书我没看过，我也不怎么会java，看不懂例子.我没有受到其他语言的毒害(因为python是我一开始的语言)，我的角度应该是最靠近python</p>
+
+<h4 id="section-2">什么是设计模式</h4>
+
+<p>设计模式其实是一些被很多人反复使用而总结出来的代码设计经验，这些技术被GOF在大概20年前编辑成《编程模式》，其实不要害怕，
+因为<strong>设计模式就在你写代码过程中已经体现了，被叫做’设计模式’只是被很好的总结出来</strong>，</p>
+
+<h4 id="python">python程序员的成长</h4>
+
+<ul>
+  <li>
+    <p>当你初学python，可能还是翻阅手册或者去google出一些你想要问题的答案，而后举一反三修改它符合你想要的东西。那么这是阶段一：堆代码，这个时候主要是为了实现功能，不重视代码编码规范，代码运行效率，代码可读性等</p>
+  </li>
+  <li>
+    <p>用过一段时间python，你对python很熟悉了，可以copy代码写东西了。那么这是阶段二：码农初长成</p>
+  </li>
+  <li>
+    <p>我是这样的人：当一个类似的功能出现，我就想思考重构(重构这个词太大了，好吧，为了减少我的代码量);当经常出现某些相同的情况的过程，我就会思考更好的抽象出来;当项目大了，、
+会思考如何在不改动或者少改动的前提下更好的扩展新功能。那么这是阶段三: 码农中的愤青 这里你会对自己有更高的要求，其实总结一些更好的表达和实现，就是设计模式了</p>
+  </li>
+  <li>
+    <p>埋头写代码毕竟进步有限，这个时候可能你会读一些好的开源代码，保存了很多别人的代码片段等，你会发现:哦，原来可以这么写.. 哇 这个实现好酷… 然后你会记下来，
+等以后在合适的场景里面借用这些思想, 这是阶段四：在很多开源代码中会看见一些很好的设计模式的体现，就是这样看别人，然后理解吸收</p>
+  </li>
+</ul>
+
+<h4 id="python-1">如何学习python的设计模式</h4>
+
+<p>github上面有2个这方面的项目: <a href="https://github.com/faif/python-patterns">python-patterns</a>和<a href="https://github.com/gennad/Design-Patterns-in-Python">Design-Patterns-in-Python</a>, 但是都不怎么维护了
+当然了，做广告,可以看我的GithubPages<a href="http://dongweiming.github.io/category/she-ji-mo-shi.html">小明明s Github - 设计模式</a>,都是我自己的理解，欢迎大家提意见</p>
+
+<h4 id="python-2">python的设计模式</h4>
+
+<p>通过我学习和写这些模式的文章，我有很多感悟</p>
+
+<ul>
+  <li>
+    <p>对于python，装饰器模式其实都已经是内置代码级别;</p>
+  </li>
+  <li>
+    <p><a href="http://dongweiming.github.io/python-flyweight.html">flyweight模式</a>原来还可以这样玩;</p>
+  </li>
+  <li>
+    <p><a href="http://dongweiming.github.io/python-singleton.html">单例模式</a>已经落伍，完全可以被<a href="http://dongweiming.github.io/python-borg.html">borg模式</a>取代</p>
+  </li>
+  <li>
+    <p><a href="http://dongweiming.github.io/python-null.html">NUll模式</a>可以帮助你省去很多代码和异常处理</p>
+  </li>
+  <li>
+    <p><a href="http://dongweiming.github.io/python-object-pool.html">对象池模式</a>是一个很实用的模式</p>
+  </li>
+  <li>
+    <p>终于理解游戏人物设计用到了<a href="http://dongweiming.github.io/python-pototype.html">原型模式</a></p>
+  </li>
+</ul>
+
+<p>…</p>
+
+<p>基本是学了每个模式都有很深的触动</p>
+
+<h4 id="section-3">学习设计模式有没有必要</h4>
+
+<p>没有学习设计模式不会影响你写代码的水平，但是学习了会提高你的代码质量和拓宽你解决问题的思路</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <ul class="pager">
+    
+    <li class="previous"><a href="/blog/page/4/">&larr; Older</a></li>
+    
+    <li><a href="/blog/blog/archives">博客文章</a></li>
+    
+    <li class="next"><a href="/blog/page/2/">Newer &rarr;</a></li>
+    
+  </ul>
+</div>
+<aside class="sidebar-nav span3">
+  
+    <section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">最近发布</li>
+    
+      <li class="post">
+        <a href="/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/">ipython的一些高级用法(一)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa/">python几个特别的__开头的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/%5B%3F%5D-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d/">一个使用python的web程序员的emacs.d</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/pythonmo-fa-er/">python的魔法二:开发的&#8217;坑&#8217;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/pythonde-mo-fa/">python的魔法(一): 基本知识</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/xian-cheng-suo-de-%5B%3F%5D-ge-da-keng/">线程锁的一个大坑</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/speakerdeck/">speakerdeck</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/">分享一个准备给公司讲python高级编程的slide</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/">使用grafana和Diamond构建Graphite监控系统</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/archives/sou-ji-xi-tong-xin-xi-de-dashboard/">搜集系统信息的dashboard</a>
+      </li>
+    
+  </ul>
+</section>
+<section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+  <li class="nav-header">个人网站</li>
+    <li class="post"><a href="http://salogs.com">带我入行的boss</a></li>
+    <li class="post"><a href="http://dongweiming.github.com/">小明明s Github Blog</a></li>
+    <li class="post"><a href="http://youhouer.appspot.com/">Love story(GAE)</a></li>
+    <li class="post"><a href="http://www.unixhot.com">unixhot运维社区</a></li>
+    <li class="post"><a href="http://www.vpsee.com">Vpsee</a></li>
+    <li class="post"><a href="http://rfyiamcool.blog.51cto.com">峰云就她了</a></li>
+    <li class="post"><a href="http://dongweiming.github.io/sed_and_awk/">sed_and_awk</a></li>
+    <li class="post"><a href="http://dongweiming.github.io/Expert-Python">Expert-Python</a></li>
+  </ul>
+</section>
+
+<section class="well">
+  <ul id="gh_repos" class="nav">
+    <li class="nav-header">GitHub帐号</li>
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/dongweiming">@dongweiming</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        github.showRepos({
+            user: 'dongweiming',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/blog/javascripts/asides/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+<section class="well">
+   <ul id="gh_repos" class="nav">
+    <li class="nav-header">标签Cloud</li>
+  </ul>
+  <div id="tag-cloud"></div>
+</section>
+
+<section class="well">
+  <ul id="gh_repos" class="nav">
+    <li class="nav-header">豆瓣阅读</li>
+  </ul>
+  <script type="text/javascript" src="http://www.douban.com/service/badge/62943420/?select=random&amp;n=10&amp;columns=2&amp;picsize=medium&amp;hidelogo=true&amp;hideself=true&amp;cat=book|music" ></script>
+  <a href="https://www.douban.com/people/62943420">@小明明</a> on Douban 
+</section>
+
+
+<section class='well'>
+<ul id='gh_repos' class='nav'>
+<li class='nav-header'>文章统计</li>
+<li>本站共有 271 篇文章</li>
+</ul>
+</section>
+
+
+  
+</aside>
+
+      </div>
+  </div>
+  <footer role="contentinfo" class="page-footer"><hr>
+<p>
+  Copyright &copy; 2014 - Dongweiming -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'dongwm';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
