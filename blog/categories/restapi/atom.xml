@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: restapi | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/restapi/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/restapi/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[speakerdeck]]></title>
-    <link href="http://dongweiming.github.com/archives/speakerdeck/"/>
+    <link href="http://dongweiming.github.com/blog/archives/speakerdeck/"/>
     <updated>2014-04-18T16:49:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/speakerdeck</id>
+    <id>http://dongweiming.github.com/blog/archives/speakerdeck</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>今天是在Ad的最后一天,本来准备了一个分享.关于业务中一些吐槽和我一些trick的用法, 有兴趣的可以下载<a href="https://github.com/dongweiming/speakerdeck">speakerdeck</a></p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: yaml | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/yaml/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/yaml/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[多台服务器进程查看脚本(pexpect+yaml)]]></title>
-    <link href="http://dongweiming.github.com/archives/duo-tai-fu-wu-qi-jin-cheng-cha-kan-jiao-ben-pexpect-plus-yaml/"/>
+    <link href="http://dongweiming.github.com/blog/archives/duo-tai-fu-wu-qi-jin-cheng-cha-kan-jiao-ben-pexpect-plus-yaml/"/>
     <updated>2013-04-19T16:18:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/duo-tai-fu-wu-qi-jin-cheng-cha-kan-jiao-ben-pexpect-plus-yaml</id>
+    <id>http://dongweiming.github.com/blog/archives/duo-tai-fu-wu-qi-jin-cheng-cha-kan-jiao-ben-pexpect-plus-yaml</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近做自己开发用相关服务的一个checklist，就写了这个脚本，用来在跳板机去检查各个服务器上面的相关服务是否正常</p>

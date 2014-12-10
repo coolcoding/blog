@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: lxc | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/lxc/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/lxc/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[gentoo下的lxc和docker]]></title>
-    <link href="http://dongweiming.github.com/archives/gentooxia-de-lxche-docker/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gentooxia-de-lxche-docker/"/>
     <updated>2013-07-13T20:03:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/gentooxia-de-lxche-docker</id>
+    <id>http://dongweiming.github.com/blog/archives/gentooxia-de-lxche-docker</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>上次就说要写一篇gentoo下安装使用docker的文章，顺便也学习了下gentoo下的lxc，记录下来</p>

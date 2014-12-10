@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: lisp | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/lisp/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/lisp/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[一起学习common lisp吧]]></title>
-    <link href="http://dongweiming.github.com/archives/%5B%3F%5D-qi-xue-xi-common-lispba/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%5B%3F%5D-qi-xue-xi-common-lispba/"/>
     <updated>2013-07-28T11:28:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/[?]-qi-xue-xi-common-lispba</id>
+    <id>http://dongweiming.github.com/blog/archives/[?]-qi-xue-xi-common-lispba</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>我记得在什么地方说过一个程序员要学什么语言:汇编,C,lisp,还有一门脚本语言(python或者ruby).遗憾的是我只会一点python和一点点ruby. 

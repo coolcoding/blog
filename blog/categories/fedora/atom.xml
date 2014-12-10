@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: fedora | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/fedora/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/fedora/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[compiz 外挂插件欣赏和安装]]></title>
-    <link href="http://dongweiming.github.com/archives/compiz-%E5%A4%96%E6%8C%82%E6%8F%92%E4%BB%B6%E6%AC%A3%E8%B5%8F%E5%92%8C%E5%AE%89%E8%A3%85/"/>
+    <link href="http://dongweiming.github.com/blog/archives/compiz-%E5%A4%96%E6%8C%82%E6%8F%92%E4%BB%B6%E6%AC%A3%E8%B5%8F%E5%92%8C%E5%AE%89%E8%A3%85/"/>
     <updated>2011-05-27T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/compiz-外挂插件欣赏和安装</id>
+    <id>http://dongweiming.github.com/blog/archives/compiz-外挂插件欣赏和安装</id>
     <content type="html"><![CDATA[<p><strong>其实很早就想写一篇关于compiz一个不为人知的插件的安装使用文章。很多人以为compiz就是那一些，其实在http://gitweb.compiz.org/上面有很多插件。不过有一些年代久远没人维护。网上可能有一些介绍这些插件的文章，只是停留在截图和简单地说明，包括ubuntu社区也没有相关的解释。作为一个菜鸟 呵呵 我来写一下：</strong>
 <strong>视频地址：http://v.youku.com/v_show/id_XMjcwNDUyODQ0.html
 视频顺序：wizard，trip，freewins，autumn，stars，snow，fireslies，bubbles，screensaver，dodge（非</strong>
@@ -62,9 +62,9 @@ sudo ln -s libGL.so.1 libGL.so</p>
   
   <entry>
     <title type="html"><![CDATA[fedora 3D效果实现]]></title>
-    <link href="http://dongweiming.github.com/archives/fedora-3d%E6%95%88%E6%9E%9C%E5%AE%9E%E7%8E%B0/"/>
+    <link href="http://dongweiming.github.com/blog/archives/fedora-3d%E6%95%88%E6%9E%9C%E5%AE%9E%E7%8E%B0/"/>
     <updated>2011-05-08T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/fedora-3d效果实现</id>
+    <id>http://dongweiming.github.com/blog/archives/fedora-3d效果实现</id>
     <content type="html"><![CDATA[<p>很多会觉得这个有什么可写的。。的确，在ubuntu，opensuse下都是很简单就可以实现的。尤其是suse的ymp一键安装^.^，但是fedora有点问题，因为第一他默认已经安装了一个驱动nouveau，需要先把它禁掉，然后安装你的电脑配置的显卡驱动，这个需要自己去找，然后去官网下载再安装：
 过程如下：
 1 查找下载电脑的显卡品牌型号：
@@ -114,9 +114,9 @@ yum install kernel-devel-2.6.35.6-45.fc14.i686  dkms -y</pre>
   
   <entry>
     <title type="html"><![CDATA[fedora ubuntu 添加对方grub菜单]]></title>
-    <link href="http://dongweiming.github.com/archives/fedora-ubuntu-%E6%B7%BB%E5%8A%A0%E5%AF%B9%E6%96%B9grub%E8%8F%9C%E5%8D%95/"/>
+    <link href="http://dongweiming.github.com/blog/archives/fedora-ubuntu-%E6%B7%BB%E5%8A%A0%E5%AF%B9%E6%96%B9grub%E8%8F%9C%E5%8D%95/"/>
     <updated>2011-05-01T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/fedora-ubuntu-添加对方grub菜单</id>
+    <id>http://dongweiming.github.com/blog/archives/fedora-ubuntu-添加对方grub菜单</id>
     <content type="html"><![CDATA[<p><strong>这几天折腾ubuntu11.04，结果把我的opensuse弄坏了...索性直接换成了fedora。乘机研究了下grub2，以及各个操作系统之间的启动菜单的一些特性。
 1 先fedora，后ubuntu
 进入ubuntu系统：

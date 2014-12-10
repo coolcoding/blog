@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: opensuse | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/opensuse/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/opensuse/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[跨操作系统初始化安装工具(laptop)]]></title>
-    <link href="http://dongweiming.github.com/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell/"/>
+    <link href="http://dongweiming.github.com/blog/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell/"/>
     <updated>2013-04-08T18:07:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell</id>
+    <id>http://dongweiming.github.com/blog/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>上周看了<a href="https://github.com/docopt/docopt">docopt</a>, 感想很多。最近因为工作需要用opensuse，用ubuntu，个人pc用gentoo，
@@ -252,9 +252,9 @@ shell&gt;bash &lt;(curl -s https://raw.github.com/orzrd/laptop/master/setup_lapt
   
   <entry>
     <title type="html"><![CDATA[linux下升级到最新版本firefox浏览器]]></title>
-    <link href="http://dongweiming.github.com/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi/"/>
     <updated>2012-07-11T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi</id>
+    <id>http://dongweiming.github.com/blog/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi</id>
     <content type="html"><![CDATA[<p>前言：一直是firefox忠实用户，本文是普及篇，系统是opensuse11.3，其他系统请借鉴方法</p>
 
 <p>1 首先查看当前系统firefox信息：</p>
@@ -292,9 +292,9 @@ linux-vkmz:~ #cp -rp firefox/* /usr/lib/firefox/   #拷贝lib文件到系统�
   
   <entry>
     <title type="html"><![CDATA[解决Linux下打开的应用程序不在gnome桌面面板上面显示]]></title>
-    <link href="http://dongweiming.github.com/archives/jiejuelinuxxiadakaideyingyongchengxubuzaignomezhuomianmianbanshangmianxianshi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/jiejuelinuxxiadakaideyingyongchengxubuzaignomezhuomianmianbanshangmianxianshi/"/>
     <updated>2012-03-08T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/jiejuelinuxxiadakaideyingyongchengxubuzaignomezhuomianmianbanshangmianxianshi</id>
+    <id>http://dongweiming.github.com/blog/archives/jiejuelinuxxiadakaideyingyongchengxubuzaignomezhuomianmianbanshangmianxianshi</id>
     <content type="html"><![CDATA[<p>前言：最近把我的opensuse的软件更新了一下，后来发现现在打开的程序没有在底部的面板上显示，当我打开多个程序的时候只能使用compiz特效‘alt’＋‘tab’键去找我想要让目前窗口显示的程序，很不方便（包括安装了Cairo-Dock，当程序最小化了在dock界面也不会有这个程序的图标，也不方便）</p>
 
 <p>解决办法：</p>
@@ -309,9 +309,9 @@ linux-vkmz:~ #cp -rp firefox/* /usr/lib/firefox/   #拷贝lib文件到系统�
   
   <entry>
     <title type="html"><![CDATA[opensuse安装anjuta]]></title>
-    <link href="http://dongweiming.github.com/archives/opensuseanzhuanganjuta/"/>
+    <link href="http://dongweiming.github.com/blog/archives/opensuseanzhuanganjuta/"/>
     <updated>2012-02-27T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/opensuseanzhuanganjuta</id>
+    <id>http://dongweiming.github.com/blog/archives/opensuseanzhuanganjuta</id>
     <content type="html"><![CDATA[<p>问题：以前使用anjuta在gentoo下调试c/c++程序，最近在opensuse11.4想使用anjuta，发现yast/zypper安装的anjuta不能新建项目，直接卡住，然后杀掉进程后再启动anjuta会停止在"加载调试器"这一步。</p>
 
 <p>解决：1 使用源码安装：http://ftp.gnome.org/pub/GNOME/sources/anjuta</p>
@@ -352,9 +352,9 @@ cd anjuta/
   
   <entry>
     <title type="html"><![CDATA[opensuse rpm数据库损坏的解决方法]]></title>
-    <link href="http://dongweiming.github.com/archives/opensuserpmshujukusunhuaidejiejuefangfa/"/>
+    <link href="http://dongweiming.github.com/blog/archives/opensuserpmshujukusunhuaidejiejuefangfa/"/>
     <updated>2012-02-23T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/opensuserpmshujukusunhuaidejiejuefangfa</id>
+    <id>http://dongweiming.github.com/blog/archives/opensuserpmshujukusunhuaidejiejuefangfa</id>
     <content type="html"><![CDATA[<p>opensuse后来使用不知道为什么，安装更新软件以及我最近做的从11。4升级到12。1的操作，都会报类似的错误：</p>
 
 <p>rpmdb: PANIC: fatal region error detected; run recovery

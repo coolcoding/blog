@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: markdown | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/markdown/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用docopt/schema:markdown文件直接发送支持python语法的邮件]]></title>
-    <link href="http://dongweiming.github.com/archives/shi-yong-docopt-slash-schema-markdownwen-jian-zhi-jie-fa-song-you-jian/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-docopt-slash-schema-markdownwen-jian-zhi-jie-fa-song-you-jian/"/>
     <updated>2013-05-13T17:42:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/shi-yong-docopt-slash-schema-markdownwen-jian-zhi-jie-fa-song-you-jian</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-docopt-slash-schema-markdownwen-jian-zhi-jie-fa-song-you-jian</id>
     <content type="html"><![CDATA[<h2 id="section">前言</h2>
 
 <ol>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: threading | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/threading/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/threading/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[gevent-twisted-多线程谁更快?]]></title>
-    <link href="http://dongweiming.github.com/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai/"/>
     <updated>2013-01-11T13:54:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai</id>
+    <id>http://dongweiming.github.com/blog/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai</id>
     <content type="html"><![CDATA[<h4 id="section"><em>前言</em></h4>
 
 <p>标题有点唬人，以前了解过研究gevent，twisted，scrapy（基于twisted）。最近有个想法：这些东西比如做爬虫，谁的效率更好呢？

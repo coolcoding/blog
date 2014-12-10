@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: web框架 | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/webkuang-jia/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/webkuang-jia/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[tornado应用例子(二)：使用ajax（jquery）通过前台和后台交互]]></title>
-    <link href="http://dongweiming.github.com/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu/"/>
+    <link href="http://dongweiming.github.com/blog/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu/"/>
     <updated>2012-03-31T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu</id>
+    <id>http://dongweiming.github.com/blog/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu</id>
     <content type="html"><![CDATA[<p>前言：在实际使用中肯定出现在web页面输入一些数据然后把数据传送到后台（tornado），执行完毕后再从后台把结果返回到web前台，其中也安排一些异常处理，比如数据在后台不存在，会进行提示（异步），上一个例子主要把html文件写到了python脚本，本例子是一个html＋tornado类</p>
 
 <p><pre class="sh_html4strict">
@@ -124,9 +124,9 @@ class SendPostHandler(MyRequestHandler):
   
   <entry>
     <title type="html"><![CDATA[tornado应用例子]]></title>
-    <link href="http://dongweiming.github.com/archives/tornadoyingyonglizi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/tornadoyingyonglizi/"/>
     <updated>2012-03-23T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/tornadoyingyonglizi</id>
+    <id>http://dongweiming.github.com/blog/archives/tornadoyingyonglizi</id>
     <content type="html"><![CDATA[<p>前言：网上有的tornado的例子基本都是来源于其官网，下面是一个我以前弄得一个例子，包含基本tornado所有常用功能 ：</p>
 
 <p>1 mysql数据库相关功能</p>

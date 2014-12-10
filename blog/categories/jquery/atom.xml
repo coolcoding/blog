@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: jquery | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/jquery/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/jquery/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用Google Captcha作tornado网站的验证码]]></title>
-    <link href="http://dongweiming.github.com/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma/"/>
     <updated>2012-04-13T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma</id>
+    <id>http://dongweiming.github.com/blog/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma</id>
     <content type="html"><![CDATA[<p>前言：为了防止恶意尝试破解密码，在用户注册和登录的时候都需要一个验证码，但是简单的验证码图片实在太好破解了，还是不安全，正好发现类似于google，yahoo等大网站的图片验证使用了这样的方式：</p>
 
 <p><img class="alignnone" title="recaptcha" src="https://developers.google.com/recaptcha/images/reCAPTCHA_Sample_White.png" alt="" width="322" height="132" /></p>
@@ -148,9 +148,9 @@ $("#lg").click(function(event)
   
   <entry>
     <title type="html"><![CDATA[tornado应用例子(二)：使用ajax（jquery）通过前台和后台交互]]></title>
-    <link href="http://dongweiming.github.com/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu/"/>
+    <link href="http://dongweiming.github.com/blog/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu/"/>
     <updated>2012-03-31T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu</id>
+    <id>http://dongweiming.github.com/blog/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu</id>
     <content type="html"><![CDATA[<p>前言：在实际使用中肯定出现在web页面输入一些数据然后把数据传送到后台（tornado），执行完毕后再从后台把结果返回到web前台，其中也安排一些异常处理，比如数据在后台不存在，会进行提示（异步），上一个例子主要把html文件写到了python脚本，本例子是一个html＋tornado类</p>
 
 <p><pre class="sh_html4strict">

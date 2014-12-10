@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: pelican | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/pelican/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/pelican/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用pelican心得]]></title>
-    <link href="http://dongweiming.github.com/archives/shi-yong-pelicanxin-de/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-pelicanxin-de/"/>
     <updated>2013-06-06T23:32:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/shi-yong-pelicanxin-de</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-pelicanxin-de</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近在用<a href="http://getpelican.com/">pelican</a>借用<a href="http://pages.github.com">GitHub Pages</a>搭建我的<a href="http://dongweiming.github.io">小明明s Github</a>, 总结了些心得</p>

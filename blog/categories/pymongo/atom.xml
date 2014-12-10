@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: pymongo | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/pymongo/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/pymongo/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[封装pymongo自动关闭连接]]></title>
-    <link href="http://dongweiming.github.com/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/"/>
+    <link href="http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/"/>
     <updated>2013-08-16T21:42:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie</id>
+    <id>http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>在我工作的项目里面使用了mongodb.自然也用到了pymongo.但是它都是在大片的函数里面使用类似于这样的方式</p>

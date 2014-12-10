@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: 操作系统 | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/cao-zuo-xi-tong/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/cao-zuo-xi-tong/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[fedora ubuntu 添加对方grub菜单]]></title>
-    <link href="http://dongweiming.github.com/archives/fedora-ubuntu-%E6%B7%BB%E5%8A%A0%E5%AF%B9%E6%96%B9grub%E8%8F%9C%E5%8D%95/"/>
+    <link href="http://dongweiming.github.com/blog/archives/fedora-ubuntu-%E6%B7%BB%E5%8A%A0%E5%AF%B9%E6%96%B9grub%E8%8F%9C%E5%8D%95/"/>
     <updated>2011-05-01T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/fedora-ubuntu-添加对方grub菜单</id>
+    <id>http://dongweiming.github.com/blog/archives/fedora-ubuntu-添加对方grub菜单</id>
     <content type="html"><![CDATA[<p><strong>这几天折腾ubuntu11.04，结果把我的opensuse弄坏了...索性直接换成了fedora。乘机研究了下grub2，以及各个操作系统之间的启动菜单的一些特性。
 1 先fedora，后ubuntu
 进入ubuntu系统：

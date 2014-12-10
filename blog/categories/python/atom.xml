@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: python | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/python/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[ipython的一些高级用法(一)]]></title>
-    <link href="http://dongweiming.github.com/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/"/>
+    <link href="http://dongweiming.github.com/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/"/>
     <updated>2014-12-07T09:56:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/ipythonde-[?]-xie-gao-ji-yong-fa</id>
+    <id>http://dongweiming.github.com/blog/archives/ipythonde-[?]-xie-gao-ji-yong-fa</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>以前在我的PPT<a href="http://dongweiming.github.io/Expert-Python/">python高级编程</a>也提到了一些关于ipython的用法. 今天继续由浅入深的看看ipython,
@@ -262,15 +262,15 @@ Out[29]: (0.104384, 0.13980499999999998, 0.104384)
   
   <entry>
     <title type="html"><![CDATA[python几个特别的__开头的方法]]></title>
-    <link href="http://dongweiming.github.com/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa/"/>
+    <link href="http://dongweiming.github.com/blog/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa/"/>
     <updated>2014-12-06T22:51:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa</id>
+    <id>http://dongweiming.github.com/blog/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p><a href="http://www.rafekettler.com/magicmethods.html">A Guide to Python’s Magic Methods</a>python的绝大多数这样的特殊方法都
-在这里面被提到了. 今天我来说3个他没有提到的[<strong>dir</strong>, <strong>slots</strong>, <strong>weakref</strong>], 再强调下他提到的2个[<strong>missing</strong>, <strong>contains</strong>]</p>
+在这里面被提到了. 今天我来说3个他没有提到的[__dir__, __slots__, __weakref__], 再强调下他提到的2个[__missing__, __contains__]</p>
 
-<h5 id="dir---"><strong>dir</strong> -&gt; 看个小例子就知道了</h5>
+<h5 id="dir---">__dir__ -&gt; 看个小例子就知道了</h5>
 
 <p><code>python
 In [1]: class T(object):
@@ -295,9 +295,9 @@ Out[7]: ['a', 'b']
 
 <p>看出来了把, 不解释, 但是这个__dir__是相对于类的实例有效果的.</p>
 
-<h5 id="slots"><strong>slots</strong></h5>
+<h5 id="slots">__slots__</h5>
 
-<p>这个在我初学python的时候就被模糊了, 原来的理解是它的出现替代了__dict<strong>，也就是说你只能给__slots</strong>
+<p>这个在我初学python的时候就被模糊了, 原来的理解是它的出现替代了__dict__，也就是说你只能给__slots__
 这个变量列表项的属性赋值. 对外的接口减少了,也安全了. 后来看了这篇<a href="http://tech.oyster.com/save-ram-with-python-slots/">Saving 9 GB of RAM with Python’s <strong>slots</strong></a>.
 好久不做运维了,在生产环境究竟怎么样我无法定论, <python cookbook="">也提到了,在对象实例很多的时候他能帮助减少内存, 详见https://www.safaribooksonline.com/library/view/python-cookbook-3rd/9781449357337/ch08s04.html.
 这里来个小实验(在Hacker News也被讨论过https://news.ycombinator.com/item?id=6750187)</python></p>
@@ -339,7 +339,7 @@ $pmap -x `ps -ef|grep test_slot.py|grep -v grep|awk '{print $2}'`|grep total # �
 
 <p>结果很明显,内存占用减少了很多…</p>
 
-<h5 id="weakref-"><strong>weakref</strong> 弱引用</h5>
+<h5 id="weakref-">__weakref__ 弱引用</h5>
 
 <p>首先先说下<a href="http://zh.wikipedia.org/wiki/%E5%BC%B1%E5%BC%95%E7%94%A8">weakref</a>: 弱引用，与强引用相对，是指不能确保其引用的对象不会被垃圾回收器回收的引用。一个对象若只被弱引用所引用，则被认为是不可访问（或弱可访问）的，并因此可能在任何时刻被回收.
 在Python中,当一个对象的引用数目为0的时候，才会被从内存中回收. 但是被循环引用呢?</p>
@@ -423,7 +423,7 @@ In [15]: weakref.ref(t4)
 Out[15]: &lt;weakref at 0x2766f70; to 'T4' at 0x2586fd8&gt;
 ```
 
-##### __contains__ 判断某值 in/not in 实例
+##### \_\_contains\_\_ 判断某值 in/not in 实例
 
 ```python
 In [1]: class NewList(object):
@@ -441,7 +441,7 @@ In [4]: 10 in l
 Out[4]: False
 ```
 
-##### __missing__
+##### \_\_missing\_\_
 
 最初看这个特殊方法是看python标准库的源码的时候(collections#L421):
 
@@ -472,9 +472,9 @@ Out[7]: 0
   
   <entry>
     <title type="html"><![CDATA[python的魔法二:开发的'坑']]></title>
-    <link href="http://dongweiming.github.com/archives/pythonmo-fa-er/"/>
+    <link href="http://dongweiming.github.com/blog/archives/pythonmo-fa-er/"/>
     <updated>2014-05-08T23:15:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/pythonmo-fa-er</id>
+    <id>http://dongweiming.github.com/blog/archives/pythonmo-fa-er</id>
     <content type="html"><![CDATA[<h4 id="python-httpwwwdongwmcomarchivespythonde-mo-fa-python">有了第一篇<a href="http://www.dongwm.com/archives/pythonde-mo-fa/">python的魔法(-)之基础知识</a>, 我们再来说说python开发中的坑</h4>
 
 <h4 id="section">不要使用可变对象作为函数默认值</h4>
@@ -768,9 +768,9 @@ Out[78]: [[1, 2, 3], ['a', 2, 3]]
   
   <entry>
     <title type="html"><![CDATA[python的魔法(一): 基本知识]]></title>
-    <link href="http://dongweiming.github.com/archives/pythonde-mo-fa/"/>
+    <link href="http://dongweiming.github.com/blog/archives/pythonde-mo-fa/"/>
     <updated>2014-05-08T00:40:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/pythonde-mo-fa</id>
+    <id>http://dongweiming.github.com/blog/archives/pythonde-mo-fa</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近读了一篇<a href="http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/not_so_obvious_python_stuff.ipynb">A collection of not-so-obvious Python stuff you should know!</a>,感觉受益颇多. 翻译过来(非直接翻译),再加上一些我的理解和注释. 让大家注意python鲜为人知的”魔法”. 我会分2篇</p>
@@ -1133,9 +1133,9 @@ In [159]: for i in range(2):
   
   <entry>
     <title type="html"><![CDATA[线程锁的一个大坑]]></title>
-    <link href="http://dongweiming.github.com/archives/xian-cheng-suo-de-%5B%3F%5D-ge-da-keng/"/>
+    <link href="http://dongweiming.github.com/blog/archives/xian-cheng-suo-de-%5B%3F%5D-ge-da-keng/"/>
     <updated>2014-04-18T16:56:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/xian-cheng-suo-de-[?]-ge-da-keng</id>
+    <id>http://dongweiming.github.com/blog/archives/xian-cheng-suo-de-[?]-ge-da-keng</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>原来的一位同事@炮哥, 昨天在QQ问我: “想请教下一个线程获得lock之后，也可能被其他的线程释放掉？这个是因为线程之间的资源是共享的吗？这样的话普通的thread lock 都是不安全的了？”. 我第一反应就是怎么可能:’谁加锁谁解锁呗,别的线程怎么能解锁？’</p>

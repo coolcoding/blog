@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: icinga | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/icinga/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/icinga/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[安装及配置icinga-web]]></title>
-    <link href="http://dongweiming.github.com/archives/%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AEicinga-web/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AEicinga-web/"/>
     <updated>2011-07-29T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/安装及配置icinga-web</id>
+    <id>http://dongweiming.github.com/blog/archives/安装及配置icinga-web</id>
     <content type="html"><![CDATA[<p>前言：我所认为的icinga-web其实就是将icinga监控数据写到数据库，用icinga-web对其进行一些处理返回检查的状态
 <img style="max-width: 800px;" src="http://farm7.static.flickr.com/6025/5986605311_38600dbb57_b.jpg" alt="" />
 1 安装一些必备的rpm包：
@@ -94,9 +94,9 @@ http://localhost/icinga-web
   
   <entry>
     <title type="html"><![CDATA[Icinga专题（一）Icinga安装]]></title>
-    <link href="http://dongweiming.github.com/archives/icinga%E4%B8%93%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89icinga%E5%AE%89%E8%A3%85/"/>
+    <link href="http://dongweiming.github.com/blog/archives/icinga%E4%B8%93%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89icinga%E5%AE%89%E8%A3%85/"/>
     <updated>2011-04-16T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/icinga专题（一）icinga安装</id>
+    <id>http://dongweiming.github.com/blog/archives/icinga专题（一）icinga安装</id>
     <content type="html"><![CDATA[<p><strong>Icinga是一些nagios项目社区的成员发起的，兼容nagios，并实现了中文化和安卓系统版本。I like ^.^</strong></p>
 
 <p><strong><a href="http://www.dongwm.com/wp-content/uploads/2011/04/image_13.png"><img class="alignnone size-full wp-image-461" title="image_1" src="http://www.dongwm.com/wp-content/uploads/2011/04/image_13.png" alt="" width="890" height="342" /></a>

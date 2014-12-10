@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: kvm | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/kvm/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/kvm/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于kvm使用virt-manager报错]]></title>
-    <link href="http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Ekvm%E4%BD%BF%E7%94%A8virt-manager%E6%8A%A5%E9%94%99/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Ekvm%E4%BD%BF%E7%94%A8virt-manager%E6%8A%A5%E9%94%99/"/>
     <updated>2012-01-16T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/关于kvm使用virt-manager报错</id>
+    <id>http://dongweiming.github.com/blog/archives/关于kvm使用virt-manager报错</id>
     <content type="html"><![CDATA[<p>前言：使用linux桌面连接远程kvm服务器，使用virt-manager，出现下面报错：</p>
 
 <p>Traceback (most recent call last):
@@ -39,9 +39,9 @@ RuntimeError: could not open display</p>
   
   <entry>
     <title type="html"><![CDATA[kvm创建guest img文件的一个小问题]]></title>
-    <link href="http://dongweiming.github.com/archives/kvm%E5%88%9B%E5%BB%BAguest-img%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/"/>
+    <link href="http://dongweiming.github.com/blog/archives/kvm%E5%88%9B%E5%BB%BAguest-img%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/"/>
     <updated>2012-01-14T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/kvm创建guest-img文件的一个小问题</id>
+    <id>http://dongweiming.github.com/blog/archives/kvm创建guest-img文件的一个小问题</id>
     <content type="html"><![CDATA[<p>前言：这是作kvm项目的一个小发现：当我使用命令创建i㎎文件‘qemu-img create -f raw  i㎎路径具体位置 文件大小’，但是当查看文件的具体占用空间发现：</p>
 
 <p>[root@localhost ~]# qemu-img create -f raw  /data1//1.img 10G
@@ -102,9 +102,9 @@ class Capture：
   
   <entry>
     <title type="html"><![CDATA[使用xml.etree.ElementTree修改/删除kvm项目的guest机器xml文件]]></title>
-    <link href="http://dongweiming.github.com/archives/%E4%BD%BF%E7%94%A8xml-etree-elementtree%E4%BF%AE%E6%94%B9%E5%88%A0%E9%99%A4kvm%E9%A1%B9%E7%9B%AE%E7%9A%84guest%E6%9C%BA%E5%99%A8xml%E6%96%87%E4%BB%B6/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8xml-etree-elementtree%E4%BF%AE%E6%94%B9%E5%88%A0%E9%99%A4kvm%E9%A1%B9%E7%9B%AE%E7%9A%84guest%E6%9C%BA%E5%99%A8xml%E6%96%87%E4%BB%B6/"/>
     <updated>2012-01-06T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/使用xml-etree-elementtree修改删除kvm项目的guest机器xml文件</id>
+    <id>http://dongweiming.github.com/blog/archives/使用xml-etree-elementtree修改删除kvm项目的guest机器xml文件</id>
     <content type="html"><![CDATA[<p>前言：修改xml文件也可以用xml.dom. minidom,但是相对没有etree的简洁方便，以下是一个例子：</p>
 
 <p><pre class="sh_python">

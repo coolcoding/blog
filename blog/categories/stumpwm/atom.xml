@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: stumpwm | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/stumpwm/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/stumpwm/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[gentoo使用stumpwm做桌面管理器]]></title>
-    <link href="http://dongweiming.github.com/archives/gentoo-use-stumpwm/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gentoo-use-stumpwm/"/>
     <updated>2013-11-25T23:52:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/gentoo-use-stumpwm</id>
+    <id>http://dongweiming.github.com/blog/archives/gentoo-use-stumpwm</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>以前一直使用gentoo+gnome的方法使用,说实话,gentoo做个人桌面是在很一般, 尤其是跑起来

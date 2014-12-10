@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: chef | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/chef/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/chef/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[chef专题(一):安装chef]]></title>
-    <link href="http://dongweiming.github.com/archives/chef%E4%B8%93%E9%A2%98%E4%B8%80%E5%AE%89%E8%A3%85chef/"/>
+    <link href="http://dongweiming.github.com/blog/archives/chef%E4%B8%93%E9%A2%98%E4%B8%80%E5%AE%89%E8%A3%85chef/"/>
     <updated>2011-04-15T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/chef专题一安装chef</id>
+    <id>http://dongweiming.github.com/blog/archives/chef专题一安装chef</id>
     <content type="html"><![CDATA[<p><strong>1  安装前准备:</strong>
 <pre class="sh_bash">
 1 确保hostname是FQDN格式:

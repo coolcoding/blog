@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: django-extensions | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/django-extensions/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/django-extensions/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[怎样不退出交互模式自动reload模块]]></title>
-    <link href="http://dongweiming.github.com/archives/how-to-not-exit-interactive-mode-autoreload/"/>
+    <link href="http://dongweiming.github.com/blog/archives/how-to-not-exit-interactive-mode-autoreload/"/>
     <updated>2013-05-24T11:54:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/how-to-not-exit-interactive-mode-autoreload</id>
+    <id>http://dongweiming.github.com/blog/archives/how-to-not-exit-interactive-mode-autoreload</id>
     <content type="html"><![CDATA[<h4 id="section"><em>前言</em></h4>
 
 <p>我想做python开发的人尤其是django开发都会有一种经历:进入python交互模式(直接 执行python回车)或者进入django-shell调试某功能，然后修改源码，退出交互模式或者djangoshell，重新进入在吧那些模块一一import… 问题是什么呢？浪费时间，为啥不像web 框架那样修改源码自动reload？ </p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: emacs | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/emacs/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/emacs/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[一个使用python的web程序员的emacs.d]]></title>
-    <link href="http://dongweiming.github.com/archives/%5B%3F%5D-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%5B%3F%5D-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d/"/>
     <updated>2014-08-12T06:49:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/[?]-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d</id>
+    <id>http://dongweiming.github.com/blog/archives/[?]-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>越来越多的人使用emacs作为开发工具. 甚至skype,gmail,豆瓣FM都能通过emacs.

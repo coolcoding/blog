@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: gevent | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/gevent/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/gevent/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用http和websocket连接服务器]]></title>
-    <link href="http://dongweiming.github.com/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi/"/>
     <updated>2013-07-19T22:53:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>想想吧，通过网页ssh登录服务器是一件多么酷的事情?今天看了<a href="http://www.vpsee.com/2013/06/invoke-a-linux-shell-with-ssh-account-from-browser">使用浏览器访问 Linux 终端</a>,
@@ -57,9 +57,9 @@ wssh dongwm@dongwm.com -p XXX -s 58404
   
   <entry>
     <title type="html"><![CDATA[gevent-twisted-多线程谁更快?]]></title>
-    <link href="http://dongweiming.github.com/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai/"/>
     <updated>2013-01-11T13:54:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai</id>
+    <id>http://dongweiming.github.com/blog/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai</id>
     <content type="html"><![CDATA[<h4 id="section"><em>前言</em></h4>
 
 <p>标题有点唬人，以前了解过研究gevent，twisted，scrapy（基于twisted）。最近有个想法：这些东西比如做爬虫，谁的效率更好呢？
@@ -594,9 +594,9 @@ dongwm@localhost ~/Crawler $ python common_Crawler.py
   
   <entry>
     <title type="html"><![CDATA[关于gevent的一些理解(一)]]></title>
-    <link href="http://dongweiming.github.com/archives/guanyugeventdeyixielijieyi-2/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyugeventdeyixielijieyi-2/"/>
     <updated>2012-07-26T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/guanyugeventdeyixielijieyi-2</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyugeventdeyixielijieyi-2</id>
     <content type="html"><![CDATA[<p>前言:gevent是python的一个并发框架,以微线程greenlet为核心，使用了epoll事件监听机制以及诸多其他优化而变得高效.而且其中有个monkey类,
 将现有基于Python线程直接转化为greenlet(类似于打patch).他和线程框架性能比高大概4倍(看下图,是gevent和paste的对比):</p>
 
@@ -1222,9 +1222,9 @@ gevent.joinall([ping, pong])
   
   <entry>
     <title type="html"><![CDATA[关于gevent的一些理解(二)]]></title>
-    <link href="http://dongweiming.github.com/archives/guanyugeventdeyixielijieer/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyugeventdeyixielijieer/"/>
     <updated>2012-07-26T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/guanyugeventdeyixielijieer</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyugeventdeyixielijieer</id>
     <content type="html"><![CDATA[<p><strong>3 实际应用</strong></p>
 
 <p>1 zeromq和gevent:</p>

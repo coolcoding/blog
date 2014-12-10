@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: vim | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/vim/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[vary.vim-自动去掉行尾空格]]></title>
-    <link href="http://dongweiming.github.com/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge/"/>
+    <link href="http://dongweiming.github.com/blog/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge/"/>
     <updated>2013-09-08T21:03:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge</id>
+    <id>http://dongweiming.github.com/blog/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>一直想改成emacs无奈工作需要效率，所以vim还没有完全放弃. 我想做python的同学很可能有我一样的困扰:</p>

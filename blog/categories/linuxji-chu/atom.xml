@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: linux基础 | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/linuxji-chu/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/linuxji-chu/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SQLAlchemy教程(五)]]></title>
-    <link href="http://dongweiming.github.com/archives/sqlalchemyjiaochengwu/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengwu/"/>
     <updated>2012-07-19T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/sqlalchemyjiaochengwu</id>
+    <id>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengwu</id>
     <content type="html"><![CDATA[<p><strong> 本文主要说删除</strong></p>
 
 <p>metadata.drop_all(engine) #删除某引擎的全部表</p>
@@ -107,9 +107,9 @@ mapper(Photo, photo, properties=dict(
   
   <entry>
     <title type="html"><![CDATA[SQLAlchemy教程(六)]]></title>
-    <link href="http://dongweiming.github.com/archives/sqlalchemyjiaochengliu/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengliu/"/>
     <updated>2012-07-19T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/sqlalchemyjiaochengliu</id>
+    <id>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengliu</id>
     <content type="html"><![CDATA[<p><strong>本文主要是ORM的sission查询和更新</strong></p>
 
 <p>session负责执行内存中的对象和数据库表之间的同步工作,创建session可以这样:</p>
@@ -226,9 +226,9 @@ backref='products'))) #它的优点是可以初始化参数</p>
   
   <entry>
     <title type="html"><![CDATA[linux下升级到最新版本firefox浏览器]]></title>
-    <link href="http://dongweiming.github.com/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi/"/>
     <updated>2012-07-11T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi</id>
+    <id>http://dongweiming.github.com/blog/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi</id>
     <content type="html"><![CDATA[<p>前言：一直是firefox忠实用户，本文是普及篇，系统是opensuse11.3，其他系统请借鉴方法</p>
 
 <p>1 首先查看当前系统firefox信息：</p>
@@ -266,9 +266,9 @@ linux-vkmz:~ #cp -rp firefox/* /usr/lib/firefox/   #拷贝lib文件到系统�
   
   <entry>
     <title type="html"><![CDATA[关于select研究]]></title>
-    <link href="http://dongweiming.github.com/archives/guanyuselectyanjiu/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyuselectyanjiu/"/>
     <updated>2012-06-15T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/guanyuselectyanjiu</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyuselectyanjiu</id>
     <content type="html"><![CDATA[<p>前言：select可以完成非阻塞（所谓非阻塞方式non-block，就是进程或线程执行此函数时不必非要等待事件的发生，一旦执行肯定返回，以返回值的不同 来反映函数的执行情况，如果事件发生则与阻塞方式相同，若事件没有发生则返回一个代码来告知事件未发生，而进程或线程继续执行，所以效率较高）方式工作的 程序，还能够监视我们需要监视的文件描述符，socket，pipe的变化情况——读写或是异常（windows只能用于socket）。他可以访问select()和epoll()的系统调用，他通常用来实现轮询，也可以在不使用多线程和或者子进程的前提下跨多个I／O流进行多重处理</p>
 
 <p>服务器的程序：</p>
@@ -572,9 +572,9 @@ closing ('127.0.0.1', 57128) after reading no data</p>
   
   <entry>
     <title type="html"><![CDATA[关于shutil研究]]></title>
-    <link href="http://dongweiming.github.com/archives/guanyu-3/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyu-3/"/>
     <updated>2012-06-15T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/guanyu-3</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyu-3</id>
     <content type="html"><![CDATA[<p>前言：shutil是一个高层次的文件操作，比如复制，移动和修改权限等</p>
 
 <p><pre class="sh_python">

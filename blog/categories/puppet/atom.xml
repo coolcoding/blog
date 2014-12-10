@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: puppet | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/puppet/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/puppet/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[准确掌握puppet client向server请求时间]]></title>
-    <link href="http://dongweiming.github.com/archives/%E5%87%86%E7%A1%AE%E6%8E%8C%E6%8F%A1puppet-client%E5%90%91server%E8%AF%B7%E6%B1%82%E6%97%B6%E9%97%B4/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E5%87%86%E7%A1%AE%E6%8E%8C%E6%8F%A1puppet-client%E5%90%91server%E8%AF%B7%E6%B1%82%E6%97%B6%E9%97%B4/"/>
     <updated>2011-04-28T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/准确掌握puppet-client向server请求时间</id>
+    <id>http://dongweiming.github.com/blog/archives/准确掌握puppet-client向server请求时间</id>
     <content type="html"><![CDATA[<p><p>使用puppet，发现默认半小时客户端就和服务器端请求一次信息，如果发现有更新就会自动更新。但是在使用了tagmail后，这是一件很郁闷的事情，因为请求一次就产生一个邮件，设想有上千台client，没30分钟一个邮件。。。但是我不希望用cron，因为有些事情是很紧急的，不能等到下一个定时任务执行时才去执行。</p>  <p>解决方法：</p>  <p>修改puppet.conf修改向server请求的时间间隔：</p>  <p>在[agent]下面加一行：</p>  <p>runinterval = 86400&#160; //单位是秒 我设置的一天更新一次&#160; 然后puppetd进程是一直后台运行的</p>  <p>采用server端向客户端主动发送要求，触发客户端来向server请求</p>  <p>#puppetrun –host 主机名</p>  <p>可以吧主机做个for循环，虽然性能不够，也不能实现并行执行。幸好puppetrun只是发送一个信号</p></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[升级puppet版本]]></title>
-    <link href="http://dongweiming.github.com/archives/%E5%8D%87%E7%BA%A7puppet%E7%89%88%E6%9C%AC/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E5%8D%87%E7%BA%A7puppet%E7%89%88%E6%9C%AC/"/>
     <updated>2011-03-29T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/升级puppet版本</id>
+    <id>http://dongweiming.github.com/blog/archives/升级puppet版本</id>
     <content type="html"><![CDATA[<p><p><strong>目前最新版puppet是2.6.7，我的版本是2.6.3，以下是升级过程（本例只适合编译安装puppet）：</strong></p>
 <p><strong>思路：</strong></p>
 <p><strong>1  先升级server端，后升级client端</strong></p>
@@ -52,9 +52,9 @@
   
   <entry>
     <title type="html"><![CDATA[让puppet代码支持vim高亮显示]]></title>
-    <link href="http://dongweiming.github.com/archives/rangpuppetdaimazhichivimgaoliangxianshi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/rangpuppetdaimazhichivimgaoliangxianshi/"/>
     <updated>2010-12-25T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/rangpuppetdaimazhichivimgaoliangxianshi</id>
+    <id>http://dongweiming.github.com/blog/archives/rangpuppetdaimazhichivimgaoliangxianshi</id>
     <content type="html"><![CDATA[<p>puppet的<span>语言<em> </em></span>还没有被vim支持，编辑时候黑底白字，不容易排错，看起来也不好分辨，请一定要看我一下这篇高亮显示的文章^.^<!--more--></p>
 
 <p>原理就是在你用户根目录下的.vim里面加2个文件，具体如下：</p>
@@ -179,9 +179,9 @@ endif</p>
   
   <entry>
     <title type="html"><![CDATA[puppet配置文件结构树参考]]></title>
-    <link href="http://dongweiming.github.com/archives/puppet%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%A0%91%E5%8F%82%E8%80%83/"/>
+    <link href="http://dongweiming.github.com/blog/archives/puppet%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%A0%91%E5%8F%82%E8%80%83/"/>
     <updated>2010-12-18T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/puppet配置文件结构树参考</id>
+    <id>http://dongweiming.github.com/blog/archives/puppet配置文件结构树参考</id>
     <content type="html"><![CDATA[<p>我想大多数人开始学习puppet都会对它的结构化有些迷惑，本文仅供初学puppet，以及希望对puppet更好结构化管理的同学们。很少见的一种思路：</p>
 
 <p><img class="alignnone" title="puppet" src="http://farm6.static.flickr.com/5243/5288063660_0a1ecac877.jpg" alt="" width="500" height="479" /><!--more--></p>
@@ -265,9 +265,9 @@ vi manifests/module.pp
   
   <entry>
     <title type="html"><![CDATA[使用svn和hook（钩子）对puppet进行版本控制]]></title>
-    <link href="http://dongweiming.github.com/archives/%E4%BD%BF%E7%94%A8svn%E5%92%8Chook%EF%BC%88%E9%92%A9%E5%AD%90%EF%BC%89%E5%AF%B9puppet%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8svn%E5%92%8Chook%EF%BC%88%E9%92%A9%E5%AD%90%EF%BC%89%E5%AF%B9puppet%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     <updated>2010-11-30T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/使用svn和hook（钩子）对puppet进行版本控制</id>
+    <id>http://dongweiming.github.com/blog/archives/使用svn和hook（钩子）对puppet进行版本控制</id>
     <content type="html"><![CDATA[<p>puppet默认没有使用版本控制。可以在puppet.conf文件中添加一下一行：
 <code>config_version = /usr/local/bin/return_version</code>
 其中“/usr/local/bin/return_version” 是我自定义的脚本：<!--more--></p>

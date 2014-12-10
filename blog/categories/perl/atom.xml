@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: perl | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/perl/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/perl/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[复杂事件（cep）处理多个结果同窗口展示]]></title>
-    <link href="http://dongweiming.github.com/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi/"/>
     <updated>2011-09-18T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi</id>
+    <id>http://dongweiming.github.com/blog/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi</id>
     <content type="html"><![CDATA[<p>展示效果类似于dstat（python）将日志文件的结果格式化显示到终端界面</p>
 
 <p><pre class="sh_perl">
@@ -276,9 +276,9 @@ while (1) {
   
   <entry>
     <title type="html"><![CDATA[复杂事件(cep)处理结果实时展示脚本（perl）]]></title>
-    <link href="http://dongweiming.github.com/archives/fuzashijiancepchulijieguozhanshijiaoben/"/>
+    <link href="http://dongweiming.github.com/blog/archives/fuzashijiancepchulijieguozhanshijiaoben/"/>
     <updated>2011-08-24T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/fuzashijiancepchulijieguozhanshijiaoben</id>
+    <id>http://dongweiming.github.com/blog/archives/fuzashijiancepchulijieguozhanshijiaoben</id>
     <content type="html"><![CDATA[<p>前言：复杂事件处理主要用来企业作为应用系统的监测和决策控制，但是我们可能需要一个实时的展示平台，以下脚本实现了终端的彩色终端展示，并支持键盘输入不同的按键刷新不同功能的展示（比如ip访问量的排行，页面访问数的排行等自定义效果）</p>
 
 <p><pre class="sh_perl">
@@ -665,9 +665,9 @@ sub ChangePage{
   
   <entry>
     <title type="html"><![CDATA[使用可以带选项的perl发送中文邮件]]></title>
-    <link href="http://dongweiming.github.com/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian/"/>
     <updated>2011-08-13T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian</id>
+    <id>http://dongweiming.github.com/blog/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian</id>
     <content type="html"><![CDATA[<p>为了处理复杂事件处理的故障报警，需要使用perl语言实现邮件报警和短信报警</p>
 
 <p><pre class="sh_perl">

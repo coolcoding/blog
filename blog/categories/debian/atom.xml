@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: debian | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/debian/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/debian/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[debian下使用sshfs＋fuse挂载远端文件系统]]></title>
-    <link href="http://dongweiming.github.com/archives/debianxiashiyongsshfsfuseguazaiyuanduanwenjianxitong/"/>
+    <link href="http://dongweiming.github.com/blog/archives/debianxiashiyongsshfsfuseguazaiyuanduanwenjianxitong/"/>
     <updated>2011-09-16T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/debianxiashiyongsshfsfuseguazaiyuanduanwenjianxitong</id>
+    <id>http://dongweiming.github.com/blog/archives/debianxiashiyongsshfsfuseguazaiyuanduanwenjianxitong</id>
     <content type="html"><![CDATA[<p>前言：这个想法是因为在linux通过wine安装editplus后发现不能编辑ftp远程服务器的代码。而bluefish也没有提供远程ftp编辑的功能，于是想将远程服务器的文件系统挂载到本地（但是因为某些原因，他没有类似于nfs这样的网络文件系统），于是有了此文－－通过ssh的特性。而fuse,他是Linux 中用于挂载某些网络空间，如SSH，到本地文件系统的模块。</p>
 
 <p>1  安装fuse和sshfs：</p>
@@ -57,9 +57,9 @@ root@192.168.10.89:/ 1000G     0 1000G   0% /home/dongwm/10.89</p>
   
   <entry>
     <title type="html"><![CDATA[compiz 外挂插件欣赏和安装]]></title>
-    <link href="http://dongweiming.github.com/archives/compiz-%E5%A4%96%E6%8C%82%E6%8F%92%E4%BB%B6%E6%AC%A3%E8%B5%8F%E5%92%8C%E5%AE%89%E8%A3%85/"/>
+    <link href="http://dongweiming.github.com/blog/archives/compiz-%E5%A4%96%E6%8C%82%E6%8F%92%E4%BB%B6%E6%AC%A3%E8%B5%8F%E5%92%8C%E5%AE%89%E8%A3%85/"/>
     <updated>2011-05-27T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/compiz-外挂插件欣赏和安装</id>
+    <id>http://dongweiming.github.com/blog/archives/compiz-外挂插件欣赏和安装</id>
     <content type="html"><![CDATA[<p><strong>其实很早就想写一篇关于compiz一个不为人知的插件的安装使用文章。很多人以为compiz就是那一些，其实在http://gitweb.compiz.org/上面有很多插件。不过有一些年代久远没人维护。网上可能有一些介绍这些插件的文章，只是停留在截图和简单地说明，包括ubuntu社区也没有相关的解释。作为一个菜鸟 呵呵 我来写一下：</strong>
 <strong>视频地址：http://v.youku.com/v_show/id_XMjcwNDUyODQ0.html
 视频顺序：wizard，trip，freewins，autumn，stars，snow，fireslies，bubbles，screensaver，dodge（非</strong>
@@ -104,9 +104,9 @@ sudo ln -s libGL.so.1 libGL.so</p>
   
   <entry>
     <title type="html"><![CDATA[安装debian后无法进入windows 7 解决办法]]></title>
-    <link href="http://dongweiming.github.com/archives/%E5%AE%89%E8%A3%85debian%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5windows-7-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E5%AE%89%E8%A3%85debian%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5windows-7-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
     <updated>2011-04-14T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/安装debian后无法进入windows-7-解决办法</id>
+    <id>http://dongweiming.github.com/blog/archives/安装debian后无法进入windows-7-解决办法</id>
     <content type="html"><![CDATA[<p>最近安装了debian6.1版本，发现grub没有了windows7 菜单选项，这个grub是debian的天下。。。研究后感觉应该是debian使用了grub2的缘故，解决办法如下：</p>
 
 <p><pre class="sh_bash">sudo vi /boot/grub/grub.cfg

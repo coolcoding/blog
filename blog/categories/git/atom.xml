@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: git | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/git/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[自搭建git服务器实现提交代码自动推到测试环境]]></title>
-    <link href="http://dongweiming.github.com/archives/zi-da-jian-gitfu-wu-qi-shi-xian-ti-jiao-dai-ma-zi-dong-tui-dao-ce-shi-huan-jing/"/>
+    <link href="http://dongweiming.github.com/blog/archives/zi-da-jian-gitfu-wu-qi-shi-xian-ti-jiao-dai-ma-zi-dong-tui-dao-ce-shi-huan-jing/"/>
     <updated>2013-06-17T23:15:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/zi-da-jian-gitfu-wu-qi-shi-xian-ti-jiao-dai-ma-zi-dong-tui-dao-ce-shi-huan-jing</id>
+    <id>http://dongweiming.github.com/blog/archives/zi-da-jian-gitfu-wu-qi-shi-xian-ti-jiao-dai-ma-zi-dong-tui-dao-ce-shi-huan-jing</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>假如公司有很多项目，很可能你要自建git服务器，然后有不同的分支管理各个项目。尤其是web开发，每次push不仅在测试环境需要pull代码，

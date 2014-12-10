@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: mongoengine | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/mongoengine/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/mongoengine/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[一个flask+mongoengine的site]]></title>
-    <link href="http://dongweiming.github.com/archives/a-data-analysis-site-by-flask-and-mongoengine/"/>
+    <link href="http://dongweiming.github.com/blog/archives/a-data-analysis-site-by-flask-and-mongoengine/"/>
     <updated>2013-11-20T17:39:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/a-data-analysis-site-by-flask-and-mongoengine</id>
+    <id>http://dongweiming.github.com/blog/archives/a-data-analysis-site-by-flask-and-mongoengine</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近一直学习emacs和elisp, 也在做关于mongodb相关的研究,闲来无事就做了个网站,后端使用了flask, mongoengine, 前端css框架用的是
@@ -46,9 +46,9 @@ python run.py
   
   <entry>
     <title type="html"><![CDATA[仿slid.es的在线PPT编辑网站]]></title>
-    <link href="http://dongweiming.github.com/archives/a-web-based-reveal.js-online-PPT/"/>
+    <link href="http://dongweiming.github.com/blog/archives/a-web-based-reveal.js-online-PPT/"/>
     <updated>2013-05-25T12:22:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/a-web-based-reveal.js-online-PPT</id>
+    <id>http://dongweiming.github.com/blog/archives/a-web-based-reveal.js-online-PPT</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p><a href="https://slid.es">slid.es</a>是我最喜欢的前端之一<a href="https://github.com/hakimel">hakimel</a>的作品，前身叫做rvl.io, 网站已经改版。源于去年年底在上家公司做年终总结PPT，对我这种不搞office，没有美感的小程序员太痛苦了，然后就找到了<a href="https://github.com/hakimel/reveal.js">reveal.js</a>, 后来萌发做个基于它的网站, 其实也是为了练手学习mongoengine和oauth</p>

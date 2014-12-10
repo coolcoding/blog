@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: ospf | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/ospf/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/ospf/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[OSPF验证配置 (MD5验证)]]></title>
-    <link href="http://dongweiming.github.com/archives/ospf%E9%AA%8C%E8%AF%81%E9%85%8D%E7%BD%AE-md5%E9%AA%8C%E8%AF%81/"/>
+    <link href="http://dongweiming.github.com/blog/archives/ospf%E9%AA%8C%E8%AF%81%E9%85%8D%E7%BD%AE-md5%E9%AA%8C%E8%AF%81/"/>
     <updated>2011-03-30T00:00:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/ospf验证配置-md5验证</id>
+    <id>http://dongweiming.github.com/blog/archives/ospf验证配置-md5验证</id>
     <content type="html"><![CDATA[<p><strong>实验要求</strong></p>
 
 <p><strong>1. 完成路由器的基本配置和连通性配置</strong>

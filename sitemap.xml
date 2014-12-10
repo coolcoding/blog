@@ -2,1482 +2,1516 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/linux-gcc%E6%BC%8F%E6%B4%9E%EF%BC%9A%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E8%8E%B7%E5%BE%97root%E6%9D%83%E9%99%90/
+            http://dongweiming.github.com/blog/archives/linux-gcc%E6%BC%8F%E6%B4%9E%EF%BC%9A%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E8%8E%B7%E5%BE%97root%E6%9D%83%E9%99%90/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%BC%80%E6%BA%90%E8%87%AA%E5%8A%A8%E5%8C%96%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7puppet%E5%AE%89%E8%A3%85/
+            http://dongweiming.github.com/blog/archives/%E5%BC%80%E6%BA%90%E8%87%AA%E5%8A%A8%E5%8C%96%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7puppet%E5%AE%89%E8%A3%85/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/puppet-dashboard%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3/
+            http://dongweiming.github.com/blog/archives/puppet-dashboard%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/puppet-dashboard%E7%9A%84%E5%9F%BA%E4%BA%8E-htaccess%E9%AA%8C%E8%AF%81/
+            http://dongweiming.github.com/blog/archives/puppet-dashboard%E7%9A%84%E5%9F%BA%E4%BA%8E-htaccess%E9%AA%8C%E8%AF%81/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BD%BF%E7%94%A8svn%E5%92%8Chook%EF%BC%88%E9%92%A9%E5%AD%90%EF%BC%89%E5%AF%B9puppet%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/
+            http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8svn%E5%92%8Chook%EF%BC%88%E9%92%A9%E5%AD%90%EF%BC%89%E5%AF%B9puppet%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/nagios%E6%B7%B1%E5%85%A5%E8%BF%9B%E9%98%B6%E4%B9%8B%E4%B8%80%EF%BC%9A%E8%A2%AB%E5%8A%A8%E6%A3%80%E6%9F%A5/
+            http://dongweiming.github.com/blog/archives/nagios%E6%B7%B1%E5%85%A5%E8%BF%9B%E9%98%B6%E4%B9%8B%E4%B8%80%EF%BC%9A%E8%A2%AB%E5%8A%A8%E6%A3%80%E6%9F%A5/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/nagios%E6%B7%B1%E5%85%A5%E8%BF%9B%E9%98%B6%E4%B9%8B%E4%BA%8C%E5%86%97%E4%BD%99%E5%BC%8F%E4%B8%8E%E5%A4%B1%E6%95%88%E5%BC%8F%E7%BD%91%E7%BB%9C%E7%9B%91%E6%8E%A7/
+            http://dongweiming.github.com/blog/archives/nagios%E6%B7%B1%E5%85%A5%E8%BF%9B%E9%98%B6%E4%B9%8B%E4%BA%8C%E5%86%97%E4%BD%99%E5%BC%8F%E4%B8%8E%E5%A4%B1%E6%95%88%E5%BC%8F%E7%BD%91%E7%BB%9C%E7%9B%91%E6%8E%A7/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/nagios%E6%B7%B1%E5%85%A5%E8%BF%9B%E9%98%B6%E4%B9%8B%E4%B8%89%EF%BC%9A%E6%9C%8D%E5%8A%A1%E6%89%A9%E5%B1%95%E7%9A%84%E5%AE%9A%E4%B9%89/
+            http://dongweiming.github.com/blog/archives/nagios%E6%B7%B1%E5%85%A5%E8%BF%9B%E9%98%B6%E4%B9%8B%E4%B8%89%EF%BC%9A%E6%9C%8D%E5%8A%A1%E6%89%A9%E5%B1%95%E7%9A%84%E5%AE%9A%E4%B9%89/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/nagios%E6%B7%B1%E5%85%A5%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%9B%EF%BC%9A%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE%E7%9A%84%E5%90%8C%E6%AD%A5/
+            http://dongweiming.github.com/blog/archives/nagios%E6%B7%B1%E5%85%A5%E8%BF%9B%E9%98%B6%E4%B9%8B%E5%9B%9B%EF%BC%9A%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE%E7%9A%84%E5%90%8C%E6%AD%A5/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/puppet%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%A0%91%E5%8F%82%E8%80%83/
+            http://dongweiming.github.com/blog/archives/puppet%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%A0%91%E5%8F%82%E8%80%83/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/syslog%E8%AE%B0%E5%BD%95history%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/
+            http://dongweiming.github.com/blog/archives/syslog%E8%AE%B0%E5%BD%95history%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E9%85%8D%E7%BD%AEcherokee%E4%B8%8B%E7%9A%84cacti/
+            http://dongweiming.github.com/blog/archives/%E9%85%8D%E7%BD%AEcherokee%E4%B8%8B%E7%9A%84cacti/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/rangpuppetdaimazhichivimgaoliangxianshi/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/rangpuppetdaimazhichivimgaoliangxianshi/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/zuixinfangshianzhuangpeizhismokeping/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/zuixinfangshianzhuangpeizhismokeping/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Ehistory%E5%91%BD%E4%BB%A4%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Ehistory%E5%91%BD%E4%BB%A4%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Essh%E5%91%BD%E4%BB%A4%E7%A0%94%E7%A9%B6%E4%BB%A5%E5%8F%8Assh%E4%BF%A1%E4%BB%BB%E8%AF%A6%E8%A7%A3/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Essh%E5%91%BD%E4%BB%A4%E7%A0%94%E7%A9%B6%E4%BB%A5%E5%8F%8Assh%E4%BF%A1%E4%BB%BB%E8%AF%A6%E8%A7%A3/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/spreadwackamoledazaoquanxingaokeyongfuzaijunheng/
+            http://dongweiming.github.com/blog/archives/spreadwackamoledazaoquanxingaokeyongfuzaijunheng/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Els%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Els%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Ecd%E5%91%BD%E4%BB%A4%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Ecd%E5%91%BD%E4%BB%A4%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Efind%E5%91%BD%E4%BB%A4%E7%9A%84%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Efind%E5%91%BD%E4%BB%A4%E7%9A%84%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/susedeyuanchenglianjiejiqiao/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/susedeyuanchenglianjiejiqiao/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Ecrontab%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Ecrontab%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Etop%E7%81%B5%E5%91%BD%E7%9A%84%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Etop%E7%81%B5%E5%91%BD%E7%9A%84%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Ewget%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Ewget%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyugrepminglingdeyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyugrepminglingdeyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/ok/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/ok/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/zxtm%E4%B8%93%E9%A2%98%E4%B8%80%EF%BC%9A%E4%BB%8B%E7%BB%8D%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%99%A8zxtm-lb/
+            http://dongweiming.github.com/blog/archives/zxtm%E4%B8%93%E9%A2%98%E4%B8%80%EF%BC%9A%E4%BB%8B%E7%BB%8D%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%99%A8zxtm-lb/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E6%9F%A5%E7%9C%8B%E5%92%8C%E6%8F%90%E5%8F%96rpm%EF%BC%8Cdeb%E6%96%87%E4%BB%B6/
+            http://dongweiming.github.com/blog/archives/%E6%9F%A5%E7%9C%8B%E5%92%8C%E6%8F%90%E5%8F%96rpm%EF%BC%8Cdeb%E6%96%87%E4%BB%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/bash-shell%E7%9A%84functions%E5%8A%9F%E8%83%BD%E5%8F%8A%E5%BA%94%E7%94%A8/
+            http://dongweiming.github.com/blog/archives/bash-shell%E7%9A%84functions%E5%8A%9F%E8%83%BD%E5%8F%8A%E5%BA%94%E7%94%A8/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/linux%E4%B8%8B%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94lcrt/
+            http://dongweiming.github.com/blog/archives/linux%E4%B8%8B%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94lcrt/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/rpm%E5%91%BD%E4%BB%A4%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/rpm%E5%91%BD%E4%BB%A4%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8func%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/
+            http://dongweiming.github.com/blog/archives/%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8func%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC/
+            http://dongweiming.github.com/blog/archives/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/15%E4%B8%AAbash-shell%E5%86%85%E5%BB%BA%E5%91%BD%E4%BB%A4/
+            http://dongweiming.github.com/blog/archives/15%E4%B8%AAbash-shell%E5%86%85%E5%BB%BA%E5%91%BD%E4%BB%A4/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%9B%B4%E6%94%B9%E6%97%B6%E5%8C%BA%EF%BC%88timezone%EF%BC%89/
+            http://dongweiming.github.com/blog/archives/linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E6%9B%B4%E6%94%B9%E6%97%B6%E5%8C%BA%EF%BC%88timezone%EF%BC%89/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E8%A7%A3%E5%86%B3usrbinld-cannot-find-lxxx%E9%94%99%E8%AF%AF/
+            http://dongweiming.github.com/blog/archives/%E8%A7%A3%E5%86%B3usrbinld-cannot-find-lxxx%E9%94%99%E8%AF%AF/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/colordiff-%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA-diff-%E8%BE%93%E5%87%BA/
+            http://dongweiming.github.com/blog/archives/colordiff-%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA-diff-%E8%BE%93%E5%87%BA/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/bash%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F/
+            http://dongweiming.github.com/blog/archives/bash%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Epaste%E5%91%BD%E4%BB%A4/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Epaste%E5%91%BD%E4%BB%A4/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Ewatch%E5%91%BD%E4%BB%A4%E7%9A%84%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Ewatch%E5%91%BD%E4%BB%A4%E7%9A%84%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Ersync/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Ersync/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/bash-shell-%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E5%92%8C%E5%86%85%E9%83%A8%E5%8F%82%E6%95%B0/
+            http://dongweiming.github.com/blog/archives/bash-shell-%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E5%92%8C%E5%86%85%E9%83%A8%E5%8F%82%E6%95%B0/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Exargs%E5%91%BD%E4%BB%A4%E7%9A%84%E7%A0%94%E7%A9%B6/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Exargs%E5%91%BD%E4%BB%A4%E7%9A%84%E7%A0%94%E7%A9%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/vmware%E4%B8%8Bips%E5%AE%9E%E7%8E%B0web%E8%BF%9E%E6%8E%A5idm/
+            http://dongweiming.github.com/blog/archives/vmware%E4%B8%8Bips%E5%AE%9E%E7%8E%B0web%E8%BF%9E%E6%8E%A5idm/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Eexpect%E7%A0%94%E7%A9%B6%EF%BC%88%E4%B8%80%EF%BC%89/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Eexpect%E7%A0%94%E7%A9%B6%EF%BC%88%E4%B8%80%EF%BC%89/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%8D%87%E7%BA%A7puppet%E7%89%88%E6%9C%AC/
+            http://dongweiming.github.com/blog/archives/%E5%8D%87%E7%BA%A7puppet%E7%89%88%E6%9C%AC/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/ospf%E9%AA%8C%E8%AF%81%E9%85%8D%E7%BD%AE-md5%E9%AA%8C%E8%AF%81/
+            http://dongweiming.github.com/blog/archives/ospf%E9%AA%8C%E8%AF%81%E9%85%8D%E7%BD%AE-md5%E9%AA%8C%E8%AF%81/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/shell-%E8%BF%9B%E5%BA%A6%E6%9D%A1/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/shell-%E8%BF%9B%E5%BA%A6%E6%9D%A1/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/ps1ps2ps3ps4%E5%92%8Cprompt_command/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/ps1ps2ps3ps4%E5%92%8Cprompt_command/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shell-%E9%AB%98%E7%BA%A7%E5%8F%98%E9%87%8F/
+            http://dongweiming.github.com/blog/archives/shell-%E9%AB%98%E7%BA%A7%E5%8F%98%E9%87%8F/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/zxtm%E4%B8%93%E9%A2%98%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8zxtm%E7%94%A8%E8%87%AA%E5%BB%BAssl%E8%AF%81%E4%B9%A6%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E7%9A%84https%E5%8D%8F%E8%AE%AE%E8%AE%BF%E9%97%AE/
+            http://dongweiming.github.com/blog/archives/zxtm%E4%B8%93%E9%A2%98%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8zxtm%E7%94%A8%E8%87%AA%E5%BB%BAssl%E8%AF%81%E4%B9%A6%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E7%9A%84https%E5%8D%8F%E8%AE%AE%E8%AE%BF%E9%97%AE/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BD%BF%E7%94%A8vim%E7%9A%84bash-support%E6%8F%92%E4%BB%B6%E8%B0%83%E8%AF%95bash-shell%E8%84%9A%E6%9C%AC/
+            http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8vim%E7%9A%84bash-support%E6%8F%92%E4%BB%B6%E8%B0%83%E8%AF%95bash-shell%E8%84%9A%E6%9C%AC/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Eexpect%E7%A0%94%E7%A9%B6%EF%BC%88%E4%BA%8C%EF%BC%89/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Eexpect%E7%A0%94%E7%A9%B6%EF%BC%88%E4%BA%8C%EF%BC%89/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shell%E8%84%9A%E6%9C%AC%E8%B0%83%E8%AF%95%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0/
+            http://dongweiming.github.com/blog/archives/shell%E8%84%9A%E6%9C%AC%E8%B0%83%E8%AF%95%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BF%AE%E6%94%B9opensuse%E5%BC%80%E6%9C%BAgrub%E7%94%BB%E9%9D%A2/
+            http://dongweiming.github.com/blog/archives/%E4%BF%AE%E6%94%B9opensuse%E5%BC%80%E6%9C%BAgrub%E7%94%BB%E9%9D%A2/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BF%AE%E6%94%B9opensuse%E4%BF%AE%E6%94%B9%E5%BC%80%E6%9C%BA%E8%BF%87%E7%A8%8B%E8%83%8C%E6%99%AF%E7%94%BB%E9%9D%A2%E5%92%8Cgrub%E5%BC%80%E5%90%AF%E4%BC%81%E9%B9%85%E5%8A%A8%E7%94%BB%E6%8A%80/
+            http://dongweiming.github.com/blog/archives/%E4%BF%AE%E6%94%B9opensuse%E4%BF%AE%E6%94%B9%E5%BC%80%E6%9C%BA%E8%BF%87%E7%A8%8B%E8%83%8C%E6%99%AF%E7%94%BB%E9%9D%A2%E5%92%8Cgrub%E5%BC%80%E5%90%AF%E4%BC%81%E9%B9%85%E5%8A%A8%E7%94%BB%E6%8A%80/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%AE%89%E8%A3%85debian%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5windows-7-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/
+            http://dongweiming.github.com/blog/archives/%E5%AE%89%E8%A3%85debian%E5%90%8E%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5windows-7-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/chef%E4%B8%93%E9%A2%98%E4%B8%80%E5%AE%89%E8%A3%85chef/
+            http://dongweiming.github.com/blog/archives/chef%E4%B8%93%E9%A2%98%E4%B8%80%E5%AE%89%E8%A3%85chef/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/icinga%E4%B8%93%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89icinga%E5%AE%89%E8%A3%85/
+            http://dongweiming.github.com/blog/archives/icinga%E4%B8%93%E9%A2%98%EF%BC%88%E4%B8%80%EF%BC%89icinga%E5%AE%89%E8%A3%85/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/nagios%E6%97%A5%E5%BF%97%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E9%97%AE%E9%A2%98/
+            http://dongweiming.github.com/blog/archives/nagios%E6%97%A5%E5%BF%97%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E9%97%AE%E9%A2%98/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BD%BF%E7%94%A8pssh%E8%BF%9B%E8%A1%8C%E5%B9%B6%E8%A1%8C%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/
+            http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8pssh%E8%BF%9B%E8%A1%8C%E5%B9%B6%E8%A1%8C%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%87%86%E7%A1%AE%E6%8E%8C%E6%8F%A1puppet-client%E5%90%91server%E8%AF%B7%E6%B1%82%E6%97%B6%E9%97%B4/
+            http://dongweiming.github.com/blog/archives/%E5%87%86%E7%A1%AE%E6%8E%8C%E6%8F%A1puppet-client%E5%90%91server%E8%AF%B7%E6%B1%82%E6%97%B6%E9%97%B4/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/fedora-ubuntu-%E6%B7%BB%E5%8A%A0%E5%AF%B9%E6%96%B9grub%E8%8F%9C%E5%8D%95/
+            http://dongweiming.github.com/blog/archives/fedora-ubuntu-%E6%B7%BB%E5%8A%A0%E5%AF%B9%E6%96%B9grub%E8%8F%9C%E5%8D%95/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/fedora-3d%E6%95%88%E6%9E%9C%E5%AE%9E%E7%8E%B0/
+            http://dongweiming.github.com/blog/archives/fedora-3d%E6%95%88%E6%9E%9C%E5%AE%9E%E7%8E%B0/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BD%BF%E7%94%A8vsftpd%E8%99%9A%E6%8B%9F%E7%94%A8%E6%88%B7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/
+            http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8vsftpd%E8%99%9A%E6%8B%9F%E7%94%A8%E6%88%B7%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/peizhiautopagpdeyitaixindao/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/peizhiautopagpdeyitaixindao/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/compiz-%E5%A4%96%E6%8C%82%E6%8F%92%E4%BB%B6%E6%AC%A3%E8%B5%8F%E5%92%8C%E5%AE%89%E8%A3%85/
+            http://dongweiming.github.com/blog/archives/compiz-%E5%A4%96%E6%8C%82%E6%8F%92%E4%BB%B6%E6%AC%A3%E8%B5%8F%E5%92%8C%E5%AE%89%E8%A3%85/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/ubuntu11-04%E5%AE%89%E8%A3%85macbuntu/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/ubuntu11-04%E5%AE%89%E8%A3%85macbuntu/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/luyouqidhcppeizhi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/luyouqidhcppeizhi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/linux-%E5%9C%A8%E7%BA%BF%E5%90%AC%E6%AD%8C%E8%BD%AF%E4%BB%B6/
+            http://dongweiming.github.com/blog/archives/linux-%E5%9C%A8%E7%BA%BF%E5%90%AC%E6%AD%8C%E8%BD%AF%E4%BB%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/zxtm%E5%AE%9E%E7%8E%B0mongodb%E7%9A%84route-server%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/
+            http://dongweiming.github.com/blog/archives/zxtm%E5%AE%9E%E7%8E%B0mongodb%E7%9A%84route-server%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/centos%E4%B8%8Bvsftpd%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E7%94%A8%E6%88%B7%E6%9E%B6%E8%AE%BEftp%E6%9C%8D%E5%8A%A1%E5%99%A8/
+            http://dongweiming.github.com/blog/archives/centos%E4%B8%8Bvsftpd%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E7%94%A8%E6%88%B7%E6%9E%B6%E8%AE%BEftp%E6%9C%8D%E5%8A%A1%E5%99%A8/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/pythonfasongyoujian/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/pythonfasongyoujian/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pythonjiaobenshixianchakanmouqqhaomashifouzaixianjiuchuyinshen/
+            http://dongweiming.github.com/blog/archives/pythonjiaobenshixianchakanmouqqhaomashifouzaixianjiuchuyinshen/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/kongzhipingmianheguanlipingmiananquan/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/kongzhipingmianheguanlipingmiananquan/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/yuanchengduankoujingxiang/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/yuanchengduankoujingxiang/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BD%BFnagios%E4%BD%BF%E7%94%A8ldap%E5%B8%90%E5%8F%B7%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/
+            http://dongweiming.github.com/blog/archives/%E4%BD%BFnagios%E4%BD%BF%E7%94%A8ldap%E5%B8%90%E5%8F%B7%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BD%BF%E7%94%A8ucarp%E5%AE%9E%E7%8E%B0%E8%99%9A%E6%8B%9Fip%E6%95%85%E9%9A%9C%E8%BD%AC%E6%8D%A2%EF%BC%8C%E9%93%BE%E8%B7%AF%E5%86%97%E4%BD%99/
+            http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8ucarp%E5%AE%9E%E7%8E%B0%E8%99%9A%E6%8B%9Fip%E6%95%85%E9%9A%9C%E8%BD%AC%E6%8D%A2%EF%BC%8C%E9%93%BE%E8%B7%AF%E5%86%97%E4%BD%99/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/nagios%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85nagios-plugin-mongodb%E6%8A%A5%E9%94%99%E2%80%9Cneed-to-install-pymongo%E2%80%9D/
+            http://dongweiming.github.com/blog/archives/nagios%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85nagios-plugin-mongodb%E6%8A%A5%E9%94%99%E2%80%9Cneed-to-install-pymongo%E2%80%9D/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/nrpe%E6%A8%A1%E5%BC%8F%E6%A3%80%E6%9F%A5mongo%E8%BF%9B%E7%A8%8B%E8%84%9A%E6%9C%AC/
+            http://dongweiming.github.com/blog/archives/nrpe%E6%A8%A1%E5%BC%8F%E6%A3%80%E6%9F%A5mongo%E8%BF%9B%E7%A8%8B%E8%84%9A%E6%9C%AC/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/kongzhipingmianheguanlipingmiananquan-2/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/kongzhipingmianheguanlipingmiananquan-2/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AEicinga-web/
+            http://dongweiming.github.com/blog/archives/%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AEicinga-web/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/yuanchengjieruvpn/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/yuanchengjieruvpn/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/zhandaozhanvpnyugongxiangmiyue/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/zhandaozhanvpnyugongxiangmiyue/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyujiaohuanjianquan/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyujiaohuanjianquan/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/luyouqishangmianqiyonganquanshellssh/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/luyouqishangmianqiyonganquanshellssh/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/sikewangluoanquanzhuantierguanyuluyouqianquan/
+            http://dongweiming.github.com/blog/archives/sikewangluoanquanzhuantierguanyuluyouqianquan/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/mongodbguanlijiaoben/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/mongodbguanlijiaoben/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/bashhistorybiantaiyongfa/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/bashhistorybiantaiyongfa/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian/
+            http://dongweiming.github.com/blog/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/fuzashijiancepchulijieguozhanshijiaoben/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/fuzashijiancepchulijieguozhanshijiaoben/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pythonyumingchaxunfuwuwhoischengxujiancha5weiyineiyumingdaoqishijianyoujianbaojingqiangzhuyuming/
+            http://dongweiming.github.com/blog/archives/pythonyumingchaxunfuwuwhoischengxujiancha5weiyineiyumingdaoqishijianyoujianbaojingqiangzhuyuming/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/fuzashijiancepchulidexiaoxiduiliezmqzaiserverduandepythonchulijiaoben/
+            http://dongweiming.github.com/blog/archives/fuzashijiancepchulidexiaoxiduiliezmqzaiserverduandepythonchulijiaoben/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/debianxiashiyongsshfsfuseguazaiyuanduanwenjianxitong/
+            http://dongweiming.github.com/blog/archives/debianxiashiyongsshfsfuseguazaiyuanduanwenjianxitong/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/jiyuconsolezhongduandejiaohusocketliaotianchengxufuwuqiduan/
+            http://dongweiming.github.com/blog/archives/jiyuconsolezhongduandejiaohusocketliaotianchengxufuwuqiduan/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/jiyuconsolezhongduandejiaohusocketliaotianchengxukehuduan/
+            http://dongweiming.github.com/blog/archives/jiyuconsolezhongduandejiaohusocketliaotianchengxukehuduan/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi/
+            http://dongweiming.github.com/blog/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shiyongsvntexingshipythonchengxuzidonggengxin/
+            http://dongweiming.github.com/blog/archives/shiyongsvntexingshipythonchengxuzidonggengxin/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pythonchengxubenlipyqt4tuxingchengxuzhongdianjizidongdanchuqqliaotianchuangkou/
+            http://dongweiming.github.com/blog/archives/pythonchengxubenlipyqt4tuxingchengxuzhongdianjizidongdanchuqqliaotianchuangkou/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/jiejuepyqtxitongtuopanyoujiancaidanzaidianjiqitaweizhibuyincangxiaoshidewenti/
+            http://dongweiming.github.com/blog/archives/jiejuepyqtxitongtuopanyoujiancaidanzaidianjiqitaweizhibuyincangxiaoshidewenti/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/opensuseanzhuangkiba-dock/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/opensuseanzhuangkiba-dock/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/shiyongcx_freezeduipengyoutahuanoni/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/shiyongcx_freezeduipengyoutahuanoni/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shiyongsuperviserangbuwendingchengxusidiaozidongmashangzhongqi/
+            http://dongweiming.github.com/blog/archives/shiyongsuperviserangbuwendingchengxusidiaozidongmashangzhongqi/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pyqt4pythonchengxuqidonghuamiandanrudanchuxiaoguo/
+            http://dongweiming.github.com/blog/archives/pyqt4pythonchengxuqidonghuamiandanrudanchuxiaoguo/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/linuxxiamonixshellscrtdezidongdengluduotaifuwuqicaozuominglingyijiduilinuxzhongduandeweizhikongzhi/
+            http://dongweiming.github.com/blog/archives/linuxxiamonixshellscrtdezidongdengluduotaifuwuqicaozuominglingyijiduilinuxzhongduandeweizhikongzhi/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/pythonshiyongeccduisocketshujujiami/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/pythonshiyongeccduisocketshujujiami/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/linuxyunweibukebuzhidexingnengjiankonghediaoshigongju/
+            http://dongweiming.github.com/blog/archives/linuxyunweibukebuzhidexingnengjiankonghediaoshigongju/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/linuxyunweibukebuzhidexingnengjiankonghediaoshigongjuer/
+            http://dongweiming.github.com/blog/archives/linuxyunweibukebuzhidexingnengjiankonghediaoshigongjuer/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sqlitedepythoncaozuomoban/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sqlitedepythoncaozuomoban/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/jiejuelinuxxiaanzhuangpypcapwenti/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/jiejuelinuxxiaanzhuangpypcapwenti/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/gentooanzhuangbiji/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/gentooanzhuangbiji/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/opnesusesudozhichitabzidongbuqi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/opnesusesudozhichitabzidongbuqi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentoobijieranzhuanggnomezhuomianjianzhuangchuxianwentijiejueanzhuangzongjie/
+            http://dongweiming.github.com/blog/archives/gentoobijieranzhuanggnomezhuomianjianzhuangchuxianwentijiejueanzhuangzongjie/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/gentoobijisananzhuang3dtexiaocompiz/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/gentoobijisananzhuang3dtexiaocompiz/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/gentoobijisianzhuangchangyongruanjian/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/gentoobijisianzhuangchangyongruanjian/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentoo%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEconky/
+            http://dongweiming.github.com/blog/archives/gentoo%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEconky/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/unicodeencodeerror-latin-1-codec-cant-encode-characters-in-position-%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/
+            http://dongweiming.github.com/blog/archives/unicodeencodeerror-latin-1-codec-cant-encode-characters-in-position-%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Eexpect%E7%A0%94%E7%A9%B6%EF%BC%88%E4%B8%89%EF%BC%89/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Eexpect%E7%A0%94%E7%A9%B6%EF%BC%88%E4%B8%89%EF%BC%89/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BD%BF%E7%94%A8xml-etree-elementtree%E4%BF%AE%E6%94%B9%E5%88%A0%E9%99%A4kvm%E9%A1%B9%E7%9B%AE%E7%9A%84guest%E6%9C%BA%E5%99%A8xml%E6%96%87%E4%BB%B6/
+            http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8xml-etree-elementtree%E4%BF%AE%E6%94%B9%E5%88%A0%E9%99%A4kvm%E9%A1%B9%E7%9B%AE%E7%9A%84guest%E6%9C%BA%E5%99%A8xml%E6%96%87%E4%BB%B6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentoo%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89iproute2%E5%92%8Ctelnet/
+            http://dongweiming.github.com/blog/archives/gentoo%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89iproute2%E5%92%8Ctelnet/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/kvm%E5%88%9B%E5%BB%BAguest-img%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/
+            http://dongweiming.github.com/blog/archives/kvm%E5%88%9B%E5%BB%BAguest-img%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E5%85%B3%E4%BA%8Ekvm%E4%BD%BF%E7%94%A8virt-manager%E6%8A%A5%E9%94%99/
+            http://dongweiming.github.com/blog/archives/%E5%85%B3%E4%BA%8Ekvm%E4%BD%BF%E7%94%A8virt-manager%E6%8A%A5%E9%94%99/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%E4%BD%BF%E7%94%A8python%E7%A8%8B%E5%BA%8F%E7%A7%BB%E9%99%A4mwindows%E6%8D%A2%E8%A1%8C%E7%AC%A6/
+            http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8python%E7%A8%8B%E5%BA%8F%E7%A7%BB%E9%99%A4mwindows%E6%8D%A2%E8%A1%8C%E7%AC%A6/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentoo%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%83%EF%BC%89%E5%AE%89%E8%A3%85google-chrome/
+            http://dongweiming.github.com/blog/archives/gentoo%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%83%EF%BC%89%E5%AE%89%E8%A3%85google-chrome/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/
+            http://dongweiming.github.com/blog/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentoo%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AB%EF%BC%89%E5%AE%89%E8%A3%85%E4%BA%A6%E6%AD%8C%E5%9C%A8%E7%BA%BF%E5%90%AC%E6%AD%8C%E8%BD%AF%E4%BB%B6%EF%BC%881g1g%EF%BC%89/
+            http://dongweiming.github.com/blog/archives/gentoo%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AB%EF%BC%89%E5%AE%89%E8%A3%85%E4%BA%A6%E6%AD%8C%E5%9C%A8%E7%BA%BF%E5%90%AC%E6%AD%8C%E8%BD%AF%E4%BB%B6%EF%BC%881g1g%EF%BC%89/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89/
+            http://dongweiming.github.com/blog/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89/
+            http://dongweiming.github.com/blog/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/jiejueundefinedmethodrequirementfor/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/jiejueundefinedmethodrequirementfor/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/opensuserpmshujukusunhuaidejiejuefangfa/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/opensuserpmshujukusunhuaidejiejuefangfa/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/gentoobijijiuportageyuruanjianbao/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/gentoobijijiuportageyuruanjianbao/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentoobijishigentooguanliruanjianzongjie/
+            http://dongweiming.github.com/blog/archives/gentoobijishigentooguanliruanjianzongjie/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/opensuseanzhuanganjuta/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/opensuseanzhuanganjuta/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/gentoobijishiyioverlayhelayman/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/gentoobijishiyioverlayhelayman/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/jiejuelinuxxiadakaideyingyongchengxubuzaignomezhuomianmianbanshangmianxianshi/
+            http://dongweiming.github.com/blog/archives/jiejuelinuxxiadakaideyingyongchengxubuzaignomezhuomianmianbanshangmianxianshi/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/debianxidpkgheredhatxirpmminglingzongjie/
+            http://dongweiming.github.com/blog/archives/debianxidpkgheredhatxirpmminglingzongjie/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/tornadoyingyonglizi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/tornadoyingyonglizi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu/
+            http://dongweiming.github.com/blog/archives/tornadoyingyongliziershiyongajaxjquerytongguoqiantaihehoutaijiaohu/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/tornado404shixianzhongdingxiangyemian/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/tornado404shixianzhongdingxiangyemian/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/tornadoduihttp403405zhongdingxiang/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/tornadoduihttp403405zhongdingxiang/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma/
+            http://dongweiming.github.com/blog/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusedyanjiuer/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusedyanjiuer/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusedyanjiuyi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusedyanjiuyi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusedyanjiuee/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusedyanjiuee/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuawkyanjiuer/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuawkyanjiuer/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuawkyanjiuyi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuawkyanjiuyi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuawkyanjiusi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuawkyanjiusi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuawkyanjiuwu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuawkyanjiuwu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pythonzhaodaoipduankeyongipzuidahezuishaoip/
+            http://dongweiming.github.com/blog/archives/pythonzhaodaoipduankeyongipzuidahezuishaoip/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/pythonzhongduanxianshicaisezifu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/pythonzhongduanxianshicaisezifu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/linuxjiqiao/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/linuxjiqiao/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shiyongbeautifulsoupzhuaquyoudaocidianchaxunzidianjieguo/
+            http://dongweiming.github.com/blog/archives/shiyongbeautifulsoupzhuaquyoudaocidianchaxunzidianjieguo/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/zuijindelinuxheshellshiyongzongjie/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/zuijindelinuxheshellshiyongzongjie/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuanydbmyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuanydbmyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuargparseyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuargparseyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuatexityanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuatexityanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyubase64yanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyubase64yanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyubisectyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyubisectyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyubz2yanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyubz2yanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyucompileallyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyucompileallyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyucontextlibyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyucontextlibyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuurlparseyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuurlparseyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyu-2/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyu-2/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyucollectionsyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyucollectionsyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuconfigparseryanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuconfigparseryanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyucookieyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyucookieyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyucpickleyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyucpickleyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyucstringioyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyucstringioyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyudatetimeyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyudatetimeyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyufnmatchyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyufnmatchyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyufunctoolsyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyufunctoolsyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyugcyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyugcyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyugetoptyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyugetoptyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyugetpassyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyugetpassyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuglobyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuglobyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyugrpyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyugrpyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyugzipyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyugzipyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuhashlibyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuhashlibyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuheapq/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuheapq/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuhmacyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuhmacyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuimaplibyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuimaplibyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuinspectyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuinspectyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuitertoolsyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuitertoolsyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyujsonyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyujsonyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyulinecacheyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyulinecacheyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyulogging/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyulogging/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyummapyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyummapyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuoperatoryanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuoperatoryanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyupwdyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyupwdyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyureadlineyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyureadlineyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuschedyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuschedyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyu-3/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyu-3/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyu-4/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyu-4/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuselectyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuselectyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyushelveyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyushelveyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusignalyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusignalyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusimplexmlrpcserveryanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusimplexmlrpcserveryanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusmtplibyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusmtplibyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyustringyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyustringyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyustructyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyustructyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuqueueyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuqueueyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyutarfileyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyutarfileyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyutempfileyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyutempfileyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyutextwrapyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyutextwrapyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyutimeyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyutimeyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyutimeityanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyutimeityanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyutracebackyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyutracebackyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuurllib2yanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuurllib2yanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuurllibyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuurllibyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuuuidyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuuuidyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuwarningsyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuwarningsyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuweakrefyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuweakrefyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuwebbrowseryanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuwebbrowseryanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/guanyuxml-etree-elementtreeyanjiuchuangjianpian/
+            http://dongweiming.github.com/blog/archives/guanyuxml-etree-elementtreeyanjiuchuangjianpian/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/guanyuxml-etree-elementtreeyanjiujiexipian/
+            http://dongweiming.github.com/blog/archives/guanyuxml-etree-elementtreeyanjiujiexipian/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuxmlrpclibyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuxmlrpclibyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuzipfileyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuzipfileyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuzipimportyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuzipimportyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyumultiprocessingyanjiuer/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyumultiprocessingyanjiuer/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyumultiprocessingyanjiuyi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyumultiprocessingyanjiuyi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuos-pathyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuos-pathyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuosyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuosyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusocketserveryanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusocketserveryanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusubprocessyanjiu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusubprocessyanjiu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/pythonzhuabaochengxupypcap/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/pythonzhuabaochengxupypcap/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusocketyanjiuyi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusocketyanjiuyi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuthreadingyanjiuer/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuthreadingyanjiuer/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyuthreadingyanjiuer-2/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyuthreadingyanjiuer-2/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentoobijishierzhongxinbianyineihezongjie/
+            http://dongweiming.github.com/blog/archives/gentoobijishierzhongxinbianyineihezongjie/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentoobijishisangengxinxitongdebaocuojiejue/
+            http://dongweiming.github.com/blog/archives/gentoobijishisangengxinxitongdebaocuojiejue/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusocketyanjiuer-2/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusocketyanjiuer-2/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusysyanjiuer/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusysyanjiuer/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusysyanjiusan/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusysyanjiusan/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusysyanjiusi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusysyanjiusi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyusysyanjiuyi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyusysyanjiuyi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi/
+            http://dongweiming.github.com/blog/archives/linuxxiashengjidaozuixinbanbenfirefoxlanqi/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentoo3-2-21neihebianyivmware8-02failedtocompilemodulevmnetjiejue/
+            http://dongweiming.github.com/blog/archives/gentoo3-2-21neihebianyivmware8-02failedtocompilemodulevmnetjiejue/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sqlalchemyjiaochenger/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochenger/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sqlalchemyjiaochengsan/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengsan/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sqlalchemyjiaochengsi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengsi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sqlalchemyjiaochengyi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengyi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sqlalchemyjiaochengba/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengba/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sqlalchemyjiaochengliu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengliu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sqlalchemyjiaochengqi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengqi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sqlalchemyjiaochengwu/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengwu/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyugeventdeyixielijieer/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyugeventdeyixielijieer/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guanyugeventdeyixielijieyi-2/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guanyugeventdeyixielijieyi-2/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shiyongsphinxheapachedajianwikiwendangwangzhan/
+            http://dongweiming.github.com/blog/archives/shiyongsphinxheapachedajianwikiwendangwangzhan/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shiyongoctopresszuoweigithub-comwangzhandebokekuangjia/
+            http://dongweiming.github.com/blog/archives/shiyongoctopresszuoweigithub-comwangzhandebokekuangjia/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/qian-yi-octpressyi-ji-zi-ding-yi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/qian-yi-octpressyi-ji-zi-ding-yi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/pythonban-ge-ren-jian-li/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/pythonban-ge-ren-jian-li/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/pa-chong-lian-xi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/pa-chong-lian-xi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/octopress-de-3D-biao-qian-yun/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/octopress-de-3D-biao-qian-yun/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/djangohe-flaskfen-ye/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/djangohe-flaskfen-ye/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai/
+            http://dongweiming.github.com/blog/archives/gevent-twisted-duo-xian-cheng-shui-geng-kuai/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/1ge-flaskli-zi/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/1ge-flaskli-zi/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/gentoo-wpa_supplicant-wireless/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/gentoo-wpa_supplicant-wireless/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell/
+            http://dongweiming.github.com/blog/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/guan-yu-expectyan-jiu-si/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/guan-yu-expectyan-jiu-si/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/duo-tai-fu-wu-qi-jin-cheng-cha-kan-jiao-ben-pexpect-plus-yaml/
+            http://dongweiming.github.com/blog/archives/duo-tai-fu-wu-qi-jin-cheng-cha-kan-jiao-ben-pexpect-plus-yaml/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/octopresszi-ding-yi-markdownde-codeyu-fa/
+            http://dongweiming.github.com/blog/archives/octopresszi-ding-yi-markdownde-codeyu-fa/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue/
+            http://dongweiming.github.com/blog/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shi-yong-docopt-slash-schema-markdownwen-jian-zhi-jie-fa-song-you-jian/
+            http://dongweiming.github.com/blog/archives/shi-yong-docopt-slash-schema-markdownwen-jian-zhi-jie-fa-song-you-jian/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/how-to-not-exit-interactive-mode-autoreload/
+            http://dongweiming.github.com/blog/archives/how-to-not-exit-interactive-mode-autoreload/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/a-web-based-reveal.js-online-PPT/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/a-web-based-reveal.js-online-PPT/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/duo-master-slash-developfen-zhi-shi-yong-gitflow/
+            http://dongweiming.github.com/blog/archives/duo-master-slash-developfen-zhi-shi-yong-gitflow/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/shi-yong-pelicanxin-de/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/shi-yong-pelicanxin-de/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/wo-wei-hu-de-colout/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/wo-wei-hu-de-colout/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gei-chu-xue-pythonshe-ji-mo-shi-de-pythonista/
+            http://dongweiming.github.com/blog/archives/gei-chu-xue-pythonshe-ji-mo-shi-de-pythonista/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/zi-da-jian-gitfu-wu-qi-shi-xian-ti-jiao-dai-ma-zi-dong-tui-dao-ce-shi-huan-jing/
+            http://dongweiming.github.com/blog/archives/zi-da-jian-gitfu-wu-qi-shi-xian-ti-jiao-dai-ma-zi-dong-tui-dao-ce-shi-huan-jing/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pythoncheng-xu-yuan-macchu-shi-hua-huan-jing/
+            http://dongweiming.github.com/blog/archives/pythoncheng-xu-yuan-macchu-shi-hua-huan-jing/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/osxxia-shi-yong-vagranthe-dockerguan-li-chuang-jian-xu-ni-huan-jing/
+            http://dongweiming.github.com/blog/archives/osxxia-shi-yong-vagranthe-dockerguan-li-chuang-jian-xu-ni-huan-jing/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/gentooxia-de-lxche-docker/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/gentooxia-de-lxche-docker/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi/
+            http://dongweiming.github.com/blog/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/%5B%3F%5D-qi-xue-xi-common-lispba/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/%5B%3F%5D-qi-xue-xi-common-lispba/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shi-yong-glancesjian-kong-ben-di-he-yuan-cheng-fu-wu-qi-de-xing-neng-zhuang-tai-%2Cyi-ji-wo-dui-ta-de-xiu-gai/
+            http://dongweiming.github.com/blog/archives/shi-yong-glancesjian-kong-ben-di-he-yuan-cheng-fu-wu-qi-de-xing-neng-zhuang-tai-%2Cyi-ji-wo-dui-ta-de-xiu-gai/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/ni-zhen-de-hui-pythonma/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/ni-zhen-de-hui-pythonma/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/shi-yong-celeryzhi-liao-jie-celery/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/shi-yong-celeryzhi-liao-jie-celery/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai/
+            http://dongweiming.github.com/blog/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/
+            http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi/
+            http://dongweiming.github.com/blog/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge/
+            http://dongweiming.github.com/blog/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/a-data-analysis-site-by-flask-and-mongoengine/
+            http://dongweiming.github.com/blog/archives/a-data-analysis-site-by-flask-and-mongoengine/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/how-to-use-celery/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/how-to-use-celery/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/gentoo-use-stumpwm/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/gentoo-use-stumpwm/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/gentle-quickly-submit-code-to-the-test-environment-tools/
+            http://dongweiming.github.com/blog/archives/gentle-quickly-submit-code-to-the-test-environment-tools/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sed-and-awk/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sed-and-awk/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/yong-pythonpao-mapreduce/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/yong-pythonpao-mapreduce/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/sou-ji-xi-tong-xin-xi-de-dashboard/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/sou-ji-xi-tong-xin-xi-de-dashboard/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/
+            http://dongweiming.github.com/blog/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/
+            http://dongweiming.github.com/blog/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/speakerdeck/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/speakerdeck/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/xian-cheng-suo-de-%5B%3F%5D-ge-da-keng/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/xian-cheng-suo-de-%5B%3F%5D-ge-da-keng/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/pythonde-mo-fa/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/pythonde-mo-fa/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/pythonmo-fa-er/</loc>
+        <loc>http://dongweiming.github.com/blog/archives/pythonmo-fa-er/</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/%5B%3F%5D-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d/
+            http://dongweiming.github.com/blog/archives/%5B%3F%5D-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d/
         </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://dongweiming.github.com/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa/
+            http://dongweiming.github.com/blog/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa/
         </loc>
-        <lastmod>2014-12-10T10:41:54+08:00</lastmod>
+        <lastmod>2014-12-10T12:07:55+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/</loc>
+        <loc>
+            http://dongweiming.github.com/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/
+        </loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/404.html</loc>
+        <loc>http://dongweiming.github.com/blog/404.html</loc>
         <lastmod>2014-12-10T10:41:54+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/blog/archives/</loc>
-        <lastmod>2014-12-10T10:41:54+08:00</lastmod>
+        <loc>http://dongweiming.github.com/blog/blog/archives/</loc>
+        <lastmod>2014-12-10T12:07:55+08:00</lastmod>
     </url>
     <url>
-        <loc>http://dongweiming.github.com/</loc>
-        <lastmod>2014-12-10T10:41:54+08:00</lastmod>
+        <loc>http://dongweiming.github.com/blog/</loc>
+        <lastmod>2014-12-10T12:07:55+08:00</lastmod>
     </url>
 </urlset>

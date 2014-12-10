@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: 运维 | 小明明s à domicile]]></title>
-  <link href="http://dongweiming.github.com/blog/categories/yun-wei/atom.xml" rel="self"/>
-  <link href="http://dongweiming.github.com/"/>
-  <updated>2014-12-10T11:25:02+08:00</updated>
-  <id>http://dongweiming.github.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/yun-wei/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:08:02+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用glances监控本地和远程服务器的性能状态，以及我对它的修改]]></title>
-    <link href="http://dongweiming.github.com/archives/shi-yong-glancesjian-kong-ben-di-he-yuan-cheng-fu-wu-qi-de-xing-neng-zhuang-tai-%2Cyi-ji-wo-dui-ta-de-xiu-gai/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-glancesjian-kong-ben-di-he-yuan-cheng-fu-wu-qi-de-xing-neng-zhuang-tai-%2Cyi-ji-wo-dui-ta-de-xiu-gai/"/>
     <updated>2013-08-01T11:43:00+08:00</updated>
-    <id>http://dongweiming.github.com/archives/shi-yong-glancesjian-kong-ben-di-he-yuan-cheng-fu-wu-qi-de-xing-neng-zhuang-tai-,yi-ji-wo-dui-ta-de-xiu-gai</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-glancesjian-kong-ben-di-he-yuan-cheng-fu-wu-qi-de-xing-neng-zhuang-tai-,yi-ji-wo-dui-ta-de-xiu-gai</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>首先开始感谢<a href="http://www.vpsee.com">Vpsee</a>的那篇<a href="http://www.vpsee.com/2013/07/a-new-system-monitoring-tool-glances-installation-and-usage/">安装和使用系统监控工具 Glances</a>，让我发现了<a href="https://github.com/nicolargo/glances">glances</a>这个新的系统监控工具.并且可以通过xml-rpc
