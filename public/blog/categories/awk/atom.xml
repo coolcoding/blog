@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: awk | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/awk/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/awk/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[sed and awk]]></title>
-    <link href="http://www.dongwm.com/archives/sed-and-awk/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sed-and-awk/"/>
     <updated>2013-12-24T08:16:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sed-and-awk</id>
+    <id>http://dongweiming.github.com/blog/archives/sed-and-awk</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近做一个关于sed和awk的分享,这里把源码开源:<a href="https://github.com/dongweiming/sed_and_awk">sed_and_awk</a>,或者直接访问<a href="http://dongweiming.github.io/sed_and_awk">http://dongweiming.github.io/sed_and_awk</a>. 我这个ppt基本覆盖90%以上的知识点.</p>
@@ -49,9 +49,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于AWK研究（五）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyuawkyanjiuwu/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyuawkyanjiuwu/"/>
     <updated>2012-04-23T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyuawkyanjiuwu</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyuawkyanjiuwu</id>
     <content type="html"><![CDATA[<p><strong>1 IGNORECASE忽略大小写</strong></p>
 
 <p>dongwm@linux-dongwm:~&gt; awk '/aaa/{print}' test.txt   #默认IGNORECASE是0
@@ -193,9 +193,9 @@ dongwm@linux-dongwm:~&gt; awk 'BEGIN { print strftime("%c",systime()) }'
   
   <entry>
     <title type="html"><![CDATA[关于awk研究（四）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyuawkyanjiusi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyuawkyanjiusi/"/>
     <updated>2012-04-20T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyuawkyanjiusi</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyuawkyanjiusi</id>
     <content type="html"><![CDATA[<p><strong>1 printf</strong></p>
 
 <p>"print format", variable1, variable2, etc.
@@ -376,9 +376,9 @@ DONGWMDONGMCOM</p>
   
   <entry>
     <title type="html"><![CDATA[关于awk研究（一）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyuawkyanjiuyi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyuawkyanjiuyi/"/>
     <updated>2012-04-18T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyuawkyanjiuyi</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyuawkyanjiuyi</id>
     <content type="html"><![CDATA[<p>前言：我想sed是对于行操作，而awk算是对于列操作</p>
 
 <p><strong>1 基本语法</strong></p>
@@ -584,9 +584,9 @@ Total number of records: 6</p>
   
   <entry>
     <title type="html"><![CDATA[关于awk研究（二）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyuawkyanjiuer/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyuawkyanjiuer/"/>
     <updated>2012-04-18T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyuawkyanjiuer</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyuawkyanjiuer</id>
     <content type="html"><![CDATA[<p><strong>1 变量</strong></p>
 
 <p>注：假如有一些需要设置的变量，建议在BEGIN块里面</p>

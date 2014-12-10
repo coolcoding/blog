@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: 安全 | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/an-quan/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/an-quan/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[思科网络安全专题（二）:关于路由器安全]]></title>
-    <link href="http://www.dongwm.com/archives/sikewangluoanquanzhuantierguanyuluyouqianquan/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sikewangluoanquanzhuantierguanyuluyouqianquan/"/>
     <updated>2011-08-01T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sikewangluoanquanzhuantierguanyuluyouqianquan</id>
+    <id>http://dongweiming.github.com/blog/archives/sikewangluoanquanzhuantierguanyuluyouqianquan</id>
     <content type="html"><![CDATA[<p>怎么说我也是ccsp出生，呵呵也看过很多IE级别的关于安全的书 ，所以最近准备做一个基于配置的关于安全的专题。</p>
 
 <p>1  vty访问</p>
@@ -93,9 +93,9 @@ Please leave immediately, otherwise it will be held liable
   
   <entry>
     <title type="html"><![CDATA[路由器上面启用安全Shell（ssh）]]></title>
-    <link href="http://www.dongwm.com/archives/luyouqishangmianqiyonganquanshellssh/"/>
+    <link href="http://dongweiming.github.com/blog/archives/luyouqishangmianqiyonganquanshellssh/"/>
     <updated>2011-07-31T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/luyouqishangmianqiyonganquanshellssh</id>
+    <id>http://dongweiming.github.com/blog/archives/luyouqishangmianqiyonganquanshellssh</id>
     <content type="html"><![CDATA[<p>R1(config)#ip domain-name dongwm.com</p>
 
 <p>R1(config)#crypto key zeroize rsa
@@ -146,9 +146,9 @@ Key Data:
   
   <entry>
     <title type="html"><![CDATA[思科网络安全专题（一）:关于交换机安全]]></title>
-    <link href="http://www.dongwm.com/archives/guanyujiaohuanjianquan/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyujiaohuanjianquan/"/>
     <updated>2011-07-31T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyujiaohuanjianquan</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyujiaohuanjianquan</id>
     <content type="html"><![CDATA[<p>生产环境交换机比较多，以前的同事没有对其进行什么安全策略，就是简单配置一个登录密码而已。我接手后进行了一些改造！</p>
 
 <p>1 禁用DTP，中继</p>
@@ -270,9 +270,9 @@ no mop enabled</p>
   
   <entry>
     <title type="html"><![CDATA[控制平面和管理平面安全]]></title>
-    <link href="http://www.dongwm.com/archives/kongzhipingmianheguanlipingmiananquan-2/"/>
+    <link href="http://dongweiming.github.com/blog/archives/kongzhipingmianheguanlipingmiananquan-2/"/>
     <updated>2011-07-29T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/kongzhipingmianheguanlipingmiananquan-2</id>
+    <id>http://dongweiming.github.com/blog/archives/kongzhipingmianheguanlipingmiananquan-2</id>
     <content type="html"><![CDATA[<p><span style="color: #c00000;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><strong>R3 </strong></span></span><span style="font-size: medium;"><strong>上的</strong></span><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><strong>VLAN</strong></span></span><span style="font-size: medium;"><strong>配置</strong></span></span></p>
 
 <p><span style="font-family: Times New Roman,serif;">VLAN3 Fa0/0, Fa0/3</span></p>

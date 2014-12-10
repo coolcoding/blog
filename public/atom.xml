@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[ipython的一些高级用法(一)]]></title>
-    <link href="http://www.dongwm.com/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/"/>
+    <link href="http://dongweiming.github.com/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/"/>
     <updated>2014-12-07T09:56:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/ipythonde-[?]-xie-gao-ji-yong-fa</id>
+    <id>http://dongweiming.github.com/blog/archives/ipythonde-[?]-xie-gao-ji-yong-fa</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>以前在我的PPT<a href="http://dongweiming.github.io/Expert-Python/">python高级编程</a>也提到了一些关于ipython的用法. 今天继续由浅入深的看看ipython,
@@ -252,15 +252,15 @@
   
   <entry>
     <title type="html"><![CDATA[python几个特别的__开头的方法]]></title>
-    <link href="http://www.dongwm.com/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa/"/>
+    <link href="http://dongweiming.github.com/blog/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa/"/>
     <updated>2014-12-06T22:51:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa</id>
+    <id>http://dongweiming.github.com/blog/archives/pythonji-ge-te-bie-de-kai-tou-de-fang-fa</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p><a href="http://www.rafekettler.com/magicmethods.html">A Guide to Python’s Magic Methods</a>python的绝大多数这样的特殊方法都
-在这里面被提到了. 今天我来说3个他没有提到的[<strong>dir</strong>, <strong>slots</strong>, <strong>weakref</strong>], 再强调下他提到的2个[<strong>missing</strong>, <strong>contains</strong>]</p>
+在这里面被提到了. 今天我来说3个他没有提到的[__dir__, __slots__, __weakref__], 再强调下他提到的2个[__missing__, __contains__]</p>
 
-<h5 id="dir---"><strong>dir</strong> -&gt; 看个小例子就知道了</h5>
+<h5 id="dir---">__dir__ -&gt; 看个小例子就知道了</h5>
 
 <div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="k">class</span> <span class="nc">T</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 </span><span class="line">   <span class="o">...</span><span class="p">:</span>     <span class="k">pass</span>
@@ -283,9 +283,9 @@
 
 <p>看出来了把, 不解释, 但是这个__dir__是相对于类的实例有效果的.</p>
 
-<h5 id="slots"><strong>slots</strong></h5>
+<h5 id="slots">__slots__</h5>
 
-<p>这个在我初学python的时候就被模糊了, 原来的理解是它的出现替代了__dict<strong>，也就是说你只能给__slots</strong>
+<p>这个在我初学python的时候就被模糊了, 原来的理解是它的出现替代了__dict__，也就是说你只能给__slots__
 这个变量列表项的属性赋值. 对外的接口减少了,也安全了. 后来看了这篇<a href="http://tech.oyster.com/save-ram-with-python-slots/">Saving 9 GB of RAM with Python’s <strong>slots</strong></a>.
 好久不做运维了,在生产环境究竟怎么样我无法定论, <python cookbook="">也提到了,在对象实例很多的时候他能帮助减少内存, 详见https://www.safaribooksonline.com/library/view/python-cookbook-3rd/9781449357337/ch08s04.html.
 这里来个小实验(在Hacker News也被讨论过https://news.ycombinator.com/item?id=6750187)</python></p>
@@ -325,7 +325,7 @@
 
 <p>结果很明显,内存占用减少了很多…</p>
 
-<h5 id="weakref-"><strong>weakref</strong> 弱引用</h5>
+<h5 id="weakref-">__weakref__ 弱引用</h5>
 
 <p>首先先说下<a href="http://zh.wikipedia.org/wiki/%E5%BC%B1%E5%BC%95%E7%94%A8">weakref</a>: 弱引用，与强引用相对，是指不能确保其引用的对象不会被垃圾回收器回收的引用。一个对象若只被弱引用所引用，则被认为是不可访问（或弱可访问）的，并因此可能在任何时刻被回收.
 在Python中,当一个对象的引用数目为0的时候，才会被从内存中回收. 但是被循环引用呢?</p>
@@ -408,7 +408,7 @@
 </span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">weakref</span> <span class="n">at</span> <span class="mh">0x2766f70</span><span class="p">;</span> <span class="n">to</span> <span class="s">&#39;T4&#39;</span> <span class="n">at</span> <span class="mh">0x2586fd8</span><span class="o">&gt;</span>
 </span></pre></figure></notextile></div>
 
-<h5 id="contains--innot-in-"><strong>contains</strong> 判断某值 in/not in 实例</h5>
+<h5 id="contains--innot-in-">__contains__ 判断某值 in/not in 实例</h5>
 
 <div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="k">class</span> <span class="nc">NewList</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 </span><span class="line">   <span class="o">...</span><span class="p">:</span>     <span class="k">def</span> <span class="nf">__init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
@@ -425,7 +425,7 @@
 </span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="bp">False</span>
 </span></pre></figure></notextile></div>
 
-<h5 id="missing"><strong>missing</strong></h5>
+<h5 id="missing">__missing__</h5>
 
 <p>最初看这个特殊方法是看python标准库的源码的时候(collections#L421):</p>
 
@@ -452,9 +452,9 @@
   
   <entry>
     <title type="html"><![CDATA[一个使用python的web程序员的emacs.d]]></title>
-    <link href="http://www.dongwm.com/archives/%5B%3F%5D-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%5B%3F%5D-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d/"/>
     <updated>2014-08-12T06:49:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/[?]-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d</id>
+    <id>http://dongweiming.github.com/blog/archives/[?]-ge-shi-yong-pythonde-webcheng-xu-yuan-de-emacs-dot-d</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>越来越多的人使用emacs作为开发工具. 甚至skype,gmail,豆瓣FM都能通过emacs.
@@ -583,9 +583,9 @@
   
   <entry>
     <title type="html"><![CDATA[python的魔法二:开发的'坑']]></title>
-    <link href="http://www.dongwm.com/archives/pythonmo-fa-er/"/>
+    <link href="http://dongweiming.github.com/blog/archives/pythonmo-fa-er/"/>
     <updated>2014-05-08T23:15:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/pythonmo-fa-er</id>
+    <id>http://dongweiming.github.com/blog/archives/pythonmo-fa-er</id>
     <content type="html"><![CDATA[<h4 id="python-httpwwwdongwmcomarchivespythonde-mo-fa-python">有了第一篇<a href="http://www.dongwm.com/archives/pythonde-mo-fa/">python的魔法(-)之基础知识</a>, 我们再来说说python开发中的坑</h4>
 
 <h4 id="section">不要使用可变对象作为函数默认值</h4>
@@ -865,9 +865,9 @@
   
   <entry>
     <title type="html"><![CDATA[python的魔法(一): 基本知识]]></title>
-    <link href="http://www.dongwm.com/archives/pythonde-mo-fa/"/>
+    <link href="http://dongweiming.github.com/blog/archives/pythonde-mo-fa/"/>
     <updated>2014-05-08T00:40:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/pythonde-mo-fa</id>
+    <id>http://dongweiming.github.com/blog/archives/pythonde-mo-fa</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近读了一篇<a href="http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/not_so_obvious_python_stuff.ipynb">A collection of not-so-obvious Python stuff you should know!</a>,感觉受益颇多. 翻译过来(非直接翻译),再加上一些我的理解和注释. 让大家注意python鲜为人知的”魔法”. 我会分2篇</p>
@@ -1215,9 +1215,9 @@
   
   <entry>
     <title type="html"><![CDATA[线程锁的一个大坑]]></title>
-    <link href="http://www.dongwm.com/archives/xian-cheng-suo-de-%5B%3F%5D-ge-da-keng/"/>
+    <link href="http://dongweiming.github.com/blog/archives/xian-cheng-suo-de-%5B%3F%5D-ge-da-keng/"/>
     <updated>2014-04-18T16:56:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/xian-cheng-suo-de-[?]-ge-da-keng</id>
+    <id>http://dongweiming.github.com/blog/archives/xian-cheng-suo-de-[?]-ge-da-keng</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>原来的一位同事@炮哥, 昨天在QQ问我: “想请教下一个线程获得lock之后，也可能被其他的线程释放掉？这个是因为线程之间的资源是共享的吗？这样的话普通的thread lock 都是不安全的了？”. 我第一反应就是怎么可能:’谁加锁谁解锁呗,别的线程怎么能解锁？’</p>
@@ -1269,9 +1269,9 @@
   
   <entry>
     <title type="html"><![CDATA[speakerdeck]]></title>
-    <link href="http://www.dongwm.com/archives/speakerdeck/"/>
+    <link href="http://dongweiming.github.com/blog/archives/speakerdeck/"/>
     <updated>2014-04-18T16:49:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/speakerdeck</id>
+    <id>http://dongweiming.github.com/blog/archives/speakerdeck</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>今天是在Ad的最后一天,本来准备了一个分享.关于业务中一些吐槽和我一些trick的用法, 有兴趣的可以下载<a href="https://github.com/dongweiming/speakerdeck">speakerdeck</a></p>
@@ -1313,9 +1313,9 @@
   
   <entry>
     <title type="html"><![CDATA[分享一个准备给公司讲python高级编程的slide]]></title>
-    <link href="http://www.dongwm.com/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/"/>
+    <link href="http://dongweiming.github.com/blog/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/"/>
     <updated>2014-04-04T11:07:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/fen-xiang-[?]-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide</id>
+    <id>http://dongweiming.github.com/blog/archives/fen-xiang-[?]-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>我以前在学习python模块的时候,曾经翻译<a href="http://pymotw.com/2/py-modindex.html#">pymotw</a>的文章,其实还是有抄袭的嫌疑,从最近开始逐渐直接阅读python标准库源码, 收获颇多. 我现在不愿意教一些从网上或者书里提到的知识点,而更愿意根据我工作中常见的需求去挖掘对应的python的解法.也是在过程中对一些东西有了比较深的理解. 这个ppt是从<a href="https://linuxtoy.org/archives/using-cli-like-a-hacker.html">像黑客一样使用 Linux 命令行</a>获得的灵感. 然后角度为<python高级编程>, 还用到了webfonts娃娃体^.^</python高级编程></p>
@@ -1427,9 +1427,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用grafana和Diamond构建Graphite监控系统]]></title>
-    <link href="http://www.dongwm.com/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/"/>
     <updated>2014-04-01T13:56:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>在豆瓣开源项目里面有个<a href="https://github.com/douban/graph-index">graph-index</a>, 提供监控服务器的状态的目录索引,基于<a href="https://github.com/vimeo/graph-explorer">graph-explorer</a>. 类似衍生物很多,就包括我要说的本文用到的项目.先看看我的测试环境的几个截图</p>
@@ -1855,9 +1855,9 @@
   
   <entry>
     <title type="html"><![CDATA[搜集系统信息的dashboard]]></title>
-    <link href="http://www.dongwm.com/archives/sou-ji-xi-tong-xin-xi-de-dashboard/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sou-ji-xi-tong-xin-xi-de-dashboard/"/>
     <updated>2014-02-09T22:21:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sou-ji-xi-tong-xin-xi-de-dashboard</id>
+    <id>http://dongweiming.github.com/blog/archives/sou-ji-xi-tong-xin-xi-de-dashboard</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>过年在家无聊, 发现个挺有意思的项目: <a href="https://github.com/afaqurk/linux-dash">linux-dash</a>,就是使用Twitter的Bootstrap做的管理模板,可以显示服务器信息, 负载, 内存,进程,硬盘,用户,安装/未安装的软件信息,网卡IP,网速,以及网络状态,在线用户等. 但是有2个问题:</p>
@@ -1906,9 +1906,9 @@
   
   <entry>
     <title type="html"><![CDATA[用python跑mapreduce]]></title>
-    <link href="http://www.dongwm.com/archives/yong-pythonpao-mapreduce/"/>
+    <link href="http://dongweiming.github.com/blog/archives/yong-pythonpao-mapreduce/"/>
     <updated>2014-01-09T23:04:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/yong-pythonpao-mapreduce</id>
+    <id>http://dongweiming.github.com/blog/archives/yong-pythonpao-mapreduce</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>mapreduce在我的理解里一直都是java等语言的专利,介于python乃至于pypy的性能局限，
@@ -2051,9 +2051,9 @@
   
   <entry>
     <title type="html"><![CDATA[sed and awk]]></title>
-    <link href="http://www.dongwm.com/archives/sed-and-awk/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sed-and-awk/"/>
     <updated>2013-12-24T08:16:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sed-and-awk</id>
+    <id>http://dongweiming.github.com/blog/archives/sed-and-awk</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近做一个关于sed和awk的分享,这里把源码开源:<a href="https://github.com/dongweiming/sed_and_awk">sed_and_awk</a>,或者直接访问<a href="http://dongweiming.github.io/sed_and_awk">http://dongweiming.github.io/sed_and_awk</a>. 我这个ppt基本覆盖90%以上的知识点.</p>
@@ -2085,9 +2085,9 @@
   
   <entry>
     <title type="html"><![CDATA[gentle - 帮助你快速部署代码到测试环境]]></title>
-    <link href="http://www.dongwm.com/archives/gentle-quickly-submit-code-to-the-test-environment-tools/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gentle-quickly-submit-code-to-the-test-environment-tools/"/>
     <updated>2013-12-02T21:58:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/gentle-quickly-submit-code-to-the-test-environment-tools</id>
+    <id>http://dongweiming.github.com/blog/archives/gentle-quickly-submit-code-to-the-test-environment-tools</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>我想很多开发的同学都经历过这样的开发流程:</p>
@@ -2213,9 +2213,9 @@
   
   <entry>
     <title type="html"><![CDATA[gentoo使用stumpwm做桌面管理器]]></title>
-    <link href="http://www.dongwm.com/archives/gentoo-use-stumpwm/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gentoo-use-stumpwm/"/>
     <updated>2013-11-25T23:52:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/gentoo-use-stumpwm</id>
+    <id>http://dongweiming.github.com/blog/archives/gentoo-use-stumpwm</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>以前一直使用gentoo+gnome的方法使用,说实话,gentoo做个人桌面是在很一般, 尤其是跑起来
@@ -2286,9 +2286,9 @@ firefox, 虽然依然性能要比其他linux桌面发行版要好,可是我自�
   
   <entry>
     <title type="html"><![CDATA[使用celery之怎么让celery跑起来]]></title>
-    <link href="http://www.dongwm.com/archives/how-to-use-celery/"/>
+    <link href="http://dongweiming.github.com/blog/archives/how-to-use-celery/"/>
     <updated>2013-11-24T16:46:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/how-to-use-celery</id>
+    <id>http://dongweiming.github.com/blog/archives/how-to-use-celery</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>自从发了上次的文章<a href="http://www.dongwm.com/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi/">使用celery之深入celery配置</a>,
@@ -2476,9 +2476,9 @@ include表示执行的任务的代码都放在哪个程序里面,比如这里的
   
   <entry>
     <title type="html"><![CDATA[一个flask+mongoengine的site]]></title>
-    <link href="http://www.dongwm.com/archives/a-data-analysis-site-by-flask-and-mongoengine/"/>
+    <link href="http://dongweiming.github.com/blog/archives/a-data-analysis-site-by-flask-and-mongoengine/"/>
     <updated>2013-11-20T17:39:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/a-data-analysis-site-by-flask-and-mongoengine</id>
+    <id>http://dongweiming.github.com/blog/archives/a-data-analysis-site-by-flask-and-mongoengine</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近一直学习emacs和elisp, 也在做关于mongodb相关的研究,闲来无事就做了个网站,后端使用了flask, mongoengine, 前端css框架用的是
@@ -2506,9 +2506,9 @@ jquery, amchart和一个最近发现的页面消息弹出<a href="https://github
   
   <entry>
     <title type="html"><![CDATA[vary.vim-自动去掉行尾空格]]></title>
-    <link href="http://www.dongwm.com/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge/"/>
+    <link href="http://dongweiming.github.com/blog/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge/"/>
     <updated>2013-09-08T21:03:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge</id>
+    <id>http://dongweiming.github.com/blog/archives/vary-dot-vim-zi-dong-qu-diao-xing-wei-kong-ge</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>一直想改成emacs无奈工作需要效率，所以vim还没有完全放弃. 我想做python的同学很可能有我一样的困扰:</p>
@@ -2541,9 +2541,9 @@ jquery, amchart和一个最近发现的页面消息弹出<a href="https://github
   
   <entry>
     <title type="html"><![CDATA[使用celery之深入celery配置]]></title>
-    <link href="http://www.dongwm.com/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi/"/>
     <updated>2013-08-24T14:08:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>celery的官方文档其实相对还是写的很不错的.但是在一些深层次的使用上面却显得杂乱甚至就没有某些方面的介绍, 通过我的一个测试环境的settings.py来说明一些使用celery的技巧和解决办法</p>
@@ -2680,9 +2680,9 @@ jquery, amchart和一个最近发现的页面消息弹出<a href="https://github
   
   <entry>
     <title type="html"><![CDATA[封装pymongo自动关闭连接]]></title>
-    <link href="http://www.dongwm.com/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/"/>
+    <link href="http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/"/>
     <updated>2013-08-16T21:42:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie</id>
+    <id>http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>在我工作的项目里面使用了mongodb.自然也用到了pymongo.但是它都是在大片的函数里面使用类似于这样的方式</p>
@@ -2858,9 +2858,9 @@ jquery, amchart和一个最近发现的页面消息弹出<a href="https://github
   
   <entry>
     <title type="html"><![CDATA[使用tornado让你的请求异步非阻塞]]></title>
-    <link href="http://www.dongwm.com/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai/"/>
     <updated>2013-08-14T12:08:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>也许有同学很迷惑:tornado不是标榜异步非阻塞解决10K问题的嘛?但是我却发现不是torando不好，而是你用错了.比如最近发现一个事情:某网站打开页面很慢,服务器cpu/内存都正常.网络状态也良好.

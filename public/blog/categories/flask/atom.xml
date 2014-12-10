@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: flask | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/flask/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/flask/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[一个flask+mongoengine的site]]></title>
-    <link href="http://www.dongwm.com/archives/a-data-analysis-site-by-flask-and-mongoengine/"/>
+    <link href="http://dongweiming.github.com/blog/archives/a-data-analysis-site-by-flask-and-mongoengine/"/>
     <updated>2013-11-20T17:39:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/a-data-analysis-site-by-flask-and-mongoengine</id>
+    <id>http://dongweiming.github.com/blog/archives/a-data-analysis-site-by-flask-and-mongoengine</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近一直学习emacs和elisp, 也在做关于mongodb相关的研究,闲来无事就做了个网站,后端使用了flask, mongoengine, 前端css框架用的是
@@ -46,9 +46,9 @@ python run.py
   
   <entry>
     <title type="html"><![CDATA[使用http和websocket连接服务器]]></title>
-    <link href="http://www.dongwm.com/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi/"/>
     <updated>2013-07-19T22:53:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>想想吧，通过网页ssh登录服务器是一件多么酷的事情?今天看了<a href="http://www.vpsee.com/2013/06/invoke-a-linux-shell-with-ssh-account-from-browser">使用浏览器访问 Linux 终端</a>,
@@ -88,9 +88,9 @@ wssh dongwm@dongwm.com -p XXX -s 58404
   
   <entry>
     <title type="html"><![CDATA[仿slid.es的在线PPT编辑网站]]></title>
-    <link href="http://www.dongwm.com/archives/a-web-based-reveal.js-online-PPT/"/>
+    <link href="http://dongweiming.github.com/blog/archives/a-web-based-reveal.js-online-PPT/"/>
     <updated>2013-05-25T12:22:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/a-web-based-reveal.js-online-PPT</id>
+    <id>http://dongweiming.github.com/blog/archives/a-web-based-reveal.js-online-PPT</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p><a href="https://slid.es">slid.es</a>是我最喜欢的前端之一<a href="https://github.com/hakimel">hakimel</a>的作品，前身叫做rvl.io, 网站已经改版。源于去年年底在上家公司做年终总结PPT，对我这种不搞office，没有美感的小程序员太痛苦了，然后就找到了<a href="https://github.com/hakimel/reveal.js">reveal.js</a>, 后来萌发做个基于它的网站, 其实也是为了练手学习mongoengine和oauth</p>
@@ -192,9 +192,9 @@ uwsgi_python27 -x uwsgi.xml
   
   <entry>
     <title type="html"><![CDATA[一个flask例子]]></title>
-    <link href="http://www.dongwm.com/archives/1ge-flaskli-zi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/1ge-flaskli-zi/"/>
     <updated>2013-01-11T14:34:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/1ge-flaskli-zi</id>
+    <id>http://dongweiming.github.com/blog/archives/1ge-flaskli-zi</id>
     <content type="html"><![CDATA[<h4 id="section">前言：</h4>
 
 <p>上段时间做了个demo, 使用了flask和mongodb，以及bootstrap, jquery，分享给大家当作入门flask的例子</p>
@@ -400,8 +400,8 @@ PORT = 5000  #指定监听端口
 				<div class="row-fluid">
 					<div class="control-up span6" id="control"><span>Search</span></div>
 				<ul id="zt-topright" class="pull-right">
-				<li class="blue" target="_blank"><a title="Demo" href="http://www.dongwm.com/list">列表</a></li>
-				<li class="green" target="_blank"><a title="Demo" href="http://www.dongwm.com/dev">画图</a></li>
+				<li class="blue" target="_blank"><a title="Demo" href="http://dongweiming.github.com/blog/list">列表</a></li>
+				<li class="green" target="_blank"><a title="Demo" href="http://dongweiming.github.com/blog/dev">画图</a></li>
 				</ul>
 					</div>
 				</div>
@@ -428,9 +428,9 @@ PORT = 5000  #指定监听端口
   
   <entry>
     <title type="html"><![CDATA[django和flask分页]]></title>
-    <link href="http://www.dongwm.com/archives/djangohe-flaskfen-ye/"/>
+    <link href="http://dongweiming.github.com/blog/archives/djangohe-flaskfen-ye/"/>
     <updated>2012-12-29T15:37:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/djangohe-flaskfen-ye</id>
+    <id>http://dongweiming.github.com/blog/archives/djangohe-flaskfen-ye</id>
     <content type="html"><![CDATA[<h4 id="section"><em>前言</em></h4>
 
 <p>最近搞了一些关于flask和django的东西，尤其是django的模板和admin功能以及这些框架使用bootstrap的东西，没时间更新博客，先说一下flask和django分页吧</p>

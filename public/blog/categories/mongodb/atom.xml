@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: mongodb | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/mongodb/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/mongodb/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[封装pymongo自动关闭连接]]></title>
-    <link href="http://www.dongwm.com/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/"/>
+    <link href="http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/"/>
     <updated>2013-08-16T21:42:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie</id>
+    <id>http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>在我工作的项目里面使用了mongodb.自然也用到了pymongo.但是它都是在大片的函数里面使用类似于这样的方式</p>
@@ -197,9 +197,9 @@ wrap you
   
   <entry>
     <title type="html"><![CDATA[pymongo教程（二）]]></title>
-    <link href="http://www.dongwm.com/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <link href="http://dongweiming.github.com/blog/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <updated>2012-02-06T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/pymongo教程（二）</id>
+    <id>http://dongweiming.github.com/blog/archives/pymongo教程（二）</id>
     <content type="html"><![CDATA[<p>1  移除子文档：</p>
 
 <p>user_doc = {
@@ -371,9 +371,9 @@ new_account_balance = ret["account_balance"]  #"account_balance"自动加了20<
   
   <entry>
     <title type="html"><![CDATA[pymongo教程（三）]]></title>
-    <link href="http://www.dongwm.com/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <link href="http://dongweiming.github.com/blog/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89/"/>
     <updated>2012-02-06T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/pymongo教程（三）</id>
+    <id>http://dongweiming.github.com/blog/archives/pymongo教程（三）</id>
     <content type="html"><![CDATA[<p>1 MongoDB 队列查询
 $gt 大于 例子：“score”:{"$gt”:0}
 $lt小于 例子：“score”:{"$lt”:0}
@@ -410,9 +410,9 @@ $rename 属性重命名 “$rename”:{"emails”:"old_emails"}</p>
   
   <entry>
     <title type="html"><![CDATA[pymongo教程（一）]]></title>
-    <link href="http://www.dongwm.com/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <link href="http://dongweiming.github.com/blog/archives/pymongo%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <updated>2012-02-01T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/pymongo教程（一）</id>
+    <id>http://dongweiming.github.com/blog/archives/pymongo教程（一）</id>
     <content type="html"><![CDATA[<p>前言：本文是一些简单的使用python模块的例子，主旨是帮助使用本模块的朋友找到使用方法</p>
 
 <p>1 一个MongoDB的文档</p>
@@ -561,9 +561,9 @@ dbh.users.remove(None, safe=True) #删除用户集合中的所有文档</p>
   
   <entry>
     <title type="html"><![CDATA[mongodb集群管理脚本（python）]]></title>
-    <link href="http://www.dongwm.com/archives/mongodbguanlijiaoben/"/>
+    <link href="http://dongweiming.github.com/blog/archives/mongodbguanlijiaoben/"/>
     <updated>2011-08-06T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/mongodbguanlijiaoben</id>
+    <id>http://dongweiming.github.com/blog/archives/mongodbguanlijiaoben</id>
     <content type="html"><![CDATA[<p>前言：mongodb集群需要一个管理脚本，比如启动集群，关闭集群，查看集群状态等功能，本脚本使用了pdsh代替ssh，本来为了并行操作，但是事实上在for循环里面并行是不必要的，所以可以改成ssh的。以后会改成多线程并行操作。</p>
 
 <p>本脚本特性：</p>

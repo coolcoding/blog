@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: gitflow | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/gitflow/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/gitflow/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[多master/develop分支使用gitflow]]></title>
-    <link href="http://www.dongwm.com/archives/duo-master-slash-developfen-zhi-shi-yong-gitflow/"/>
+    <link href="http://dongweiming.github.com/blog/archives/duo-master-slash-developfen-zhi-shi-yong-gitflow/"/>
     <updated>2013-06-04T20:30:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/duo-master-slash-developfen-zhi-shi-yong-gitflow</id>
+    <id>http://dongweiming.github.com/blog/archives/duo-master-slash-developfen-zhi-shi-yong-gitflow</id>
     <content type="html"><![CDATA[<h4 id="section"><em>前言</em></h4>
 
 <p>公司都是git作为版本控制，公司一些项目组在用gitflow，但是我们组没有强制，

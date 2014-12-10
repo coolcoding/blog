@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: sqlite | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/sqlite/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/sqlite/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[sqlite的python操作模板]]></title>
-    <link href="http://www.dongwm.com/archives/sqlitedepythoncaozuomoban/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sqlitedepythoncaozuomoban/"/>
     <updated>2011-12-14T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sqlitedepythoncaozuomoban</id>
+    <id>http://dongweiming.github.com/blog/archives/sqlitedepythoncaozuomoban</id>
     <content type="html"><![CDATA[<p>前言：最近弄了一个程序，但是使用mysql这样需要服务器的数据库有些限制和浪费，尝试了一下sqlite：</p>
 
 <p><pre class="sh_python">

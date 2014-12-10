@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: sed | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/sed/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/sed/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[sed and awk]]></title>
-    <link href="http://www.dongwm.com/archives/sed-and-awk/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sed-and-awk/"/>
     <updated>2013-12-24T08:16:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sed-and-awk</id>
+    <id>http://dongweiming.github.com/blog/archives/sed-and-awk</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>最近做一个关于sed和awk的分享,这里把源码开源:<a href="https://github.com/dongweiming/sed_and_awk">sed_and_awk</a>,或者直接访问<a href="http://dongweiming.github.io/sed_and_awk">http://dongweiming.github.io/sed_and_awk</a>. 我这个ppt基本覆盖90%以上的知识点.</p>
@@ -49,9 +49,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于sed研究（三）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyusedyanjiuee/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyusedyanjiuee/"/>
     <updated>2012-04-17T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyusedyanjiuee</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyusedyanjiuee</id>
     <content type="html"><![CDATA[<p><strong>1 存储空间</strong></p>
 
 <p>dongwm@linux-dongwm:~&gt; cat test.txt
@@ -167,9 +167,9 @@ ccc
   
   <entry>
     <title type="html"><![CDATA[关于sed研究（一）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyusedyanjiuyi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyusedyanjiuyi/"/>
     <updated>2012-04-16T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyusedyanjiuyi</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyusedyanjiuyi</id>
     <content type="html"><![CDATA[<p><strong>1 sed语法和命令结构</strong></p>
 
 <p>sed [options] {sed-commands} {input-file}</p>
@@ -373,9 +373,9 @@ dongwm@linux-dongwm:~&gt; sed -n 's/dongwm/\Udongwm/p' test.txt  #\U会让挨�
   
   <entry>
     <title type="html"><![CDATA[关于sed研究（二）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyusedyanjiuer/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyusedyanjiuer/"/>
     <updated>2012-04-16T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyusedyanjiuer</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyusedyanjiuer</id>
     <content type="html"><![CDATA[<p><strong>1 正则表达式</strong></p>
 
 <p>dongwm@linux-dongwm:~&gt; sed -n '/^112/ p' test.txt  #'^'表示开头匹配，这里是开头是‘112’

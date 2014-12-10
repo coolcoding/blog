@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: Diamond | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/diamond/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/diamond/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用grafana和Diamond构建Graphite监控系统]]></title>
-    <link href="http://www.dongwm.com/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/"/>
     <updated>2014-04-01T13:56:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>在豆瓣开源项目里面有个<a href="https://github.com/douban/graph-index">graph-index</a>, 提供监控服务器的状态的目录索引,基于<a href="https://github.com/vimeo/graph-explorer">graph-explorer</a>. 类似衍生物很多,就包括我要说的本文用到的项目.先看看我的测试环境的几个截图</p>

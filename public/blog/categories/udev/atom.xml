@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: udev | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/udev/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/udev/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[udev升级的网卡重命名问题和解决]]></title>
-    <link href="http://www.dongwm.com/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue/"/>
+    <link href="http://dongweiming.github.com/blog/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue/"/>
     <updated>2013-04-27T15:32:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue</id>
+    <id>http://dongweiming.github.com/blog/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue</id>
     <content type="html"><![CDATA[<h4 id="section">故障描述</h4>
 
 <p>最近终于更新了下gentoo，重启发现我的eth0网卡启动失败：</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: fabric | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/fabric/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/fabric/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[gentle - 帮助你快速部署代码到测试环境]]></title>
-    <link href="http://www.dongwm.com/archives/gentle-quickly-submit-code-to-the-test-environment-tools/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gentle-quickly-submit-code-to-the-test-environment-tools/"/>
     <updated>2013-12-02T21:58:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/gentle-quickly-submit-code-to-the-test-environment-tools</id>
+    <id>http://dongweiming.github.com/blog/archives/gentle-quickly-submit-code-to-the-test-environment-tools</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>我想很多开发的同学都经历过这样的开发流程:</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: ips | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/ips/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/ips/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[VMWARE下IPS实现web连接(IDM)]]></title>
-    <link href="http://www.dongwm.com/archives/vmware%E4%B8%8Bips%E5%AE%9E%E7%8E%B0web%E8%BF%9E%E6%8E%A5idm/"/>
+    <link href="http://dongweiming.github.com/blog/archives/vmware%E4%B8%8Bips%E5%AE%9E%E7%8E%B0web%E8%BF%9E%E6%8E%A5idm/"/>
     <updated>2011-03-25T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/vmware下ips实现web连接idm</id>
+    <id>http://dongweiming.github.com/blog/archives/vmware下ips实现web连接idm</id>
     <content type="html"><![CDATA[<p><strong>1  设置IPS初始化</strong></p>
 
 <p>sensor# conf t

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: SQLAlchemy | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/sqlalchemy/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/sqlalchemy/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SQLAlchemy教程(五)]]></title>
-    <link href="http://www.dongwm.com/archives/sqlalchemyjiaochengwu/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengwu/"/>
     <updated>2012-07-19T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sqlalchemyjiaochengwu</id>
+    <id>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengwu</id>
     <content type="html"><![CDATA[<p><strong> 本文主要说删除</strong></p>
 
 <p>metadata.drop_all(engine) #删除某引擎的全部表</p>
@@ -107,9 +107,9 @@ mapper(Photo, photo, properties=dict(
   
   <entry>
     <title type="html"><![CDATA[SQLAlchemy教程(七)]]></title>
-    <link href="http://www.dongwm.com/archives/sqlalchemyjiaochengqi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengqi/"/>
     <updated>2012-07-19T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sqlalchemyjiaochengqi</id>
+    <id>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengqi</id>
     <content type="html"><![CDATA[<p><strong>本文主要是面向对象的继承映射到关系数据库表的方法</strong></p>
 
 <p>&gt;&gt;&gt; class Product(object):
@@ -260,9 +260,9 @@ FROM clothing
   
   <entry>
     <title type="html"><![CDATA[SQLAlchemy教程(六)]]></title>
-    <link href="http://www.dongwm.com/archives/sqlalchemyjiaochengliu/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengliu/"/>
     <updated>2012-07-19T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sqlalchemyjiaochengliu</id>
+    <id>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengliu</id>
     <content type="html"><![CDATA[<p><strong>本文主要是ORM的sission查询和更新</strong></p>
 
 <p>session负责执行内存中的对象和数据库表之间的同步工作,创建session可以这样:</p>
@@ -379,9 +379,9 @@ backref='products'))) #它的优点是可以初始化参数</p>
   
   <entry>
     <title type="html"><![CDATA[SQLAlchemy教程(八)]]></title>
-    <link href="http://www.dongwm.com/archives/sqlalchemyjiaochengba/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengba/"/>
     <updated>2012-07-19T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sqlalchemyjiaochengba</id>
+    <id>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengba</id>
     <content type="html"><![CDATA[<p><strong>本文主要是讲关于sqlalchemy的扩展</strong></p>
 
 <p>扩展其实就是一些外部的插件,比如sqlsoup,associationproxy,declarative,horizontal_shard等等</p>
@@ -781,9 +781,9 @@ u'dongwm'
   
   <entry>
     <title type="html"><![CDATA[SQLAlchemy教程(一)]]></title>
-    <link href="http://www.dongwm.com/archives/sqlalchemyjiaochengyi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengyi/"/>
     <updated>2012-07-17T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/sqlalchemyjiaochengyi</id>
+    <id>http://dongweiming.github.com/blog/archives/sqlalchemyjiaochengyi</id>
     <content type="html"><![CDATA[<p>前言:最近开始学习SQLAlchemy,本教程是其官方文档以及在读英文版&lt;Essential SQLAlchemy&gt;的翻译加一些自己的理解和总结</p>
 
 <p>1 什么是 SQLAlchemy?</p>

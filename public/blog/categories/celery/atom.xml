@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: celery | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/celery/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/celery/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[speakerdeck]]></title>
-    <link href="http://www.dongwm.com/archives/speakerdeck/"/>
+    <link href="http://dongweiming.github.com/blog/archives/speakerdeck/"/>
     <updated>2014-04-18T16:49:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/speakerdeck</id>
+    <id>http://dongweiming.github.com/blog/archives/speakerdeck</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>今天是在Ad的最后一天,本来准备了一个分享.关于业务中一些吐槽和我一些trick的用法, 有兴趣的可以下载<a href="https://github.com/dongweiming/speakerdeck">speakerdeck</a></p>
@@ -61,9 +61,9 @@ tmux attach-session -t $SESSION
   
   <entry>
     <title type="html"><![CDATA[使用celery之怎么让celery跑起来]]></title>
-    <link href="http://www.dongwm.com/archives/how-to-use-celery/"/>
+    <link href="http://dongweiming.github.com/blog/archives/how-to-use-celery/"/>
     <updated>2013-11-24T16:46:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/how-to-use-celery</id>
+    <id>http://dongweiming.github.com/blog/archives/how-to-use-celery</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>自从发了上次的文章<a href="http://www.dongwm.com/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi/">使用celery之深入celery配置</a>,
@@ -289,9 +289,9 @@ from celery.schedules import crontab</p>
   
   <entry>
     <title type="html"><![CDATA[使用celery之深入celery配置]]></title>
-    <link href="http://www.dongwm.com/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi/"/>
     <updated>2013-08-24T14:08:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-celeryzhi-shen-ru-celerypei-zhi</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>celery的官方文档其实相对还是写的很不错的.但是在一些深层次的使用上面却显得杂乱甚至就没有某些方面的介绍, 通过我的一个测试环境的settings.py来说明一些使用celery的技巧和解决办法</p>
@@ -430,9 +430,9 @@ CELERY_DEFAULT_QUEUE = “default_dongwm” # 默认的队列，如果一个消�
   
   <entry>
     <title type="html"><![CDATA[使用celery之了解celery]]></title>
-    <link href="http://www.dongwm.com/archives/shi-yong-celeryzhi-liao-jie-celery/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-celeryzhi-liao-jie-celery/"/>
     <updated>2013-08-10T20:12:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shi-yong-celeryzhi-liao-jie-celery</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-celeryzhi-liao-jie-celery</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>我想很多做开发和运维的都会涉及一件事:crontab, 也就是在服务器上设定定时任务,按期执行一些任务.但是假如你有上千台的服务器，

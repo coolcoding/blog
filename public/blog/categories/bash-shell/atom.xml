@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: Bash Shell | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/bash-shell/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/bash-shell/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[shell脚本调试高级学习]]></title>
-    <link href="http://www.dongwm.com/archives/shell%E8%84%9A%E6%9C%AC%E8%B0%83%E8%AF%95%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shell%E8%84%9A%E6%9C%AC%E8%B0%83%E8%AF%95%E9%AB%98%E7%BA%A7%E5%AD%A6%E4%B9%A0/"/>
     <updated>2011-04-13T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shell脚本调试高级学习</id>
+    <id>http://dongweiming.github.com/blog/archives/shell脚本调试高级学习</id>
     <content type="html"><![CDATA[<p><strong>1  函数调试--额这个函数使用了shell内置变量$?，执行$?的值可以接着执行命令，调用函数</strong></p>
 
 <p><pre class="sh_bash">[root@server ~]# cat test.sh
@@ -72,9 +72,9 @@ sh test.sh
   
   <entry>
     <title type="html"><![CDATA[使用Vim的bash-Support插件调试bash shell脚本]]></title>
-    <link href="http://www.dongwm.com/archives/%E4%BD%BF%E7%94%A8vim%E7%9A%84bash-support%E6%8F%92%E4%BB%B6%E8%B0%83%E8%AF%95bash-shell%E8%84%9A%E6%9C%AC/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8vim%E7%9A%84bash-support%E6%8F%92%E4%BB%B6%E8%B0%83%E8%AF%95bash-shell%E8%84%9A%E6%9C%AC/"/>
     <updated>2011-04-08T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/使用vim的bash-support插件调试bash-shell脚本</id>
+    <id>http://dongweiming.github.com/blog/archives/使用vim的bash-support插件调试bash-shell脚本</id>
     <content type="html"><![CDATA[<p><strong>1  下载安装并启用：</strong></p>
 
 <p><pre class="sh_bash">[root@server ~]# mkdir ~/.vim
@@ -134,9 +134,9 @@ sh test.sh
   
   <entry>
     <title type="html"><![CDATA[Shell 高级变量]]></title>
-    <link href="http://www.dongwm.com/archives/shell-%E9%AB%98%E7%BA%A7%E5%8F%98%E9%87%8F/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shell-%E9%AB%98%E7%BA%A7%E5%8F%98%E9%87%8F/"/>
     <updated>2011-04-08T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shell-高级变量</id>
+    <id>http://dongweiming.github.com/blog/archives/shell-高级变量</id>
     <content type="html"><![CDATA[<p><strong>1 测试变量存在与否:</strong>
 语法 ${变量-默认值}
 若变量不存在换回-后面的默认值,要存在传回变量值
@@ -289,9 +289,9 @@ test.sh
   
   <entry>
     <title type="html"><![CDATA[shell  进度条]]></title>
-    <link href="http://www.dongwm.com/archives/shell-%E8%BF%9B%E5%BA%A6%E6%9D%A1/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shell-%E8%BF%9B%E5%BA%A6%E6%9D%A1/"/>
     <updated>2011-03-31T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shell-进度条</id>
+    <id>http://dongweiming.github.com/blog/archives/shell-进度条</id>
     <content type="html"><![CDATA[<p>我想要实现的是根据任务完成度实现进度条显示，但是以下前4种都是设定了循环时间，主要是产生一种进度的效果：</p>
 
 <p>1 以下格式：</p>
@@ -573,9 +573,9 @@ test.sh
   
   <entry>
     <title type="html"><![CDATA[Bash Shell  位置参数和内部参数]]></title>
-    <link href="http://www.dongwm.com/archives/bash-shell-%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E5%92%8C%E5%86%85%E9%83%A8%E5%8F%82%E6%95%B0/"/>
+    <link href="http://dongweiming.github.com/blog/archives/bash-shell-%E4%BD%8D%E7%BD%AE%E5%8F%82%E6%95%B0%E5%92%8C%E5%86%85%E9%83%A8%E5%8F%82%E6%95%B0/"/>
     <updated>2011-03-17T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/bash-shell-位置参数和内部参数</id>
+    <id>http://dongweiming.github.com/blog/archives/bash-shell-位置参数和内部参数</id>
     <content type="html"><![CDATA[<p><pre class="sh_bash">$0表示当前执行的进程名,script 本身的名字,或者在正则表达式中表示整行输出
 
 <p>$# ----传递给程序的总的参数数目</p>

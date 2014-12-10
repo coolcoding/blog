@@ -3,7 +3,7 @@
 # ----------------------- #
 
 
-url: http://www.dongwm.com
+url: http://dongweiming.github.com/blog
 title: 小明明s à domicile
 subtitle: 沉浸于linux艺术（首先是态度，然后再是技术）
 author: Dongweiming
@@ -27,7 +27,7 @@ email:
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /
+root: /blog
 permalink: /archives/:title/
 source: source
 destination: public
@@ -71,7 +71,7 @@ qq_share: true
 douban_user: 62943420
 douban_people: 小明明
 douban_apikey: 0ec15d10bdd1901a2c4417323974b04e
-douban_show:  #dolist,wishlist,collection 
+douban_show:  #dolist,wishlist,collection
 douban_display_category: book|music #''(book music blog movie) format: movie|book|music
 douban_display: random #favorite and ''(new add)
 douban_total_show: 10
@@ -84,11 +84,11 @@ douban_hideself:  true #''(false)
 weibo_uid: 1994497175
 weibo_verifier: abd54ad9
 weibokey: 2642268232
-weibo_fansline: 0 
-weibo_show: true 
-weibo_pic: true 
-weibo_skin: 10 
-weibo_share: true 
+weibo_fansline: 0
+weibo_show: true
+weibo_pic: true
+weibo_skin: 10
+weibo_share: true
 
 # Github repositories
 github_user: dongweiming
@@ -118,7 +118,7 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user: 
+delicious_user:
 delicious_count: 3
 
 # Disqus Comments

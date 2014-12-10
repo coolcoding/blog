@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: python模块研究 | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/pythonmo-kuai-yan-jiu/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/pythonmo-kuai-yan-jiu/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于sys研究（一）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyusysyanjiuyi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyusysyanjiuyi/"/>
     <updated>2012-07-10T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyusysyanjiuyi</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyusysyanjiuyi</id>
     <content type="html"><![CDATA[<p>前言：sys是一个关系系统配置使用的模块，和os一样经常被使用</p>
 
 <p><pre class="sh_python">
@@ -139,9 +139,9 @@ installing
   
   <entry>
     <title type="html"><![CDATA[关于sys研究（四）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyusysyanjiusi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyusysyanjiusi/"/>
     <updated>2012-07-10T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyusysyanjiusi</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyusysyanjiusi</id>
     <content type="html"><![CDATA[<p><pre class="sh_python">
 import sys
 import textwrap
@@ -655,9 +655,9 @@ IOError</p>
   
   <entry>
     <title type="html"><![CDATA[关于sys研究（三）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyusysyanjiusan/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyusysyanjiusan/"/>
     <updated>2012-07-10T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyusysyanjiusan</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyusysyanjiusan</id>
     <content type="html"><![CDATA[<p><pre class="sh_python">
 import sys
 
@@ -1106,9 +1106,9 @@ Thread-2 stopped in block at line 14 of test.py</p>
   
   <entry>
     <title type="html"><![CDATA[关于sys研究（二）]]></title>
-    <link href="http://www.dongwm.com/archives/guanyusysyanjiuer/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyusysyanjiuer/"/>
     <updated>2012-07-10T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyusysyanjiuer</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyusysyanjiuer</id>
     <content type="html"><![CDATA[<p><pre class="sh_python">
 import sys
 print 'Arguments:', sys.argv #命令行参数
@@ -1279,9 +1279,9 @@ print 'maxunicode:', sys.maxunicode #支持 Unicode的最大整数
   
   <entry>
     <title type="html"><![CDATA[关于socket研究(二)]]></title>
-    <link href="http://www.dongwm.com/archives/guanyusocketyanjiuer-2/"/>
+    <link href="http://dongweiming.github.com/blog/archives/guanyusocketyanjiuer-2/"/>
     <updated>2012-07-09T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/guanyusocketyanjiuer-2</id>
+    <id>http://dongweiming.github.com/blog/archives/guanyusocketyanjiuer-2</id>
     <content type="html"><![CDATA[<p>socket服务器端：</p>
 
 <p><pre class="sh_python">

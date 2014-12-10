@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: github | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/github/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用http和websocket连接服务器]]></title>
-    <link href="http://www.dongwm.com/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi/"/>
     <updated>2013-07-19T22:53:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-httphe-websocketlian-jie-fu-wu-qi</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>想想吧，通过网页ssh登录服务器是一件多么酷的事情?今天看了<a href="http://www.vpsee.com/2013/06/invoke-a-linux-shell-with-ssh-account-from-browser">使用浏览器访问 Linux 终端</a>,

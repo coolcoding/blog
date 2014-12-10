@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: 其它 | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/qi-ta/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/qi-ta/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用可以带选项的perl发送中文邮件]]></title>
-    <link href="http://www.dongwm.com/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian/"/>
     <updated>2011-08-13T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian</id>
+    <id>http://dongweiming.github.com/blog/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian</id>
     <content type="html"><![CDATA[<p>为了处理复杂事件处理的故障报警，需要使用perl语言实现邮件报警和短信报警</p>
 
 <p><pre class="sh_perl">
@@ -78,9 +78,9 @@ print LOG "$currenttime send mail to $sendto : \"$data\"\n";
   
   <entry>
     <title type="html"><![CDATA[使用pssh进行并行批量操作]]></title>
-    <link href="http://www.dongwm.com/archives/%E4%BD%BF%E7%94%A8pssh%E8%BF%9B%E8%A1%8C%E5%B9%B6%E8%A1%8C%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E4%BD%BF%E7%94%A8pssh%E8%BF%9B%E8%A1%8C%E5%B9%B6%E8%A1%8C%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/"/>
     <updated>2011-04-22T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/使用pssh进行并行批量操作</id>
+    <id>http://dongweiming.github.com/blog/archives/使用pssh进行并行批量操作</id>
     <content type="html"><![CDATA[<p><strong>假如同时给上千台服务器执行一个命令,拷贝一个文件,杀一个进程等,有什么简化运维管理的工具呢?在小型使用中我都是使用for循环,数量巨大,一方面不确定操作是否成功,一方面for循环语句性能不好估计且是不是同步并行执行.，这类工具比如pdsh，mussh，cssh，dsh等还有这里提到的pssh:
 1  安装:</strong>
 <pre class="sh_bash">#wget http://peak.telecommunity.com/dist/ez_setup.py
@@ -133,9 +133,9 @@ pssh工具包主要有5个程序:
   
   <entry>
     <title type="html"><![CDATA[使用crush-tools分析apache访问日志]]></title>
-    <link href="http://www.dongwm.com/archives/ok/"/>
+    <link href="http://dongweiming.github.com/blog/archives/ok/"/>
     <updated>2011-02-21T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/ok</id>
+    <id>http://dongweiming.github.com/blog/archives/ok</id>
     <content type="html"><![CDATA[<p><strong>crush（Custom Reporting Utilities for SHell）是用于处理数据的工具包，在这里我用来分析apache访问日志，它的网址是http://code.google.com/p/crush-tools/，我所要说的是其强大的性能和功能。</strong></p>
 
 <p><strong>1  下载安装：</strong></p>
@@ -246,9 +246,9 @@ exit(0);</pre></p>
   
   <entry>
     <title type="html"><![CDATA[syslog记录history历史记录]]></title>
-    <link href="http://www.dongwm.com/archives/syslog%E8%AE%B0%E5%BD%95history%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/"/>
+    <link href="http://dongweiming.github.com/blog/archives/syslog%E8%AE%B0%E5%BD%95history%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/"/>
     <updated>2010-12-20T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/syslog记录history历史记录</id>
+    <id>http://dongweiming.github.com/blog/archives/syslog记录history历史记录</id>
     <content type="html"><![CDATA[<p>工作中可能会有无聊的黑客在你服务器上转悠，黑客智商都不错，所有离开的时候就会删除history记录。怎么办才能记录下用户的历史记录呢？</p>
 
 <p><strong>原理</strong>：将history记录到syslog上面，并实时的传送到了远端的日志集中服务器上。</p>
@@ -309,9 +309,9 @@ Dec 23 17:48:54 server -bash: HISTORY: PID=2152 PPID=2137 SID=2152 User=root CMD
   
   <entry>
     <title type="html"><![CDATA[linux gcc++漏洞：普通用户获得root权限]]></title>
-    <link href="http://www.dongwm.com/archives/linux-gcc%E6%BC%8F%E6%B4%9E%EF%BC%9A%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E8%8E%B7%E5%BE%97root%E6%9D%83%E9%99%90/"/>
+    <link href="http://dongweiming.github.com/blog/archives/linux-gcc%E6%BC%8F%E6%B4%9E%EF%BC%9A%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%E8%8E%B7%E5%BE%97root%E6%9D%83%E9%99%90/"/>
     <updated>2010-11-01T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/linux-gcc漏洞：普通用户获得root权限</id>
+    <id>http://dongweiming.github.com/blog/archives/linux-gcc漏洞：普通用户获得root权限</id>
     <content type="html"><![CDATA[<p><strong>前言：经我测试在RHEL5 / CentOS5 / FC13都成功了。</strong></p>
 
 <p>首先介绍下一下具体步骤中涉及到的2个频繁的出现的词语:</p>

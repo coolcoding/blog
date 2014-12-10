@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: cacti | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/cacti/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/cacti/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[配置Cherokee下的cacti]]></title>
-    <link href="http://www.dongwm.com/archives/%E9%85%8D%E7%BD%AEcherokee%E4%B8%8B%E7%9A%84cacti/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E9%85%8D%E7%BD%AEcherokee%E4%B8%8B%E7%9A%84cacti/"/>
     <updated>2010-12-23T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/配置cherokee下的cacti</id>
+    <id>http://dongweiming.github.com/blog/archives/配置cherokee下的cacti</id>
     <content type="html"><![CDATA[<p><strong>LCMP</strong><strong>是指</strong><em><strong>Linux.Cherokee.MySQL.PHP/Perl/Python</strong></em><em><strong>。</strong></em><em><strong> </strong></em></p>
 
 <p><em><strong>其中</strong></em><em><strong>Cherokee</strong></em>号称是目前最快的 Web 服务器软件，在性能上，甚至比  Nginx 还略胜一筹。Cherokee 的功能包括支持 FastCGI、SCGI、PHP、CGI、TLS 及 SSL  加密连接，虚拟主机，授权认证，实时编码，载入均衡，与 Apache 兼容的 log 文件等等。Cherokee 内含一个名为  cherokee-admin 的工具，执行后，允许管理员直接通过浏览器进入 http://localhost:9090/ 对其进行管理和配置<!--more--><img title="更多..." src="../wp-includes/js/tinymce/plugins/wordpress/img/trans.gif" alt="" /><strong> </strong></p>

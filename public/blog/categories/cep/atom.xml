@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: cep | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/cep/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/cep/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[复杂事件（cep）处理多个结果同窗口展示]]></title>
-    <link href="http://www.dongwm.com/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi/"/>
+    <link href="http://dongweiming.github.com/blog/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi/"/>
     <updated>2011-09-18T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi</id>
+    <id>http://dongweiming.github.com/blog/archives/cepfuzashijianchuliduogejieguotongchuangkouzhanshi</id>
     <content type="html"><![CDATA[<p>展示效果类似于dstat（python）将日志文件的结果格式化显示到终端界面</p>
 
 <p><pre class="sh_perl">
@@ -276,9 +276,9 @@ while (1) {
   
   <entry>
     <title type="html"><![CDATA[复杂事件(cep)处理的消息队列zmq在server端的python日志记录处理脚本]]></title>
-    <link href="http://www.dongwm.com/archives/fuzashijiancepchulidexiaoxiduiliezmqzaiserverduandepythonchulijiaoben/"/>
+    <link href="http://dongweiming.github.com/blog/archives/fuzashijiancepchulidexiaoxiduiliezmqzaiserverduandepythonchulijiaoben/"/>
     <updated>2011-08-26T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/fuzashijiancepchulidexiaoxiduiliezmqzaiserverduandepythonchulijiaoben</id>
+    <id>http://dongweiming.github.com/blog/archives/fuzashijiancepchulidexiaoxiduiliezmqzaiserverduandepythonchulijiaoben</id>
     <content type="html"><![CDATA[<p><p>前言：主要用来接收客户端服务器传送来的socket内容，并写到指定数据目录下。</p>
 <p><pre class="sh_python">
 import zmq
@@ -317,9 +317,9 @@ from datetime import date
   
   <entry>
     <title type="html"><![CDATA[使用可以带选项的perl发送中文邮件]]></title>
-    <link href="http://www.dongwm.com/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian/"/>
     <updated>2011-08-13T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian</id>
+    <id>http://dongweiming.github.com/blog/archives/shiyongkeyidaixuanxiangdeperlfasongzhongwenyoujian</id>
     <content type="html"><![CDATA[<p>为了处理复杂事件处理的故障报警，需要使用perl语言实现邮件报警和短信报警</p>
 
 <p><pre class="sh_perl">

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: vpn | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/vpn/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/vpn/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[站到站VPN(预共享密钥)]]></title>
-    <link href="http://www.dongwm.com/archives/zhandaozhanvpnyugongxiangmiyue/"/>
+    <link href="http://dongweiming.github.com/blog/archives/zhandaozhanvpnyugongxiangmiyue/"/>
     <updated>2011-07-30T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/zhandaozhanvpnyugongxiangmiyue</id>
+    <id>http://dongweiming.github.com/blog/archives/zhandaozhanvpnyugongxiangmiyue</id>
     <content type="html"><![CDATA[<p><span style="color: #c00000;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><strong>R1</strong></span></span><span style="font-size: medium;"><strong>配置</strong></span></span></p>
 
 <p><span style="font-family: Times New Roman,serif;"><span style="font-family: Arial,sans-serif;">R1(config)#</span><span style="font-family: Arial,sans-serif;"><strong>line con 0</strong></span></span></p>
@@ -232,9 +232,9 @@
   
   <entry>
     <title type="html"><![CDATA[远程接入VPN]]></title>
-    <link href="http://www.dongwm.com/archives/yuanchengjieruvpn/"/>
+    <link href="http://dongweiming.github.com/blog/archives/yuanchengjieruvpn/"/>
     <updated>2011-07-30T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/yuanchengjieruvpn</id>
+    <id>http://dongweiming.github.com/blog/archives/yuanchengjieruvpn</id>
     <content type="html"><![CDATA[<p><span style="color: #c00000;"><span style="font-size: medium;"><strong>服务器端配置</strong></span><span style="font-family: Times New Roman,serif;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><strong>(R1)</strong></span></span></span></span></p>
 
 <p><span style="font-family: Times New Roman,serif;"><span style="font-family: Arial,sans-serif;">Router&gt;</span><span style="font-family: Arial,sans-serif;"><strong>enable</strong></span></span></p>
@@ -515,9 +515,9 @@
   
   <entry>
     <title type="html"><![CDATA[站到站VPN (数字证书)]]></title>
-    <link href="http://www.dongwm.com/archives/kongzhipingmianheguanlipingmiananquan/"/>
+    <link href="http://dongweiming.github.com/blog/archives/kongzhipingmianheguanlipingmiananquan/"/>
     <updated>2011-07-10T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/kongzhipingmianheguanlipingmiananquan</id>
+    <id>http://dongweiming.github.com/blog/archives/kongzhipingmianheguanlipingmiananquan</id>
     <content type="html"><![CDATA[<p><span style="font-family: Times New Roman,serif;"><span style="color: #c00000;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><strong>R3 </strong></span></span></span></span><span style="color: #c00000;"><span style="font-size: medium;"><strong>上的</strong></span><span style="font-family: Times New Roman,serif;"><span style="font-family: Arial,sans-serif;"><span style="font-size: medium;"><strong>VLAN</strong></span></span></span></span><span style="color: #c00000;"><span style="font-size: medium;"><strong>配置</strong></span></span></p>
 
 <p><span style="font-family: Times New Roman,serif;">VLAN0035 Fa0/3, Fa0/5</span></p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: gentoo | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/gentoo/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/gentoo/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[udev升级的网卡重命名问题和解决]]></title>
-    <link href="http://www.dongwm.com/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue/"/>
+    <link href="http://dongweiming.github.com/blog/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue/"/>
     <updated>2013-04-27T15:32:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue</id>
+    <id>http://dongweiming.github.com/blog/archives/udevsheng-ji-de-wang-qia-zhong-ming-ming-wen-ti-he-jie-jue</id>
     <content type="html"><![CDATA[<h4 id="section">故障描述</h4>
 
 <p>最近终于更新了下gentoo，重启发现我的eth0网卡启动失败：</p>
@@ -126,9 +126,9 @@ depend() {
   
   <entry>
     <title type="html"><![CDATA[跨操作系统初始化安装工具(laptop)]]></title>
-    <link href="http://www.dongwm.com/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell/"/>
+    <link href="http://dongweiming.github.com/blog/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell/"/>
     <updated>2013-04-08T18:07:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell</id>
+    <id>http://dongweiming.github.com/blog/archives/kua-cao-zuo-xi-tong-chu-shi-hua-an-zhuang-gong-ju-shell</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>上周看了<a href="https://github.com/docopt/docopt">docopt</a>, 感想很多。最近因为工作需要用opensuse，用ubuntu，个人pc用gentoo，
@@ -363,9 +363,9 @@ shell&gt;bash &lt;(curl -s https://raw.github.com/orzrd/laptop/master/setup_lapt
   
   <entry>
     <title type="html"><![CDATA[gentoo使用wpa_supplicant配置无线网卡]]></title>
-    <link href="http://www.dongwm.com/archives/gentoo-wpa_supplicant-wireless/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gentoo-wpa_supplicant-wireless/"/>
     <updated>2013-03-31T23:22:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/gentoo-wpa_supplicant-wireless</id>
+    <id>http://dongweiming.github.com/blog/archives/gentoo-wpa_supplicant-wireless</id>
     <content type="html"><![CDATA[<h4 id="section"><em>前言</em></h4>
 
 <p>公司全部使用了无线网络，我也被‘逼’的开始研究gentoo的无线上网，看了网上很多文章，以及gentoo文档，但是感觉都让我很迷糊，以下是我使用wpa_supplicant是一些总结</p>
@@ -484,9 +484,9 @@ dhcpcd[12395]: forked to background, child pid 12479
   
   <entry>
     <title type="html"><![CDATA[gentoo3.2.21内核编译vmware8.02failed to compile module vmnet 解决]]></title>
-    <link href="http://www.dongwm.com/archives/gentoo3-2-21neihebianyivmware8-02failedtocompilemodulevmnetjiejue/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gentoo3-2-21neihebianyivmware8-02failedtocompilemodulevmnetjiejue/"/>
     <updated>2012-07-12T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/gentoo3-2-21neihebianyivmware8-02failedtocompilemodulevmnetjiejue</id>
+    <id>http://dongweiming.github.com/blog/archives/gentoo3-2-21neihebianyivmware8-02failedtocompilemodulevmnetjiejue</id>
     <content type="html"><![CDATA[<p>前言：我一直是vmware忠实使用者,最近重新编译gentoo内核后重新安装vmware并且升级到8.02,其它模块正常,但是唯独vmnet编译失败,报错日志如下:</p>
 
 <p>2012-07-12T10:33:01.401+08:00| vthread-3| I120: Building module with command: /usr/bin/make -j -C /tmp/vmware-root/modules/vmnet-only auto-build SUPPORT_SMP=1 HEADER_DIR=/lib/modules/3.2.21-gentoo/build/include CC=/usr/bin/gcc GREP=/usr/bin/make IS_GCC_3=no VMCCVER=4.5.3
@@ -504,9 +504,9 @@ dhcpcd[12395]: forked to background, child pid 12479
   
   <entry>
     <title type="html"><![CDATA[gentoo笔记（十三）更新系统的总结和报错解决]]></title>
-    <link href="http://www.dongwm.com/archives/gentoobijishisangengxinxitongdebaocuojiejue/"/>
+    <link href="http://dongweiming.github.com/blog/archives/gentoobijishisangengxinxitongdebaocuojiejue/"/>
     <updated>2012-07-09T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/gentoobijishisangengxinxitongdebaocuojiejue</id>
+    <id>http://dongweiming.github.com/blog/archives/gentoobijishisangengxinxitongdebaocuojiejue</id>
     <content type="html"><![CDATA[<p>升级步骤：</p>
 
 <p>1 emerge -–sync ＃同步更新目录

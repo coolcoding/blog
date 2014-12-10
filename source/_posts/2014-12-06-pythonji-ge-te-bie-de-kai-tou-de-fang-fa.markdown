@@ -14,10 +14,10 @@ tags:
 #### 前言
 
 [A Guide to Python's Magic Methods](http://www.rafekettler.com/magicmethods.html)python的绝大多数这样的特殊方法都
-在这里面被提到了. 今天我来说3个他没有提到的[__dir__, __slots__, __weakref__], 再强调下他提到的2个[__missing__, __contains__]
+在这里面被提到了. 今天我来说3个他没有提到的[\_\_dir\_\_, \_\_slots\_\_, \_\_weakref\_\_], 再强调下他提到的2个[\_\_missing\_\_, \_\_contains\_\_]
 
 
-##### __dir__ -> 看个小例子就知道了
+##### \_\_dir\_\_ -> 看个小例子就知道了
 
 ```python
 In [1]: class T(object):
@@ -40,11 +40,11 @@ In [7]: dir(t)
 Out[7]: ['a', 'b']
 ```
 
-看出来了把, 不解释, 但是这个__dir__是相对于类的实例有效果的.
+看出来了把, 不解释, 但是这个\_\_dir\_\_是相对于类的实例有效果的.
 
-##### __slots__
+##### \_\_slots\_\_
 
-这个在我初学python的时候就被模糊了, 原来的理解是它的出现替代了__dict__，也就是说你只能给__slots__
+这个在我初学python的时候就被模糊了, 原来的理解是它的出现替代了\_\_dict\_\_，也就是说你只能给\_\_slots\_\_
 这个变量列表项的属性赋值. 对外的接口减少了,也安全了. 后来看了这篇[Saving 9 GB of RAM with Python’s __slots__](http://tech.oyster.com/save-ram-with-python-slots/).
 好久不做运维了,在生产环境究竟怎么样我无法定论, <python cookbook>也提到了,在对象实例很多的时候他能帮助减少内存, 详见https://www.safaribooksonline.com/library/view/python-cookbook-3rd/9781449357337/ch08s04.html.
 这里来个小实验(在Hacker News也被讨论过https://news.ycombinator.com/item?id=6750187)
@@ -86,7 +86,7 @@ $pmap -x `ps -ef|grep test_slot.py|grep -v grep|awk '{print $2}'`|grep total # �
 
 结果很明显,内存占用减少了很多...
 
-##### __weakref__ 弱引用
+##### \_\_weakref\_\_ 弱引用
 
 首先先说下[weakref](http://zh.wikipedia.org/wiki/%E5%BC%B1%E5%BC%95%E7%94%A8): 弱引用，与强引用相对，是指不能确保其引用的对象不会被垃圾回收器回收的引用。一个对象若只被弱引用所引用，则被认为是不可访问（或弱可访问）的，并因此可能在任何时刻被回收.
 在Python中,当一个对象的引用数目为0的时候，才会被从内存中回收. 但是被循环引用呢?
@@ -142,7 +142,7 @@ In [18]: r() is None # 弱引用计数器没有增加，所以当obj不在引用
 Out[18]: True
 ```
 
-好吧, 我的总结是弱引用是个好东西, 但是加了__slots__就不支持弱引用了. 所以需要__weakref__
+好吧, 我的总结是弱引用是个好东西, 但是加了\_\_slots\_\_就不支持弱引用了. 所以需要\_\_weakref\_\_
 
 ```python
 In [9]: class T3(object):
@@ -171,7 +171,7 @@ In [15]: weakref.ref(t4)
 Out[15]: <weakref at 0x2766f70; to 'T4' at 0x2586fd8>
 ```
 
-##### __contains__ 判断某值 in/not in 实例
+##### \_\_contains\_\_ 判断某值 in/not in 实例
 
 ```python
 In [1]: class NewList(object):
@@ -189,7 +189,7 @@ In [4]: 10 in l
 Out[4]: False
 ```
 
-##### __missing__
+##### \_\_missing\_\_
 
 最初看这个特殊方法是看python标准库的源码的时候(collections#L421):
 

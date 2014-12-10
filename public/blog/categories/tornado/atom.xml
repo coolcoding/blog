@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: tornado | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/tornado/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/tornado/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[speakerdeck]]></title>
-    <link href="http://www.dongwm.com/archives/speakerdeck/"/>
+    <link href="http://dongweiming.github.com/blog/archives/speakerdeck/"/>
     <updated>2014-04-18T16:49:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/speakerdeck</id>
+    <id>http://dongweiming.github.com/blog/archives/speakerdeck</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>今天是在Ad的最后一天,本来准备了一个分享.关于业务中一些吐槽和我一些trick的用法, 有兴趣的可以下载<a href="https://github.com/dongweiming/speakerdeck">speakerdeck</a></p>
@@ -61,9 +61,9 @@ tmux attach-session -t $SESSION
   
   <entry>
     <title type="html"><![CDATA[使用tornado让你的请求异步非阻塞]]></title>
-    <link href="http://www.dongwm.com/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai/"/>
     <updated>2013-08-14T12:08:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai</id>
+    <id>http://dongweiming.github.com/blog/archives/shi-yong-tornadorang-ni-de-qing-qiu-yi-bu-fei-zu-sai</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>也许有同学很迷惑:tornado不是标榜异步非阻塞解决10K问题的嘛?但是我却发现不是torando不好，而是你用错了.比如最近发现一个事情:某网站打开页面很慢,服务器cpu/内存都正常.网络状态也良好.
@@ -433,9 +433,9 @@ def get_(self, n):
   
   <entry>
     <title type="html"><![CDATA[使用Google Captcha作tornado网站的验证码]]></title>
-    <link href="http://www.dongwm.com/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma/"/>
+    <link href="http://dongweiming.github.com/blog/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma/"/>
     <updated>2012-04-13T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma</id>
+    <id>http://dongweiming.github.com/blog/archives/shiyonggooglecaptchazuotornadowangzhandeyanzhengma</id>
     <content type="html"><![CDATA[<p>前言：为了防止恶意尝试破解密码，在用户注册和登录的时候都需要一个验证码，但是简单的验证码图片实在太好破解了，还是不安全，正好发现类似于google，yahoo等大网站的图片验证使用了这样的方式：</p>
 
 <p><img class="alignnone" title="recaptcha" src="https://developers.google.com/recaptcha/images/reCAPTCHA_Sample_White.png" alt="" width="322" height="132" /></p>
@@ -566,9 +566,9 @@ $("#lg").click(function(event)
   
   <entry>
     <title type="html"><![CDATA[tornado对http403，405重定向]]></title>
-    <link href="http://www.dongwm.com/archives/tornadoduihttp403405zhongdingxiang/"/>
+    <link href="http://dongweiming.github.com/blog/archives/tornadoduihttp403405zhongdingxiang/"/>
     <updated>2012-04-11T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/tornadoduihttp403405zhongdingxiang</id>
+    <id>http://dongweiming.github.com/blog/archives/tornadoduihttp403405zhongdingxiang</id>
     <content type="html"><![CDATA[<p>前言：http403表示禁止访问，比如没有相应权限，比如它不是一个可以读的文件（目录）;http405表示资源被禁止，比如一个url要求你使用post方式访问，你直接打开网页用get方式就不可以</p>
 
 <p>修改 tornado源码web.py</p>
@@ -600,9 +600,9 @@ if not (abspath + os.path.sep).startswith(self.root): #大概1479行
   
   <entry>
     <title type="html"><![CDATA[tornado 404实现重定向页面]]></title>
-    <link href="http://www.dongwm.com/archives/tornado404shixianzhongdingxiangyemian/"/>
+    <link href="http://dongweiming.github.com/blog/archives/tornado404shixianzhongdingxiangyemian/"/>
     <updated>2012-04-10T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/tornado404shixianzhongdingxiangyemian</id>
+    <id>http://dongweiming.github.com/blog/archives/tornado404shixianzhongdingxiangyemian</id>
     <content type="html"><![CDATA[<p>前言：不喜欢默认的404报错：404:Not Found，本来我可以在我程序里面对RequestHandler重定义，但是需要修改的比较多，因为我的服务器上面只跑我这一个程序，那么我直接去修改源码（/usr/local/lib/python2.6/site-packages/tornado-2.2-py2.6.egg/tornado）的ErrorHandler类（个人方法仅供参考，要是有更好的方法，欢迎留言<pre class="sh_python">
 class ErrorHandler(RequestHandler):  #大约1413行  这里主要是‘文件url的404’
     """Generates an error response with status_code for all requests."""

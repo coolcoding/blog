@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: func | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/func/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/func/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[安装使用Func一些总结]]></title>
-    <link href="http://www.dongwm.com/archives/%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8func%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/"/>
+    <link href="http://dongweiming.github.com/blog/archives/%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8func%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/"/>
     <updated>2011-03-02T00:00:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/安装使用func一些总结</id>
+    <id>http://dongweiming.github.com/blog/archives/安装使用func一些总结</id>
     <content type="html"><![CDATA[<p>1  关于Func<strong>
 func全称</strong><span style="font-family: Times New Roman,serif;"> </span><span style="font-size: x-small;">Fedora Unified Network Controller </span>,主要用在Radhat, Fedora,OpenSuse,Centos系列系统上由一个server管理任意台服务器的工具,<span style="font-size: x-small;">建立了</span><span style="font-size: x-small;">Master-Slaves </span><span style="font-size: x-small;">主从</span><span style="font-size: x-small;">SSL</span><span style="font-size: x-small;">证书管控体系，可以将证书自动分发到所有受控服务.</span>func直接发送远程命令或者远程获取数据,但是只适用于一些常用功能的模块的操作,实现其它功能需要自己写Python API,个人认为没有使用比较适当的"for do done"循环程序效果明确和方便.</p>
 

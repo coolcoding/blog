@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[分类: osx | 小明明s à domicile]]></title>
-  <link href="http://www.dongwm.com/blog/categories/osx/atom.xml" rel="self"/>
-  <link href="http://www.dongwm.com/"/>
-  <updated>2014-12-07T21:37:47+08:00</updated>
-  <id>http://www.dongwm.com/</id>
+  <link href="http://dongweiming.github.com/blog/blog/categories/osx/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2014-12-10T12:21:26+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[OSX下使用vagrant和docker管理创建虚拟环境]]></title>
-    <link href="http://www.dongwm.com/archives/osxxia-shi-yong-vagranthe-dockerguan-li-chuang-jian-xu-ni-huan-jing/"/>
+    <link href="http://dongweiming.github.com/blog/archives/osxxia-shi-yong-vagranthe-dockerguan-li-chuang-jian-xu-ni-huan-jing/"/>
     <updated>2013-07-09T10:41:00+08:00</updated>
-    <id>http://www.dongwm.com/archives/osxxia-shi-yong-vagranthe-dockerguan-li-chuang-jian-xu-ni-huan-jing</id>
+    <id>http://dongweiming.github.com/blog/archives/osxxia-shi-yong-vagranthe-dockerguan-li-chuang-jian-xu-ni-huan-jing</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>乍一看题目出现了好多名词，根据我的理解一一说来</p>
