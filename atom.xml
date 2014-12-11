@@ -4,7 +4,7 @@
   <title><![CDATA[小明明s à domicile]]></title>
   <link href="http://dongweiming.github.com/blog/atom.xml" rel="self"/>
   <link href="http://dongweiming.github.com/blog/"/>
-  <updated>2014-12-11T18:13:17+08:00</updated>
+  <updated>2014-12-11T18:19:21+08:00</updated>
   <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
@@ -166,19 +166,20 @@
 </span><span class="line"><span class="p">});</span>
 </span></pre></figure></notextile></div>
 
-<p>然后再说line_cell_magic
-&lt;div class=&#8217;bogus-wrapper&#8217;&gt;<notextile><figure class="code">&lt;figcaption&gt;<span></span>&lt;/figcaption&gt;&lt;pre class=&#8217;sh_python&#8217;&gt;<span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="o">%</span><span class="n">time</span> <span class="mi">2</span><span class="o">**</span><span class="mi">128</span>
+<p>然后再说line_cell_magic:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="o">%</span><span class="n">time</span> <span class="mi">2</span><span class="o">**</span><span class="mi">128</span>
 </span><span class="line"><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">2</span> <span class="err">µ</span><span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">1</span> <span class="err">µ</span><span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">3</span> <span class="err">µ</span><span class="n">s</span>
 </span><span class="line"><span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">5.01</span> <span class="err">µ</span><span class="n">s</span>
 </span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="il">340282366920938463463374607431768211456L</span>
 </span><span class="line">
 </span><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="o">%%</span><span class="n">time</span>
-</span><span class="line">   <span class="o">&#8230;</span><span class="p">:</span> <span class="mi">2</span><span class="o">**</span><span class="mi">128</span>
-</span><span class="line">   <span class="o">&#8230;</span><span class="p">:</span>
+</span><span class="line">   <span class="o">...</span><span class="p">:</span> <span class="mi">2</span><span class="o">**</span><span class="mi">128</span>
+</span><span class="line">   <span class="o">...</span><span class="p">:</span>
 </span><span class="line">   <span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">4</span> <span class="err">µ</span><span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">0</span> <span class="n">ns</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">4</span> <span class="err">µ</span><span class="n">s</span>
 </span><span class="line">   <span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mf">9.06</span> <span class="err">µ</span><span class="n">s</span>
 </span><span class="line">   <span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="il">340282366920938463463374607431768211456L</span>
-</span>&lt;/pre&gt;</figure></notextile>&lt;/div&gt;</p>
+</span></pre></figure></notextile></div>
 
 <p>Ps: line_cell_magic方法的参数是2个:</p>
 

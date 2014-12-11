@@ -4,7 +4,7 @@
   <title><![CDATA[分类: python | 小明明s à domicile]]></title>
   <link href="http://dongweiming.github.com/blog/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://dongweiming.github.com/blog/"/>
-  <updated>2014-12-11T18:13:17+08:00</updated>
+  <updated>2014-12-11T18:19:21+08:00</updated>
   <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
@@ -167,8 +167,9 @@ In [1]: !ruby -e ‘p “hello”’
 });
 ```</ipython.core.display.javascript></p>
 
-<p>然后再说line_cell_magic
-```python
+<p>然后再说line_cell_magic:</p>
+
+<p>```python
 In [4]: %time 2**128
 CPU times: user 2 µs, sys: 1 µs, total: 3 µs
 Wall time: 5.01 µs
