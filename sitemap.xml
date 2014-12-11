@@ -1500,7 +1500,13 @@
         <loc>
             http://dongweiming.github.com/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa/
         </loc>
-        <lastmod>2014-12-10T10:41:54+08:00</lastmod>
+        <lastmod>2014-12-11T13:49:46+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://dongweiming.github.com/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-er/
+        </loc>
+        <lastmod>2014-12-11T18:12:40+08:00</lastmod>
     </url>
     <url>
         <loc>http://dongweiming.github.com/blog/404.html</loc>
@@ -1508,10 +1514,10 @@
     </url>
     <url>
         <loc>http://dongweiming.github.com/blog/blog/archives/</loc>
-        <lastmod>2014-12-10T12:07:55+08:00</lastmod>
+        <lastmod>2014-12-11T18:12:40+08:00</lastmod>
     </url>
     <url>
         <loc>http://dongweiming.github.com/blog/</loc>
-        <lastmod>2014-12-10T12:07:55+08:00</lastmod>
+        <lastmod>2014-12-11T18:12:40+08:00</lastmod>
     </url>
 </urlset>
