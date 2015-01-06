@@ -127,56 +127,6 @@
       
   <header class="page-header">
     
-      <h1 class="entry-title"><a href="/archives/guanyucompileallyanjiu/">关于compileall研究</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-11T00:00:00+08:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>前言：这个模块主要用来将源文件编译成字节码文件</p>
-
-<p>假如想整个目录的编译成pyc文件，那么可以这样用：</p>
-
-<p><pre class="sh_python">
-import compileall
-import re</p>
-
-<p>compileall.compile_dir('examples',   #要编译当面目录下的examples目录
-    rx=re.compile(r'/\.svn'))  #'rx'自动了一个排除目录， 不编译.svn目录下的文件
-</pre></p>
-
-<p>注：以上的也可以使用命令行;</p>
-
-<p>python -m compileall -x &#8216;/&#46;svn&#8217; examples</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header class="page-header">
-    
       <h1 class="entry-title"><a href="/archives/guanyubz2yanjiu/">关于cmd研究</a></h1>
     
     
@@ -1333,6 +1283,51 @@ sendmail
 
     </article>
   
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/archives/linuxjiqiao/">Linux技巧</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-10T00:00:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>1 cat ~/.ssh/id_rsa.pub | ssh －p port user@server &#8220;cat - &gt;&gt; ~/.ssh/authorized_keys&#8221;  #ssh-copy-id类似</strong></p>
+
+<p><strong>2 awk &#8216;BEGIN{srand()}{a[NR,rand()]=$0}END{y=0;for(i in a){print a[i];y++;if(y==num){exit;}}}&#8217;  file #从file中随机出num行显示出来</strong></p>
+
+<p><strong>3 sorted(dict.iteritems(), key=lambda d:d[1],reverse =True) #将字典dict以value按从大到小的顺序排序（python）</strong></p>
+
+<p><strong>4 history | awk &#8216;{a[$2]++}END{for(i in a){print a[i] &#8221; &#8221; i}}&#8217; | sort -rn | head #最常用的10条命令</strong></p>
+
+<p><strong>5 heapq.nlargest(10, d.iteritems(), operator.itemgetter(1)) #字典排序，返回根据value从大到小前十</strong></p>
+
+</div>
+  
+  
+
+
+    </article>
+  
   <ul class="pager">
     
     <li class="previous"><a href="/page/16/">&larr; Older</a></li>
@@ -1348,10 +1343,6 @@ sendmail
     <section class="well">
   <ul id="recent_posts" class="nav nav-list">
     <li class="nav-header">最近发布</li>
-    
-      <li class="post">
-        <a href="/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-san-ipython/">ipython的一些高级用法(三)Cython和ipython的cythonmagic</a>
-      </li>
     
       <li class="post">
         <a href="/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-er/">ipython的一些高级用法(二)</a>
@@ -1387,6 +1378,10 @@ sendmail
     
       <li class="post">
         <a href="/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/">分享一个准备给公司讲python高级编程的slide</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/">使用grafana和Diamond构建Graphite监控系统</a>
       </li>
     
   </ul>

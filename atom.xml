@@ -4,7 +4,7 @@
   <title><![CDATA[小明明s à domicile]]></title>
   <link href="http://dongweiming.github.com/blog/atom.xml" rel="self"/>
   <link href="http://dongweiming.github.com/blog/"/>
-  <updated>2015-01-06T21:32:21+08:00</updated>
+  <updated>2015-01-06T21:35:37+08:00</updated>
   <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
@@ -12,118 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[ipython的一些高级用法(三)Cython和ipython的cythonmagic]]></title>
-    <link href="http://dongweiming.github.com/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-san-ipython/"/>
-    <updated>2014-12-12T10:28:00+08:00</updated>
-    <id>http://dongweiming.github.com/blog/archives/ipythonde-[?]-xie-gao-ji-yong-fa-san-ipython</id>
-    <content type="html"><![CDATA[<h4 id="cythonipythoncython">今天我们来讨论下Cython和用ipython执行写Cython代码.</h4>
-<p>Cython是什么?它是能使用c的数据结构和标准库的python. cython可以运行绝大多部分的python代码, 我们要改变的就是对于其中的参数或者变量的类型, 以及调用调用的对应的
-标准库的不同(其实你会发现不同语言的标准库重叠性很高,甚至方法的接口参数都一样–只是语法不同). 也就是在你不怎么会写C扩展的时候帮你生成c代码并编译</p>
-
-<h4 id="cython">首先先学习下Cython</h4>
-
-<p><a href="http://docs.cython.org/src/tutorial/cython_tutorial.html">cython官网</a>的文档写的很好了, 但是好多人喜欢拿来主义.
-我这里直接来个生产环境中的例子,顺便下面对比下效率.</p>
-
-<p>我假设一个需求: 有个15G的日志, 我想统计nginx日志里面2014-11-30使用ipad/iphone访问xx业务(这里用a.dongwm.com), 请求返回码是200的uv.</p>
-
-<p>每条日志假设是这样的:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_bash"><span class="line">221.247.41.114 daS0keuySWUDg:834717:7RORVuSQYDT3Y <span class="s2">&quot;30/Nov/2014:01:01:45 +0800&quot;</span> <span class="s2">&quot;GET /count/?a=2 HTTP/1.1&quot;</span> 200 209 <span class="s2">&quot;http://a.dongwm.com/test/&quot;</span>Mozilla/5.1 <span class="o">(</span>Windows NT 6.1; WOW64<span class="o">)</span> AppleWebKit/537.36 <span class="o">(</span>KHTML, like Gecko<span class="o">)</span> Chrome/31.0.1650.63 Safari/537.36<span class="err">&quot;</span> 0.003 fetch_app4
-</span></pre></figure></notextile></div>
-
-<p>说明: 其中834717是用户的uid. 但是也需要考虑匿名用户, 匿名用户标示了一个cid(cookie id)这里是7RORVuSQYDT3Y</p>
-
-<p>我们不讨论这种用python程序算uv的用法, 只是表现下在日志较大的时候效率提升的效果</p>
-
-<h5 id="python">好把, 先用python实现:</h5>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-</span><span class="line">    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;access_log-20141201&#39;</span><span class="p">)</span>
-</span><span class="line">    <span class="n">uv</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-</span><span class="line">    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">xreadlines</span><span class="p">():</span>
-</span><span class="line">        <span class="n">data</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;&quot;&#39;</span><span class="p">)</span>
-</span><span class="line">        <span class="n">_</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">bid</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="p">)</span>
-</span><span class="line">        <span class="n">id_</span> <span class="o">=</span> <span class="bp">None</span>
-</span><span class="line">        <span class="k">if</span> <span class="n">uid</span><span class="p">:</span>
-</span><span class="line">            <span class="k">if</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">uv</span><span class="p">:</span>
-</span><span class="line">                <span class="k">continue</span>
-</span><span class="line">            <span class="n">id_</span> <span class="o">=</span> <span class="n">uid</span>
-</span><span class="line">        <span class="k">elif</span> <span class="n">bid</span><span class="p">:</span>
-</span><span class="line">            <span class="k">if</span> <span class="n">bid</span> <span class="ow">in</span> <span class="n">uv</span><span class="p">:</span>
-</span><span class="line">                <span class="k">continue</span>
-</span><span class="line">            <span class="n">id_</span> <span class="o">=</span> <span class="n">bid</span>
-</span><span class="line">
-</span><span class="line">        <span class="n">ua</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-</span><span class="line">        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;30/Nov/2014&#39;</span><span class="p">)</span> <span class="ow">and</span> \
-</span><span class="line">           <span class="s">&#39;http://a.dongwm.com/&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ow">and</span> \
-</span><span class="line">           <span class="p">(</span><span class="s">&#39;iphone&#39;</span> <span class="ow">in</span> <span class="n">ua</span> <span class="ow">or</span> <span class="s">&#39;ipad&#39;</span> <span class="ow">in</span> <span class="n">ua</span><span class="p">)</span> <span class="ow">and</span> \
-</span><span class="line">           <span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;200&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-</span><span class="line">            <span class="n">uv</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">id_</span><span class="p">)</span>
-</span><span class="line">    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span><span class="line">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">uv</span><span class="p">)</span>
-</span><span class="line">
-</span><span class="line"><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-</span><span class="line">    <span class="n">main</span><span class="p">()</span>
-</span></pre></figure></notextile></div>
-
-<p>效果是这样:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">parse</span>
-</span><span class="line">
-</span><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="o">%</span><span class="n">time</span> <span class="n">parse</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
-</span><span class="line"><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">46</span><span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">9.83</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">56</span><span class="n">s</span>
-</span><span class="line"><span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">59</span><span class="n">s</span>
-</span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">4090</span>
-</span></pre></figure></notextile></div>
-
-<h5 id="pyxc---">使用.pyx后缀生成c扩展 - 完全不修改数据结构</h5>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="err">$</span><span class="n">cat</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
-</span><span class="line"><span class="c"># coding=utf-8</span>
-</span><span class="line">
-</span><span class="line">
-</span><span class="line"><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
-</span><span class="line"><span class="kn">from</span> <span class="nn">Cython.Build</span> <span class="kn">import</span> <span class="n">cythonize</span>
-</span><span class="line">
-</span><span class="line"><span class="n">setup</span><span class="p">(</span>
-</span><span class="line">    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;parse&#39;</span><span class="p">,</span>
-</span><span class="line">    <span class="n">ext_modules</span> <span class="o">=</span> <span class="n">cythonize</span><span class="p">(</span><span class="s">&quot;parse.pyx&quot;</span><span class="p">),</span>
-</span><span class="line"><span class="p">)</span>
-</span><span class="line"><span class="err">$</span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="o">--</span><span class="n">inplace</span> <span class="c"># 这样就在当前目录生成了一个parse.so</span>
-</span></pre></figure></notextile></div>
-
-<p>我们再看下效果:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">parse</span>
-</span><span class="line">
-</span><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="o">%</span><span class="n">time</span> <span class="n">parse</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
-</span><span class="line"><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">26</span><span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">7.62</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">34</span><span class="n">s</span>
-</span><span class="line"><span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">36</span><span class="n">s</span>
-</span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">4090</span>
-</span><span class="line">
-</span><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">(</span><span class="mi">106</span> <span class="o">-</span> <span class="mi">85</span><span class="p">)</span> <span class="o">/</span> <span class="mi">85</span>
-</span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mf">0.24705882352941178</span>
-</span></pre></figure></notextile></div>
-
-<p>总结1: 哪怕什么都不修改, 转换成.so 也会让速度有提升. 这里是24%多</p>
-
-<p>然后有人问, 就这几秒钟的提升有必要么?</p>
-
-<p>好吧我告诉你, 这个日志只是某一天,
-某集群服务器上被hash后的一个日志. 一天的量上T, 你要经常算PV, UV, 转化率等等指标.
-速度提升24%且完全没有增加工作量, 感觉怎么样?</p>
-
-<h4 id="section">参考</h4>
-
-<ul>
-  <li>https://python.g-node.org/python-summerschool-2011/_media/materials/cython/cython-slides.pdf</li>
-  <li>http://docs.cython.org/src/tutorial/cython_tutorial.html</li>
-</ul>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[ipython的一些高级用法(二)]]></title>
@@ -3013,6 +2901,184 @@ jquery, amchart和一个最近发现的页面消息弹出<a href="https://github
 </span><span class="line"><span class="n">CELERY_ROUTES</span> <span class="o">=</span> <span class="p">(</span><span class="n">MyRouter</span><span class="p">(),</span> <span class="p">)</span>
 </span></pre></figure></notextile></div>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[封装pymongo自动关闭连接]]></title>
+    <link href="http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/"/>
+    <updated>2013-08-16T21:42:00+08:00</updated>
+    <id>http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie</id>
+    <content type="html"><![CDATA[<h4 id="section">前言</h4>
+
+<p>在我工作的项目里面使用了mongodb.自然也用到了pymongo.但是它都是在大片的函数里面使用类似于这样的方式</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="kn">import</span> <span class="nn">db</span>
+</span><span class="line"><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+</span><span class="line">    <span class="o">...</span>
+</span><span class="line">    <span class="n">db</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">find_one</span><span class="p">()</span>
+</span><span class="line">    <span class="o">...</span>
+</span></pre></figure></notextile></div>
+
+<p>但是问题是在使用完都没有关闭连接,这样多台服务器连接我这台mongodb服务器，在业务高峰期就会占满我的连接, 我当时总结造成这个原因的问题有以下三种:</p>
+
+<ol>
+  <li>
+    <p>上面说的用完db不关闭连接而是等着db超时</p>
+  </li>
+  <li>
+    <p>注意上面的import，其实在import文件的时候数据库连接就已经生成了，没有在需要的时候才创建, 占满我连接的应用其实有很多没有用，浪费了</p>
+  </li>
+  <li>
+    <p>nginx、uwsgi，celery等应用配置的问题，造成过多的实例，其实根本无益</p>
+  </li>
+</ol>
+
+<h4 id="pymongo">我今天写的一个封装pymongo和关闭数据库连接的装饰器</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="c">#/usr/bin/env python</span>
+</span><span class="line"><span class="c"># coding=utf-8</span>
+</span><span class="line">
+</span><span class="line"><span class="sd">&quot;&quot;&quot;</span>
+</span><span class="line"><span class="sd">1. 封装数据库操作(INSERT,FIND,UPDATE)</span>
+</span><span class="line"><span class="sd">2. 函数执行完MONGODB操作后关闭数据库连接</span>
+</span><span class="line"><span class="sd">&quot;&quot;&quot;</span>
+</span><span class="line">
+</span><span class="line"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">pymongo.database</span> <span class="kn">import</span> <span class="n">Database</span>
+</span><span class="line">
+</span><span class="line"><span class="k">try</span><span class="p">:</span>
+</span><span class="line">    <span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+</span><span class="line"><span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+</span><span class="line">    <span class="c"># 好像2.4之前的pymongo都没有MongoClient,现在官网已经把Connection抛弃了</span>
+</span><span class="line">    <span class="kn">import</span> <span class="nn">warnings</span>
+</span><span class="line">    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&quot;Strongly recommend upgrading to the latest version pymongo version,&quot;</span>
+</span><span class="line">                  <span class="s">&quot;Connection is DEPRECATED: Please use mongo_client instead.&quot;</span><span class="p">)</span>
+</span><span class="line">    <span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">Connection</span> <span class="k">as</span> <span class="n">MongoClient</span>
+</span><span class="line">
+</span><span class="line">
+</span><span class="line"><span class="k">class</span> <span class="nc">Mongo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class="line">
+</span><span class="line">    <span class="sd">&#39;&#39;&#39;封装数据库操作&#39;&#39;&#39;</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">27017</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s">&#39;test&#39;</span><span class="p">,</span>
+</span><span class="line">                 <span class="n">max_pool_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">max_pool_size</span> <span class="o">=</span> <span class="n">max_pool_size</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span> <span class="o">=</span> <span class="n">timeout</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">database</span> <span class="o">=</span> <span class="n">database</span>
+</span><span class="line">
+</span><span class="line">    <span class="nd">@property</span>
+</span><span class="line">    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class="line">        <span class="c"># 我这里是为了使用类似&quot;db.集合.操作&quot;的操作的时候才会生成数据库连接,其实pymongo已经实现了进程池,也可以把这个db放在__init__里面,</span>
+</span><span class="line">        <span class="c"># 比如我把db关掉有其他的数据库调用连接又会生成,并且不影响使用.我这里只是想每次执行数据库生成一个连接用完关掉-自己控制自己的</span>
+</span><span class="line">        <span class="k">return</span> <span class="n">MongoClientself</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">max_pool_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_pool_size</span><span class="p">,</span>
+</span><span class="line">                  <span class="n">connectTimeoutMS</span><span class="o">=</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">collection</span><span class="p">):</span>
+</span><span class="line">        <span class="c"># 为了兼容db[集合].操作的用法</span>
+</span><span class="line">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__getattr__</span><span class="p">(</span><span class="n">collection</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">collection_or_func</span><span class="p">):</span>
+</span><span class="line">        <span class="n">db</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">]</span>
+</span><span class="line">        <span class="k">if</span> <span class="n">collection_or_func</span> <span class="ow">in</span> <span class="n">Database</span><span class="o">.</span><span class="n">__dict__</span><span class="p">:</span>
+</span><span class="line">            <span class="c"># 当调用的是db的方法就直接返回</span>
+</span><span class="line">            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">collection_or_func</span><span class="p">)</span>
+</span><span class="line">        <span class="c"># 否则委派给Collection</span>
+</span><span class="line">        <span class="k">return</span> <span class="n">Collection</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">collection_or_func</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">
+</span><span class="line"><span class="k">class</span> <span class="nc">Collection</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">collection</span><span class="p">):</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">collection</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">collection</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">    <span class="k">def</span> <span class="nf">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">):</span>
+</span><span class="line">        <span class="c"># 我这个封装只是为了拦截一部分操作,不符合的就直接raise属性错误</span>
+</span><span class="line">        <span class="n">control_type</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;disconnect&#39;</span><span class="p">,</span> <span class="s">&#39;insert&#39;</span><span class="p">,</span> <span class="s">&#39;update&#39;</span><span class="p">,</span> <span class="s">&#39;find&#39;</span><span class="p">,</span> <span class="s">&#39;find_one&#39;</span><span class="p">]</span>
+</span><span class="line">        <span class="k">if</span> <span class="n">operation</span> <span class="ow">in</span> <span class="n">control_type</span><span class="p">:</span>
+</span><span class="line">            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">collection</span><span class="p">,</span> <span class="n">operation</span><span class="p">)</span>
+</span><span class="line">        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line">
+</span><span class="line"><span class="k">def</span> <span class="nf">close_db</span><span class="p">(</span><span class="n">dbs</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;db&#39;</span><span class="p">]):</span>
+</span><span class="line">    <span class="sd">&#39;&#39;&#39;</span>
+</span><span class="line"><span class="sd">    关闭mongodb数据库连接</span>
+</span><span class="line"><span class="sd">    db : 在执行函数里面使用的db的名字(大部分是db，也会有s_db)</span>
+</span><span class="line"><span class="sd">        Usage::</span>
+</span><span class="line"><span class="sd">            &gt;&gt;&gt;s_db = Mongo()</span>
+</span><span class="line"><span class="sd">            &gt;&gt;&gt;@close_db([&#39;s_db&#39;])</span>
+</span><span class="line"><span class="sd">            ...: def test():</span>
+</span><span class="line"><span class="sd">            ...:     print s_db.test.insert({&#39;a&#39;: 1, &#39;b&#39;: 2})</span>
+</span><span class="line"><span class="sd">            ...:</span>
+</span><span class="line"><span class="sd">    &#39;&#39;&#39;</span>
+</span><span class="line">    <span class="k">def</span> <span class="nf">_deco</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span><span class="line">        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+</span><span class="line">        <span class="k">def</span> <span class="nf">_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span class="line">            <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span class="line">            <span class="k">for</span> <span class="n">db</span> <span class="ow">in</span> <span class="n">dbs</span><span class="p">:</span>
+</span><span class="line">                <span class="k">try</span><span class="p">:</span>
+</span><span class="line">                    <span class="n">func</span><span class="o">.</span><span class="n">func_globals</span><span class="p">[</span><span class="n">db</span><span class="p">]</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+</span><span class="line">                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+</span><span class="line">                    <span class="k">pass</span>
+</span><span class="line">            <span class="k">return</span> <span class="n">result</span>
+</span><span class="line">        <span class="k">return</span> <span class="n">_call</span>
+</span><span class="line">    <span class="k">return</span> <span class="n">_deco</span>
+</span></pre></figure></notextile></div>
+
+<p>PS: 在我测试的时候发现,使用Mongo()类生成的db，操作完会自动关闭连接了…</p>
+
+<h4 id="section-1">怎么样给一个很大的文件每个函数都加上面的这个装饰器？</h4>
+
+<p>项目每个脚本的代码都很长，函数也很多，并且每个函数里面使用的db的名字都不同,比如有一些一些风格:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">db</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">find_one</span><span class="p">()</span>
+</span><span class="line"><span class="n">s_db</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">test</span><span class="o">=</span><span class="s">&#39;test&#39;</span><span class="p">))</span>
+</span><span class="line"><span class="o">...</span>
+</span></pre></figure></notextile></div>
+
+<p>每个函数加一个装饰器,好费劲，就想能不能自动分辨文件中的函数然后给他们自动加装饰器，然后就有以下的一个做好的脚本:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="c">#coding=utf-8</span>
+</span><span class="line">
+</span><span class="line"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+</span><span class="line"><span class="kn">import</span> <span class="nn">copy</span>
+</span><span class="line"><span class="kn">import</span> <span class="nn">types</span>
+</span><span class="line">
+</span><span class="line"><span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span><span class="line">    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+</span><span class="line">    <span class="k">def</span> <span class="nf">_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span class="line">        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span class="line">        <span class="k">print</span> <span class="s">&#39;wrap you&#39;</span>
+</span><span class="line">        <span class="k">return</span> <span class="n">result</span>
+</span><span class="line">    <span class="k">return</span> <span class="n">_call</span>
+</span><span class="line">
+</span><span class="line"><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+</span><span class="line">    <span class="k">print</span> <span class="s">&#39;test&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">def</span> <span class="nf">test2</span><span class="p">():</span>
+</span><span class="line">    <span class="k">print</span> <span class="s">&#39;test3&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="n">glocal_dict</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="nb">globals</span><span class="p">())</span>
+</span><span class="line">
+</span><span class="line"><span class="n">func_list</span> <span class="o">=</span> <span class="p">[[</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">glocal_dict</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;__&#39;</span><span class="p">)]</span>
+</span><span class="line">
+</span><span class="line"><span class="k">for</span> <span class="n">func_name</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">func_list</span><span class="p">:</span>
+</span><span class="line">    <span class="k">if</span>  <span class="n">func_name</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;wraps&#39;</span><span class="p">,</span> <span class="s">&#39;copy&#39;</span><span class="p">,</span> <span class="s">&#39;wrap&#39;</span><span class="p">,</span> <span class="s">&#39;types&#39;</span><span class="p">]:</span>
+</span><span class="line">        <span class="k">continue</span>
+</span><span class="line">    <span class="k">if</span> <span class="n">types</span><span class="o">.</span><span class="n">FunctionType</span>  <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span><span class="line">        <span class="nb">globals</span><span class="p">()[</span><span class="n">func_name</span><span class="p">]</span><span class="o">=</span> <span class="n">wrap</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+</span></pre></figure></notextile></div>
+
+<p>这样当你调用的时候自动就有了装饰器:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_bash"><span class="line">&gt;&gt;&gt; from <span class="nb">test </span>import <span class="nb">test</span>
+</span><span class="line">&gt;&gt;&gt; <span class="nb">test</span><span class="o">()</span>
+</span><span class="line"><span class="nb">test</span>
+</span><span class="line">wrap you
+</span><span class="line">&gt;&gt;&gt;
+</span></pre></figure></notextile></div>
 ]]></content>
   </entry>
   
