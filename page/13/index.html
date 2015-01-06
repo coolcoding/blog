@@ -127,6 +127,78 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/archives/guanyuhmacyanjiu/">关于hmac研究</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-13T00:00:00+08:00" pubdate data-updated="true">Jun 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>前言：hmac是一个加密签名和验证的消息的模块，主要验证数据在传送或者储存后是否完整，基本思路是生成一个共享密钥结合实际数据的加密hash</p>
+
+<p><pre class="sh_python">
+import hmac
+import hashlib</p>
+
+<p>digest_maker = hmac.new('secret-shared-key-goes-here', '', hashlib.sha1) #默认使用md5，将第三个参数置空，但是md5可能发生碰撞（2个文件的md5值一样），这里用sha1</p>
+
+<p>f = open('text1', 'rb')
+try:
+    while True:
+        block = f.read(1024)
+        if not block:
+            break
+        digest_maker.update(block)
+finally:
+    f.close()</p>
+
+<p>print digest_maker.hexdigest()
+</pre></p>
+
+<p><pre class="sh_python">
+import base64
+import hmac
+import hashlib</p>
+
+<p>f = open('text1', 'rb')
+try:
+    body = f.read()
+finally:
+    f.close()</p>
+
+<p>digest = hmac.new('secret-shared-key-goes-here', body, hashlib.sha1).digest() #有些场景（比如http post等）不使用update，而直接把内容放到new()
+print base64.encodestring(digest) #有些服务或者内容包含非ascii字符或者提供的网络服务使用<tt>base64</tt>编码的二进制版本，那么就要编码一下
+</pre></p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/archives/guanyuheapq/">关于heapq</a></h1>
     
     
@@ -1415,86 +1487,6 @@ MyObject(5)</p>
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/archives/guanyufnmatchyanjiu/">关于fnmatch研究</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-12T00:00:00+08:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>前言：fnmatch是一个底层比较文件名匹配的模块</p>
-
-<p><pre class="sh_python">
-import fnmatch</p>
-
-<p>pattern = 'FNMATCH_*.PY'  #要匹配的字符串
-print 'Pattern :', pattern
-print</p>
-
-<p>for name in ['test.py','fnmatch_fn.py','FNMATCH_fn.PY']:
-    print 'Filename: %-25s %s' % (name, fnmatch.fnmatch(name, pattern))
-</pre></p>
-
-<p>执行结果：</p>
-
-<p>dongwm@linux-dongwm:~&gt; python test.py
-Pattern : FNMATCH_*.PY</p>
-
-<p>Filename: test.py                   False
-Filename: fnmatch_fn.py             False #大小写敏感，失败
-Filename: FNMATCH_fn.PY             True  #匹配成功</p>
-
-<p>注：要强制区分大小写的比较，无论文件系统和操作系统设置，使用<tt>fnmatchcas</tt>e</p>
-
-<p><pre class="sh_python">
-import fnmatch</p>
-
-<p>pattern = 'FNMATCH_*.PY'
-list = ['test.py','fnmatch_fn.py','FNMATCH_fn.PY']
-print 'Matches :', fnmatch.filter(list, pattern) #过滤，只留下匹配项
-</pre></p>
-
-<p><pre class="sh_python">
-import fnmatch</p>
-
-<p>pattern = 'FNMATCH_*.PY'
-print 'Pattern :', pattern
-print 'Regex   :', fnmatch.translate(pattern)  # 这事公共的API，用来转换glob模式到一个正则表达式
-</pre></p>
-
-<p>执行：</p>
-
-<p>dongwm@linux-dongwm:~&gt; python test.py
-Pattern : FNMATCH_*.PY
-Regex   : FNMATCH\_.*&#46;PY\Z(?ms)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/page/14/">&larr; Older</a></li>
@@ -1510,6 +1502,10 @@ Regex   : FNMATCH\_.*&#46;PY\Z(?ms)</p>
     <section class="well">
   <ul id="recent_posts" class="nav nav-list">
     <li class="nav-header">最近发布</li>
+    
+      <li class="post">
+        <a href="/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-san-ipython/">ipython的一些高级用法(三)Cython和ipython的cythonmagic</a>
+      </li>
     
       <li class="post">
         <a href="/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-er/">ipython的一些高级用法(二)</a>
@@ -1545,10 +1541,6 @@ Regex   : FNMATCH\_.*&#46;PY\Z(?ms)</p>
     
       <li class="post">
         <a href="/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/">分享一个准备给公司讲python高级编程的slide</a>
-      </li>
-    
-      <li class="post">
-        <a href="/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/">使用grafana和Diamond构建Graphite监控系统</a>
       </li>
     
   </ul>
@@ -1622,7 +1614,7 @@ Regex   : FNMATCH\_.*&#46;PY\Z(?ms)</p>
   </div>
   <footer role="contentinfo" class="page-footer"><hr>
 <p>
-  Copyright &copy; 2014 - Dongweiming -
+  Copyright &copy; 2015 - Dongweiming -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

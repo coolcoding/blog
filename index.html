@@ -127,6 +127,145 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-san-ipython/">ipython的一些高级用法(三)Cython和ipython的cythonmagic</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-12T10:28:00+08:00" pubdate data-updated="true">Dec 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h4 id="cythonipythoncython">今天我们来讨论下Cython和用ipython执行写Cython代码.</h4>
+<p>Cython是什么?它是能使用c的数据结构和标准库的python. cython可以运行绝大多部分的python代码, 我们要改变的就是对于其中的参数或者变量的类型, 以及调用调用的对应的
+标准库的不同(其实你会发现不同语言的标准库重叠性很高,甚至方法的接口参数都一样–只是语法不同). 也就是在你不怎么会写C扩展的时候帮你生成c代码并编译</p>
+
+<h4 id="cython">首先先学习下Cython</h4>
+
+<p><a href="http://docs.cython.org/src/tutorial/cython_tutorial.html">cython官网</a>的文档写的很好了, 但是好多人喜欢拿来主义.
+我这里直接来个生产环境中的例子,顺便下面对比下效率.</p>
+
+<p>我假设一个需求: 有个15G的日志, 我想统计nginx日志里面2014-11-30使用ipad/iphone访问xx业务(这里用a.dongwm.com), 请求返回码是200的uv.</p>
+
+<p>每条日志假设是这样的:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_bash"><span class="line">221.247.41.114 daS0keuySWUDg:834717:7RORVuSQYDT3Y <span class="s2">&quot;30/Nov/2014:01:01:45 +0800&quot;</span> <span class="s2">&quot;GET /count/?a=2 HTTP/1.1&quot;</span> 200 209 <span class="s2">&quot;http://a.dongwm.com/test/&quot;</span>Mozilla/5.1 <span class="o">(</span>Windows NT 6.1; WOW64<span class="o">)</span> AppleWebKit/537.36 <span class="o">(</span>KHTML, like Gecko<span class="o">)</span> Chrome/31.0.1650.63 Safari/537.36<span class="err">&quot;</span> 0.003 fetch_app4
+</span></pre></figure></notextile></div>
+
+<p>说明: 其中834717是用户的uid. 但是也需要考虑匿名用户, 匿名用户标示了一个cid(cookie id)这里是7RORVuSQYDT3Y</p>
+
+<p>我们不讨论这种用python程序算uv的用法, 只是表现下在日志较大的时候效率提升的效果</p>
+
+<h5 id="python">好把, 先用python实现:</h5>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span><span class="line">    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;access_log-20141201&#39;</span><span class="p">)</span>
+</span><span class="line">    <span class="n">uv</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span><span class="line">    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">xreadlines</span><span class="p">():</span>
+</span><span class="line">        <span class="n">data</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;&quot;&#39;</span><span class="p">)</span>
+</span><span class="line">        <span class="n">_</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">bid</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="p">)</span>
+</span><span class="line">        <span class="n">id_</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class="line">        <span class="k">if</span> <span class="n">uid</span><span class="p">:</span>
+</span><span class="line">            <span class="k">if</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">uv</span><span class="p">:</span>
+</span><span class="line">                <span class="k">continue</span>
+</span><span class="line">            <span class="n">id_</span> <span class="o">=</span> <span class="n">uid</span>
+</span><span class="line">        <span class="k">elif</span> <span class="n">bid</span><span class="p">:</span>
+</span><span class="line">            <span class="k">if</span> <span class="n">bid</span> <span class="ow">in</span> <span class="n">uv</span><span class="p">:</span>
+</span><span class="line">                <span class="k">continue</span>
+</span><span class="line">            <span class="n">id_</span> <span class="o">=</span> <span class="n">bid</span>
+</span><span class="line">
+</span><span class="line">        <span class="n">ua</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span><span class="line">        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;30/Nov/2014&#39;</span><span class="p">)</span> <span class="ow">and</span> \
+</span><span class="line">           <span class="s">&#39;http://a.dongwm.com/&#39;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ow">and</span> \
+</span><span class="line">           <span class="p">(</span><span class="s">&#39;iphone&#39;</span> <span class="ow">in</span> <span class="n">ua</span> <span class="ow">or</span> <span class="s">&#39;ipad&#39;</span> <span class="ow">in</span> <span class="n">ua</span><span class="p">)</span> <span class="ow">and</span> \
+</span><span class="line">           <span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;200&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+</span><span class="line">            <span class="n">uv</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">id_</span><span class="p">)</span>
+</span><span class="line">    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class="line">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">uv</span><span class="p">)</span>
+</span><span class="line">
+</span><span class="line"><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class="line">    <span class="n">main</span><span class="p">()</span>
+</span></pre></figure></notextile></div>
+
+<p>效果是这样:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">parse</span>
+</span><span class="line">
+</span><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="o">%</span><span class="n">time</span> <span class="n">parse</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</span><span class="line"><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">46</span><span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">9.83</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">56</span><span class="n">s</span>
+</span><span class="line"><span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">59</span><span class="n">s</span>
+</span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">4090</span>
+</span></pre></figure></notextile></div>
+
+<h5 id="pyxc---">使用.pyx后缀生成c扩展 - 完全不修改数据结构</h5>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="err">$</span><span class="n">cat</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+</span><span class="line"><span class="c"># coding=utf-8</span>
+</span><span class="line">
+</span><span class="line">
+</span><span class="line"><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">Cython.Build</span> <span class="kn">import</span> <span class="n">cythonize</span>
+</span><span class="line">
+</span><span class="line"><span class="n">setup</span><span class="p">(</span>
+</span><span class="line">    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;parse&#39;</span><span class="p">,</span>
+</span><span class="line">    <span class="n">ext_modules</span> <span class="o">=</span> <span class="n">cythonize</span><span class="p">(</span><span class="s">&quot;parse.pyx&quot;</span><span class="p">),</span>
+</span><span class="line"><span class="p">)</span>
+</span><span class="line"><span class="err">$</span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="o">--</span><span class="n">inplace</span> <span class="c"># 这样就在当前目录生成了一个parse.so</span>
+</span></pre></figure></notextile></div>
+
+<p>我们再看下效果:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">parse</span>
+</span><span class="line">
+</span><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="o">%</span><span class="n">time</span> <span class="n">parse</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</span><span class="line"><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">26</span><span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mf">7.62</span> <span class="n">s</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">34</span><span class="n">s</span>
+</span><span class="line"><span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">36</span><span class="n">s</span>
+</span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">4090</span>
+</span><span class="line">
+</span><span class="line"><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">(</span><span class="mi">106</span> <span class="o">-</span> <span class="mi">85</span><span class="p">)</span> <span class="o">/</span> <span class="mi">85</span>
+</span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mf">0.24705882352941178</span>
+</span></pre></figure></notextile></div>
+
+<p>总结1: 哪怕什么都不修改, 转换成.so 也会让速度有提升. 这里是24%多</p>
+
+<p>然后有人问, 就这几秒钟的提升有必要么?</p>
+
+<p>好吧我告诉你, 这个日志只是某一天,
+某集群服务器上被hash后的一个日志. 一天的量上T, 你要经常算PV, UV, 转化率等等指标.
+速度提升24%且完全没有增加工作量, 感觉怎么样?</p>
+
+<h4 id="section">参考</h4>
+
+<ul>
+  <li>https://python.g-node.org/python-summerschool-2011/_media/materials/cython/cython-slides.pdf</li>
+  <li>http://docs.cython.org/src/tutorial/cython_tutorial.html</li>
+</ul>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-er/">Ipython的一些高级用法(二)</a></h1>
     
     
@@ -626,7 +765,12 @@ D:,l:,r,s:,T:,q 也就是-r和-q不需要参数其他的都是参数 类似 %pru
 </span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">29</span><span class="p">]:</span> <span class="p">(</span><span class="mf">0.104384</span><span class="p">,</span> <span class="mf">0.13980499999999998</span><span class="p">,</span> <span class="mf">0.104384</span><span class="p">)</span>
 </span></pre></figure></notextile></div>
 
-<p>更多地关于并行计算请看这里: <a href="http://nbviewer.ipython.org/url/www.astro.washington.edu/users/vanderplas/Astr599/notebooks/21_IPythonParallel.ipynb">Parallel Computing with IPython</a></p>
+<p>更多地关于并行计算请看这里:</p>
+
+<ul>
+  <li><a href="http://nbviewer.ipython.org/url/www.astro.washington.edu/users/vanderplas/Astr599/notebooks/21_IPythonParallel.ipynb">Parallel Computing with IPython</a></li>
+  <li><a href="http://nbviewer.ipython.org/github/minrk/IPython-parallel-tutorial">IPython-parallel-tutorial</a></li>
+</ul>
 </div>
   
   
@@ -1998,461 +2142,6 @@ D:,l:,r,s:,T:,q 也就是-r和-q不需要参数其他的都是参数 类似 %pru
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/">使用grafana和Diamond构建Graphite监控系统</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-01T13:56:00+08:00" pubdate data-updated="true">Apr 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h4 id="section">前言</h4>
-
-<p>在豆瓣开源项目里面有个<a href="https://github.com/douban/graph-index">graph-index</a>, 提供监控服务器的状态的目录索引,基于<a href="https://github.com/vimeo/graph-explorer">graph-explorer</a>. 类似衍生物很多,就包括我要说的本文用到的项目.先看看我的测试环境的几个截图</p>
-
-<p><img src="https://dl.dropboxusercontent.com/u/95512723/images/040101.png" alt="" />
-<img src="https://dl.dropboxusercontent.com/u/95512723/images/040102.png" alt="" /></p>
-
-<h4 id="section-1">一些关键词说明</h4>
-
-<ol>
-  <li>graphite-web # graphite组件之一, 提供一个django的可以高度扩展的实时画图系统</li>
-  <li>Whisper # graphite组件之一, 实现数据库存储. 它比rrdtool要慢，因为whisper是使用python写的，而rrdtool是使用C写的。然而速度之间的差异很小</li>
-  <li>Carbon # 数据收集的结果会传给它, 它会解析数据让它可用于实时绘图. 它默认可会提示一些类型的数据,监听2003和2004端口</li>
-  <li><a href="https://github.com/BrightcoveOS/Diamond">Diamond</a> # 他是一个提供了大部分数据收集结果功能的结合,类似cpu, load, memory以及mongodb,rabbitmq,nginx等指标.这样就不需要我大量的写各种类型,因为它都已经提供,并且它提供了可扩展的自定义类型(最后我会展示一个我自己定义的类型)</li>
-  <li><a href="https://github.com/torkelo/grafana">grafana</a> # 这个面板是基于node, <a href="https://github.com/elasticsearch/kibana">kibana</a>,并且可以在线编辑. 因为是kibana,所以也用到了开元搜索框架<a href="https://github.com/elasticsearch/elasticsearch">elasticsearch</a></li>
-</ol>
-
-<p>PS: 其他工具可以参考这里<a href="http://graphite.readthedocs.org/en/1.0/tools.html">Tools That Work With Graphite</a></p>
-
-<h4 id="section-2">原理解析</h4>
-
-<p>我没有看实际全部代码,大概的流程是这样的:</p>
-
-<ol>
-  <li>启动Carbon-cache等待接收数据(carbon用的是twisted)</li>
-  <li>启动graphite-web给grafana提供实时绘图数据api</li>
-  <li>启动grafana,调用graphite-web接口获取数据展示出来</li>
-  <li>Diamond定期获取各类要监测的类型数据发给carbon(默认是5分钟,默认一小时自动重载一次配置)</li>
-</ol>
-
-<h4 id="section-3">实现我这个系统需要做的事情</h4>
-
-<h5 id="graphitecentos">安装graphite相关组件(我这里用的是centos)</h5>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">yum --enablerepo=epel install graphite-web python-carbon -y</span></pre></figure></notextile></div>
-
-<h6 id="grafana">安装grafana需要的组件</h6>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line"># 增加elasticsearch的repo:
-</span><span class="line">sudo  rpm --import http://packages.elasticsearch.org/GPG-KEY-elasticsearch
-</span><span class="line">$cat /etc/yum.repos.d/elasticsearch.repo
-</span><span class="line">[elasticsearch-1.0]
-</span><span class="line">name=Elasticsearch repository for 1.0.x packages
-</span><span class="line">baseurl=http://packages.elasticsearch.org/elasticsearch/1.0/centos
-</span><span class="line">gpgcheck=1
-</span><span class="line">gpgkey=http://packages.elasticsearch.org/GPG-KEY-elasticsearch
-</span><span class="line">enabled=1
-</span><span class="line">sudo yum install nginx nodejs npm java-1.7.0-openjdk elasticsearch -y</span></pre></figure></notextile></div>
-
-<h5 id="diamondgrafana">下载Diamond和grafana</h5>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">git clone https://github.com/torkelo/grafana
-</span><span class="line">cd grafana
-</span><span class="line">sudo npm install
-</span><span class="line">sudo pip install django-cors-headers configobj # 这可能因为我环境中已经有了一些模块，看缺什么安装什么
-</span><span class="line">git clone https://github.com/BrightcoveOS/Diamond
-</span><span class="line">cd Diamond</span></pre></figure></notextile></div>
-<p>##### 开始修改配置</p>
-
-<ol>
-  <li>添加cors支持</li>
-</ol>
-
-<p>在/usr/lib/python2.6/site-packages/graphite/app_settings.py:</p>
-
-<p>INSTALLED_APPS里面添加corsheaders, MIDDLEWARE_CLASSES里面添加’corsheaders.middleware.CorsMiddleware’</p>
-
-<ol>
-  <li>使用nginx使用grafana</li>
-</ol>
-
-<p>在nginx.conf 添加类型的一段配置</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">server {
-</span><span class="line">  listen                *:80 ;
-</span><span class="line">
-</span><span class="line">  server_name           monitor.dongwm.com; # 我用了虚拟主机
-</span><span class="line">  access_log            /var/log/nginx/kibana.myhost.org.access.log;
-</span><span class="line">
-</span><span class="line">  location / {
-</span><span class="line">    add_header 'Access-Control-Allow-Origin' "$http_origin";
-</span><span class="line">    add_header 'Access-Control-Allow-Credentials' 'true';
-</span><span class="line">    root  /home/operation/dongwm/grafana/src;
-</span><span class="line">    index  index.html  index.htm;
-</span><span class="line">  }
-</span><span class="line">
-</span><span class="line">  location ~ ^/_aliases$ {
-</span><span class="line">    proxy_pass http://127.0.0.1:9200;
-</span><span class="line">    proxy_read_timeout 90;
-</span><span class="line">  }
-</span><span class="line">  location ~ ^/_nodes$ {
-</span><span class="line">    proxy_pass http://127.0.0.1:9200;
-</span><span class="line">    proxy_read_timeout 90;
-</span><span class="line">  }
-</span><span class="line">  location ~ ^/.*/_search$ {
-</span><span class="line">    proxy_pass http://127.0.0.1:9200;
-</span><span class="line">    proxy_read_timeout 90;
-</span><span class="line">  }
-</span><span class="line">  location ~ ^/.*/_mapping$ {
-</span><span class="line">    proxy_pass http://127.0.0.1:9200;
-</span><span class="line">    proxy_read_timeout 90;
-</span><span class="line">  }
-</span><span class="line">
-</span><span class="line">  # Password protected end points
-</span><span class="line">  location ~ ^/kibana-int/dashboard/.*$ {
-</span><span class="line">    proxy_pass http://127.0.0.1:9200;
-</span><span class="line">    proxy_read_timeout 90;
-</span><span class="line">    limit_except GET {
-</span><span class="line">      proxy_pass http://127.0.0.1:9200;
-</span><span class="line">      auth_basic "Restricted";
-</span><span class="line">      auth_basic_user_file /etc/nginx/conf.d/dongwm.htpasswd;
-</span><span class="line">    }
-</span><span class="line">  }
-</span><span class="line">  location ~ ^/kibana-int/temp.*$ {
-</span><span class="line">    proxy_pass http://127.0.0.1:9200;
-</span><span class="line">    proxy_read_timeout 90;
-</span><span class="line">    limit_except GET {
-</span><span class="line">      proxy_pass http://127.0.0.1:9200;
-</span><span class="line">      auth_basic "Restricted";
-</span><span class="line">      auth_basic_user_file /etc/nginx/conf.d/dongwm.htpasswd;
-</span><span class="line">    }
-</span><span class="line">  }</span></pre></figure></notextile></div>
-
-<ol>
-  <li>修改grafana的src/config.js:</li>
-</ol>
-
-<p>graphiteUrl: “http://”+window.location.hostname+”:8020”, # 下面会定义graphite-web启动在8020端口</p>
-
-<ol>
-  <li>修改Diamond的配置conf/diamond.conf</li>
-</ol>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">cp conf/diamond.conf.example conf/diamond.conf</span></pre></figure></notextile></div>
-
-<p>主要修改监听的carbon服务器和端口,以及要监控什么类型的数据,看我的一个全文配置</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">################################################################################
-</span><span class="line"># Diamond Configuration File
-</span><span class="line">################################################################################
-</span><span class="line">
-</span><span class="line">################################################################################
-</span><span class="line">### Options for the server
-</span><span class="line">[server]
-</span><span class="line">
-</span><span class="line"># Handlers for published metrics.
-</span><span class="line">handlers = diamond.handler.graphite.GraphiteHandler, diamond.handler.archive.ArchiveHandler
-</span><span class="line">
-</span><span class="line"># User diamond will run as
-</span><span class="line"># Leave empty to use the current user
-</span><span class="line">user =
-</span><span class="line">
-</span><span class="line"># Group diamond will run as
-</span><span class="line"># Leave empty to use the current group
-</span><span class="line">group =
-</span><span class="line">
-</span><span class="line"># Pid file
-</span><span class="line">pid_file = /home/dongwm/logs/diamond.pid # 换了pid的地址,因为我的服务都不会root启动
-</span><span class="line">
-</span><span class="line"># Directory to load collector modules from
-</span><span class="line">collectors_path = /home/dongwm/Diamond/src/collectors # 收集器的目录,这个/home/dongwm/Diamond就是克隆代码的地址
-</span><span class="line">
-</span><span class="line"># Directory to load collector configs from
-</span><span class="line">collectors_config_path = /home/dongwm/Diamond/src/collectors
-</span><span class="line">
-</span><span class="line"># Directory to load handler configs from
-</span><span class="line">handlers_config_path = /home/dongwm/Diamond/src/diamond/handler
-</span><span class="line">
-</span><span class="line">handlers_path = /home/dongwm/Diamond/src/diamond/handler
-</span><span class="line">
-</span><span class="line"># Interval to reload collectors
-</span><span class="line">collectors_reload_interval = 3600 # 收集器定期会重载看有没有配置更新
-</span><span class="line">
-</span><span class="line">################################################################################
-</span><span class="line">### Options for handlers
-</span><span class="line">[handlers]
-</span><span class="line">
-</span><span class="line"># daemon logging handler(s)
-</span><span class="line">keys = rotated_file
-</span><span class="line">
-</span><span class="line">### Defaults options for all Handlers
-</span><span class="line">[[default]]
-</span><span class="line">
-</span><span class="line">[[ArchiveHandler]]
-</span><span class="line">
-</span><span class="line"># File to write archive log files
-</span><span class="line">log_file = /home/dongwm/logs/diamond_archive.log
-</span><span class="line">
-</span><span class="line"># Number of days to keep archive log files
-</span><span class="line">days = 7
-</span><span class="line">
-</span><span class="line">[[GraphiteHandler]]
-</span><span class="line">### Options for GraphiteHandler
-</span><span class="line">
-</span><span class="line"># Graphite server host
-</span><span class="line">host = 123.126.1.11
-</span><span class="line">
-</span><span class="line"># Port to send metrics to
-</span><span class="line">port = 2003
-</span><span class="line">
-</span><span class="line"># Socket timeout (seconds)
-</span><span class="line">timeout = 15
-</span><span class="line">
-</span><span class="line"># Batch size for metrics
-</span><span class="line">batch = 1
-</span><span class="line">
-</span><span class="line">[[GraphitePickleHandler]]
-</span><span class="line">### Options for GraphitePickleHandler
-</span><span class="line">
-</span><span class="line"># Graphite server host
-</span><span class="line">host = 123.126.1.11
-</span><span class="line">
-</span><span class="line"># Port to send metrics to
-</span><span class="line">port = 2004
-</span><span class="line">
-</span><span class="line"># Socket timeout (seconds)
-</span><span class="line">timeout = 15
-</span><span class="line">
-</span><span class="line"># Batch size for pickled metrics
-</span><span class="line">batch = 256
-</span><span class="line">
-</span><span class="line">[[MySQLHandler]]
-</span><span class="line">### Options for MySQLHandler
-</span><span class="line">
-</span><span class="line"># MySQL Connection Info 这个可以你的会不同
-</span><span class="line">hostname    = 127.0.0.1
-</span><span class="line">port        = 3306
-</span><span class="line">username    = root
-</span><span class="line">password    =
-</span><span class="line">database    = diamond
-</span><span class="line">table       = metrics
-</span><span class="line"># INT UNSIGNED NOT NULL
-</span><span class="line">col_time    = timestamp
-</span><span class="line"># VARCHAR(255) NOT NULL
-</span><span class="line">col_metric  = metric
-</span><span class="line"># VARCHAR(255) NOT NULL
-</span><span class="line">col_value   = value
-</span><span class="line">
-</span><span class="line">[[StatsdHandler]]
-</span><span class="line">host = 127.0.0.1
-</span><span class="line">port = 8125
-</span><span class="line">
-</span><span class="line">[[TSDBHandler]]
-</span><span class="line">host = 127.0.0.1
-</span><span class="line">port = 4242
-</span><span class="line">timeout = 15
-</span><span class="line">
-</span><span class="line">[[LibratoHandler]]
-</span><span class="line">user = user@example.com
-</span><span class="line">apikey = abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz01
-</span><span class="line">
-</span><span class="line">[[HostedGraphiteHandler]]
-</span><span class="line">apikey = abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz01
-</span><span class="line">timeout = 15
-</span><span class="line">batch = 1
-</span><span class="line">
-</span><span class="line"># And any other config settings from GraphiteHandler are valid here
-</span><span class="line">
-</span><span class="line">[[HttpPostHandler]]
-</span><span class="line">
-</span><span class="line">### Urp to post the metrics
-</span><span class="line">url = http://localhost:8888/
-</span><span class="line">### Metrics batch size
-</span><span class="line">batch = 100
-</span><span class="line">
-</span><span class="line">
-</span><span class="line">################################################################################
-</span><span class="line">### Options for collectors
-</span><span class="line">[collectors]
-</span><span class="line">[[TencentCollector]] # 本来[collectors]下试没有东西的,这个是我定制的一个类型
-</span><span class="line">ttype = server
-</span><span class="line">[[MongoDBCollector]] # 一般情况,有一些类型是默认enabled = True,也就是启动的,但是大部分是默认不启动《需要显示指定True
-</span><span class="line">enabled = True
-</span><span class="line">host = 127.0.0.1 # 每种类型的参数不同
-</span><span class="line">[[TCPCollector]]
-</span><span class="line">enabled = True
-</span><span class="line">[[NetworkCollector]]
-</span><span class="line">enabled = True
-</span><span class="line">[[NginxCollector]]
-</span><span class="line">enabled = False # 没开启nginx_status 开启了也没用
-</span><span class="line">[[ SockstatCollector]]
-</span><span class="line">enabled = True
-</span><span class="line">[[default]]
-</span><span class="line">### Defaults options for all Collectors
-</span><span class="line">
-</span><span class="line"># Uncomment and set to hardcode a hostname for the collector path
-</span><span class="line"># Keep in mind, periods are seperators in graphite
-</span><span class="line"># hostname = my_custom_hostname
-</span><span class="line">
-</span><span class="line"># If you prefer to just use a different way of calculating the hostname
-</span><span class="line"># Uncomment and set this to one of these values:
-</span><span class="line">
-</span><span class="line"># smart             = Default. Tries fqdn_short. If that's localhost, uses hostname_short
-</span><span class="line">
-</span><span class="line"># fqdn_short        = Default. Similar to hostname -s
-</span><span class="line"># fqdn              = hostname output
-</span><span class="line"># fqdn_rev          = hostname in reverse (com.example.www)
-</span><span class="line">
-</span><span class="line"># uname_short       = Similar to uname -n, but only the first part
-</span><span class="line"># uname_rev         = uname -r in reverse (com.example.www)
-</span><span class="line">
-</span><span class="line"># hostname_short    = `hostname -s`
-</span><span class="line"># hostname          = `hostname`
-</span><span class="line"># hostname_rev      = `hostname` in reverse (com.example.www)
-</span><span class="line">
-</span><span class="line"># hostname_method = smart
-</span><span class="line">
-</span><span class="line"># Path Prefix and Suffix
-</span><span class="line"># you can use one or both to craft the path where you want to put metrics
-</span><span class="line"># such as: %(path_prefix)s.$(hostname)s.$(path_suffix)s.$(metric)s
-</span><span class="line"># path_prefix = servers
-</span><span class="line"># path_suffix =
-</span><span class="line">
-</span><span class="line"># Path Prefix for Virtual Machines
-</span><span class="line"># If the host supports virtual machines, collectors may report per
-</span><span class="line"># VM metrics. Following OpenStack nomenclature, the prefix for
-</span><span class="line"># reporting per VM metrics is "instances", and metric foo for VM
-</span><span class="line"># bar will be reported as: instances.bar.foo...
-</span><span class="line"># instance_prefix = instances
-</span><span class="line">
-</span><span class="line"># Default Poll Interval (seconds)
-</span><span class="line"># interval = 300
-</span><span class="line">
-</span><span class="line">################################################################################
-</span><span class="line">### Options for logging
-</span><span class="line"># for more information on file format syntax:
-</span><span class="line"># http://docs.python.org/library/logging.config.html#configuration-file-format
-</span><span class="line">
-</span><span class="line">[loggers]
-</span><span class="line">
-</span><span class="line">keys = root
-</span><span class="line">
-</span><span class="line"># handlers are higher in this config file, in:
-</span><span class="line"># [handlers]
-</span><span class="line"># keys = ...
-</span><span class="line">
-</span><span class="line">[formatters]
-</span><span class="line">
-</span><span class="line">keys = default
-</span><span class="line">
-</span><span class="line">[logger_root]
-</span><span class="line">
-</span><span class="line"># to increase verbosity, set DEBUG
-</span><span class="line">level = INFO
-</span><span class="line">handlers = rotated_file
-</span><span class="line">propagate = 1
-</span><span class="line">
-</span><span class="line">[handler_rotated_file]
-</span><span class="line">
-</span><span class="line">class = handlers.TimedRotatingFileHandler
-</span><span class="line">level = DEBUG
-</span><span class="line">formatter = default
-</span><span class="line"># rotate at midnight, each day and keep 7 days
-</span><span class="line">args = ('/home/dongwm/logs/diamond.log', 'midnight', 1, 7)
-</span><span class="line">
-</span><span class="line">[formatter_default]
-</span><span class="line">
-</span><span class="line">format = [%(asctime)s] [%(threadName)s] %(message)s
-</span><span class="line">datefmt =</span></pre></figure></notextile></div>
-
-<h5 id="section-4">启动相关服务</h5>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">sudo /etc/init.d/nginx reload
-</span><span class="line">sudo /sbin/chkconfig --add elasticsearch
-</span><span class="line">sudo service elasticsearch start
-</span><span class="line">sudo service carbon-cache restart
-</span><span class="line">sudo python /usr/lib/python2.6/site-packages/graphite/manage.py runserver 0.0.0.0:8020 # 启动graphite-web到8020端口</span></pre></figure></notextile></div>
-
-<h6 id="agentdiamond">在每个要搜集信息的agent上面安装Diamond,并启动:</h6>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">cd /home/dongm/Diamond
-</span><span class="line">python ./bin/diamond --configfile=conf/diamond.conf
-</span><span class="line">
-</span><span class="line"># PS: 也可以添加 -l -f在前台显示</span></pre></figure></notextile></div>
-
-<h5 id="tencentcollector">自定义数据搜集类型，也就是上面的TencentCollector</h5>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line"># coding=utf-8 
-</span><span class="line">
-</span><span class="line">"""
-</span><span class="line">获取腾讯微博爬虫的业务指标
-</span><span class="line">"""
-</span><span class="line">
-</span><span class="line">import diamond.collector
-</span><span class="line">import pymongo
-</span><span class="line">from pymongo.errors import ConnectionFailure
-</span><span class="line">
-</span><span class="line">
-</span><span class="line">class TencentCollector(diamond.collector.Collector): # 需要继承至diamond.collector.Collector
-</span><span class="line">    PATH = '/home/dongwm/tencent_data'
-</span><span class="line">    
-</span><span class="line">    def get_default_config(self):
-</span><span class="line">        config = super(TencentCollector, self).get_default_config()
-</span><span class="line">        config.update({
-</span><span class="line">            'enabled':  'True',
-</span><span class="line">            'path':     'tencent',
-</span><span class="line">            'method':   'Threaded',
-</span><span class="line">            'ttype':    'agent' # 服务类型 包含agent和server
-</span><span class="line">        })
-</span><span class="line">        return config
-</span><span class="line">
-</span><span class="line">    def collect(self):
-</span><span class="line">        ttype = self.config['ttype']
-</span><span class="line">        if ttype == 'server':
-</span><span class="line">            try:
-</span><span class="line">                db = pymongo.MongoClient()['tmp']
-</span><span class="line">            except ConnectionFailure:
-</span><span class="line">                return
-</span><span class="line">            now_count = db.data.count()
-</span><span class="line">            try:
-</span><span class="line">                last_count = db.diamond.find_and_modify(
-</span><span class="line">                    {}, {'$set': {'last': now_count}}, upsert=True)['last']
-</span><span class="line">            except TypeError:
-</span><span class="line">                last_count = 0
-</span><span class="line">            self.publish('count', now_count)
-</span><span class="line">            self.publish('update', abs(last_count - now_count))
-</span><span class="line">        if ttype == 'agent':
-</span><span class="line">            # somethings..........</span></pre></figure></notextile></div>
-
-<h5 id="grafana-rowpanelmetric">添加你要绘图的类型. 这个就是打开grafana, 添加不同的row.给每个添加panel.选择metric的类型就好了</h5>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/page/2/">&larr; Older</a></li>
@@ -2466,6 +2155,10 @@ D:,l:,r,s:,T:,q 也就是-r和-q不需要参数其他的都是参数 类似 %pru
     <section class="well">
   <ul id="recent_posts" class="nav nav-list">
     <li class="nav-header">最近发布</li>
+    
+      <li class="post">
+        <a href="/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-san-ipython/">ipython的一些高级用法(三)Cython和ipython的cythonmagic</a>
+      </li>
     
       <li class="post">
         <a href="/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-er/">ipython的一些高级用法(二)</a>
@@ -2501,10 +2194,6 @@ D:,l:,r,s:,T:,q 也就是-r和-q不需要参数其他的都是参数 类似 %pru
     
       <li class="post">
         <a href="/archives/fen-xiang-%5B%3F%5D-ge-zhun-bei-gei-gong-si-jiang-pythongao-ji-bian-cheng-de-slide/">分享一个准备给公司讲python高级编程的slide</a>
-      </li>
-    
-      <li class="post">
-        <a href="/archives/shi-yong-grafanahe-diamondgou-jian-graphitejian-kong-xi-tong/">使用grafana和Diamond构建Graphite监控系统</a>
       </li>
     
   </ul>
@@ -2578,7 +2267,7 @@ D:,l:,r,s:,T:,q 也就是-r和-q不需要参数其他的都是参数 类似 %pru
   </div>
   <footer role="contentinfo" class="page-footer"><hr>
 <p>
-  Copyright &copy; 2014 - Dongweiming -
+  Copyright &copy; 2015 - Dongweiming -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

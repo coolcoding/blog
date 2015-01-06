@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[分类: cython | 小明明s à domicile]]></title>
+  <link href="http://dongweiming.github.com/blog/blog/categories/cython/atom.xml" rel="self"/>
+  <link href="http://dongweiming.github.com/blog/"/>
+  <updated>2015-01-06T21:32:21+08:00</updated>
+  <id>http://dongweiming.github.com/blog/</id>
+  <author>
+    <name><![CDATA[Dongweiming]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ipython的一些高级用法(三)Cython和ipython的cythonmagic]]></title>
+    <link href="http://dongweiming.github.com/blog/archives/ipythonde-%5B%3F%5D-xie-gao-ji-yong-fa-san-ipython/"/>
+    <updated>2014-12-12T10:28:00+08:00</updated>
+    <id>http://dongweiming.github.com/blog/archives/ipythonde-[?]-xie-gao-ji-yong-fa-san-ipython</id>
+    <content type="html"><![CDATA[<h4 id="cythonipythoncython">今天我们来讨论下Cython和用ipython执行写Cython代码.</h4>
+<p>Cython是什么?它是能使用c的数据结构和标准库的python. cython可以运行绝大多部分的python代码, 我们要改变的就是对于其中的参数或者变量的类型, 以及调用调用的对应的
+标准库的不同(其实你会发现不同语言的标准库重叠性很高,甚至方法的接口参数都一样–只是语法不同). 也就是在你不怎么会写C扩展的时候帮你生成c代码并编译</p>
+
+<h4 id="cython">首先先学习下Cython</h4>
+
+<p><a href="http://docs.cython.org/src/tutorial/cython_tutorial.html">cython官网</a>的文档写的很好了, 但是好多人喜欢拿来主义.
+我这里直接来个生产环境中的例子,顺便下面对比下效率.</p>
+
+<p>我假设一个需求: 有个15G的日志, 我想统计nginx日志里面2014-11-30使用ipad/iphone访问xx业务(这里用a.dongwm.com), 请求返回码是200的uv.</p>
+
+<p>每条日志假设是这样的:</p>
+
+<p><code>bash
+221.247.41.114 daS0keuySWUDg:834717:7RORVuSQYDT3Y "30/Nov/2014:01:01:45 +0800" "GET /count/?a=2 HTTP/1.1" 200 209 "http://a.dongwm.com/test/"Mozilla/5.1 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36" 0.003 fetch_app4
+</code></p>
+
+<p>说明: 其中834717是用户的uid. 但是也需要考虑匿名用户, 匿名用户标示了一个cid(cookie id)这里是7RORVuSQYDT3Y</p>
+
+<p>我们不讨论这种用python程序算uv的用法, 只是表现下在日志较大的时候效率提升的效果</p>
+
+<h5 id="python">好把, 先用python实现:</h5>
+
+<p>```python
+def main():
+    f = open(‘access_log-20141201’)
+    uv = set()
+    for line in f.xreadlines():
+        data = line.split(‘”’)
+        <em>, uid, bid = data[0].split(‘:’)
+        id</em> = None
+        if uid:
+            if uid in uv:
+                continue
+            id_ = uid
+        elif bid:
+            if bid in uv:
+                continue
+            id_ = bid</p>
+
+<pre><code>    ua = data[6].lower()
+    if data[1].startswith('30/Nov/2014') and \
+       'http://a.dongwm.com/' in data[5] and \
+       ('iphone' in ua or 'ipad' in ua) and \
+       data[4].strip().startswith('200') and id_ is not None:
+        uv.add(id_)
+f.close()
+return len(uv)
+</code></pre>
+
+<p>if <strong>name</strong> == ‘<strong>main</strong>’:
+    main()
+```</p>
+
+<p>效果是这样:</p>
+
+<p>```python
+In [1]: import parse</p>
+
+<p>In [2]: %time parse.main()
+CPU times: user 1min 46s, sys: 9.83 s, total: 1min 56s
+Wall time: 1min 59s
+Out[2]: 4090
+```</p>
+
+<h5 id="pyxc---">使用.pyx后缀生成c扩展 - 完全不修改数据结构</h5>
+
+<p>```python
+$cat setup.py
+# coding=utf-8</p>
+
+<p>from distutils.core import setup
+from Cython.Build import cythonize</p>
+
+<p>setup(
+    name = ‘parse’,
+    ext_modules = cythonize(“parse.pyx”),
+)
+$python setup.py build_ext –inplace # 这样就在当前目录生成了一个parse.so
+```</p>
+
+<p>我们再看下效果:</p>
+
+<p>```python
+In [1]: import parse</p>
+
+<p>In [2]: %time parse.main()
+CPU times: user 1min 26s, sys: 7.62 s, total: 1min 34s
+Wall time: 1min 36s
+Out[2]: 4090</p>
+
+<p>In [3]: (106 - 85) / 85
+Out[3]: 0.24705882352941178
+```</p>
+
+<p>总结1: 哪怕什么都不修改, 转换成.so 也会让速度有提升. 这里是24%多</p>
+
+<p>然后有人问, 就这几秒钟的提升有必要么?</p>
+
+<p>好吧我告诉你, 这个日志只是某一天,
+某集群服务器上被hash后的一个日志. 一天的量上T, 你要经常算PV, UV, 转化率等等指标.
+速度提升24%且完全没有增加工作量, 感觉怎么样?</p>
+
+<h4 id="section">参考</h4>
+
+<ul>
+  <li>https://python.g-node.org/python-summerschool-2011/_media/materials/cython/cython-slides.pdf</li>
+  <li>http://docs.cython.org/src/tutorial/cython_tutorial.html</li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>
