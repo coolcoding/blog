@@ -4,7 +4,7 @@
   <title><![CDATA[小明明s à domicile]]></title>
   <link href="http://dongweiming.github.com/blog/atom.xml" rel="self"/>
   <link href="http://dongweiming.github.com/blog/"/>
-  <updated>2015-01-06T21:35:37+08:00</updated>
+  <updated>2015-01-12T18:44:33+08:00</updated>
   <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
@@ -12,6 +12,99 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[推荐[pre-commit/pre-push]: 本地在commit或者push的时候做各种检查(pep8/pylint/pyflakes8)]]></title>
+    <link href="http://dongweiming.github.com/blog/archives/tui-jian-pre-commit-slash-pre-push-ben-di-zai-commithuo-zhe-pushde-shi-hou-zuo-ge-chong-jian-cha-pep8-slash-pylint-slash-pyflakes8/"/>
+    <updated>2015-01-12T18:16:00+08:00</updated>
+    <id>http://dongweiming.github.com/blog/archives/tui-jian-pre-commit-slash-pre-push-ben-di-zai-commithuo-zhe-pushde-shi-hou-zuo-ge-chong-jian-cha-pep8-slash-pylint-slash-pyflakes8</id>
+    <content type="html"><![CDATA[<h4 id="section">前言</h4>
+
+<p>使用git的同学想必都有这样的工作场景-保证生产环境的ci不挂. 也就是检查python是否符合pep8/csslint/jslint/pylint/pyflake8等.
+我在我的emacs配置中加入了这一项<a href="https://github.com/dongweiming/emacs.d/blob/master/custom/py-autopep8.el">py-autopep8</a>,
+就是在保存缓存区的时候把当前缓存区的文本放到一个临时文件, 然后执行autopep8, 再检查pep8/flake8</p>
+
+<p>但是不能对css/js/html做规范检查. 而且也不通用. 周末看到了yelp的<a href="https://github.com/pre-commit/pre-commit">pre-commit</a>.
+感觉是个很有意思的东西，虽然之前也写过类似的hook. 但是没有它灵活. 看完他的源码后, 我今天给大家介绍下这个东西</p>
+
+<h4 id="pre-commit">pre-commit</h4>
+
+<p>玩过svn/git的同学应该都知道他们有各种的hook. 也就是准备/完成什么事件的时候做写额外的工作. 一般是shell脚本,
+版本控制工具会判断脚本的退出码, 如果不是0, 就不会继续完成. pre-commit顾名思义就是在commit之前做的准备, 也就是每次执行</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><pre class="sh_"><span class="line">git commit -m 'xxx'</span></pre></figure></notextile></div>
+
+<p>的时候去做一些检查. 启用的插件都放到这个版本库目录的根目录下, 名字叫做.pre-commit-config.yaml -&gt; 详细文档请看: <a href="http://pre-commit.com/">http://pre-commit.com/</a></p>
+
+<p>这里有我的一个配置例子:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="o">-</span>   <span class="n">repo</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span><span class="o">/</span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span><span class="o">-</span><span class="n">hooks</span>
+</span><span class="line">    <span class="n">sha</span><span class="p">:</span> <span class="n">b03733bc86d9e8b2564a5798ade40d64baae3055</span>
+</span><span class="line">    <span class="n">hooks</span><span class="p">:</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">trailing</span><span class="o">-</span><span class="n">whitespace</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">end</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="nb">file</span><span class="o">-</span><span class="n">fixer</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">autopep8</span><span class="o">-</span><span class="n">wrapper</span>
+</span><span class="line">    <span class="n">args</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;-i&#39;</span><span class="p">,</span> <span class="s">&#39;--ignore=E265,E309,E501&#39;</span><span class="p">]</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">check</span><span class="o">-</span><span class="n">docstring</span><span class="o">-</span><span class="n">first</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">check</span><span class="o">-</span><span class="n">json</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">check</span><span class="o">-</span><span class="n">yaml</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">debug</span><span class="o">-</span><span class="n">statements</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">name</span><span class="o">-</span><span class="n">tests</span><span class="o">-</span><span class="n">test</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">requirements</span><span class="o">-</span><span class="n">txt</span><span class="o">-</span><span class="n">fixer</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">flake8</span>
+</span><span class="line"><span class="o">-</span>   <span class="n">repo</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span><span class="o">/</span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span>
+</span><span class="line">    <span class="n">sha</span><span class="p">:</span> <span class="mi">86</span><span class="n">c99c6b870a261d2aff0b4cdb36995764edce1b</span>
+</span><span class="line">    <span class="n">hooks</span><span class="p">:</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">validate_config</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">validate_manifest</span>
+</span><span class="line"><span class="o">-</span>   <span class="n">repo</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">asottile</span><span class="o">/</span><span class="n">reorder_python_imports</span>
+</span><span class="line">    <span class="n">sha</span><span class="p">:</span> <span class="n">ea9fa14a757bb210d849de5af8f8ba2c9744027a</span>
+</span><span class="line">    <span class="n">hooks</span><span class="p">:</span>
+</span><span class="line">    <span class="o">-</span>   <span class="nb">id</span><span class="p">:</span> <span class="n">reorder</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">imports</span>
+</span></pre></figure></notextile></div>
+
+<h4 id="section-1">安装使用</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">pip</span> <span class="n">install</span> <span class="n">pre</span><span class="o">-</span><span class="n">commit</span>
+</span><span class="line"><span class="n">pre</span><span class="o">-</span><span class="n">commit</span><span class="o">-</span><span class="n">install</span>
+</span><span class="line"><span class="c"># PS: 第一次执行commit会比较慢，因为他会clone对应的源, 之后就会用这个缓存的</span>
+</span><span class="line"><span class="c"># 其他的可选源和用法直接参照[https://github.com/pre-commit](https://github.com/pre-commit)里面的项目</span>
+</span></pre></figure></notextile></div>
+
+<h4 id="section-2">看一个失败的例子(有颜色效果, 不能展示出来)</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="err">$</span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s">&#39;test&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="n">Trim</span> <span class="n">Trailing</span> <span class="n">Whitespace</span><span class="o">.................................................................................................................</span><span class="n">Passed</span>
+</span><span class="line"><span class="n">Fix</span> <span class="n">End</span> <span class="n">of</span> <span class="n">Files</span><span class="o">.........................................................................................................................</span><span class="n">Passed</span>
+</span><span class="line"><span class="n">autopep8</span> <span class="n">wrapper</span><span class="o">.........................................................................................................................</span><span class="n">Passed</span>
+</span><span class="line"><span class="n">Check</span> <span class="n">docstring</span> <span class="ow">is</span> <span class="n">first</span><span class="o">.................................................................................................................</span><span class="n">Passed</span>
+</span><span class="line"><span class="n">Check</span> <span class="n">JSON</span><span class="o">..........................................................................................................</span><span class="p">(</span><span class="n">no</span> <span class="n">files</span> <span class="n">to</span> <span class="n">check</span><span class="p">)</span> <span class="n">Skipped</span>
+</span><span class="line"><span class="n">Check</span> <span class="n">Yaml</span><span class="o">..........................................................................................................</span><span class="p">(</span><span class="n">no</span> <span class="n">files</span> <span class="n">to</span> <span class="n">check</span><span class="p">)</span> <span class="n">Skipped</span>
+</span><span class="line"><span class="n">Debug</span> <span class="n">Statements</span> <span class="p">(</span><span class="n">Python</span><span class="p">)</span><span class="o">................................................................................................................</span><span class="n">Passed</span>
+</span><span class="line"><span class="n">Tests</span> <span class="n">should</span> <span class="n">end</span> <span class="ow">in</span> <span class="n">_test</span><span class="o">.</span><span class="n">py</span><span class="o">........................................................................................</span><span class="p">(</span><span class="n">no</span> <span class="n">files</span> <span class="n">to</span> <span class="n">check</span><span class="p">)</span> <span class="n">Skipped</span>
+</span><span class="line"><span class="n">Fix</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span><span class="o">................................................................................................</span><span class="p">(</span><span class="n">no</span> <span class="n">files</span> <span class="n">to</span> <span class="n">check</span><span class="p">)</span> <span class="n">Skipped</span>
+</span><span class="line"><span class="n">Flake8</span><span class="o">...................................................................................................................................</span><span class="n">Failed</span>
+</span><span class="line"><span class="n">hookid</span><span class="p">:</span> <span class="n">flake8</span>
+</span><span class="line">
+</span><span class="line"><span class="n">pre_commit</span><span class="o">/</span><span class="n">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span> <span class="n">F401</span> <span class="s">&#39;os&#39;</span> <span class="n">imported</span> <span class="n">but</span> <span class="n">unused</span>
+</span><span class="line"><span class="n">pre_commit</span><span class="o">/</span><span class="n">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span> <span class="n">F401</span> <span class="s">&#39;sys&#39;</span> <span class="n">imported</span> <span class="n">but</span> <span class="n">unused</span>
+</span><span class="line">
+</span><span class="line"><span class="n">Validate</span> <span class="n">Pre</span><span class="o">-</span><span class="n">Commit</span> <span class="n">Config</span><span class="o">..........................................................................................</span><span class="p">(</span><span class="n">no</span> <span class="n">files</span> <span class="n">to</span> <span class="n">check</span><span class="p">)</span> <span class="n">Skipped</span>
+</span><span class="line"><span class="n">Validate</span> <span class="n">Pre</span><span class="o">-</span><span class="n">Commit</span> <span class="n">Manifest</span><span class="o">........................................................................................</span><span class="p">(</span><span class="n">no</span> <span class="n">files</span> <span class="n">to</span> <span class="n">check</span><span class="p">)</span> <span class="n">Skipped</span>
+</span><span class="line"><span class="n">Reorder</span> <span class="n">python</span> <span class="n">imports</span><span class="o">...................................................................................................................</span><span class="n">Passed</span>
+</span><span class="line"><span class="n">error</span><span class="p">:</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">push</span> <span class="n">some</span> <span class="n">refs</span> <span class="n">to</span> <span class="s">&#39;https://github.com/dongweiming/pre-push&#39;</span>
+</span></pre></figure></notextile></div>
+
+<h4 id="pre-commit-1">pre-commit的问题</h4>
+
+<p>我觉得对每次commit做一次审查, 第一是需要时间, 第二是没有必要, 因为经常一个pr有多个commit,
+我只保证整体结果是正确的就好了 - 也就是说应该是在push的时候. 整个过程我可能对commit做多次rebase/–amend等等. 某一次的检查失败其实完全不
+影响我做后的结果 - 我是手快党</p>
+
+<p>so. 我基于它修改了一个版本<a href="https://github.com/dongweiming/pre-push/">pre-push</a>, 用法完全一样, 只是我对push做了拦截. 并且我会经常和它保持同步</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ipython的一些高级用法(二)]]></title>
@@ -242,7 +335,7 @@ D:,l:,r,s:,T:,q 也就是-r和-q不需要参数其他的都是参数 类似 %pru
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>以前在我的PPT<a href="http://dongweiming.github.io/Expert-Python/">python高级编程</a>也提到了一些关于ipython的用法. 今天继续由浅入深的看看ipython,
-本文假设作为读者的你已经知道ipython并且用了一段时间了.</p>
+本文作为读者的你已经知道ipython并且用了一段时间了.</p>
 
 <h5 id="run">%run</h5>
 
@@ -467,12 +560,7 @@ D:,l:,r,s:,T:,q 也就是-r和-q不需要参数其他的都是参数 类似 %pru
 </span><span class="line"><span class="n">Out</span><span class="p">[</span><span class="mi">29</span><span class="p">]:</span> <span class="p">(</span><span class="mf">0.104384</span><span class="p">,</span> <span class="mf">0.13980499999999998</span><span class="p">,</span> <span class="mf">0.104384</span><span class="p">)</span>
 </span></pre></figure></notextile></div>
 
-<p>更多地关于并行计算请看这里:</p>
-
-<ul>
-  <li><a href="http://nbviewer.ipython.org/url/www.astro.washington.edu/users/vanderplas/Astr599/notebooks/21_IPythonParallel.ipynb">Parallel Computing with IPython</a></li>
-  <li><a href="http://nbviewer.ipython.org/github/minrk/IPython-parallel-tutorial">IPython-parallel-tutorial</a></li>
-</ul>
+<p>更多地关于并行计算请看这里: <a href="http://nbviewer.ipython.org/url/www.astro.washington.edu/users/vanderplas/Astr599/notebooks/21_IPythonParallel.ipynb">Parallel Computing with IPython</a></p>
 ]]></content>
   </entry>
   
@@ -2901,184 +2989,6 @@ jquery, amchart和一个最近发现的页面消息弹出<a href="https://github
 </span><span class="line"><span class="n">CELERY_ROUTES</span> <span class="o">=</span> <span class="p">(</span><span class="n">MyRouter</span><span class="p">(),</span> <span class="p">)</span>
 </span></pre></figure></notextile></div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[封装pymongo自动关闭连接]]></title>
-    <link href="http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie/"/>
-    <updated>2013-08-16T21:42:00+08:00</updated>
-    <id>http://dongweiming.github.com/blog/archives/feng-zhuang-pymongozi-dong-guan-bi-lian-jie</id>
-    <content type="html"><![CDATA[<h4 id="section">前言</h4>
-
-<p>在我工作的项目里面使用了mongodb.自然也用到了pymongo.但是它都是在大片的函数里面使用类似于这样的方式</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="kn">import</span> <span class="nn">db</span>
-</span><span class="line"><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-</span><span class="line">    <span class="o">...</span>
-</span><span class="line">    <span class="n">db</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">find_one</span><span class="p">()</span>
-</span><span class="line">    <span class="o">...</span>
-</span></pre></figure></notextile></div>
-
-<p>但是问题是在使用完都没有关闭连接,这样多台服务器连接我这台mongodb服务器，在业务高峰期就会占满我的连接, 我当时总结造成这个原因的问题有以下三种:</p>
-
-<ol>
-  <li>
-    <p>上面说的用完db不关闭连接而是等着db超时</p>
-  </li>
-  <li>
-    <p>注意上面的import，其实在import文件的时候数据库连接就已经生成了，没有在需要的时候才创建, 占满我连接的应用其实有很多没有用，浪费了</p>
-  </li>
-  <li>
-    <p>nginx、uwsgi，celery等应用配置的问题，造成过多的实例，其实根本无益</p>
-  </li>
-</ol>
-
-<h4 id="pymongo">我今天写的一个封装pymongo和关闭数据库连接的装饰器</h4>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="c">#/usr/bin/env python</span>
-</span><span class="line"><span class="c"># coding=utf-8</span>
-</span><span class="line">
-</span><span class="line"><span class="sd">&quot;&quot;&quot;</span>
-</span><span class="line"><span class="sd">1. 封装数据库操作(INSERT,FIND,UPDATE)</span>
-</span><span class="line"><span class="sd">2. 函数执行完MONGODB操作后关闭数据库连接</span>
-</span><span class="line"><span class="sd">&quot;&quot;&quot;</span>
-</span><span class="line">
-</span><span class="line"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-</span><span class="line"><span class="kn">from</span> <span class="nn">pymongo.database</span> <span class="kn">import</span> <span class="n">Database</span>
-</span><span class="line">
-</span><span class="line"><span class="k">try</span><span class="p">:</span>
-</span><span class="line">    <span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
-</span><span class="line"><span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-</span><span class="line">    <span class="c"># 好像2.4之前的pymongo都没有MongoClient,现在官网已经把Connection抛弃了</span>
-</span><span class="line">    <span class="kn">import</span> <span class="nn">warnings</span>
-</span><span class="line">    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&quot;Strongly recommend upgrading to the latest version pymongo version,&quot;</span>
-</span><span class="line">                  <span class="s">&quot;Connection is DEPRECATED: Please use mongo_client instead.&quot;</span><span class="p">)</span>
-</span><span class="line">    <span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">Connection</span> <span class="k">as</span> <span class="n">MongoClient</span>
-</span><span class="line">
-</span><span class="line">
-</span><span class="line"><span class="k">class</span> <span class="nc">Mongo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-</span><span class="line">
-</span><span class="line">    <span class="sd">&#39;&#39;&#39;封装数据库操作&#39;&#39;&#39;</span>
-</span><span class="line">
-</span><span class="line">    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">27017</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s">&#39;test&#39;</span><span class="p">,</span>
-</span><span class="line">                 <span class="n">max_pool_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">max_pool_size</span> <span class="o">=</span> <span class="n">max_pool_size</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span> <span class="o">=</span> <span class="n">timeout</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">database</span> <span class="o">=</span> <span class="n">database</span>
-</span><span class="line">
-</span><span class="line">    <span class="nd">@property</span>
-</span><span class="line">    <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class="line">        <span class="c"># 我这里是为了使用类似&quot;db.集合.操作&quot;的操作的时候才会生成数据库连接,其实pymongo已经实现了进程池,也可以把这个db放在__init__里面,</span>
-</span><span class="line">        <span class="c"># 比如我把db关掉有其他的数据库调用连接又会生成,并且不影响使用.我这里只是想每次执行数据库生成一个连接用完关掉-自己控制自己的</span>
-</span><span class="line">        <span class="k">return</span> <span class="n">MongoClientself</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">max_pool_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_pool_size</span><span class="p">,</span>
-</span><span class="line">                  <span class="n">connectTimeoutMS</span><span class="o">=</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">)</span>
-</span><span class="line">
-</span><span class="line">    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">collection</span><span class="p">):</span>
-</span><span class="line">        <span class="c"># 为了兼容db[集合].操作的用法</span>
-</span><span class="line">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__getattr__</span><span class="p">(</span><span class="n">collection</span><span class="p">)</span>
-</span><span class="line">
-</span><span class="line">    <span class="k">def</span> <span class="nf">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">collection_or_func</span><span class="p">):</span>
-</span><span class="line">        <span class="n">db</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">]</span>
-</span><span class="line">        <span class="k">if</span> <span class="n">collection_or_func</span> <span class="ow">in</span> <span class="n">Database</span><span class="o">.</span><span class="n">__dict__</span><span class="p">:</span>
-</span><span class="line">            <span class="c"># 当调用的是db的方法就直接返回</span>
-</span><span class="line">            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">collection_or_func</span><span class="p">)</span>
-</span><span class="line">        <span class="c"># 否则委派给Collection</span>
-</span><span class="line">        <span class="k">return</span> <span class="n">Collection</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">collection_or_func</span><span class="p">)</span>
-</span><span class="line">
-</span><span class="line">
-</span><span class="line"><span class="k">class</span> <span class="nc">Collection</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-</span><span class="line">
-</span><span class="line">    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">collection</span><span class="p">):</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">collection</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">collection</span><span class="p">)</span>
-</span><span class="line">
-</span><span class="line">    <span class="k">def</span> <span class="nf">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operation</span><span class="p">):</span>
-</span><span class="line">        <span class="c"># 我这个封装只是为了拦截一部分操作,不符合的就直接raise属性错误</span>
-</span><span class="line">        <span class="n">control_type</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;disconnect&#39;</span><span class="p">,</span> <span class="s">&#39;insert&#39;</span><span class="p">,</span> <span class="s">&#39;update&#39;</span><span class="p">,</span> <span class="s">&#39;find&#39;</span><span class="p">,</span> <span class="s">&#39;find_one&#39;</span><span class="p">]</span>
-</span><span class="line">        <span class="k">if</span> <span class="n">operation</span> <span class="ow">in</span> <span class="n">control_type</span><span class="p">:</span>
-</span><span class="line">            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">collection</span><span class="p">,</span> <span class="n">operation</span><span class="p">)</span>
-</span><span class="line">        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="n">operation</span><span class="p">)</span>
-</span><span class="line">
-</span><span class="line">
-</span><span class="line"><span class="k">def</span> <span class="nf">close_db</span><span class="p">(</span><span class="n">dbs</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;db&#39;</span><span class="p">]):</span>
-</span><span class="line">    <span class="sd">&#39;&#39;&#39;</span>
-</span><span class="line"><span class="sd">    关闭mongodb数据库连接</span>
-</span><span class="line"><span class="sd">    db : 在执行函数里面使用的db的名字(大部分是db，也会有s_db)</span>
-</span><span class="line"><span class="sd">        Usage::</span>
-</span><span class="line"><span class="sd">            &gt;&gt;&gt;s_db = Mongo()</span>
-</span><span class="line"><span class="sd">            &gt;&gt;&gt;@close_db([&#39;s_db&#39;])</span>
-</span><span class="line"><span class="sd">            ...: def test():</span>
-</span><span class="line"><span class="sd">            ...:     print s_db.test.insert({&#39;a&#39;: 1, &#39;b&#39;: 2})</span>
-</span><span class="line"><span class="sd">            ...:</span>
-</span><span class="line"><span class="sd">    &#39;&#39;&#39;</span>
-</span><span class="line">    <span class="k">def</span> <span class="nf">_deco</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-</span><span class="line">        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-</span><span class="line">        <span class="k">def</span> <span class="nf">_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span class="line">            <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</span><span class="line">            <span class="k">for</span> <span class="n">db</span> <span class="ow">in</span> <span class="n">dbs</span><span class="p">:</span>
-</span><span class="line">                <span class="k">try</span><span class="p">:</span>
-</span><span class="line">                    <span class="n">func</span><span class="o">.</span><span class="n">func_globals</span><span class="p">[</span><span class="n">db</span><span class="p">]</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
-</span><span class="line">                <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-</span><span class="line">                    <span class="k">pass</span>
-</span><span class="line">            <span class="k">return</span> <span class="n">result</span>
-</span><span class="line">        <span class="k">return</span> <span class="n">_call</span>
-</span><span class="line">    <span class="k">return</span> <span class="n">_deco</span>
-</span></pre></figure></notextile></div>
-
-<p>PS: 在我测试的时候发现,使用Mongo()类生成的db，操作完会自动关闭连接了…</p>
-
-<h4 id="section-1">怎么样给一个很大的文件每个函数都加上面的这个装饰器？</h4>
-
-<p>项目每个脚本的代码都很长，函数也很多，并且每个函数里面使用的db的名字都不同,比如有一些一些风格:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">db</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">find_one</span><span class="p">()</span>
-</span><span class="line"><span class="n">s_db</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">test</span><span class="o">=</span><span class="s">&#39;test&#39;</span><span class="p">))</span>
-</span><span class="line"><span class="o">...</span>
-</span></pre></figure></notextile></div>
-
-<p>每个函数加一个装饰器,好费劲，就想能不能自动分辨文件中的函数然后给他们自动加装饰器，然后就有以下的一个做好的脚本:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="c">#coding=utf-8</span>
-</span><span class="line">
-</span><span class="line"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-</span><span class="line"><span class="kn">import</span> <span class="nn">copy</span>
-</span><span class="line"><span class="kn">import</span> <span class="nn">types</span>
-</span><span class="line">
-</span><span class="line"><span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-</span><span class="line">    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-</span><span class="line">    <span class="k">def</span> <span class="nf">_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span class="line">        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</span><span class="line">        <span class="k">print</span> <span class="s">&#39;wrap you&#39;</span>
-</span><span class="line">        <span class="k">return</span> <span class="n">result</span>
-</span><span class="line">    <span class="k">return</span> <span class="n">_call</span>
-</span><span class="line">
-</span><span class="line"><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
-</span><span class="line">    <span class="k">print</span> <span class="s">&#39;test&#39;</span>
-</span><span class="line">
-</span><span class="line"><span class="k">def</span> <span class="nf">test2</span><span class="p">():</span>
-</span><span class="line">    <span class="k">print</span> <span class="s">&#39;test3&#39;</span>
-</span><span class="line">
-</span><span class="line"><span class="n">glocal_dict</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="nb">globals</span><span class="p">())</span>
-</span><span class="line">
-</span><span class="line"><span class="n">func_list</span> <span class="o">=</span> <span class="p">[[</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">glocal_dict</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;__&#39;</span><span class="p">)]</span>
-</span><span class="line">
-</span><span class="line"><span class="k">for</span> <span class="n">func_name</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">func_list</span><span class="p">:</span>
-</span><span class="line">    <span class="k">if</span>  <span class="n">func_name</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;wraps&#39;</span><span class="p">,</span> <span class="s">&#39;copy&#39;</span><span class="p">,</span> <span class="s">&#39;wrap&#39;</span><span class="p">,</span> <span class="s">&#39;types&#39;</span><span class="p">]:</span>
-</span><span class="line">        <span class="k">continue</span>
-</span><span class="line">    <span class="k">if</span> <span class="n">types</span><span class="o">.</span><span class="n">FunctionType</span>  <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-</span><span class="line">        <span class="nb">globals</span><span class="p">()[</span><span class="n">func_name</span><span class="p">]</span><span class="o">=</span> <span class="n">wrap</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-</span></pre></figure></notextile></div>
-
-<p>这样当你调用的时候自动就有了装饰器:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_bash"><span class="line">&gt;&gt;&gt; from <span class="nb">test </span>import <span class="nb">test</span>
-</span><span class="line">&gt;&gt;&gt; <span class="nb">test</span><span class="o">()</span>
-</span><span class="line"><span class="nb">test</span>
-</span><span class="line">wrap you
-</span><span class="line">&gt;&gt;&gt;
-</span></pre></figure></notextile></div>
 ]]></content>
   </entry>
   

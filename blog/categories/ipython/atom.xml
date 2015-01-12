@@ -4,7 +4,7 @@
   <title><![CDATA[分类: ipython | 小明明s à domicile]]></title>
   <link href="http://dongweiming.github.com/blog/blog/categories/ipython/atom.xml" rel="self"/>
   <link href="http://dongweiming.github.com/blog/"/>
-  <updated>2015-01-06T21:35:37+08:00</updated>
+  <updated>2015-01-12T18:44:33+08:00</updated>
   <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
@@ -247,7 +247,7 @@ def debug(self, line='', cell=None):
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
 <p>以前在我的PPT<a href="http://dongweiming.github.io/Expert-Python/">python高级编程</a>也提到了一些关于ipython的用法. 今天继续由浅入深的看看ipython,
-本文假设作为读者的你已经知道ipython并且用了一段时间了.</p>
+本文作为读者的你已经知道ipython并且用了一段时间了.</p>
 
 <h5 id="run">%run</h5>
 
@@ -482,12 +482,7 @@ Wall time: 106 ms # 这个时间是</p>
 Out[29]: (0.104384, 0.13980499999999998, 0.104384)
 ```</p>
 
-<p>更多地关于并行计算请看这里:</p>
-
-<ul>
-  <li><a href="http://nbviewer.ipython.org/url/www.astro.washington.edu/users/vanderplas/Astr599/notebooks/21_IPythonParallel.ipynb">Parallel Computing with IPython</a></li>
-  <li><a href="http://nbviewer.ipython.org/github/minrk/IPython-parallel-tutorial">IPython-parallel-tutorial</a></li>
-</ul>
+<p>更多地关于并行计算请看这里: <a href="http://nbviewer.ipython.org/url/www.astro.washington.edu/users/vanderplas/Astr599/notebooks/21_IPythonParallel.ipynb">Parallel Computing with IPython</a></p>
 ]]></content>
   </entry>
   
