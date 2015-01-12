@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>推荐[pre-commit/pre-push]: 本地在commit或者push的时候做各种检查(pep8/pylint/pyflakes8) - 小明明s à domicile</title>
+  <title>推荐pre-commit/pre-push: 本地在commit或者push的时候做各种检查(pep8/pylint/pyflakes8) - 小明明s à domicile</title>
   <meta name="author" content="Dongweiming">
 
   
@@ -125,7 +125,7 @@
   
   <header class="page-header">
     
-      <h1 class="entry-title">推荐[pre-commit/pre-push]: 本地在commit或者push的时候做各种检查(pep8/pylint/pyflakes8)</h1>
+      <h1 class="entry-title">推荐pre-commit/pre-push: 本地在commit或者push的时候做各种检查(pep8/pylint/pyflakes8)</h1>
     
     
       <p class="meta">
@@ -154,7 +154,7 @@
 我在我的emacs配置中加入了这一项<a href="https://github.com/dongweiming/emacs.d/blob/master/custom/py-autopep8.el">py-autopep8</a>,
 就是在保存缓存区的时候把当前缓存区的文本放到一个临时文件, 然后执行autopep8, 再检查pep8/flake8</p>
 
-<p>但是不能对css/js/html做规范检查. 而且也不通用. 周末看到了yelp的<a href="https://github.com/pre-commit/pre-commit">pre-commit</a>.
+<p>但是不能对css/js/html做规范检查. 而且也不通用. 周末看到了Yelp的<a href="https://github.com/pre-commit/pre-commit">pre-commit</a>.
 感觉是个很有意思的东西，虽然之前也写过类似的hook. 但是没有它灵活. 看完他的源码后, 我今天给大家介绍下这个东西</p>
 
 <h4 id="pre-commit">pre-commit</h4>
@@ -196,8 +196,8 @@
 <h4 id="section-1">安装使用</h4>
 
 <div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><pre class="sh_python"><span class="line"><span class="n">pip</span> <span class="n">install</span> <span class="n">pre</span><span class="o">-</span><span class="n">commit</span>
-</span><span class="line"><span class="n">pre</span><span class="o">-</span><span class="n">commit</span><span class="o">-</span><span class="n">install</span>
-</span><span class="line"><span class="c"># PS: 第一次执行commit会比较慢，因为他会clone对应的源, 之后就会用这个缓存的</span>
+</span><span class="line"><span class="n">pre</span><span class="o">-</span><span class="n">commit</span> <span class="n">install</span>
+</span><span class="line"><span class="c"># PS: 第一次执行commit会比较慢，因为他会clone对应的源, 之后就会用这个缓存的源</span>
 </span><span class="line"><span class="c"># 其他的可选源和用法直接参照[https://github.com/pre-commit](https://github.com/pre-commit)里面的项目</span>
 </span></pre></figure></notextile></div>
 
@@ -223,7 +223,7 @@
 </span><span class="line"><span class="n">Validate</span> <span class="n">Pre</span><span class="o">-</span><span class="n">Commit</span> <span class="n">Config</span><span class="o">..........................................................................................</span><span class="p">(</span><span class="n">no</span> <span class="n">files</span> <span class="n">to</span> <span class="n">check</span><span class="p">)</span> <span class="n">Skipped</span>
 </span><span class="line"><span class="n">Validate</span> <span class="n">Pre</span><span class="o">-</span><span class="n">Commit</span> <span class="n">Manifest</span><span class="o">........................................................................................</span><span class="p">(</span><span class="n">no</span> <span class="n">files</span> <span class="n">to</span> <span class="n">check</span><span class="p">)</span> <span class="n">Skipped</span>
 </span><span class="line"><span class="n">Reorder</span> <span class="n">python</span> <span class="n">imports</span><span class="o">...................................................................................................................</span><span class="n">Passed</span>
-</span><span class="line"><span class="n">error</span><span class="p">:</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">push</span> <span class="n">some</span> <span class="n">refs</span> <span class="n">to</span> <span class="s">&#39;https://github.com/dongweiming/pre-push&#39;</span>
+</span><span class="line"><span class="c"># 因为我的flake8有问题 所以commit失败了</span>
 </span></pre></figure></notextile></div>
 
 <h4 id="pre-commit-1">pre-commit的问题</h4>
@@ -233,6 +233,8 @@
 影响我做后的结果 - 我是手快党</p>
 
 <p>so. 我基于它修改了一个版本<a href="https://github.com/dongweiming/pre-push/">pre-push</a>, 用法完全一样, 只是我对push做了拦截. 并且我会经常和它保持同步</p>
+
+<p>假如push的时候想要不检查而强制push, 可以加上<code>--no-verify</code>参数</p>
 </div>
 
 
@@ -321,7 +323,7 @@
     <li class="nav-header">最近发布</li>
     
       <li class="post">
-        <a href="/archives/tui-jian-pre-commit-slash-pre-push-ben-di-zai-commithuo-zhe-pushde-shi-hou-zuo-ge-chong-jian-cha-pep8-slash-pylint-slash-pyflakes8/">推荐[pre-commit/pre-push]: 本地在commit或者push的时候做各种检查(pep8/pylint/pyflakes8)</a>
+        <a href="/archives/tui-jian-pre-commit-slash-pre-push-ben-di-zai-commithuo-zhe-pushde-shi-hou-zuo-ge-chong-jian-cha-pep8-slash-pylint-slash-pyflakes8/">推荐pre-commit/pre-push: 本地在commit或者push的时候做各种检查(pep8/pylint/pyflakes8)</a>
       </li>
     
       <li class="post">

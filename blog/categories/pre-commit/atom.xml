@@ -4,7 +4,7 @@
   <title><![CDATA[分类: pre-commit | 小明明s à domicile]]></title>
   <link href="http://dongweiming.github.com/blog/blog/categories/pre-commit/atom.xml" rel="self"/>
   <link href="http://dongweiming.github.com/blog/"/>
-  <updated>2015-01-12T20:32:40+08:00</updated>
+  <updated>2015-01-12T20:39:19+08:00</updated>
   <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[推荐[pre-commit/pre-push]: 本地在commit或者push的时候做各种检查(pep8/pylint/pyflakes8)]]></title>
+    <title type="html"><![CDATA[推荐pre-commit/pre-push: 本地在commit或者push的时候做各种检查(pep8/pylint/pyflakes8)]]></title>
     <link href="http://dongweiming.github.com/blog/archives/tui-jian-pre-commit-slash-pre-push-ben-di-zai-commithuo-zhe-pushde-shi-hou-zuo-ge-chong-jian-cha-pep8-slash-pylint-slash-pyflakes8/"/>
     <updated>2015-01-12T18:16:00+08:00</updated>
     <id>http://dongweiming.github.com/blog/archives/tui-jian-pre-commit-slash-pre-push-ben-di-zai-commithuo-zhe-pushde-shi-hou-zuo-ge-chong-jian-cha-pep8-slash-pylint-slash-pyflakes8</id>
@@ -24,7 +24,7 @@
 我在我的emacs配置中加入了这一项<a href="https://github.com/dongweiming/emacs.d/blob/master/custom/py-autopep8.el">py-autopep8</a>,
 就是在保存缓存区的时候把当前缓存区的文本放到一个临时文件, 然后执行autopep8, 再检查pep8/flake8</p>
 
-<p>但是不能对css/js/html做规范检查. 而且也不通用. 周末看到了yelp的<a href="https://github.com/pre-commit/pre-commit">pre-commit</a>.
+<p>但是不能对css/js/html做规范检查. 而且也不通用. 周末看到了Yelp的<a href="https://github.com/pre-commit/pre-commit">pre-commit</a>.
 感觉是个很有意思的东西，虽然之前也写过类似的hook. 但是没有它灵活. 看完他的源码后, 我今天给大家介绍下这个东西</p>
 
 <h4 id="pre-commit">pre-commit</h4>
@@ -70,8 +70,8 @@ git commit -m 'xxx'
 
 <p><code>python
 pip install pre-commit
-pre-commit-install
-# PS: 第一次执行commit会比较慢，因为他会clone对应的源, 之后就会用这个缓存的
+pre-commit install
+# PS: 第一次执行commit会比较慢，因为他会clone对应的源, 之后就会用这个缓存的源
 # 其他的可选源和用法直接参照[https://github.com/pre-commit](https://github.com/pre-commit)里面的项目
 </code></p>
 
@@ -98,7 +98,7 @@ pre_commit/<strong>init</strong>.py:3:1: F401 ‘sys’ imported but unused</p>
 <p>Validate Pre-Commit Config………………………………………………………………………………(no files to check) Skipped
 Validate Pre-Commit Manifest…………………………………………………………………………….(no files to check) Skipped
 Reorder python imports…………………………………………………………………………………………………….Passed
-error: failed to push some refs to ‘https://github.com/dongweiming/pre-push’
+# 因为我的flake8有问题 所以commit失败了
 ```</p>
 
 <h4 id="pre-commit-1">pre-commit的问题</h4>
@@ -108,6 +108,8 @@ error: failed to push some refs to ‘https://github.com/dongweiming/pre-push’
 影响我做后的结果 - 我是手快党</p>
 
 <p>so. 我基于它修改了一个版本<a href="https://github.com/dongweiming/pre-push/">pre-push</a>, 用法完全一样, 只是我对push做了拦截. 并且我会经常和它保持同步</p>
+
+<p>假如push的时候想要不检查而强制push, 可以加上<code>--no-verify</code>参数</p>
 ]]></content>
   </entry>
   
