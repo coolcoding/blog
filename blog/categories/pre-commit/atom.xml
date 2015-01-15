@@ -4,7 +4,7 @@
   <title><![CDATA[分类: pre-commit | 小明明s à domicile]]></title>
   <link href="http://dongweiming.github.com/blog/blog/categories/pre-commit/atom.xml" rel="self"/>
   <link href="http://dongweiming.github.com/blog/"/>
-  <updated>2015-01-12T20:39:19+08:00</updated>
+  <updated>2015-01-15T10:22:41+08:00</updated>
   <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
@@ -29,7 +29,7 @@
 
 <h4 id="pre-commit">pre-commit</h4>
 
-<p>玩过svn/git的同学应该都知道他们有各种的hook. 也就是准备/完成什么事件的时候做写额外的工作. 一般是shell脚本,
+<p>玩过svn/git的同学应该都知道他们有各种的hook. 也就是准备/完成什么事件的时候做些额外的工作. 一般是shell脚本,
 版本控制工具会判断脚本的退出码, 如果不是0, 就不会继续完成. pre-commit顾名思义就是在commit之前做的准备, 也就是每次执行</p>
 
 <p><code>
@@ -72,7 +72,7 @@ git commit -m 'xxx'
 pip install pre-commit
 pre-commit install
 # PS: 第一次执行commit会比较慢，因为他会clone对应的源, 之后就会用这个缓存的源
-# 其他的可选源和用法直接参照[https://github.com/pre-commit](https://github.com/pre-commit)里面的项目
+# 其他的可选源和用法直接参照[https://github.com/pre-commit](https://github.com/pre-commit)里面的项目或者[http://pre-commit.com/hooks.html](http://pre-commit.com/hooks.html)
 </code></p>
 
 <h4 id="section-2">看一个失败的例子(有颜色效果, 不能展示出来)</h4>
@@ -107,7 +107,14 @@ Reorder python imports…………………………………………………�
 我只保证整体结果是正确的就好了 - 也就是说应该是在push的时候. 整个过程我可能对commit做多次rebase/–amend等等. 某一次的检查失败其实完全不
 影响我做后的结果 - 我是手快党</p>
 
-<p>so. 我基于它修改了一个版本<a href="https://github.com/dongweiming/pre-push/">pre-push</a>, 用法完全一样, 只是我对push做了拦截. 并且我会经常和它保持同步</p>
+<p>so. 我基于它修改了一个版本<a href="https://github.com/dongweiming/pre-push/">pre-push</a>, 只是我对push做了拦截. 并且我会经常和它保持同步</p>
+
+<p><code>python
+pre-commit install -t pre-commit # 默认安装pre-commit钩子, 每次commit触发
+pre-commit install -t pre-push # 默认安装pre-push钩子, 每次push触发
+</code></p>
+
+<p>其他用法完全一样.</p>
 
 <p>假如push的时候想要不检查而强制push, 可以加上<code>--no-verify</code>参数</p>
 ]]></content>
