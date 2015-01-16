@@ -4,7 +4,7 @@
   <title><![CDATA[分类: ipython | 小明明s à domicile]]></title>
   <link href="http://dongweiming.github.com/blog/blog/categories/ipython/atom.xml" rel="self"/>
   <link href="http://dongweiming.github.com/blog/"/>
-  <updated>2015-01-15T12:36:20+08:00</updated>
+  <updated>2015-01-16T16:17:34+08:00</updated>
   <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[即将在bpug分享<ipython notebook>]]></title>
+    <link href="http://dongweiming.github.com/blog/archives/ji-jiang-zai-bpugfen-xiang/"/>
+    <updated>2015-01-16T15:48:00+08:00</updated>
+    <id>http://dongweiming.github.com/blog/archives/ji-jiang-zai-bpugfen-xiang</id>
+    <content type="html"><![CDATA[<h4 id="section">前言</h4>
+
+<p>下一次的Bpug(北京python用户组)的活动上准备做这个分享. 有兴趣的同学可以前往(我也会把录像地址放到网站的).
+提前给大家做一些预告. 其实ppt早就放到slideshare上了, 地址是http://www.slideshare.net/dongweiming/ipython-notebook-43211257</p>
+
+<p>对应的代码在<a href="https://github.com/dongweiming/divingintoipynb">divingintoipynb</a></p>
+
+<h4 id="section-1">大纲</h4>
+
+<ol>
+  <li>豆瓣东西双11临时后台 - 想看效果么? 看下面</li>
+  <li>把ipython notebook转换成html或者其他格式以及它的原理</li>
+  <li>我写的一个缩小版的<a href="https://github.com/jupyter/nbviewer">nbviewer</a>: <a href="https://github.com/dongweiming/Ipynb-viewer">Ipynb-viewer</a>, 直接在ipython目录启动web服务</li>
+  <li>nbconvert原理</li>
+  <li>用ipynb写blog(pelican/nikola) 效果可见<a href="http://dongweiming.github.io/divingintoipynb_pelican">divingintoipynb_pelican</a>和<a href="http://dongweiming.github.io/divingintoipynb_nikola/">divingintoipynb_nikola</a>
+还会讲到pelican转换ipynb到html插件，使用fabric: new_post, edit，import_ipynb. 我也给nikola贡献了import ipynb功能.</li>
+  <li>ipython notebook用到得第三方库和组件</li>
+  <li>Rich display system</li>
+  <li>现有的扩展, 演示. 我自己写的一个扩展. 演示, 代码分析</li>
+  <li>定制ipython notebook的键位. 使用emacs键位. 设计一个新的功能 - 弹出一个dialog列出所有emacs快捷键说明(想起来了么? C-h b)</li>
+  <li>定制一个基于<a href="https://github.com/brianreavis/selectize.js">selectize.js</a>的widget. 前后端代码分析.</li>
+  <li>ipython notebook 其他方面的一些用法， 整个过程中有ipython2也有ipython3</li>
+</ol>
+
+<p>模拟后台效果:</p>
+
+<p><img src="https://github.com/dongweiming/divingintoipynb/raw/master/double11/double11.png" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ipython的一些高级用法(二)]]></title>
