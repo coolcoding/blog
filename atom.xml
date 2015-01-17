@@ -4,7 +4,7 @@
   <title><![CDATA[小明明s à domicile]]></title>
   <link href="http://dongweiming.github.com/blog/atom.xml" rel="self"/>
   <link href="http://dongweiming.github.com/blog/"/>
-  <updated>2015-01-16T16:22:57+08:00</updated>
+  <updated>2015-01-17T22:43:31+08:00</updated>
   <id>http://dongweiming.github.com/blog/</id>
   <author>
     <name><![CDATA[Dongweiming]]></name>
@@ -14,13 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[即将在bpug分享ipython notebook]]></title>
+    <title type="html"><![CDATA[分享ipython notebook]]></title>
     <link href="http://dongweiming.github.com/blog/archives/ji-jiang-zai-bpugfen-xiang/"/>
     <updated>2015-01-16T15:48:00+08:00</updated>
     <id>http://dongweiming.github.com/blog/archives/ji-jiang-zai-bpugfen-xiang</id>
     <content type="html"><![CDATA[<h4 id="section">前言</h4>
 
-<p>下一次的Bpug(北京python用户组)的活动上准备做这个分享. 有兴趣的同学可以前往(我也会把录像地址放到网站的).
+<p>本来准备下一次的Bpug(北京python用户组)的活动上准备做这个分享. 搁置了. 有兴趣组织纯技术活动的公司或者组织可以联系我. 有兴趣的同学可以前往(我也会把录像地址放到网站的).
 提前给大家做一些预告. 其实ppt早就放到slideshare上了, 地址是http://www.slideshare.net/dongweiming/ipython-notebook-43211257</p>
 
 <p>对应的代码在<a href="https://github.com/dongweiming/divingintoipynb">divingintoipynb</a></p>
